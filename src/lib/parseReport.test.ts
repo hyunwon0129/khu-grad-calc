@@ -35,6 +35,17 @@ describe('사정표 파서', () => {
     expect(r.rows.some((x) => x.code.startsWith('20'))).toBe(false);
   });
 
+  it('과목명이 숫자로 끝나도 학기 바로 앞 숫자를 학점으로 읽는다', () => {
+    const lines = [
+      '02 ABC101 설계1 3 2025 / 1 IE202 프로그래밍실습2 1 2025 / 2',
+      'SWCON111 컴퓨터구조/실습3 2026 / 1',
+    ];
+    const rows = parseReportLines(lines, new Map(), '2026-2').rows;
+    expect(rows.find((x) => x.code === 'ABC101')?.credit).toBe(3);
+    expect(rows.find((x) => x.code === 'IE202')).toMatchObject({ credit: 1, term: '2025-2' });
+    expect(rows.find((x) => x.code === 'SWCON111')).toMatchObject({ credit: 3, term: '2026-1' });
+  });
+
   it('현재 학기 계산', () => {
     expect(currentTerm(new Date('2026-10-25'))).toBe('2026-2');
     expect(currentTerm(new Date('2026-03-02'))).toBe('2026-1');

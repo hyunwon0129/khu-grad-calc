@@ -79,9 +79,11 @@ export function parseReportLines(
 
       const termMatch = segment.match(TERM);
       const term = termMatch ? `${termMatch[1]}-${termMatch[2]}` : null;
-      if (termMatch) segment = segment.replace(termMatch[0], ' ');
+      // 학점은 학기 바로 앞의 마지막 숫자. 과목명이 숫자로 끝나는 경우(예: "설계1")를 피한다.
+      if (termMatch) segment = segment.slice(0, termMatch.index);
 
-      const creditMatch = segment.match(CREDIT);
+      const creditCandidates = [...segment.matchAll(new RegExp(CREDIT.source, 'g'))];
+      const creditMatch = creditCandidates[creditCandidates.length - 1];
       const known = creditOf.has(code);
       const credit = creditMatch ? Number(creditMatch[1]) : (creditOf.get(code) ?? null);
 

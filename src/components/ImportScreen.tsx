@@ -34,6 +34,10 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
   const load = (lines: string[], src: 'PDF' | 'SAMPLE') => {
     const r = parseReportLines(lines, creditOf);
     lines.length = 0; // 추출한 원문은 파싱 직후 버린다
+    if (r.rows.length === 0) {
+      setError('이 파일에서 과목을 찾지 못했습니다. 학사정보시스템에서 내려받은 졸업사정표 PDF인지 확인해 주세요. 스캔·사진을 PDF로 만든 파일은 아직 읽을 수 없습니다.');
+      return;
+    }
     setResult(r);
     setSource(src);
     setRows(

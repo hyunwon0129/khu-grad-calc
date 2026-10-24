@@ -27,7 +27,14 @@ export async function extractPdfLines(file: File): Promise<string[]> {
   pdfjs.GlobalWorkerOptions.workerPort = worker;
 
   const data = new Uint8Array(await file.arrayBuffer());
-  const task = pdfjs.getDocument({ data });
+  const { koreanCMaps, makeEmbeddedFactory } = await import('./embeddedCMaps');
+  const task = pdfjs.getDocument({
+    data,
+    cMapUrl: 'embedded:/',          // 실제로 요청하지 않음. 아래 공장이 내장 데이터를 돌려준다
+    cMapPacked: true,
+    useWorkerFetch: false,
+    BinaryDataFactory: makeEmbeddedFactory(koreanCMaps()),
+  } as Parameters<typeof pdfjs.getDocument>[0]);
   const doc = await task.promise;
   try {
     const lines: string[] = [];

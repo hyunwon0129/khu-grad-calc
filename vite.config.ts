@@ -7,6 +7,7 @@ const preview = process.env.PREVIEW === '1'
 export default defineConfig({
   plugins: [react()],
   base: './',
+  assetsInclude: ['**/*.bcmap'], // pdf.js 한국어 CMap 내장용
   build: {
     chunkSizeWarningLimit: 2500,
     rolldownOptions: preview ? { output: { codeSplitting: false } } : undefined,
