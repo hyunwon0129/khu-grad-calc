@@ -5,13 +5,15 @@ import { recommendPrograms, trackProgress } from '../lib/recommend';
 import { planRoadmap, nextTerm, termLabel } from '../lib/planner';
 import { currentTerm } from '../lib/parseReport';
 import ProgressChart from './ProgressChart';
+import type { ImportMeta } from './ImportScreen';
+import { sameDept } from '../lib/dept';
 
 interface Props {
   program: Program;
   programs: Program[];
   courseMap: Map<string, Course>;
   taken: TakenCourse[];
-  importInfo?: { count: number; source: 'PDF' | 'SAMPLE'; at: Date } | null;
+  importInfo?: (ImportMeta & { at: Date }) | null;
   excluded: string[];
   maxCredits: number;
   onExcluded: (codes: string[]) => void;
@@ -26,6 +28,7 @@ export default function ResultScreen(p: Props) {
   const [showPlan, setShowPlan] = useState(true);
   const [semestersLeft, setSemestersLeft] = useState(4);
   const [copied, setCopied] = useState<'idle' | 'ok' | 'manual'>('idle');
+  const [forceShow, setForceShow] = useState(false);
 
   const result = calculate(program, courseMap, taken, includeInProgress);
   const nowTerm = currentTerm();
@@ -72,9 +75,35 @@ export default function ResultScreen(p: Props) {
   const restore = (code: string) => p.onExcluded(excluded.filter((c) => c !== code));
 
   const counted = taken.length - uncounted;
+  const fileDept = p.importInfo?.department ?? null;
+  const mismatch = !!fileDept && !sameDept(fileDept, program.department);
+  const showCurriculum = !mismatch || forceShow;
+  const curriculumName = `${program.department} ${program.admissionYearRange[0]}학번`;
 
   return (
     <>
+      {mismatch && (
+        <section className="notice notice-warn" role="status">
+          <strong>{fileDept} 교육과정 데이터가 아직 없습니다</strong>
+          <span>
+            올린 사정표는 {fileDept} 기준인데, 앱에 들어 있는 교육과정은 {curriculumName}뿐입니다.
+            {' '}그래서 남은 학점, 꼭 들어야 하는 과목, 학기별 로드맵을 계산하지 않았습니다.
+          </span>
+          <span className="actions">
+            <button type="button" className="link" onClick={() => setForceShow((v) => !v)}>
+              {forceShow ? '다시 숨기기' : `그래도 ${curriculumName} 기준으로 보기`}
+            </button>
+          </span>
+        </section>
+      )}
+      {showCurriculum && !program.verified && (
+        <p className="notice">
+          <span>
+            <strong>시험용 샘플 교육과정 기준</strong> · {curriculumName} 데이터는 기능 확인용으로 만든 가상 값이라 실제 학과 요건과 다릅니다.
+          </span>
+        </p>
+      )}
+
       <section>
         <h2>이수 현황</h2>
         <p className="input-summary">
@@ -87,25 +116,29 @@ export default function ResultScreen(p: Props) {
           입력된 과목 <strong>{taken.length}</strong>개 중 <strong>{counted}</strong>개가 이 교육과정 학점에 반영됨
           {ipCodes.size > 0 && <span className="muted"> · 수강 중 {ipCodes.size}개</span>}
         </p>
-        {taken.length > 0 && counted === 0 && (
+        {showCurriculum && taken.length > 0 && counted === 0 && (
           <p className="warn" role="status">
             입력한 과목이 선택한 교육과정의 과목 목록에 하나도 없어 학점이 0으로 계산됐습니다.
             {!program.verified && ' 지금 교육과정 데이터는 검증 전(샘플)이라 실제 과목이 들어 있지 않습니다.'}
             {' '}과목 직접 수정에서 이수구분을 지정하면 반영됩니다.
           </p>
         )}
-        <ProgressChart
-          result={result}
-          showPending={!includeInProgress}
-          planned={showPlan ? plan.plannedByCategory : undefined}
-          graduationLabel={gradLabel}
-        />
-        <div className="toolbar">
-          {hasPending && (
-            <label><input id="include-ip" type="checkbox" checked={includeInProgress} onChange={(e) => setIncludeInProgress(e.target.checked)} /> 수강 중 과목도 이수로 계산</label>
-          )}
-          <label><input id="show-plan" type="checkbox" checked={showPlan} onChange={(e) => setShowPlan(e.target.checked)} /> 로드맵 계획 겹쳐 보기</label>
-        </div>
+        {showCurriculum && (
+          <>
+            <ProgressChart
+              result={result}
+              showPending={!includeInProgress}
+              planned={showPlan ? plan.plannedByCategory : undefined}
+              graduationLabel={gradLabel}
+            />
+            <div className="toolbar">
+              {hasPending && (
+                <label><input id="include-ip" type="checkbox" checked={includeInProgress} onChange={(e) => setIncludeInProgress(e.target.checked)} /> 수강 중 과목도 이수로 계산</label>
+              )}
+              <label><input id="show-plan" type="checkbox" checked={showPlan} onChange={(e) => setShowPlan(e.target.checked)} /> 로드맵 계획 겹쳐 보기</label>
+            </div>
+          </>
+        )}
         <div className="toolbar">
           <button type="button" className="link" onClick={p.onEdit}>과목 직접 수정</button>
           <button type="button" className="link" onClick={p.onReimport}>사정표 다시 불러오기</button>
@@ -113,6 +146,8 @@ export default function ResultScreen(p: Props) {
         {uncounted > 0 && <p className="muted">이 교육과정에 속하지 않거나 이수구분이 정해지지 않은 과목 {uncounted}개는 전공 학점에서 제외했습니다.</p>}
       </section>
 
+      {showCurriculum && (
+        <>
       <section>
         <h2>꼭 들어야 하는 과목</h2>
         {missingRequired.length === 0 ? (
@@ -198,6 +233,9 @@ export default function ResultScreen(p: Props) {
         </section>
       )}
 
+        </>
+      )}
+
       <section>
         <h2>다전공·MD 추천</h2>
         <label htmlFor="sem-left">남은 학기</label>{' '}
@@ -214,6 +252,7 @@ export default function ResultScreen(p: Props) {
         </ul>
       </section>
 
+      {showCurriculum && (
       <section>
         <h2>상담용 요약</h2>
         <p className="muted">지도교수 상담이나 학과 사무실 문의 때 붙여넣기 좋은 요약입니다. 이름·학번은 들어가지 않습니다.</p>
@@ -225,6 +264,7 @@ export default function ResultScreen(p: Props) {
           {copied === 'manual' && <span className="muted" role="status">자동 복사가 막혀 있습니다. 위 칸을 눌러 선택한 뒤 복사하세요.</span>}
         </div>
       </section>
+      )}
     </>
   );
 }

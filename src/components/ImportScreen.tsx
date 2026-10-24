@@ -7,10 +7,17 @@ import { extractPdfLines } from '../lib/pdfText';
 /** 사정표에서 불러와 만든 과목 표식. 새 사정표를 불러오면 이 표식의 과목은 모두 교체된다. */
 export const IMPORTED_NAME = '사정표에서 불러온 과목';
 
+export interface ImportMeta {
+  count: number;
+  source: 'PDF' | 'SAMPLE';
+  department: string | null;
+  admissionYear: number | null;
+}
+
 interface Props {
   program: Program;
   courseMap: Map<string, Course>;
-  onApply: (taken: TakenCourse[], custom: Course[], info: { count: number; source: 'PDF' | 'SAMPLE' }) => void;
+  onApply: (taken: TakenCourse[], custom: Course[], info: ImportMeta) => void;
 }
 
 interface EditRow {
@@ -99,7 +106,7 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
     onApply(
       picked.map((r) => ({ code: r.code, term: r.term || '-', status: r.status })),
       custom,
-      { count: picked.length, source: source ?? 'PDF' },
+      { count: picked.length, source: source ?? 'PDF', department: result?.departmentHint ?? null, admissionYear: result?.admissionYearHint ?? null },
     );
   };
 
@@ -135,6 +142,7 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
             <li>읽은 과목 <strong>{rows.length}</strong>개{source === 'SAMPLE' && ' (가상 사정표)'}</li>
             <li>중복 제거 {result.duplicatesRemoved}건</li>
             <li>개인정보로 보이는 항목 {result.piiLinesRemoved}건 삭제</li>
+            {result.departmentHint && <li>학과 <strong>{result.departmentHint}</strong></li>}
             {result.admissionYearHint && <li>입학연도 {result.admissionYearHint}년으로 확인됨</li>}
           </ul>
           <p className="muted">노란 줄은 확인이 필요한 과목입니다. 틀린 값은 고치고, 빼야 할 과목은 체크를 해제하세요.</p>

@@ -151,3 +151,6 @@ button.small { font-size: 0.8rem; margin-right: 8px; }
 .email-login { display: flex; flex-direction: column; gap: 2px; }
 .email-login input[type="email"] { flex: 1 1 200px; min-width: 0; }
 button:disabled { cursor: not-allowed; opacity: 0.6; }
+.notice-warn { border-left-color: var(--warn); }
+.notice-warn strong { color: var(--warn); }
+p.notice { margin: 0; }

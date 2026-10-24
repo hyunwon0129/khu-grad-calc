@@ -46,6 +46,12 @@ describe('사정표 파서', () => {
     expect(rows.find((x) => x.code === 'SWCON111')).toMatchObject({ credit: 3, term: '2026-1' });
   });
 
+  it('사정표 머리 부분에서 학과명만 찾는다', () => {
+    expect(r.departmentHint).toBe('가상학과');
+    expect(parseReportLines(['소속 체육대학 태권도학과 주전공 홍길동', 'TKD101 3 2025 / 1'], new Map(), '2026-2').departmentHint).toBe('태권도학과');
+    expect(parseReportLines(['주전공 다전공', 'AB101 3 2025 / 1', '전공탐색학과'], new Map(), '2026-2').departmentHint).toBeNull();
+  });
+
   it('현재 학기 계산', () => {
     expect(currentTerm(new Date('2026-10-25'))).toBe('2026-2');
     expect(currentTerm(new Date('2026-03-02'))).toBe('2026-1');

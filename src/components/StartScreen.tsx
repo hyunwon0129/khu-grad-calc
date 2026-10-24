@@ -49,6 +49,7 @@ export default function StartScreen({ majors, programId, savedCount, savedAt, sy
             </option>
           ))}
         </select>
+        <p className="muted">졸업사정표로 입력하면 사정표에 적힌 학과로 자동 선택됩니다. 현재는 시험용 샘플 교육과정만 들어 있습니다.</p>
         {savedCount > 0 && <p className="muted">학과를 바꾸면 입력한 과목이 초기화됩니다.</p>}
       </section>
 

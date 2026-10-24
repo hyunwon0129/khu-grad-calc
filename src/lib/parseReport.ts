@@ -18,6 +18,17 @@ export interface ParseResult {
   piiLinesRemoved: number;          // 개인정보로 보여 지운 항목 수
   duplicatesRemoved: number;
   subtotalCount: number;            // 취득 / 기준 형태로 읽힌 소계 줄 수
+  departmentHint: string | null;    // 사정표 머리 부분의 학과명 (…학과/학부/전공 단어만)
+}
+
+// 학과명: 과목 목록이 시작되기 전(학생 정보 영역)에서 '…학과/…학부/…전공'으로 끝나는 단어만 꺼낸다.
+// 이름 등 다른 단어는 이 형태가 아니므로 꺼내지지 않는다.
+const DEPT = /[가-힣A-Za-z]{2,20}(?:학과|학부|전공)(?![가-힣])/g;
+const DEPT_LABELS = new Set(['주전공', '다전공', '부전공', '복수전공', '연계전공', '융합전공', '소속학과', '학과', '학부', '전공', '제1전공', '제2전공']);
+
+export function findDepartment(headerLines: string[]): string | null {
+  const found = headerLines.flatMap((l) => [...l.matchAll(DEPT)].map((m) => m[0])).filter((w) => !DEPT_LABELS.has(w));
+  return found.find((w) => w.endsWith('학과')) ?? found.find((w) => w.endsWith('학부')) ?? found[0] ?? null;
 }
 
 // 부록 A 마스킹 정규식 (보조 안전장치)
@@ -51,6 +62,8 @@ export function parseReportLines(
   let piiLinesRemoved = 0;
   let subtotalCount = 0;
   const raw: ParsedRow[] = [];
+  const headerLines: string[] = [];
+  let seenCourse = false;
 
   for (const original of lines) {
     // 1) 개인정보 패턴을 먼저 지운다. 학번은 앞 4자리만 힌트로 남긴다.
@@ -65,6 +78,8 @@ export function parseReportLines(
 
     // 2) 학수번호가 있는 줄만 과목 행으로 본다.
     const codes = [...line.matchAll(COURSE_CODE)];
+    if (codes.length > 0) seenCourse = true;
+    else if (!seenCourse) headerLines.push(line);
     if (codes.length === 0) {
       const sub = line.match(SUBTOTAL);
       if (sub && !/^(19|20)\d{2}$/.test(sub[1])) subtotalCount++;
@@ -115,6 +130,7 @@ export function parseReportLines(
     piiLinesRemoved,
     duplicatesRemoved: raw.length - rows.length,
     subtotalCount,
+    departmentHint: findDepartment(headerLines),
   };
 }
 

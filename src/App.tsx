@@ -8,7 +8,8 @@ import { clearState, isEmpty, loadState, saveState, type UserData } from './lib/
 import { cloudEnabled } from './lib/cloud';
 import { useCloudSync } from './lib/useCloudSync';
 import StartScreen from './components/StartScreen';
-import ImportScreen, { IMPORTED_NAME } from './components/ImportScreen';
+import ImportScreen, { IMPORTED_NAME, type ImportMeta } from './components/ImportScreen';
+import { matchProgram } from './lib/dept';
 import ManualScreen from './components/ManualScreen';
 import ResultScreen from './components/ResultScreen';
 import AccountPanel from './components/AccountPanel';
@@ -33,7 +34,7 @@ export default function App() {
   const [maxCredits, setMaxCredits] = useState(validSaved?.maxCreditsPerSemester ?? DEFAULT_MAX_CREDITS);
   const [savedAt, setSavedAt] = useState(validSaved?.savedAt ?? null);
   const [accountOpen, setAccountOpen] = useState(false);
-  const [importInfo, setImportInfo] = useState<{ count: number; source: 'PDF' | 'SAMPLE'; at: Date } | null>(null);
+  const [importInfo, setImportInfo] = useState<(ImportMeta & { at: Date }) | null>(null);
 
   const data: UserData = { programId, taken, custom, excluded, maxCreditsPerSemester: maxCredits };
 
@@ -134,6 +135,9 @@ export default function App() {
             ]);
             setTaken(rows);
             setImportInfo({ ...info, at: new Date() });
+            // 사정표의 학과·입학연도에 맞는 교육과정이 있으면 자동으로 바꾼다
+            const matched = info.department ? matchProgram(majors, info.department, info.admissionYear) : undefined;
+            if (matched) setProgramId(matched.programId);
             setExcluded([]);
             setStep('result');
           }}
