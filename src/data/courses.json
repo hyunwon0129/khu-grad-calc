@@ -1,0 +1,12 @@
+[
+  { "code": "SAMP1001", "name": "[샘플] 공학수학", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전기" } },
+  { "code": "SAMP1002", "name": "[샘플] 확률통계", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전기", "SAMPLE-DS-MD": "전선" } },
+  { "code": "SAMP2001", "name": "[샘플] 경영과학", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전필" } },
+  { "code": "SAMP2002", "name": "[샘플] 생산관리", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전필" } },
+  { "code": "SAMP3001", "name": "[샘플] 최적화", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전필" } },
+  { "code": "SAMP3002", "name": "[샘플] 데이터마이닝", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전선", "SAMPLE-DS-MD": "전필" } },
+  { "code": "SAMP3003", "name": "[샘플] 품질경영", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전선" } },
+  { "code": "SAMP4001", "name": "[샘플] 캡스톤디자인", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전선" } },
+  { "code": "SAMD2001", "name": "[샘플] 파이썬프로그래밍", "credit": 3, "typeByProgram": { "SAMPLE-DS-MD": "전필" } },
+  { "code": "SAMD3001", "name": "[샘플] 머신러닝", "credit": 3, "typeByProgram": { "SAMPLE-DS-MD": "전선" } }
+]

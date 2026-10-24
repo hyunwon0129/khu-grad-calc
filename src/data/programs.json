@@ -1,0 +1,57 @@
+[
+  {
+    "programId": "SAMPLE-2025-MAJOR",
+    "campus": "INTL",
+    "college": "[샘플] 공과대학",
+    "department": "[샘플] 가상학과",
+    "kind": "MAJOR",
+    "admissionYearRange": [2025, 2025],
+    "requirements": [
+      { "category": "전기", "minCredits": 6 },
+      { "category": "전필", "minCredits": 9 },
+      { "category": "전선", "minCredits": 9 }
+    ],
+    "totalMin": 24,
+    "courses": ["SAMP1001", "SAMP1002", "SAMP2001", "SAMP2002", "SAMP3001", "SAMP3002", "SAMP3003", "SAMP4001"],
+    "source": { "doc": "가상 데이터 (실제 교육과정 아님)", "year": 2025 },
+    "verified": false,
+    "diagram": {
+      "nodes": [
+        { "code": "SAMP1001", "year": 1, "semester": 1 },
+        { "code": "SAMP1002", "year": 1, "semester": 2 },
+        { "code": "SAMP2001", "year": 2, "semester": 1 },
+        { "code": "SAMP2002", "year": 2, "semester": 2 },
+        { "code": "SAMP3001", "year": 3, "semester": 1 },
+        { "code": "SAMP3002", "year": 3, "semester": 1 },
+        { "code": "SAMP3003", "year": 3, "semester": 2 },
+        { "code": "SAMP4001", "year": 4, "semester": 1 }
+      ],
+      "edges": [
+        ["SAMP1001", "SAMP2001"],
+        ["SAMP2001", "SAMP3001"],
+        ["SAMP1002", "SAMP3002"],
+        ["SAMP1002", "SAMP3003"]
+      ],
+      "tracks": [
+        { "name": "[샘플] 데이터 분석", "courses": ["SAMP1002", "SAMP3002"], "minCredits": 6 },
+        { "name": "[샘플] 운영 최적화", "courses": ["SAMP2001", "SAMP3001", "SAMP2002"], "minCredits": 9 }
+      ]
+    }
+  },
+  {
+    "programId": "SAMPLE-DS-MD",
+    "campus": "INTL",
+    "college": "[샘플] 소프트웨어융합대학",
+    "department": "[샘플] 데이터과학 MD",
+    "kind": "MICRO_DEGREE",
+    "admissionYearRange": [2020, 2026],
+    "requirements": [
+      { "category": "전필", "minCredits": 6 },
+      { "category": "전선", "minCredits": 6 }
+    ],
+    "totalMin": 12,
+    "courses": ["SAMP1002", "SAMP3002", "SAMD2001", "SAMD3001"],
+    "source": { "doc": "가상 데이터 (실제 교육과정 아님)", "year": 2025 },
+    "verified": false
+  }
+]

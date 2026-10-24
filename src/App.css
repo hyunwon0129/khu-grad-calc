@@ -1,0 +1,28 @@
+/* 임시 스타일. 디자인 토큰은 학교 CI 확인 후 :root 변수만 바꾸면 됨 */
+:root {
+  --primary: #8b1d2c;      /* 자리표시 색상 — CI 가이드의 상징색으로 교체 */
+  --text: #222;
+  --muted: #777;
+  --line: #ddd;
+  --bg-head: #f4f4f4;
+  --warn: #c0392b;
+  --ok: #2e7d32;
+  font-family: 'Pretendard', system-ui, sans-serif;
+  color: var(--text);
+}
+body { margin: 0; background: #fff; }
+main { max-width: 860px; margin: 0 auto; padding: 16px; }
+header { border-bottom: 3px solid var(--primary); margin-bottom: 16px; }
+h1 { color: var(--primary); margin: 8px 0 4px; font-size: 1.5rem; }
+h2 { font-size: 1.05rem; margin: 24px 0 8px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; }
+th { background: var(--bg-head); }
+.total td { font-weight: 600; background: var(--bg-head); }
+.clickable { cursor: pointer; }
+.clickable:hover { background: #fafafa; }
+.warn { color: var(--warn); }
+.ok { color: var(--ok); }
+.muted { color: var(--muted); font-size: 0.85rem; }
+footer { margin: 32px 0 16px; border-top: 1px solid var(--line); padding-top: 8px; }
+select, input { font: inherit; padding: 4px; }
