@@ -11,6 +11,7 @@ interface Props {
   programs: Program[];
   courseMap: Map<string, Course>;
   taken: TakenCourse[];
+  importInfo?: { count: number; source: 'PDF' | 'SAMPLE'; at: Date } | null;
   excluded: string[];
   maxCredits: number;
   onExcluded: (codes: string[]) => void;
@@ -77,6 +78,12 @@ export default function ResultScreen(p: Props) {
       <section>
         <h2>이수 현황</h2>
         <p className="input-summary">
+          {p.importInfo && (
+            <span className="chip">
+              {p.importInfo.source === 'SAMPLE' ? '가상 사정표' : '사정표 PDF'}{' '}
+              {p.importInfo.at.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', second: '2-digit' })} 불러옴
+            </span>
+          )}
           입력된 과목 <strong>{taken.length}</strong>개 중 <strong>{counted}</strong>개가 이 교육과정 학점에 반영됨
           {ipCodes.size > 0 && <span className="muted"> · 수강 중 {ipCodes.size}개</span>}
         </p>

@@ -4,10 +4,13 @@ import type { Course, Program, TakenCourse, CourseStatus } from '../lib/types';
 import { parseReportLines, SAMPLE_REPORT_LINES, type ParseResult } from '../lib/parseReport';
 import { extractPdfLines } from '../lib/pdfText';
 
+/** 사정표에서 불러와 만든 과목 표식. 새 사정표를 불러오면 이 표식의 과목은 모두 교체된다. */
+export const IMPORTED_NAME = '사정표에서 불러온 과목';
+
 interface Props {
   program: Program;
   courseMap: Map<string, Course>;
-  onApply: (taken: TakenCourse[], custom: Course[]) => void;
+  onApply: (taken: TakenCourse[], custom: Course[], info: { count: number; source: 'PDF' | 'SAMPLE' }) => void;
 }
 
 interface EditRow {
@@ -28,7 +31,10 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
   const [rows, setRows] = useState<EditRow[]>([]);
   const [source, setSource] = useState<'PDF' | 'SAMPLE' | null>(null);
 
-  const creditOf = new Map([...courseMap.values()].map((c) => [c.code, c.credit]));
+  // 직전에 불러온 사정표의 과목은 '알려진 과목'으로 취급하지 않는다 (새 파일에 이전 파일 정보가 섞이지 않게)
+  const knownCourses = [...courseMap.values()].filter((c) => c.name !== IMPORTED_NAME);
+  const knownMap = new Map(knownCourses.map((c) => [c.code, c]));
+  const creditOf = new Map(knownCourses.map((c) => [c.code, c.credit]));
   const categories = program.requirements.map((r) => r.category);
 
   const load = (lines: string[], src: 'PDF' | 'SAMPLE') => {
@@ -49,7 +55,7 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
         include: true,
         known: x.known,
         lowConfidence: x.lowConfidence,
-        category: courseMap.get(x.code)?.typeByProgram[program.programId] ?? '',
+        category: knownMap.get(x.code)?.typeByProgram[program.programId] ?? '',
       })),
     );
   };
@@ -86,13 +92,14 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
       .filter((r) => !r.known)
       .map((r) => ({
         code: r.code,
-        name: '사정표에서 불러온 과목',
+        name: IMPORTED_NAME,
         credit: r.credit,
         typeByProgram: r.category ? { [program.programId]: r.category } : {},
       }));
     onApply(
       picked.map((r) => ({ code: r.code, term: r.term || '-', status: r.status })),
       custom,
+      { count: picked.length, source: source ?? 'PDF' },
     );
   };
 
@@ -142,7 +149,7 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
                   <tr key={`${r.code}-${r.term}`} className={r.lowConfidence ? 'row-check' : undefined}>
                     <td><input type="checkbox" checked={r.include} onChange={(e) => update(i, { include: e.target.checked })} aria-label={`${r.code} 반영`} /></td>
                     <td className="code">{r.code}</td>
-                    <td>{courseMap.get(r.code)?.name ?? <span className="muted">목록에 없음</span>}</td>
+                    <td>{knownMap.get(r.code)?.name ?? <span className="muted">목록에 없음</span>}</td>
                     <td>
                       {r.known ? r.credit : (
                         <input type="number" min={0} max={6} value={r.credit} className="num" aria-label="학점"

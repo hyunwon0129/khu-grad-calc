@@ -8,7 +8,7 @@ import { clearState, isEmpty, loadState, saveState, type UserData } from './lib/
 import { cloudEnabled } from './lib/cloud';
 import { useCloudSync } from './lib/useCloudSync';
 import StartScreen from './components/StartScreen';
-import ImportScreen from './components/ImportScreen';
+import ImportScreen, { IMPORTED_NAME } from './components/ImportScreen';
 import ManualScreen from './components/ManualScreen';
 import ResultScreen from './components/ResultScreen';
 import AccountPanel from './components/AccountPanel';
@@ -33,6 +33,7 @@ export default function App() {
   const [maxCredits, setMaxCredits] = useState(validSaved?.maxCreditsPerSemester ?? DEFAULT_MAX_CREDITS);
   const [savedAt, setSavedAt] = useState(validSaved?.savedAt ?? null);
   const [accountOpen, setAccountOpen] = useState(false);
+  const [importInfo, setImportInfo] = useState<{ count: number; source: 'PDF' | 'SAMPLE'; at: Date } | null>(null);
 
   const data: UserData = { programId, taken, custom, excluded, maxCreditsPerSemester: maxCredits };
 
@@ -62,7 +63,7 @@ export default function App() {
 
   const resetAll = () => {
     clearState();
-    setTaken([]); setCustom([]); setExcluded([]); setMaxCredits(DEFAULT_MAX_CREDITS); setSavedAt(null);
+    setTaken([]); setCustom([]); setExcluded([]); setMaxCredits(DEFAULT_MAX_CREDITS); setSavedAt(null); setImportInfo(null);
     setStep('start');
   };
 
@@ -125,9 +126,14 @@ export default function App() {
         <ImportScreen
           program={program}
           courseMap={courseMap}
-          onApply={(rows, newCustom) => {
-            newCustom.forEach(addCustom);
+          onApply={(rows, newCustom, info) => {
+            // 이전 사정표에서 만든 과목은 버리고 이번 파일 것으로 교체 (직접 추가한 과목은 유지)
+            setCustom((prev) => [
+              ...prev.filter((c) => c.name !== IMPORTED_NAME && !newCustom.some((n) => n.code === c.code)),
+              ...newCustom,
+            ]);
             setTaken(rows);
+            setImportInfo({ ...info, at: new Date() });
             setExcluded([]);
             setStep('result');
           }}
@@ -149,6 +155,7 @@ export default function App() {
           programs={programs}
           courseMap={courseMap}
           taken={taken}
+          importInfo={importInfo}
           excluded={excluded}
           maxCredits={maxCredits}
           onExcluded={setExcluded}
