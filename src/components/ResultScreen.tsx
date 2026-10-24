@@ -70,10 +70,23 @@ export default function ResultScreen(p: Props) {
   const exclude = (code: string) => p.onExcluded([...excluded, code]);
   const restore = (code: string) => p.onExcluded(excluded.filter((c) => c !== code));
 
+  const counted = taken.length - uncounted;
+
   return (
     <>
       <section>
         <h2>이수 현황</h2>
+        <p className="input-summary">
+          입력된 과목 <strong>{taken.length}</strong>개 중 <strong>{counted}</strong>개가 이 교육과정 학점에 반영됨
+          {ipCodes.size > 0 && <span className="muted"> · 수강 중 {ipCodes.size}개</span>}
+        </p>
+        {taken.length > 0 && counted === 0 && (
+          <p className="warn" role="status">
+            입력한 과목이 선택한 교육과정의 과목 목록에 하나도 없어 학점이 0으로 계산됐습니다.
+            {!program.verified && ' 지금 교육과정 데이터는 검증 전(샘플)이라 실제 과목이 들어 있지 않습니다.'}
+            {' '}과목 직접 수정에서 이수구분을 지정하면 반영됩니다.
+          </p>
+        )}
         <ProgressChart
           result={result}
           showPending={!includeInProgress}

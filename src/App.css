@@ -136,3 +136,18 @@ button.small { font-size: 0.8rem; margin-right: 8px; }
 .resume { display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; background: var(--surface); border-radius: 6px; }
 .confirm { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 0.9rem; }
 .features ul { padding-left: 20px; }
+.input-summary { margin: 0 0 10px; font-size: 0.92rem; }
+.header-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.account-btn { font-size: 0.85rem; padding: 4px 12px; border-radius: 999px; }
+.account { display: flex; flex-direction: column; gap: 12px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 6px; }
+.account-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 8px 16px; }
+.account details summary { cursor: pointer; font-size: 0.9rem; }
+.consent { display: flex; gap: 8px; align-items: flex-start; font-size: 0.88rem; }
+.consent input { margin-top: 4px; }
+.login-methods { display: flex; flex-direction: column; gap: 10px; }
+.login-methods[aria-disabled="true"] { opacity: 0.6; }
+.provider { width: 100%; max-width: 320px; font-weight: 600; padding: 9px 12px; }
+.provider-kakao { background: #fee500; color: #191919; border-color: #fee500; }
+.email-login { display: flex; flex-direction: column; gap: 2px; }
+.email-login input[type="email"] { flex: 1 1 200px; min-width: 0; }
+button:disabled { cursor: not-allowed; opacity: 0.6; }

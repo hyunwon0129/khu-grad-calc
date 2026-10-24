@@ -13,6 +13,7 @@
     "preview:artifact": "PREVIEW=1 vite build && node scripts/build-preview.mjs"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
     "pdfjs-dist": "^6.4.299",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"

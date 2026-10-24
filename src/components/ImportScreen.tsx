@@ -81,13 +81,14 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
 
   const apply = () => {
     const picked = rows.filter((r) => r.include);
+    // 목록에 없는 과목은 학점과 함께 모두 보관한다. 이수구분을 안 골랐으면 나중에 '과목 직접 수정'에서 지정할 수 있다.
     const custom: Course[] = picked
-      .filter((r) => !r.known && r.category)
+      .filter((r) => !r.known)
       .map((r) => ({
         code: r.code,
         name: '사정표에서 불러온 과목',
         credit: r.credit,
-        typeByProgram: { [program.programId]: r.category },
+        typeByProgram: r.category ? { [program.programId]: r.category } : {},
       }));
     onApply(
       picked.map((r) => ({ code: r.code, term: r.term || '-', status: r.status })),

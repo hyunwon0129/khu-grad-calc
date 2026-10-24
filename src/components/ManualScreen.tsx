@@ -24,8 +24,11 @@ export default function ManualScreen({ program, courseMap, taken, onChange, onAd
   const categories = program.requirements.map((r) => r.category);
   const takenCodes = new Set(taken.map((t) => t.code));
   const customCodes = [...courseMap.values()]
-    .filter((c) => !program.courses.includes(c.code) && c.typeByProgram[program.programId])
+    .filter((c) => !program.courses.includes(c.code) && (c.typeByProgram[program.programId] || takenCodes.has(c.code)))
     .map((c) => c.code);
+  const untyped = customCodes.filter((code) => !courseMap.get(code)?.typeByProgram[program.programId]).length;
+  const setType = (c: Course, category: string) =>
+    onAddCustom({ ...c, typeByProgram: { ...c.typeByProgram, [program.programId]: category } });
   const list = [...program.courses, ...customCodes]
     .map((code) => courseMap.get(code)!)
     .filter(Boolean)
@@ -62,6 +65,9 @@ export default function ManualScreen({ program, courseMap, taken, onChange, onAd
         </select>
         <span className="muted">{takenCodes.size}과목 선택됨</span>
       </div>
+      {untyped > 0 && (
+        <p className="warn">이수구분이 정해지지 않은 과목 {untyped}개가 있습니다. 표의 구분 칸에서 지정해야 학점에 반영됩니다.</p>
+      )}
 
       <div className="table-wrap">
         <table>
@@ -74,7 +80,14 @@ export default function ManualScreen({ program, courseMap, taken, onChange, onAd
                   <td><input type="checkbox" checked={!!t} readOnly aria-label={`${c.name} 선택`} /></td>
                   <td className="code">{c.code}</td>
                   <td>{c.name}{t?.status === 'IN_PROGRESS' && <span className="chip">수강 중</span>}</td>
-                  <td>{c.typeByProgram[program.programId]}</td>
+                  <td onClick={(e) => e.stopPropagation()}>
+                    {c.typeByProgram[program.programId] ?? (
+                      <select value="" aria-label={`${c.code} 이수구분`} onChange={(e) => e.target.value && setType(c, e.target.value)}>
+                        <option value="">지정 필요</option>
+                        {categories.map((cat) => <option key={cat} value={cat}>{cat}</option>)}
+                      </select>
+                    )}
+                  </td>
                   <td>{c.credit}</td>
                 </tr>
               );

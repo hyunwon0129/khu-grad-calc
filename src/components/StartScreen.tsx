@@ -7,12 +7,13 @@ interface Props {
   programId: string;
   savedCount: number;
   savedAt: string | null;
+  synced?: boolean;
   onProgram: (id: string) => void;
   onChoose: (step: Step) => void;
   onClear: () => void;
 }
 
-export default function StartScreen({ majors, programId, savedCount, savedAt, onProgram, onChoose, onClear }: Props) {
+export default function StartScreen({ majors, programId, savedCount, savedAt, synced = false, onProgram, onChoose, onClear }: Props) {
   const [confirming, setConfirming] = useState(false);
 
   return (
@@ -29,7 +30,7 @@ export default function StartScreen({ majors, programId, savedCount, savedAt, on
               <button type="button" className="link" onClick={() => setConfirming(true)}>내 데이터 모두 삭제</button>
             ) : (
               <span className="confirm">
-                <span>이 기기에 저장된 과목과 계획을 모두 지울까요?</span>
+                <span>{synced ? '이 기기와 계정에 저장된 과목과 계획을 모두 지울까요?' : '이 기기에 저장된 과목과 계획을 모두 지울까요?'}</span>
                 <button type="button" onClick={() => { onClear(); setConfirming(false); }}>삭제</button>
                 <button type="button" className="link" onClick={() => setConfirming(false)}>취소</button>
               </span>

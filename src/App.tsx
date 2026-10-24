@@ -1,13 +1,17 @@
 // 화면 흐름: 시작(교육과정·입력 방식 선택) → 사정표 가져오기 | 직접 입력 → 결과
-import { useEffect, useMemo, useState } from 'react';
+// 로그인(선택): 서버가 설정돼 있으면 학수번호·학기·설정을 계정에 동기화
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import coursesData from './data/courses.json';
 import programsData from './data/programs.json';
 import type { Course, Program, TakenCourse } from './lib/types';
-import { clearState, loadState, saveState } from './lib/storage';
+import { clearState, isEmpty, loadState, saveState, type UserData } from './lib/storage';
+import { cloudEnabled } from './lib/cloud';
+import { useCloudSync } from './lib/useCloudSync';
 import StartScreen from './components/StartScreen';
 import ImportScreen from './components/ImportScreen';
 import ManualScreen from './components/ManualScreen';
 import ResultScreen from './components/ResultScreen';
+import AccountPanel from './components/AccountPanel';
 import './App.css';
 
 const baseCourses = coursesData as Course[];
@@ -28,11 +32,21 @@ export default function App() {
   const [excluded, setExcluded] = useState<string[]>(validSaved?.excluded ?? []);
   const [maxCredits, setMaxCredits] = useState(validSaved?.maxCreditsPerSemester ?? DEFAULT_MAX_CREDITS);
   const [savedAt, setSavedAt] = useState(validSaved?.savedAt ?? null);
+  const [accountOpen, setAccountOpen] = useState(false);
+
+  const data: UserData = { programId, taken, custom, excluded, maxCreditsPerSemester: maxCredits };
+
+  const apply = useCallback((d: UserData) => {
+    if (majors.some((p) => p.programId === d.programId)) setProgramId(d.programId);
+    setTaken(d.taken); setCustom(d.custom); setExcluded(d.excluded); setMaxCredits(d.maxCreditsPerSemester);
+  }, []);
+  const sync = useCloudSync(data, apply);
 
   useEffect(() => {
-    if (taken.length === 0 && custom.length === 0 && excluded.length === 0) { clearState(); return; }
-    saveState({ programId, taken, custom, excluded, maxCreditsPerSemester: maxCredits });
+    if (isEmpty(data)) { clearState(); return; }
+    saveState(data);
     setSavedAt(new Date().toISOString().slice(0, 10));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [programId, taken, custom, excluded, maxCredits]);
 
   const program = majors.find((p) => p.programId === programId);
@@ -52,12 +66,41 @@ export default function App() {
     setStep('start');
   };
 
+  const loggedIn = !!sync.session;
+
   return (
     <main>
       <header>
-        <h1>졸업요건 계산기</h1>
-        <p className="muted">비공식 서비스 · 입력한 정보와 파일은 이 브라우저 밖으로 전송되지 않습니다</p>
+        <div className="header-row">
+          <h1>졸업요건 계산기</h1>
+          {cloudEnabled && (
+            <button type="button" className="account-btn" onClick={() => setAccountOpen((v) => !v)} aria-expanded={accountOpen}>
+              {loggedIn ? (sync.session?.user.email?.split('@')[0] ?? '내 계정') : '로그인'}
+            </button>
+          )}
+        </div>
+        <p className="muted">
+          비공식 서비스 · 사정표 파일은 이 브라우저 안에서만 읽습니다
+          {loggedIn ? ' · 학수번호·학기만 계정에 동기화됩니다' : ''}
+        </p>
       </header>
+
+      {cloudEnabled && accountOpen && (
+        <AccountPanel session={sync.session} status={sync.status} lastSynced={sync.lastSynced} onClose={() => setAccountOpen(false)} />
+      )}
+
+      {sync.conflict && (
+        <section className="resume" role="alertdialog" aria-label="동기화 선택">
+          <strong>계정에 저장된 기록과 이 기기의 기록이 다릅니다</strong>
+          <span className="muted">
+            계정: 과목 {sync.conflict.taken.length}개 · 이 기기: 과목 {taken.length}개
+          </span>
+          <div className="actions">
+            <button type="button" className="primary" onClick={() => sync.resolveConflict('cloud')}>계정 기록 불러오기</button>
+            <button type="button" onClick={() => sync.resolveConflict('local')}>이 기기 기록으로 계정 덮어쓰기</button>
+          </div>
+        </section>
+      )}
 
       {step !== 'start' && (
         <nav className="steps" aria-label="단계">
@@ -72,6 +115,7 @@ export default function App() {
           programId={programId}
           savedCount={taken.length}
           savedAt={savedAt}
+          synced={loggedIn}
           onProgram={(id) => { setProgramId(id); setTaken([]); setCustom([]); setExcluded([]); }}
           onChoose={setStep}
           onClear={resetAll}
