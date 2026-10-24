@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import type { Course, Program, TakenCourse } from '../lib/types';
 import { calculate } from '../lib/calc';
-import { recommendNext, recommendPrograms, trackProgress } from '../lib/recommend';
+import { recommendPrograms, trackProgress } from '../lib/recommend';
+import { planRoadmap, nextTerm, termLabel } from '../lib/planner';
+import { currentTerm } from '../lib/parseReport';
 import ProgressChart from './ProgressChart';
 
 interface Props {
@@ -9,51 +11,156 @@ interface Props {
   programs: Program[];
   courseMap: Map<string, Course>;
   taken: TakenCourse[];
+  excluded: string[];
+  maxCredits: number;
+  onExcluded: (codes: string[]) => void;
+  onMaxCredits: (n: number) => void;
   onEdit: () => void;
   onReimport: () => void;
 }
 
-export default function ResultScreen({ program, programs, courseMap, taken, onEdit, onReimport }: Props) {
+export default function ResultScreen(p: Props) {
+  const { program, programs, courseMap, taken, excluded, maxCredits } = p;
   const [includeInProgress, setIncludeInProgress] = useState(false);
+  const [showPlan, setShowPlan] = useState(true);
   const [semestersLeft, setSemestersLeft] = useState(4);
+  const [copied, setCopied] = useState<'idle' | 'ok' | 'manual'>('idle');
 
   const result = calculate(program, courseMap, taken, includeInProgress);
-  const next = recommendNext(program, courseMap, taken).slice(0, 6);
+  const nowTerm = currentTerm();
+  const plan = planRoadmap(program, courseMap, taken, {
+    fromTerm: nextTerm(nowTerm), maxCreditsPerSemester: maxCredits, excluded: new Set(excluded),
+  });
   const tracks = trackProgress(program, courseMap, taken);
   const others = recommendPrograms(
-    programs.filter((p) => p.kind !== 'MAJOR' && p.campus === program.campus),
+    programs.filter((x) => x.kind !== 'MAJOR' && x.campus === program.campus),
     courseMap, taken, result.totalRemaining, semestersLeft,
   );
+
+  const takenCodes = new Set(taken.map((t) => t.code));
+  const ipCodes = new Set(taken.filter((t) => t.status === 'IN_PROGRESS').map((t) => t.code));
+  const missingRequired = program.courses
+    .map((c) => courseMap.get(c))
+    .filter((c): c is Course => !!c && c.typeByProgram[program.programId] === '전필' && !takenCodes.has(c.code));
   const uncounted = taken.filter((t) => !courseMap.get(t.code)?.typeByProgram[program.programId]).length;
-  const hasPending = result.areas.some((a) => a.pending > 0) || taken.some((t) => t.status === 'IN_PROGRESS');
+  const hasPending = ipCodes.size > 0;
+
+  const gradLabel =
+    plan.graduationTerm === '충족' ? '전공 요건 충족'
+    : plan.graduationTerm ? `계획대로 들으면 ${termLabel(plan.graduationTerm)}에 전공 요건 충족`
+    : '현재 계획으로는 전공 요건을 다 채우지 못합니다';
+
+  const summary = [
+    `[졸업요건 현황] ${program.department} ${program.admissionYearRange[0]}학번 교육과정`,
+    `전공 ${result.totalEarned}/${result.totalRequired}학점 (잔여 ${result.totalRemaining})`,
+    ...result.areas.map((a) => `- ${a.category} ${a.earned}/${a.required}${a.remaining ? ` (잔여 ${a.remaining})` : ' 완료'}`),
+    missingRequired.length ? `미이수 전필: ${missingRequired.map((c) => c.name).join(', ')}` : '전필: 모두 이수',
+    gradLabel,
+  ].join('\n');
+
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(summary);
+      setCopied('ok');
+    } catch {
+      setCopied('manual');
+    }
+  };
+
+  const exclude = (code: string) => p.onExcluded([...excluded, code]);
+  const restore = (code: string) => p.onExcluded(excluded.filter((c) => c !== code));
 
   return (
     <>
       <section>
         <h2>이수 현황</h2>
-        <ProgressChart result={result} showPending={!includeInProgress} />
+        <ProgressChart
+          result={result}
+          showPending={!includeInProgress}
+          planned={showPlan ? plan.plannedByCategory : undefined}
+          graduationLabel={gradLabel}
+        />
         <div className="toolbar">
           {hasPending && (
-            <label><input id="include-ip" type="checkbox" checked={includeInProgress} onChange={(e) => setIncludeInProgress(e.target.checked)} /> 수강 중 과목도 이수한 것으로 계산</label>
+            <label><input id="include-ip" type="checkbox" checked={includeInProgress} onChange={(e) => setIncludeInProgress(e.target.checked)} /> 수강 중 과목도 이수로 계산</label>
           )}
-          <button type="button" className="link" onClick={onEdit}>과목 직접 수정</button>
-          <button type="button" className="link" onClick={onReimport}>사정표 다시 불러오기</button>
+          <label><input id="show-plan" type="checkbox" checked={showPlan} onChange={(e) => setShowPlan(e.target.checked)} /> 로드맵 계획 겹쳐 보기</label>
+        </div>
+        <div className="toolbar">
+          <button type="button" className="link" onClick={p.onEdit}>과목 직접 수정</button>
+          <button type="button" className="link" onClick={p.onReimport}>사정표 다시 불러오기</button>
         </div>
         {uncounted > 0 && <p className="muted">이 교육과정에 속하지 않거나 이수구분이 정해지지 않은 과목 {uncounted}개는 전공 학점에서 제외했습니다.</p>}
       </section>
 
       <section>
-        <h2>다음 학기 추천 과목</h2>
-        <ul>
-          {next.map((c) => (
-            <li key={c.code}>
-              <span className={c.available ? 'chip ok-chip' : 'chip'}>{c.available ? '수강 가능' : '선수과목 필요'}</span>
-              {c.name} <span className="muted">({c.type} · {c.year}학년 {c.semester}학기 권장)</span>
-              {!c.available && <span className="muted"> — {c.missingPrereqs.join(', ')} 먼저</span>}
+        <h2>꼭 들어야 하는 과목</h2>
+        {missingRequired.length === 0 ? (
+          <p className="ok">전공필수 과목을 모두 이수했습니다.</p>
+        ) : (
+          <ul className="must">
+            {missingRequired.map((c) => (
+              <li key={c.code}>
+                <span className="chip warn-chip">전필</span>{c.name} <span className="muted code">{c.code} · {c.credit}학점</span>
+              </li>
+            ))}
+          </ul>
+        )}
+        <p className="muted">전공필수는 학점을 다 채워도 빠지면 졸업할 수 없는 경우가 많습니다. 정확한 규정은 학과 교육과정에서 확인하세요.</p>
+      </section>
+
+      <section>
+        <h2>학기별 로드맵</h2>
+        <div className="toolbar">
+          <label htmlFor="max-credits">학기당 전공 학점</label>
+          <input id="max-credits" type="number" min={3} max={21} step={3} value={maxCredits} className="num"
+            onChange={(e) => p.onMaxCredits(Math.max(3, Number(e.target.value)))} />
+          <span className="muted">교양·일반선택을 뺀 전공 과목 기준</span>
+        </div>
+
+        {plan.semesters.length === 0 && plan.graduationTerm === '충족' && <p className="ok">더 들어야 할 전공 과목이 없습니다.</p>}
+
+        <ol className="roadmap">
+          {plan.semesters.map((s, i) => (
+            <li key={s.term} className="sem">
+              <div className="sem-head">
+                <strong>{termLabel(s.term)}</strong>
+                {i === 0 && <span className="chip ok-chip">다음 학기</span>}
+                <span className="muted">{s.credits}학점</span>
+              </div>
+              <ul>
+                {s.courses.map((c) => (
+                  <li key={c.code} className="sem-course">
+                    <span className="chip">{c.type}</span>
+                    <span>{c.name}{c.offParity && <span className="muted"> · 권장 학기 아님</span>}</span>
+                    <button type="button" className="link small" onClick={() => exclude(c.code)} aria-label={`${c.name} 계획에서 빼기`}>빼기</button>
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
-          {next.length === 0 && <li className="muted">이 교육과정의 과목을 모두 이수했습니다.</li>}
-        </ul>
+        </ol>
+
+        {plan.shortfall.length > 0 && (
+          <p className="warn">
+            과목이 모자라 채우지 못한 학점: {plan.shortfall.map((s) => `${s.category} ${s.credits}`).join(', ')}.
+            {' '}뺀 과목을 되돌리거나 학기당 학점을 늘려 보세요.
+          </p>
+        )}
+        {plan.blocked.length > 0 && plan.shortfall.length > 0 && (
+          <p className="muted">선수과목 때문에 배치하지 못한 과목: {plan.blocked.join(', ')}</p>
+        )}
+        {excluded.length > 0 && (
+          <p className="muted">
+            계획에서 뺀 과목:{' '}
+            {excluded.map((code) => (
+              <button key={code} type="button" className="link small" onClick={() => restore(code)}>
+                {courseMap.get(code)?.name ?? code} 되돌리기
+              </button>
+            ))}
+          </p>
+        )}
+        <p className="muted">선수과목과 권장 학기를 기준으로 짠 예시입니다. 실제 개설 여부는 수강편람에서 확인하세요.</p>
       </section>
 
       {tracks.length > 0 && (
@@ -85,6 +192,18 @@ export default function ResultScreen({ program, programs, courseMap, taken, onEd
           ))}
           {others.length === 0 && <li className="muted">추천할 다전공·MD 데이터가 아직 없습니다.</li>}
         </ul>
+      </section>
+
+      <section>
+        <h2>상담용 요약</h2>
+        <p className="muted">지도교수 상담이나 학과 사무실 문의 때 붙여넣기 좋은 요약입니다. 이름·학번은 들어가지 않습니다.</p>
+        <textarea id="summary" className="summary" readOnly value={summary} rows={summary.split('\n').length}
+          onFocus={(e) => e.currentTarget.select()} />
+        <div className="actions">
+          <button type="button" onClick={copy}>요약 복사</button>
+          {copied === 'ok' && <span className="ok" role="status">복사했습니다</span>}
+          {copied === 'manual' && <span className="muted" role="status">자동 복사가 막혀 있습니다. 위 칸을 눌러 선택한 뒤 복사하세요.</span>}
+        </div>
       </section>
     </>
   );

@@ -110,3 +110,29 @@ li .chip:first-child { margin-left: 0; }
 .sw-ip { background: repeating-linear-gradient(135deg, var(--accent) 0 3px, transparent 3px 6px); opacity: 0.55; border: 1px solid var(--line); }
 .sw-rest { background: var(--line); }
 @media (prefers-reduced-motion: reduce) { .pbar span { transition: none; } }
+
+/* 로드맵·요약·이어보기 */
+.progress-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; }
+.grad { font-size: 0.88rem; font-weight: 600; }
+.pbar-plan { box-shadow: inset 0 0 0 1.5px var(--accent); border-radius: 0 5px 5px 0; }
+.sw-plan { box-shadow: inset 0 0 0 1.5px var(--accent); background: var(--bg); }
+.warn-chip { color: var(--warn); border-color: var(--warn); }
+.must { list-style: none; padding: 0; }
+.roadmap { list-style: none; padding: 0; margin: 12px 0; display: flex; flex-direction: column; gap: 0; }
+.sem { position: relative; padding: 0 0 16px 22px; border-left: 2px solid var(--line); margin-left: 6px; }
+.sem:last-child { border-left-color: transparent; padding-bottom: 4px; }
+.sem::before { content: ""; position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); }
+.sem:first-child::before { background: var(--accent); }
+.sem-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 6px; }
+.sem ul { list-style: none; padding: 0; }
+.sem-course { display: flex; align-items: baseline; gap: 4px; flex-wrap: wrap; }
+.sem-course .chip { margin-left: 0; }
+.sem-course > span:nth-child(2) { flex: 1 1 auto; min-width: 0; }
+button.small { font-size: 0.8rem; margin-right: 8px; }
+.summary {
+  width: 100%; box-sizing: border-box; resize: vertical; font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.6;
+  padding: 10px 12px; background: var(--surface); color: var(--fg); border: 1px solid var(--line); border-radius: 4px;
+}
+.resume { display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; background: var(--surface); border-radius: 6px; }
+.confirm { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 0.9rem; }
+.features ul { padding-left: 20px; }

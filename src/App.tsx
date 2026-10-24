@@ -1,8 +1,9 @@
 // 화면 흐름: 시작(교육과정·입력 방식 선택) → 사정표 가져오기 | 직접 입력 → 결과
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import coursesData from './data/courses.json';
 import programsData from './data/programs.json';
 import type { Course, Program, TakenCourse } from './lib/types';
+import { clearState, loadState, saveState } from './lib/storage';
 import StartScreen from './components/StartScreen';
 import ImportScreen from './components/ImportScreen';
 import ManualScreen from './components/ManualScreen';
@@ -11,15 +12,28 @@ import './App.css';
 
 const baseCourses = coursesData as Course[];
 const programs = programsData as Program[];
+const majors = programs.filter((p) => p.kind === 'MAJOR');
+const DEFAULT_MAX_CREDITS = 9;
 
 export type Step = 'start' | 'import' | 'manual' | 'result';
 
 export default function App() {
-  const majors = programs.filter((p) => p.kind === 'MAJOR');
+  const saved = useMemo(() => loadState(), []);
+  const validSaved = saved && majors.some((p) => p.programId === saved.programId) ? saved : null;
+
   const [step, setStep] = useState<Step>('start');
-  const [programId, setProgramId] = useState(majors[0]?.programId ?? '');
-  const [taken, setTaken] = useState<TakenCourse[]>([]);
-  const [custom, setCustom] = useState<Course[]>([]); // 목록에 없어 사용자가 직접 지정한 과목
+  const [programId, setProgramId] = useState(validSaved?.programId ?? majors[0]?.programId ?? '');
+  const [taken, setTaken] = useState<TakenCourse[]>(validSaved?.taken ?? []);
+  const [custom, setCustom] = useState<Course[]>(validSaved?.custom ?? []); // 목록에 없어 사용자가 지정한 과목
+  const [excluded, setExcluded] = useState<string[]>(validSaved?.excluded ?? []);
+  const [maxCredits, setMaxCredits] = useState(validSaved?.maxCreditsPerSemester ?? DEFAULT_MAX_CREDITS);
+  const [savedAt, setSavedAt] = useState(validSaved?.savedAt ?? null);
+
+  useEffect(() => {
+    if (taken.length === 0 && custom.length === 0 && excluded.length === 0) { clearState(); return; }
+    saveState({ programId, taken, custom, excluded, maxCreditsPerSemester: maxCredits });
+    setSavedAt(new Date().toISOString().slice(0, 10));
+  }, [programId, taken, custom, excluded, maxCredits]);
 
   const program = majors.find((p) => p.programId === programId);
   const courseMap = useMemo(
@@ -31,6 +45,12 @@ export default function App() {
 
   const addCustom = (c: Course) =>
     setCustom((prev) => [...prev.filter((x) => x.code !== c.code), c]);
+
+  const resetAll = () => {
+    clearState();
+    setTaken([]); setCustom([]); setExcluded([]); setMaxCredits(DEFAULT_MAX_CREDITS); setSavedAt(null);
+    setStep('start');
+  };
 
   return (
     <main>
@@ -50,9 +70,11 @@ export default function App() {
         <StartScreen
           majors={majors}
           programId={programId}
-          hasData={taken.length > 0}
-          onProgram={(id) => { setProgramId(id); setTaken([]); setCustom([]); }}
+          savedCount={taken.length}
+          savedAt={savedAt}
+          onProgram={(id) => { setProgramId(id); setTaken([]); setCustom([]); setExcluded([]); }}
           onChoose={setStep}
+          onClear={resetAll}
         />
       )}
       {step === 'import' && (
@@ -62,6 +84,7 @@ export default function App() {
           onApply={(rows, newCustom) => {
             newCustom.forEach(addCustom);
             setTaken(rows);
+            setExcluded([]);
             setStep('result');
           }}
         />
@@ -82,6 +105,10 @@ export default function App() {
           programs={programs}
           courseMap={courseMap}
           taken={taken}
+          excluded={excluded}
+          maxCredits={maxCredits}
+          onExcluded={setExcluded}
+          onMaxCredits={setMaxCredits}
           onEdit={() => setStep('manual')}
           onReimport={() => setStep('import')}
         />
