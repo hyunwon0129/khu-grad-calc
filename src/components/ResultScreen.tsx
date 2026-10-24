@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { Course, Program, TakenCourse } from '../lib/types';
 import { calculate } from '../lib/calc';
 import { recommendNext, recommendPrograms, trackProgress } from '../lib/recommend';
+import ProgressChart from './ProgressChart';
 
 interface Props {
   program: Program;
@@ -30,26 +31,7 @@ export default function ResultScreen({ program, programs, courseMap, taken, onEd
     <>
       <section>
         <h2>이수 현황</h2>
-        <div className="table-wrap">
-          <table>
-            <thead><tr><th>영역</th><th>취득</th><th>기준</th><th>잔여</th>{hasPending && !includeInProgress && <th>수강 중</th>}</tr></thead>
-            <tbody>
-              {result.areas.map((a) => (
-                <tr key={a.category}>
-                  <td>{a.category}</td>
-                  <td>{a.earned}</td>
-                  <td>{a.required}</td>
-                  <td className={a.remaining ? 'warn' : 'ok'}>{a.remaining === 0 ? '완료' : a.remaining}</td>
-                  {hasPending && !includeInProgress && <td className="muted">{a.pending || ''}</td>}
-                </tr>
-              ))}
-              <tr className="total">
-                <td>전공 합계</td><td>{result.totalEarned}</td><td>{result.totalRequired}</td><td>{result.totalRemaining}</td>
-                {hasPending && !includeInProgress && <td />}
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <ProgressChart result={result} showPending={!includeInProgress} />
         <div className="toolbar">
           {hasPending && (
             <label><input id="include-ip" type="checkbox" checked={includeInProgress} onChange={(e) => setIncludeInProgress(e.target.checked)} /> 수강 중 과목도 이수한 것으로 계산</label>

@@ -86,3 +86,27 @@ li .chip:first-child { margin-left: 0; }
 .track { display: grid; grid-template-columns: minmax(0, 10em) 1fr auto; align-items: center; gap: 10px; }
 .bar { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
 .bar span { display: block; height: 100%; background: var(--accent); }
+
+/* 이수 현황 막대 */
+.progress { display: flex; flex-direction: column; gap: 16px; }
+.progress-total { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; background: var(--surface); border-radius: 6px; }
+.progress-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.progress-head .figure strong { font-size: 1.6rem; color: var(--accent); }
+.progress-total .pbar { height: 14px; }
+.progress-areas { display: flex; flex-direction: column; gap: 10px; }
+.progress-row { display: grid; grid-template-columns: 3em minmax(0, 1fr) 3.6em 4.6em; align-items: center; gap: 10px; }
+.progress .label { font-weight: 600; }
+.progress .figure { font-variant-numeric: tabular-nums; text-align: right; }
+.progress .remain { font-size: 0.85rem; text-align: right; font-variant-numeric: tabular-nums; }
+.progress-head .remain { margin-left: auto; }
+.pbar { display: flex; height: 10px; background: var(--line); border-radius: 5px; overflow: hidden; }
+.pbar span { display: block; height: 100%; transition: width 0.25s ease; }
+.pbar-done { background: var(--accent); }
+.pbar-ip { background: repeating-linear-gradient(135deg, var(--accent) 0 3px, transparent 3px 6px); opacity: 0.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.8rem; color: var(--muted); align-items: center; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { display: inline-block; width: 14px; height: 8px; border-radius: 2px; }
+.sw-done { background: var(--accent); }
+.sw-ip { background: repeating-linear-gradient(135deg, var(--accent) 0 3px, transparent 3px 6px); opacity: 0.55; border: 1px solid var(--line); }
+.sw-rest { background: var(--line); }
+@media (prefers-reduced-motion: reduce) { .pbar span { transition: none; } }
