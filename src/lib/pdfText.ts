@@ -49,8 +49,9 @@ export async function extractPdfLines(file: File): Promise<string[]> {
     }
     return lines;
   } finally {
-    data.fill(0);
-    await task.destroy();
+    // 원본 바이트는 워커로 넘어가 이미 분리(detached)됐을 수 있다. 남아 있을 때만 지운다.
+    if (data.byteLength > 0) data.fill(0);
+    await task.destroy().catch(() => {});
     worker.terminate();
   }
 }

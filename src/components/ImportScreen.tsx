@@ -67,8 +67,10 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
     try {
       const lines = await extractPdfLines(file);
       load(lines, 'PDF');
-    } catch {
-      setError('PDF를 읽지 못했습니다. 암호가 걸려 있거나 손상된 파일인지 확인해 주세요.');
+    } catch (err) {
+      console.error('[사정표 PDF]', err);
+      const detail = err instanceof Error ? err.message : String(err);
+      setError(`PDF를 읽지 못했습니다. 암호가 걸려 있거나 손상된 파일인지 확인해 주세요. (오류: ${detail.slice(0, 120)})`);
     } finally {
       setBusy(false);
     }
