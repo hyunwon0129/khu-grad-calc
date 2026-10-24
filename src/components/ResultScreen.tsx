@@ -5,7 +5,8 @@ import { recommendPrograms, trackProgress } from '../lib/recommend';
 import { planRoadmap, nextTerm, termLabel } from '../lib/planner';
 import { currentTerm } from '../lib/parseReport';
 import ProgressChart from './ProgressChart';
-import type { ImportMeta } from './ImportScreen';
+import SchoolProgress, { areaViews } from './SchoolProgress';
+import type { ReportData } from '../lib/reportLayout';
 import { sameDept } from '../lib/dept';
 
 interface Props {
@@ -13,7 +14,7 @@ interface Props {
   programs: Program[];
   courseMap: Map<string, Course>;
   taken: TakenCourse[];
-  importInfo?: (ImportMeta & { at: Date }) | null;
+  report?: ReportData | null;
   excluded: string[];
   maxCredits: number;
   onExcluded: (codes: string[]) => void;
@@ -54,14 +55,17 @@ export default function ResultScreen(p: Props) {
     : plan.graduationTerm ? `계획대로 들으면 ${termLabel(plan.graduationTerm)}에 전공 요건 충족`
     : '현재 계획으로는 전공 요건을 다 채우지 못합니다';
 
-  const summary = [
-    `[졸업요건 현황] ${program.department} ${program.admissionYearRange[0]}학번 교육과정`,
-    `전공 ${result.totalEarned}/${result.totalRequired}학점 (잔여 ${result.totalRemaining})`,
-    ...result.areas.map((a) => `- ${a.category} ${a.earned}/${a.required}${a.remaining ? ` (잔여 ${a.remaining})` : ' 완료'}`),
-    missingRequired.length ? `미이수 전필: ${missingRequired.map((c) => c.name).join(', ')}` : '전필: 모두 이수',
-    gradLabel,
-  ].join('\n');
-
+  const report = p.report ?? null;
+  const views = report ? areaViews(report, taken, courseMap) : [];
+  const schoolSummary = report
+    ? [
+        `[졸업요건 현황] ${report.department ?? ''} ${report.admissionYear ? `${report.admissionYear}학번` : ''} · 졸업사정표 기준`.replace(/\s+/g, ' '),
+        ...views.map((v) =>
+          v.group === '졸업'
+            ? `- 졸업학점 ${v.done}/${v.required} (남음 ${v.remaining}${v.pending ? `, 이번 학기 ${v.pending}학점 수강 중` : ''})`
+            : `- ${v.name} ${v.earned}/${v.required}${v.remaining ? ` (남음 ${v.remaining})` : ' 충족'}`),
+      ]
+    : [];
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(summary);
@@ -75,19 +79,34 @@ export default function ResultScreen(p: Props) {
   const restore = (code: string) => p.onExcluded(excluded.filter((c) => c !== code));
 
   const counted = taken.length - uncounted;
-  const fileDept = p.importInfo?.department ?? null;
+  const fileDept = report?.department ?? null;
   const mismatch = !!fileDept && !sameDept(fileDept, program.department);
   const showCurriculum = !mismatch || forceShow;
   const curriculumName = `${program.department} ${program.admissionYearRange[0]}학번`;
+
+  const curriculumSummary = [
+    `[${report ? '학과 교육과정 기준 추천' : '졸업요건 현황'}] ${curriculumName} 교육과정${program.verified ? '' : ' (시험용 샘플)'}`,
+    ...(report ? [] : [
+      `전공 ${result.totalEarned}/${result.totalRequired}학점 (잔여 ${result.totalRemaining})`,
+      ...result.areas.map((a) => `- ${a.category} ${a.earned}/${a.required}${a.remaining ? ` (잔여 ${a.remaining})` : ' 완료'}`),
+    ]),
+    missingRequired.length ? `미이수 전필: ${missingRequired.map((c) => c.name).join(', ')}` : '전필: 모두 이수',
+    gradLabel,
+  ];
+  const summary = [
+    ...schoolSummary,
+    ...(report && showCurriculum ? [''] : []),
+    ...(showCurriculum ? curriculumSummary : []),
+  ].join('\n');
 
   return (
     <>
       {mismatch && (
         <section className="notice notice-warn" role="status">
-          <strong>{fileDept} 교육과정 데이터가 아직 없습니다</strong>
+          <strong>{fileDept} 과목 추천은 준비 중입니다</strong>
           <span>
-            올린 사정표는 {fileDept} 기준인데, 앱에 들어 있는 교육과정은 {curriculumName}뿐입니다.
-            {' '}그래서 남은 학점, 꼭 들어야 하는 과목, 학기별 로드맵을 계산하지 않았습니다.
+            남은 학점은 아래처럼 사정표 기준으로 계산했습니다. 꼭 들어야 하는 과목과 학기별 로드맵은
+            {' '}{fileDept} 과목 목록이 있어야 해서 아직 보여드릴 수 없습니다. (앱에 있는 교육과정: {curriculumName})
           </span>
           <span className="actions">
             <button type="button" className="link" onClick={() => setForceShow((v) => !v)}>
@@ -96,7 +115,7 @@ export default function ResultScreen(p: Props) {
           </span>
         </section>
       )}
-      {showCurriculum && !program.verified && (
+      {showCurriculum && !program.verified && !report && (
         <p className="notice">
           <span>
             <strong>시험용 샘플 교육과정 기준</strong> · {curriculumName} 데이터는 기능 확인용으로 만든 가상 값이라 실제 학과 요건과 다릅니다.
@@ -105,26 +124,35 @@ export default function ResultScreen(p: Props) {
       )}
 
       <section>
-        <h2>이수 현황</h2>
+        <h2>이수 현황{report && <span className="h2-sub"> · 졸업사정표 기준</span>}</h2>
         <p className="input-summary">
-          {p.importInfo && (
+          {report && (
             <span className="chip">
-              {p.importInfo.source === 'SAMPLE' ? '가상 사정표' : '사정표 PDF'}{' '}
-              {p.importInfo.at.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', second: '2-digit' })} 불러옴
+              {report.source === 'SAMPLE' ? '가상 사정표' : '사정표 PDF'}{' '}
+              {new Date(report.importedAt).toLocaleString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })} 불러옴
             </span>
           )}
-          입력된 과목 <strong>{taken.length}</strong>개 중 <strong>{counted}</strong>개가 이 교육과정 학점에 반영됨
-          {ipCodes.size > 0 && <span className="muted"> · 수강 중 {ipCodes.size}개</span>}
+          {report?.department && <><strong>{report.department}</strong>{report.admissionYear ? ` ${report.admissionYear}학번` : ''} · </>}
+          과목 <strong>{taken.length}</strong>개
+          {ipCodes.size > 0 && <span className="muted"> · 이번 학기 수강 중 {ipCodes.size}개</span>}
         </p>
-        {showCurriculum && taken.length > 0 && counted === 0 && (
-          <p className="warn" role="status">
-            입력한 과목이 선택한 교육과정의 과목 목록에 하나도 없어 학점이 0으로 계산됐습니다.
-            {!program.verified && ' 지금 교육과정 데이터는 검증 전(샘플)이라 실제 과목이 들어 있지 않습니다.'}
-            {' '}과목 직접 수정에서 이수구분을 지정하면 반영됩니다.
-          </p>
-        )}
-        {showCurriculum && (
+
+        {report && report.areas.length > 0 ? (
+          <SchoolProgress report={report} taken={taken} courseMap={courseMap} />
+        ) : report ? (
+          <p className="warn">사정표에서 영역별 학점을 읽지 못했습니다. 아래 학과 교육과정 기준 결과를 참고하세요.</p>
+        ) : null}
+
+        {(!report || report.areas.length === 0) && showCurriculum && (
           <>
+            {!program.verified && (
+              <p className="notice"><span><strong>시험용 샘플 교육과정 기준</strong> · {curriculumName} 데이터는 기능 확인용 가상 값입니다.</span></p>
+            )}
+            {taken.length > 0 && counted === 0 && (
+              <p className="warn" role="status">
+                입력한 과목이 선택한 교육과정의 과목 목록에 하나도 없어 학점이 0으로 계산됐습니다. 과목 직접 수정에서 이수구분을 지정하면 반영됩니다.
+              </p>
+            )}
             <ProgressChart
               result={result}
               showPending={!includeInProgress}
@@ -137,14 +165,18 @@ export default function ResultScreen(p: Props) {
               )}
               <label><input id="show-plan" type="checkbox" checked={showPlan} onChange={(e) => setShowPlan(e.target.checked)} /> 로드맵 계획 겹쳐 보기</label>
             </div>
+            {uncounted > 0 && <p className="muted">이 교육과정에 속하지 않거나 이수구분이 정해지지 않은 과목 {uncounted}개는 전공 학점에서 제외했습니다.</p>}
           </>
         )}
         <div className="toolbar">
           <button type="button" className="link" onClick={p.onEdit}>과목 직접 수정</button>
           <button type="button" className="link" onClick={p.onReimport}>사정표 다시 불러오기</button>
         </div>
-        {uncounted > 0 && <p className="muted">이 교육과정에 속하지 않거나 이수구분이 정해지지 않은 과목 {uncounted}개는 전공 학점에서 제외했습니다.</p>}
       </section>
+
+      {showCurriculum && report && !program.verified && (
+        <p className="notice"><span><strong>아래 추천은 시험용 샘플 교육과정 기준</strong> · {curriculumName} 데이터는 기능 확인용 가상 값입니다.</span></p>
+      )}
 
       {showCurriculum && (
         <>
@@ -252,7 +284,7 @@ export default function ResultScreen(p: Props) {
         </ul>
       </section>
 
-      {showCurriculum && (
+      {(showCurriculum || report) && (
       <section>
         <h2>상담용 요약</h2>
         <p className="muted">지도교수 상담이나 학과 사무실 문의 때 붙여넣기 좋은 요약입니다. 이름·학번은 들어가지 않습니다.</p>

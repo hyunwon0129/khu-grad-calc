@@ -20,7 +20,12 @@ export function groupIntoLines(items: TextItem[], tolerance = 2): string[] {
     .map((r) => r.items.sort((a, b) => a.x - b.x).map((i) => i.str).join(' ').replace(/\s+/g, ' ').trim());
 }
 
-export async function extractPdfLines(file: File): Promise<string[]> {
+export interface PdfText {
+  lines: string[];
+  items: TextItem[]; // 좌표 포함 (여러 쪽이면 쪽마다 아래로 이어 붙인 좌표)
+}
+
+export async function extractPdfText(file: File): Promise<PdfText> {
   const pdfjs = await import('pdfjs-dist');
   const { default: PdfWorker } = await import('pdfjs-dist/build/pdf.worker.min.mjs?worker&inline');
   const worker = new PdfWorker();
@@ -38,16 +43,19 @@ export async function extractPdfLines(file: File): Promise<string[]> {
   const doc = await task.promise;
   try {
     const lines: string[] = [];
+    const all: TextItem[] = [];
     for (let p = 1; p <= doc.numPages; p++) {
       const page = await doc.getPage(p);
       const content = await page.getTextContent();
       const items: TextItem[] = [];
       for (const it of content.items) {
-        if ('str' in it) items.push({ str: it.str, x: it.transform[4], y: it.transform[5] });
+        if ('str' in it && it.str.trim()) items.push({ str: it.str, x: it.transform[4], y: it.transform[5] });
       }
       lines.push(...groupIntoLines(items));
+      const offset = (p - 1) * 10000; // 다음 쪽은 더 아래에 있는 것으로 취급
+      all.push(...items.map((i) => ({ ...i, y: i.y - offset })));
     }
-    return lines;
+    return { lines, items: all };
   } finally {
     // 원본 바이트는 워커로 넘어가 이미 분리(detached)됐을 수 있다. 남아 있을 때만 지운다.
     if (data.byteLength > 0) data.fill(0);

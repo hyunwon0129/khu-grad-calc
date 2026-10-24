@@ -154,3 +154,11 @@ button:disabled { cursor: not-allowed; opacity: 0.6; }
 .notice-warn { border-left-color: var(--warn); }
 .notice-warn strong { color: var(--warn); }
 p.notice { margin: 0; }
+.h2-sub { font-weight: 400; font-size: 0.85rem; color: var(--muted); }
+.group-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; color: var(--muted); }
+.school-row { grid-template-columns: 4.6em minmax(0, 1fr) 3.6em 4.2em; }
+.course-groups summary { cursor: pointer; font-size: 0.9rem; color: var(--accent); }
+.course-groups[open] summary { margin-bottom: 8px; }
+.course-group { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; font-size: 0.88rem; }
+.course-group ul { padding-left: 16px; }
+.course-group .code { font-family: var(--font-mono); font-size: 0.82em; }

@@ -11,6 +11,7 @@ export interface Course {
   name: string;
   credit: number;
   typeByProgram: Record<string, Category>; // programId → 이수구분
+  source?: 'import' | 'manual';            // 사정표에서 불러옴 / 직접 추가 (새 사정표를 불러오면 'import'는 교체)
 }
 
 export interface Requirement {

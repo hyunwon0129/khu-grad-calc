@@ -1,34 +1,33 @@
 // 졸업사정표 가져오기: 파일 선택 → 기기 안에서 추출 → 확인·수정 → 적용
+// 이수구분은 학교가 사정표에 판정해 둔 값(학사제도 이수구분 코드)을 그대로 쓴다. 학과 교육과정 데이터가 없어도 된다.
 import { useState } from 'react';
 import type { Course, Program, TakenCourse, CourseStatus } from '../lib/types';
-import { parseReportLines, SAMPLE_REPORT_LINES, type ParseResult } from '../lib/parseReport';
-import { extractPdfLines } from '../lib/pdfText';
-
-/** 사정표에서 불러와 만든 과목 표식. 새 사정표를 불러오면 이 표식의 과목은 모두 교체된다. */
-export const IMPORTED_NAME = '사정표에서 불러온 과목';
-
-export interface ImportMeta {
-  count: number;
-  source: 'PDF' | 'SAMPLE';
-  department: string | null;
-  admissionYear: number | null;
-}
+import { analyzeReport, SAMPLE_REPORT_LINES, type ParseResult } from '../lib/parseReport';
+import { extractPdfText, type TextItem } from '../lib/pdfText';
+import { SCHOOL_CATEGORIES, SHORT_NAME, type ReportData, type SchoolCategory } from '../lib/reportLayout';
 
 interface Props {
   program: Program;
   courseMap: Map<string, Course>;
-  onApply: (taken: TakenCourse[], custom: Course[], info: ImportMeta) => void;
+  onApply: (taken: TakenCourse[], custom: Course[], report: ReportData) => void;
 }
 
 interface EditRow {
   code: string;
+  name: string;
   credit: number;
   term: string;
   status: CourseStatus;
   include: boolean;
-  known: boolean;
-  lowConfidence: boolean;
-  category: string; // 미등록 과목의 이수구분 (사용자가 지정)
+  category: SchoolCategory | '';
+  needsCheck: boolean;
+}
+
+/** 학교 이수구분 → 선택한 학과 교육과정의 이수구분 (전기·전필·전선). 교육과정에 없는 구분이면 빈 값 */
+export function toProgramCategory(program: Program, cat: SchoolCategory | ''): string {
+  if (!cat) return '';
+  const short = SHORT_NAME[cat] ?? cat;
+  return program.requirements.some((r) => r.category === short) ? short : '';
 }
 
 export default function ImportScreen({ program, courseMap, onApply }: Props) {
@@ -36,17 +35,17 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
   const [error, setError] = useState('');
   const [result, setResult] = useState<ParseResult | null>(null);
   const [rows, setRows] = useState<EditRow[]>([]);
-  const [source, setSource] = useState<'PDF' | 'SAMPLE' | null>(null);
+  const [source, setSource] = useState<'PDF' | 'SAMPLE'>('PDF');
 
   // 직전에 불러온 사정표의 과목은 '알려진 과목'으로 취급하지 않는다 (새 파일에 이전 파일 정보가 섞이지 않게)
-  const knownCourses = [...courseMap.values()].filter((c) => c.name !== IMPORTED_NAME);
+  const knownCourses = [...courseMap.values()].filter((c) => c.source !== 'import');
   const knownMap = new Map(knownCourses.map((c) => [c.code, c]));
   const creditOf = new Map(knownCourses.map((c) => [c.code, c.credit]));
-  const categories = program.requirements.map((r) => r.category);
 
-  const load = (lines: string[], src: 'PDF' | 'SAMPLE') => {
-    const r = parseReportLines(lines, creditOf);
-    lines.length = 0; // 추출한 원문은 파싱 직후 버린다
+  const load = (lines: string[], items: TextItem[] | null, src: 'PDF' | 'SAMPLE') => {
+    const r = analyzeReport(lines, items, creditOf);
+    lines.length = 0; // 추출한 원문은 분석 직후 버린다
+    if (items) items.length = 0;
     if (r.rows.length === 0) {
       setError('이 파일에서 과목을 찾지 못했습니다. 학사정보시스템에서 내려받은 졸업사정표 PDF인지 확인해 주세요. 스캔·사진을 PDF로 만든 파일은 아직 읽을 수 없습니다.');
       return;
@@ -56,13 +55,13 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
     setRows(
       r.rows.map((x) => ({
         code: x.code,
+        name: knownMap.get(x.code)?.name ?? x.name,
         credit: x.credit ?? 3,
         term: x.term ?? '',
         status: x.status,
         include: true,
-        known: x.known,
-        lowConfidence: x.lowConfidence,
-        category: knownMap.get(x.code)?.typeByProgram[program.programId] ?? '',
+        category: x.category ?? '',
+        needsCheck: !x.category || !x.term || (!x.creditRead && !x.known),
       })),
     );
   };
@@ -78,8 +77,8 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
     }
     setBusy(true);
     try {
-      const lines = await extractPdfLines(file);
-      load(lines, 'PDF');
+      const { lines, items } = await extractPdfText(file);
+      load(lines, items, 'PDF');
     } catch (err) {
       console.error('[사정표 PDF]', err);
       const detail = err instanceof Error ? err.message : String(err);
@@ -93,24 +92,34 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
     setRows((prev) => prev.map((r, j) => (j === i ? { ...r, ...patch } : r)));
 
   const apply = () => {
+    if (!result) return;
     const picked = rows.filter((r) => r.include);
-    // 목록에 없는 과목은 학점과 함께 모두 보관한다. 이수구분을 안 골랐으면 나중에 '과목 직접 수정'에서 지정할 수 있다.
+    // 교육과정 목록에 없는 과목은 사정표 값(과목명·학점·학교 이수구분)으로 보관한다.
     const custom: Course[] = picked
-      .filter((r) => !r.known)
-      .map((r) => ({
-        code: r.code,
-        name: IMPORTED_NAME,
-        credit: r.credit,
-        typeByProgram: r.category ? { [program.programId]: r.category } : {},
-      }));
-    onApply(
-      picked.map((r) => ({ code: r.code, term: r.term || '-', status: r.status })),
-      custom,
-      { count: picked.length, source: source ?? 'PDF', department: result?.departmentHint ?? null, admissionYear: result?.admissionYearHint ?? null },
-    );
+      .filter((r) => !knownMap.has(r.code))
+      .map((r) => {
+        const programCat = toProgramCategory(program, r.category);
+        return {
+          code: r.code,
+          name: r.name || '사정표 과목',
+          credit: r.credit,
+          typeByProgram: programCat ? { [program.programId]: programCat } : {},
+          source: 'import' as const,
+        };
+      });
+    const report: ReportData = {
+      source,
+      importedAt: new Date().toISOString(),
+      department: result.departmentHint,
+      admissionYear: result.admissionYearHint,
+      areas: result.areas,
+      categories: Object.fromEntries(picked.filter((r) => r.category).map((r) => [r.code, r.category as SchoolCategory])),
+    };
+    onApply(picked.map((r) => ({ code: r.code, term: r.term || '-', status: r.status })), custom, report);
   };
 
-  const unknownWithoutCategory = rows.filter((r) => r.include && !r.known && !r.category).length;
+  const uncategorized = rows.filter((r) => r.include && !r.category).length;
+  const areaCount = result?.areas.length ?? 0;
 
   return (
     <section>
@@ -120,15 +129,15 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
         <div className="stack">
           <div className="notice">
             <strong>파일은 이 브라우저 안에서만 읽습니다.</strong>
-            <span>서버로 보내거나 저장하지 않으며, 학수번호·학점·학기만 꺼내고 이름·학번·연락처 등 나머지 내용은 바로 버립니다.</span>
+            <span>서버로 보내지 않습니다. 과목(학수번호·과목명·학점·학기·이수구분)과 영역별 학점만 꺼내고, 이름·학번·연락처·성적은 버립니다.</span>
           </div>
           <label htmlFor="report-file" className="file-drop">
             <strong>{busy ? '읽는 중…' : '졸업사정표 PDF 선택'}</strong>
-            <span className="muted">학사정보시스템 → 졸업사정표 → PDF로 저장한 파일</span>
+            <span className="muted">학사정보시스템 → 졸업사정표 → PDF로 저장한 파일 · 모든 학과 가능</span>
             <input id="report-file" type="file" accept="application/pdf,.pdf" onChange={onFile} disabled={busy} />
           </label>
           <p>
-            <button type="button" className="link" onClick={() => load([...SAMPLE_REPORT_LINES], 'SAMPLE')}>
+            <button type="button" className="link" onClick={() => load([...SAMPLE_REPORT_LINES], null, 'SAMPLE')}>
               가상 사정표로 먼저 체험해 보기
             </button>
           </p>
@@ -140,44 +149,44 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
         <div className="stack">
           <ul className="facts">
             <li>읽은 과목 <strong>{rows.length}</strong>개{source === 'SAMPLE' && ' (가상 사정표)'}</li>
-            <li>중복 제거 {result.duplicatesRemoved}건</li>
-            <li>개인정보로 보이는 항목 {result.piiLinesRemoved}건 삭제</li>
             {result.departmentHint && <li>학과 <strong>{result.departmentHint}</strong></li>}
-            {result.admissionYearHint && <li>입학연도 {result.admissionYearHint}년으로 확인됨</li>}
+            {result.admissionYearHint && <li>{result.admissionYearHint}학번</li>}
+            <li>영역별 학점 {areaCount}개 영역</li>
+            <li>중복 제거 {result.duplicatesRemoved}건</li>
+            <li>개인정보 {result.piiLinesRemoved}건 삭제</li>
           </ul>
-          <p className="muted">노란 줄은 확인이 필요한 과목입니다. 틀린 값은 고치고, 빼야 할 과목은 체크를 해제하세요.</p>
+          <p className="muted">
+            이수구분은 학교가 사정표에 표시한 값입니다(학사제도안내의 이수구분 코드 기준). 노란 줄만 확인하고, 빼야 할 과목은 체크를 해제하세요.
+          </p>
 
           <div className="table-wrap">
             <table>
               <thead>
-                <tr><th>반영</th><th>학수번호</th><th>과목명</th><th>학점</th><th>학기</th><th>상태</th><th>이수구분</th></tr>
+                <tr><th>반영</th><th>이수구분</th><th>학수번호</th><th>과목명</th><th>학점</th><th>학기</th><th>상태</th></tr>
               </thead>
               <tbody>
                 {rows.map((r, i) => (
-                  <tr key={`${r.code}-${r.term}`} className={r.lowConfidence ? 'row-check' : undefined}>
+                  <tr key={`${r.code}-${r.term}`} className={r.needsCheck ? 'row-check' : undefined}>
                     <td><input type="checkbox" checked={r.include} onChange={(e) => update(i, { include: e.target.checked })} aria-label={`${r.code} 반영`} /></td>
-                    <td className="code">{r.code}</td>
-                    <td>{knownMap.get(r.code)?.name ?? <span className="muted">목록에 없음</span>}</td>
                     <td>
-                      {r.known ? r.credit : (
-                        <input type="number" min={0} max={6} value={r.credit} className="num" aria-label="학점"
-                          onChange={(e) => update(i, { credit: Number(e.target.value) })} />
-                      )}
+                      <select value={r.category} aria-label={`${r.code} 이수구분`}
+                        onChange={(e) => update(i, { category: e.target.value as SchoolCategory | '' })}>
+                        <option value="">확인 필요</option>
+                        {SCHOOL_CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
+                      </select>
+                    </td>
+                    <td className="code">{r.code}</td>
+                    <td>{r.name || <span className="muted">—</span>}</td>
+                    <td>
+                      <input type="number" min={0} max={6} value={r.credit} className="num" aria-label={`${r.code} 학점`}
+                        onChange={(e) => update(i, { credit: Number(e.target.value) })} />
                     </td>
                     <td>{r.term || <span className="muted">못 읽음</span>}</td>
                     <td>
-                      <select value={r.status} aria-label="상태" onChange={(e) => update(i, { status: e.target.value as CourseStatus })}>
+                      <select value={r.status} aria-label={`${r.code} 상태`} onChange={(e) => update(i, { status: e.target.value as CourseStatus })}>
                         <option value="TAKEN">이수</option>
                         <option value="IN_PROGRESS">수강 중</option>
                       </select>
-                    </td>
-                    <td>
-                      {r.known ? (r.category || <span className="muted">과정 외</span>) : (
-                        <select value={r.category} aria-label="이수구분" onChange={(e) => update(i, { category: e.target.value })}>
-                          <option value="">선택</option>
-                          {categories.map((c) => <option key={c} value={c}>{c}</option>)}
-                        </select>
-                      )}
                     </td>
                   </tr>
                 ))}
@@ -185,8 +194,8 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
             </table>
           </div>
 
-          {unknownWithoutCategory > 0 && (
-            <p className="warn">목록에 없는 과목 {unknownWithoutCategory}개는 이수구분을 고르지 않으면 학점 계산에서 빠집니다.</p>
+          {uncategorized > 0 && (
+            <p className="warn">이수구분을 확인하지 못한 과목이 {uncategorized}개 있습니다. 위 표에서 골라 주세요.</p>
           )}
           <div className="actions">
             <button type="button" className="primary" onClick={apply}>이 내용으로 계산하기</button>

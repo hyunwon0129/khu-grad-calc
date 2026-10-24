@@ -59,7 +59,7 @@ export default function AccountPanel({ session, status, lastSynced, onClose }: P
         <details>
           <summary>계정·데이터 관리</summary>
           <div className="stack">
-            <p className="muted">서버에는 교육과정 선택, 들은 과목의 학수번호·학기·상태, 로드맵 설정만 저장됩니다. 로그인용 이메일은 인증 서비스에 보관됩니다.</p>
+            <p className="muted">서버에는 교육과정 선택, 들은 과목(학수번호·과목명·학점·학기·이수구분), 영역별 학점, 로드맵 설정만 저장됩니다. 로그인용 이메일은 인증 서비스에 보관됩니다.</p>
             {confirm === 'none' && (
               <div className="actions">
                 <button type="button" className="link" onClick={() => setConfirm('data')}>서버에 저장된 내 데이터 삭제</button>
@@ -101,7 +101,7 @@ export default function AccountPanel({ session, status, lastSynced, onClose }: P
       <label className="consent" htmlFor="consent">
         <input id="consent" type="checkbox" checked={consent} onChange={(e) => { setConsent(e.target.checked); writeConsent(e.target.checked); }} />
         <span>
-          교육과정 선택과 들은 과목의 학수번호·학기를 서버에 저장하는 데 동의합니다.
+          교육과정 선택, 들은 과목(학수번호·과목명·학점·학기·이수구분), 사정표의 영역별 학점을 서버에 저장하는 데 동의합니다.
           {' '}이름·학번·성적·사정표 파일은 저장하지 않으며, 언제든 삭제·탈퇴할 수 있습니다.
         </span>
       </label>

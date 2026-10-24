@@ -2,6 +2,11 @@
 // 원칙: 필요한 필드(학수번호·학점·학기)만 꺼내고 나머지 텍스트는 결과에 담지 않는다.
 // 한글이 추출되지 않아도 동작하도록 학수번호·숫자 패턴만 사용한다.
 import type { CourseStatus } from './types';
+import type { TextItem } from './pdfText';
+import {
+  categorizeItems, categorizeLines, graduationFromItems, reconcile, summarizeLines,
+  type ReportArea, type SchoolCategory,
+} from './reportLayout';
 
 export interface ParsedRow {
   code: string;
@@ -10,6 +15,9 @@ export interface ParsedRow {
   status: CourseStatus;
   known: boolean;          // courses.json에 있는 학수번호인가
   lowConfidence: boolean;  // 학점·학기를 못 읽었거나 미등록 → 확인 필요
+  category?: SchoolCategory; // 학교가 판정한 이수구분 (사정표의 이수구분 코드·묶음 기준)
+  name: string;             // 과목명 (학수번호와 학점 사이 글자)
+  creditRead: boolean;      // 학점을 사정표에서 직접 읽었는가
 }
 
 export interface ParseResult {
@@ -19,6 +27,7 @@ export interface ParseResult {
   duplicatesRemoved: number;
   subtotalCount: number;            // 취득 / 기준 형태로 읽힌 소계 줄 수
   departmentHint: string | null;    // 사정표 머리 부분의 학과명 (…학과/학부/전공 단어만)
+  areas: ReportArea[];              // 사정표 기준 영역별 취득/기준 (영역 취득에는 이번 학기 수강분 포함)
 }
 
 // 학과명: 과목 목록이 시작되기 전(학생 정보 영역)에서 '…학과/…학부/…전공'으로 끝나는 단어만 꺼낸다.
@@ -102,8 +111,15 @@ export function parseReportLines(
       const known = creditOf.has(code);
       const credit = creditMatch ? Number(creditMatch[1]) : (creditOf.get(code) ?? null);
 
+      const name = segment
+        .slice(0, creditMatch ? creditMatch.index : undefined)
+        .replace(/\s+/g, ' ')
+        .trim()
+        .slice(0, 40);
       raw.push({
         code,
+        name,
+        creditRead: !!creditMatch,
         credit,
         term,
         status: term === nowTerm ? 'IN_PROGRESS' : 'TAKEN',
@@ -131,20 +147,43 @@ export function parseReportLines(
     duplicatesRemoved: raw.length - rows.length,
     subtotalCount,
     departmentHint: findDepartment(headerLines),
+    areas: summarizeLines(lines),
   };
+}
+
+/**
+ * 사정표 전체 분석: 과목 행 + 학교 이수구분 + 영역별 취득/기준.
+ * items(좌표)가 있으면 표 배치로 분류하고, 없으면 줄 앞 코드로만 분류한다.
+ */
+export function analyzeReport(
+  lines: string[],
+  items: TextItem[] | null,
+  creditOf: Map<string, number>,
+  nowTerm = currentTerm(),
+): ParseResult {
+  const base = parseReportLines(lines, creditOf, nowTerm);
+  const cats = items ? categorizeItems(items) : categorizeLines(lines);
+  const grad = items ? graduationFromItems(items) : null;
+  const areas = grad ? [grad, ...base.areas.filter((a) => a.group !== '졸업')] : base.areas;
+  const rows = reconcile(base.rows.map((r) => ({ ...r, category: cats.get(r.code) })), areas);
+  return { ...base, rows, areas };
 }
 
 /** 데모용 가상 사정표 텍스트. 실제 학생 정보가 아니며, 개인정보 제거 과정을 보여주려고 가짜 학번·전화번호를 넣었다. */
 export const SAMPLE_REPORT_LINES = [
   '출력일시 2026-10-25 01:30:00',
   '학번 2025123456 성명 홍길동 학과 [샘플] 가상학과',
-  '01 SAMP1001 3 2025 / 1',
-  '01 SAMP1002 3 2025 / 2',
-  '02 SAMP2001 3 2026 / 1',
-  '02 SAMP2002 3 2026 / 2',
-  '03 SAMP3002 3 2026 / 1',
-  '04 ZZZ1234 2 2025 / 2',
-  '전기 6 / 6   전필 6 / 9   전선 3 / 9',
+  '졸업학점 14 / 130',
+  '필수교과 0 / 4 0 / 17',
+  '배분이수교과 0 / 3 0 / 9',
+  '자유이수 1 / 1 2 / 3',
+  '11 SAMP1001 3 2025 / 1',
+  '11 SAMP1002 3 2025 / 2',
+  '04 SAMP2001 3 2026 / 1',
+  '04 SAMP2002 3 2026 / 2',
+  '05 SAMP3002 3 2026 / 1',
+  '17 ZZZ1234 2 2025 / 2',
+  '전공계: 15 ( 전필: 6/9 전선: 3/9 전기: 6/6 )',
   'SAMP1001 SAMP1002 SAMP2001',
   '문의 031-000-0000 sample@example.com',
 ];

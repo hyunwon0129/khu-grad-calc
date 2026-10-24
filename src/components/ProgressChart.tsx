@@ -10,7 +10,7 @@ interface Props {
   graduationLabel?: string | null;
 }
 
-function Bar({ earned, pending, planned, required, label }: {
+export function Bar({ earned, pending, planned, required, label }: {
   earned: number; pending: number; planned: number; required: number; label: string;
 }) {
   const done = Math.min(earned, required);

@@ -8,7 +8,8 @@ import { clearState, isEmpty, loadState, saveState, type UserData } from './lib/
 import { cloudEnabled } from './lib/cloud';
 import { useCloudSync } from './lib/useCloudSync';
 import StartScreen from './components/StartScreen';
-import ImportScreen, { IMPORTED_NAME, type ImportMeta } from './components/ImportScreen';
+import ImportScreen from './components/ImportScreen';
+import type { ReportData } from './lib/reportLayout';
 import { matchProgram } from './lib/dept';
 import ManualScreen from './components/ManualScreen';
 import ResultScreen from './components/ResultScreen';
@@ -34,13 +35,13 @@ export default function App() {
   const [maxCredits, setMaxCredits] = useState(validSaved?.maxCreditsPerSemester ?? DEFAULT_MAX_CREDITS);
   const [savedAt, setSavedAt] = useState(validSaved?.savedAt ?? null);
   const [accountOpen, setAccountOpen] = useState(false);
-  const [importInfo, setImportInfo] = useState<(ImportMeta & { at: Date }) | null>(null);
+  const [report, setReport] = useState<ReportData | null>(validSaved?.report ?? null); // 졸업사정표 분석 결과
 
-  const data: UserData = { programId, taken, custom, excluded, maxCreditsPerSemester: maxCredits };
+  const data: UserData = { programId, taken, custom, excluded, maxCreditsPerSemester: maxCredits, report };
 
   const apply = useCallback((d: UserData) => {
     if (majors.some((p) => p.programId === d.programId)) setProgramId(d.programId);
-    setTaken(d.taken); setCustom(d.custom); setExcluded(d.excluded); setMaxCredits(d.maxCreditsPerSemester);
+    setTaken(d.taken); setCustom(d.custom); setExcluded(d.excluded); setMaxCredits(d.maxCreditsPerSemester); setReport(d.report ?? null);
   }, []);
   const sync = useCloudSync(data, apply);
 
@@ -49,7 +50,7 @@ export default function App() {
     saveState(data);
     setSavedAt(new Date().toISOString().slice(0, 10));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [programId, taken, custom, excluded, maxCredits]);
+  }, [programId, taken, custom, excluded, maxCredits, report]);
 
   const program = majors.find((p) => p.programId === programId);
   const courseMap = useMemo(
@@ -64,7 +65,7 @@ export default function App() {
 
   const resetAll = () => {
     clearState();
-    setTaken([]); setCustom([]); setExcluded([]); setMaxCredits(DEFAULT_MAX_CREDITS); setSavedAt(null); setImportInfo(null);
+    setTaken([]); setCustom([]); setExcluded([]); setMaxCredits(DEFAULT_MAX_CREDITS); setSavedAt(null); setReport(null);
     setStep('start');
   };
 
@@ -83,7 +84,7 @@ export default function App() {
         </div>
         <p className="muted">
           비공식 서비스 · 사정표 파일은 이 브라우저 안에서만 읽습니다
-          {loggedIn ? ' · 학수번호·학기만 계정에 동기화됩니다' : ''}
+          {loggedIn ? ' · 과목·학점 기록만 계정에 동기화됩니다' : ''}
         </p>
       </header>
 
@@ -118,7 +119,7 @@ export default function App() {
           savedCount={taken.length}
           savedAt={savedAt}
           synced={loggedIn}
-          onProgram={(id) => { setProgramId(id); setTaken([]); setCustom([]); setExcluded([]); }}
+          onProgram={(id) => { setProgramId(id); setTaken([]); setCustom([]); setExcluded([]); setReport(null); }}
           onChoose={setStep}
           onClear={resetAll}
         />
@@ -127,18 +128,18 @@ export default function App() {
         <ImportScreen
           program={program}
           courseMap={courseMap}
-          onApply={(rows, newCustom, info) => {
+          onApply={(rows, newCustom, newReport) => {
             // 이전 사정표에서 만든 과목은 버리고 이번 파일 것으로 교체 (직접 추가한 과목은 유지)
             setCustom((prev) => [
-              ...prev.filter((c) => c.name !== IMPORTED_NAME && !newCustom.some((n) => n.code === c.code)),
+              ...prev.filter((c) => c.source !== 'import' && c.name !== '사정표에서 불러온 과목' && !newCustom.some((n) => n.code === c.code)),
               ...newCustom,
             ]);
             setTaken(rows);
-            setImportInfo({ ...info, at: new Date() });
-            // 사정표의 학과·입학연도에 맞는 교육과정이 있으면 자동으로 바꾼다
-            const matched = info.department ? matchProgram(majors, info.department, info.admissionYear) : undefined;
-            if (matched) setProgramId(matched.programId);
+            setReport(newReport);
             setExcluded([]);
+            // 사정표의 학과·입학연도에 맞는 교육과정이 있으면 자동으로 바꾼다
+            const matched = newReport.department ? matchProgram(majors, newReport.department, newReport.admissionYear) : undefined;
+            if (matched) setProgramId(matched.programId);
             setStep('result');
           }}
         />
@@ -159,7 +160,7 @@ export default function App() {
           programs={programs}
           courseMap={courseMap}
           taken={taken}
-          importInfo={importInfo}
+          report={report}
           excluded={excluded}
           maxCredits={maxCredits}
           onExcluded={setExcluded}
