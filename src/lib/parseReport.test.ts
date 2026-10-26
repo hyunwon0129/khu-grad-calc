@@ -22,7 +22,7 @@ describe('사정표 파서', () => {
   });
 
   it('미등록 학수번호는 확인 필요로 표시', () => {
-    expect(r.rows.find((x) => x.code === 'ZZZ1234')).toMatchObject({ known: false, lowConfidence: true, credit: 2 });
+    expect(r.rows.find((x) => x.code === 'GEC1002')).toMatchObject({ known: false, lowConfidence: true, credit: 2 });
   });
 
   it('학번은 입학연도만 남기고 개인정보 줄을 지운다', () => {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { TextItem } from './pdfText';
-import { categorizeItems, graduationFromItems, reconcile, summarizeLines } from './reportLayout';
+import { categorizeItems, graduationFromItems, matchWithSchool, reconcile, splitItems, summarizeLines } from './reportLayout';
 
 // 실제 사정표와 같은 배치의 가상 좌표 (값은 모두 가상)
 const it_ = (str: string, x: number, y: number): TextItem => ({ str, x, y });
@@ -54,6 +54,14 @@ describe('사정표 레이아웃', () => {
     expect(cats.get('GEC1003')).toBe('교양필수');
   });
 
+  it('붙어서 나온 학수번호·과목명 조각도 분류', () => {
+    const glued = [...items, it_('11', 251, 300), it_('AMTH3001 미분적분학', 297, 300), it_('05 IE401', 251, 290)];
+    const c = categorizeItems(glued);
+    expect(c.get('AMTH3001')).toBe('전공기초');
+    expect(c.get('IE401')).toBe('전공선택');
+    expect(splitItems([it_('2025 / 1', 0, 0)])).toHaveLength(1); // 학수번호가 없는 조각은 그대로
+  });
+
   it("'기타' 묶음은 앞 머리글을 이어받지 않음", () => {
     const withEtc = [...items, it_('기타', 10, 430), it_('02', 22, 420), it_('AMTH2001', 54, 420)];
     expect(categorizeItems(withEtc).get('AMTH2001')).toBeUndefined();
@@ -94,5 +102,19 @@ describe('사정표 레이아웃', () => {
       { group: '교양', name: '배분이수', earned: 6, required: 9 },
       { group: '교양', name: '자유이수', earned: 4, required: 3 },
     ]);
+  });
+
+  it('학교 집계와 비교', () => {
+    const areas = [
+      { group: '졸업' as const, name: '졸업학점', earned: 6, required: 130 },
+      { group: '전공' as const, name: '전공선택', earned: 6, required: 30 },
+    ];
+    const rows = [
+      { credit: 3, status: 'TAKEN' as const, category: '전공선택' as const },
+      { credit: 3, status: 'IN_PROGRESS' as const, category: '전공선택' as const },
+      { credit: 3, status: 'TAKEN' as const, category: '교양필수' as const },
+    ];
+    expect(matchWithSchool(rows, areas)).toEqual({ ok: true, compared: 2, mismatches: [] });
+    expect(matchWithSchool(rows.slice(0, 2), areas).mismatches).toEqual([{ name: '졸업학점', counted: 3, school: 6 }]);
   });
 });

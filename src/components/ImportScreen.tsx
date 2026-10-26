@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import type { Course, Program, TakenCourse, CourseStatus } from '../lib/types';
 import { analyzeReport, SAMPLE_REPORT_LINES, type ParseResult } from '../lib/parseReport';
 import { extractPdfText, type TextItem } from '../lib/pdfText';
-import { SCHOOL_CATEGORIES, SHORT_NAME, type ReportData, type SchoolCategory } from '../lib/reportLayout';
+import { SCHOOL_CATEGORIES, SHORT_NAME, matchWithSchool, type ReportData, type SchoolCategory } from '../lib/reportLayout';
+import MatchBadge from './MatchBadge';
 
 interface Props {
   startWithSample?: boolean;
@@ -163,6 +164,9 @@ export default function ImportScreen({ startWithSample = false, program, courseM
             <li>중복 제거 {result.duplicatesRemoved}건</li>
             <li>개인정보 {result.piiLinesRemoved}건 삭제</li>
           </ul>
+          {result.areas.length > 0 && (
+            <MatchBadge result={matchWithSchool(rows.filter((r) => r.include).map((r) => ({ credit: r.credit, status: r.status, category: r.category })), result.areas)} />
+          )}
           <p className="muted">
             이수구분은 학교가 사정표에 표시한 값입니다(학사제도안내의 이수구분 코드 기준). 노란 줄만 확인하고, 빼야 할 과목은 체크를 해제하세요.
           </p>

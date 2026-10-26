@@ -11,7 +11,8 @@
     "test": "vitest run",
     "validate": "node scripts/validate-data.mjs",
     "preview:artifact": "PREVIEW=1 vite build && node scripts/build-preview.mjs",
-    "deploy:zip": "PREVIEW=1 vite build && node scripts/make-deploy-zip.mjs"
+    "deploy:zip": "PREVIEW=1 vite build && node scripts/make-deploy-zip.mjs",
+    "fixtures": "python3 scripts/fixtures/make_reports.py"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",

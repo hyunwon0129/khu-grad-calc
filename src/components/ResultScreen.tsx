@@ -8,6 +8,8 @@ import ProgressChart from './ProgressChart';
 import SchoolProgress, { areaViews } from './SchoolProgress';
 import VerdictCard from './VerdictCard';
 import WhatIfPanel from './WhatIfPanel';
+import MatchBadge from './MatchBadge';
+import { matchWithSchool } from '../lib/reportLayout';
 import { applyPlans, plannedByArea, type PlannedItem } from '../lib/whatif';
 import { buildVerdict } from '../lib/verdict';
 import type { ReportData } from '../lib/reportLayout';
@@ -149,6 +151,10 @@ export default function ResultScreen(p: Props) {
 
         {report && report.areas.length > 0 ? (
           <>
+            <MatchBadge compact result={matchWithSchool(
+              taken.map((t) => ({ credit: courseMap.get(t.code)?.credit ?? null, status: t.status, category: report.categories[t.code] })),
+              report.areas,
+            )} />
             <SchoolProgress report={report} taken={taken} courseMap={courseMap} planned={plannedByArea(p.plans)} />
             <WhatIfPanel views={views} plans={p.plans} onPlans={p.onPlans} />
           </>

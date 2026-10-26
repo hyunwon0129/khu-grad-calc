@@ -30,3 +30,4 @@ raw/
 *.hwp
 preview/
 release/
+!src/test-fixtures/*.pdf

@@ -212,3 +212,11 @@ button.primary.big { font-size: 1.05rem; padding: 12px 22px; border-radius: 6px;
 .plan-name { flex: 1 1 auto; min-width: 0; }
 .verdict-plan-line { margin: 0; font-weight: 600; color: var(--accent); }
 .verdict-plan-line .chip { margin-left: 0; color: var(--accent); border-color: var(--accent); }
+.match { margin: 0 0 10px; font-size: 0.9rem; }
+.match p { margin: 0; }
+.match-ok { color: var(--ok); font-weight: 600; }
+.match-ok .muted { font-weight: 400; }
+.match-warn { padding: 8px 12px; border-left: 3px solid var(--warn); background: var(--surface); }
+.match-warn > p:first-child { color: var(--warn); font-weight: 600; }
+.match-warn ul { margin: 4px 0; font-size: 0.86rem; }
+.match-mark { display: inline-flex; justify-content: center; align-items: center; width: 1.2em; height: 1.2em; margin-right: 4px; border-radius: 50%; border: 1.5px solid currentColor; font-size: 0.75rem; font-weight: 700; }

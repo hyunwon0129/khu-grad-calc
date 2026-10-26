@@ -123,7 +123,25 @@ export function graduationFromItems(items: TextItem[]): ReportArea | null {
  *  - 행 앞 2자리가 이수구분 코드면 그 구분(그리고 아래 행들이 이어받음)
  *  - 아니면(01·02 같은 영역 번호이거나 비어 있으면) 단의 현재 머리글 구분
  */
-export function categorizeItems(items: TextItem[]): Map<string, SchoolCategory> {
+/**
+ * PDF 글자 조각이 붙어서 나오는 경우('AMTH1101 미분적분학', '05 IE201')를 낱말 단위로 나눈다.
+ * 낱말의 x 위치는 글자 수로 어림한다 (순서와 대략의 거리만 쓰므로 충분).
+ */
+export function splitItems(items: TextItem[], charWidth = 3.6): TextItem[] {
+  const out: TextItem[] = [];
+  for (const i of items) {
+    const parts = [...i.str.matchAll(/\S+/g)];
+    if (parts.length <= 1 || !parts.some((m) => CODE_RE.test(m[0]) || /^\d{2}$/.test(m[0]))) {
+      out.push(i);
+      continue;
+    }
+    for (const m of parts) out.push({ str: m[0], x: i.x + m.index! * charWidth, y: i.y });
+  }
+  return out;
+}
+
+export function categorizeItems(rawItems: TextItem[]): Map<string, SchoolCategory> {
+  const items = splitItems(rawItems);
   const result = new Map<string, SchoolCategory>();
   const codes = items.filter((i) => CODE_RE.test(i.str.trim()));
   if (codes.length === 0) return result;
@@ -200,4 +218,28 @@ export function reconcile<T extends CategorizedRow>(rows: T[], areas: ReportArea
     if (fits.length === 1) r.category = fits[0].name as SchoolCategory;
   }
   return out;
+}
+
+export interface MatchResult {
+  ok: boolean;
+  compared: number;                                   // 비교한 영역 수
+  mismatches: { name: string; counted: number; school: number }[];
+}
+
+/**
+ * 과목별 학점 합과 사정표의 학교 집계를 비교한다.
+ * 영역 취득은 이번 학기 수강분 포함, 졸업학점 취득은 이수 완료분만.
+ */
+export function matchWithSchool(
+  rows: { credit: number | null; status: 'TAKEN' | 'IN_PROGRESS'; category?: SchoolCategory | '' }[],
+  areas: ReportArea[],
+): MatchResult {
+  const mismatches: MatchResult['mismatches'] = [];
+  for (const a of areas) {
+    const counted = rows
+      .filter((r) => (a.group === '졸업' ? r.status === 'TAKEN' : r.category === a.name))
+      .reduce((s, r) => s + (r.credit ?? 0), 0);
+    if (counted !== a.earned) mismatches.push({ name: a.name, counted, school: a.earned });
+  }
+  return { ok: areas.length > 0 && mismatches.length === 0, compared: areas.length, mismatches };
 }
