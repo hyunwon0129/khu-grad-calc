@@ -35,6 +35,11 @@ export function sanitize(s: UserData): UserData {
           admissionYear: Number(s.report.admissionYear) || null,
           areas: (s.report.areas ?? []).map(({ group, name, earned, required }) => ({ group, name, earned: Number(earned), required: Number(required) })),
           categories: Object.fromEntries(Object.entries(s.report.categories ?? {}).map(([k, v]) => [String(k), v])),
+          checks: (s.report.checks ?? []).map(({ key, name, status, detail, hint }) => ({
+            key: String(key), name: String(name), status,
+            ...(detail && key !== 'gpa' ? { detail: String(detail).slice(0, 20) } : {}),
+            ...(hint ? { hint: String(hint) } : {}),
+          })),
         }
       : null,
   };

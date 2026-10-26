@@ -6,6 +6,8 @@ import { planRoadmap, nextTerm, termLabel } from '../lib/planner';
 import { currentTerm } from '../lib/parseReport';
 import ProgressChart from './ProgressChart';
 import SchoolProgress, { areaViews } from './SchoolProgress';
+import VerdictCard from './VerdictCard';
+import { buildVerdict } from '../lib/verdict';
 import type { ReportData } from '../lib/reportLayout';
 import { sameDept } from '../lib/dept';
 
@@ -60,10 +62,12 @@ export default function ResultScreen(p: Props) {
   const schoolSummary = report
     ? [
         `[졸업요건 현황] ${report.department ?? ''} ${report.admissionYear ? `${report.admissionYear}학번` : ''} · 졸업사정표 기준`.replace(/\s+/g, ' '),
+        buildVerdict(views, report.checks ?? []).headline,
         ...views.map((v) =>
           v.group === '졸업'
             ? `- 졸업학점 ${v.done}/${v.required} (남음 ${v.remaining}${v.pending ? `, 이번 학기 ${v.pending}학점 수강 중` : ''})`
             : `- ${v.name} ${v.earned}/${v.required}${v.remaining ? ` (남음 ${v.remaining})` : ' 충족'}`),
+        ...(report.checks ?? []).map((c) => `- ${c.name}: ${({ met: '충족', unmet: '미충족', exempt: '면제', na: '해당 없음', unknown: '확인 필요' } as const)[c.status]}${c.detail ? ` (${c.detail})` : ''}`),
       ]
     : [];
   const copy = async () => {
@@ -122,6 +126,8 @@ export default function ResultScreen(p: Props) {
           </span>
         </p>
       )}
+
+      {report && report.areas.length > 0 && <VerdictCard report={report} views={views} />}
 
       <section>
         <h2>이수 현황{report && <span className="h2-sub"> · 졸업사정표 기준</span>}</h2>

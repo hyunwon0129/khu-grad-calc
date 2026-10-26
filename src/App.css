@@ -24,7 +24,7 @@
   --accent: #e0707f; --warn: #ef8a80; --ok: #7cc67f; --check-bg: #3b3317; --on-accent: #1a1012; color-scheme: dark;
 }
 
-body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.55; word-break: keep-all; overflow-wrap: anywhere; }
 main {
   max-width: 860px; margin: 0 auto;
   padding-block: 16px 24px;
@@ -162,3 +162,36 @@ p.notice { margin: 0; }
 .course-group { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; font-size: 0.88rem; }
 .course-group ul { padding-left: 16px; }
 .course-group .code { font-family: var(--font-mono); font-size: 0.82em; }
+
+/* 결론 카드 */
+.verdict { display: flex; flex-direction: column; gap: 12px; padding: 16px; border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 6px; }
+.verdict-headline { margin: 0; font-size: 1.15rem; font-weight: 700; line-height: 1.45; text-wrap: balance; }
+.verdict-plan p { margin: 6px 0 0; }
+.verdict h3 { font-size: 0.95rem; margin: 0 0 6px; }
+.checks ul { list-style: none; padding: 0; gap: 6px; }
+.check { display: grid; grid-template-columns: 1.4em minmax(0, 1fr) auto; column-gap: 8px; row-gap: 0; align-items: baseline; }
+.check-mark { display: inline-flex; justify-content: center; align-items: center; width: 1.3em; height: 1.3em; border-radius: 50%; font-size: 0.8rem; font-weight: 700; border: 1.5px solid currentColor; }
+.check-met .check-mark, .check-exempt .check-mark, .check-met .check-status, .check-exempt .check-status { color: var(--ok); }
+.check-unmet .check-mark, .check-unmet .check-status { color: var(--warn); }
+.check-unknown .check-mark, .check-unknown .check-status { color: var(--muted); }
+.check-status { font-size: 0.88rem; font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+.check-hint { grid-column: 2 / 4; }
+.manual-checks summary { cursor: pointer; font-size: 0.88rem; color: var(--accent); }
+.manual-checks ul { margin-top: 6px; font-size: 0.88rem; }
+
+/* 처음 화면 */
+.hero { display: flex; flex-direction: column; gap: 14px; padding: 22px 18px; background: var(--surface); border-radius: 8px; }
+.hero-lead { margin: 0; font-size: 1.3rem; font-weight: 700; line-height: 1.45; text-wrap: balance; }
+.hero-points { list-style: none; padding: 0; gap: 4px; font-size: 0.92rem; }
+.hero-points li::before { content: "✓"; color: var(--ok); font-weight: 700; margin-right: 8px; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+button.primary.big { font-size: 1.05rem; padding: 12px 22px; border-radius: 6px; }
+.steps-list { padding-left: 22px; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.steps-list li { display: flex; flex-direction: column; }
+.program-pick { margin-top: 12px; }
+.program-pick summary { cursor: pointer; font-size: 0.9rem; color: var(--accent); margin-bottom: 6px; }
+.header-badge { display: flex; align-items: center; gap: 6px; }
+.lock { color: var(--ok); font-size: 0.6rem; }
+.app-footer { display: flex; flex-direction: column; gap: 4px; }
+.about h3 { font-size: 0.98rem; margin: 8px 0 0; }
+.about ul { font-size: 0.92rem; gap: 6px; }

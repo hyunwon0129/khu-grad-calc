@@ -14,6 +14,7 @@ import { matchProgram } from './lib/dept';
 import ManualScreen from './components/ManualScreen';
 import ResultScreen from './components/ResultScreen';
 import AccountPanel from './components/AccountPanel';
+import AboutScreen, { APP_VERSION, DATA_BASIS } from './components/AboutScreen';
 import './App.css';
 
 const baseCourses = coursesData as Course[];
@@ -21,7 +22,7 @@ const programs = programsData as Program[];
 const majors = programs.filter((p) => p.kind === 'MAJOR');
 const DEFAULT_MAX_CREDITS = 9;
 
-export type Step = 'start' | 'import' | 'manual' | 'result';
+export type Step = 'start' | 'import' | 'manual' | 'result' | 'about';
 
 export default function App() {
   const saved = useMemo(() => loadState(), []);
@@ -35,6 +36,7 @@ export default function App() {
   const [maxCredits, setMaxCredits] = useState(validSaved?.maxCreditsPerSemester ?? DEFAULT_MAX_CREDITS);
   const [savedAt, setSavedAt] = useState(validSaved?.savedAt ?? null);
   const [accountOpen, setAccountOpen] = useState(false);
+  const [sampleOnOpen, setSampleOnOpen] = useState(false);
   const [report, setReport] = useState<ReportData | null>(validSaved?.report ?? null); // 졸업사정표 분석 결과
 
   const data: UserData = { programId, taken, custom, excluded, maxCreditsPerSemester: maxCredits, report };
@@ -51,6 +53,9 @@ export default function App() {
     setSavedAt(new Date().toISOString().slice(0, 10));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [programId, taken, custom, excluded, maxCredits, report]);
+
+  // 화면이 바뀌면 맨 위부터 보이게
+  useEffect(() => { window.scrollTo({ top: 0 }); }, [step]);
 
   const program = majors.find((p) => p.programId === programId);
   const courseMap = useMemo(
@@ -82,8 +87,8 @@ export default function App() {
             </button>
           )}
         </div>
-        <p className="muted">
-          비공식 서비스 · 사정표 파일은 이 브라우저 안에서만 읽습니다
+        <p className="muted header-badge">
+          <span className="lock" aria-hidden="true">●</span> 사정표는 이 기기 안에서만 처리됩니다
           {loggedIn ? ' · 과목·학점 기록만 계정에 동기화됩니다' : ''}
         </p>
       </header>
@@ -105,7 +110,7 @@ export default function App() {
         </section>
       )}
 
-      {step !== 'start' && (
+      {step !== 'start' && step !== 'about' && (
         <nav className="steps" aria-label="단계">
           <button type="button" className="link" onClick={() => setStep('start')}>← 처음으로</button>
           <span className="muted">{program.department} · {program.admissionYearRange[0]}학번 교육과정</span>
@@ -120,12 +125,15 @@ export default function App() {
           savedAt={savedAt}
           synced={loggedIn}
           onProgram={(id) => { setProgramId(id); setTaken([]); setCustom([]); setExcluded([]); setReport(null); }}
-          onChoose={setStep}
+          onChoose={(st) => { setSampleOnOpen(false); setStep(st); }}
+          onSample={() => { setSampleOnOpen(true); setStep('import'); }}
           onClear={resetAll}
         />
       )}
       {step === 'import' && (
         <ImportScreen
+          key={sampleOnOpen ? 'sample' : 'file'}
+          startWithSample={sampleOnOpen}
           program={program}
           courseMap={courseMap}
           onApply={(rows, newCustom, newReport) => {
@@ -170,7 +178,15 @@ export default function App() {
         />
       )}
 
-      <footer className="muted">참고용이며 최종 졸업 여부는 학교 학사 시스템 기준입니다.</footer>
+      {step === 'about' && <AboutScreen onBack={() => setStep('start')} />}
+
+      <footer className="muted app-footer">
+        <span>비공식 서비스 · 참고용이며 최종 졸업 판정은 학교 학사정보시스템 기준입니다.</span>
+        <span>
+          <button type="button" className="link" onClick={() => setStep('about')}>이용 안내·개인정보</button>
+          {' '}· v{APP_VERSION} · {DATA_BASIS} 기준
+        </span>
+      </footer>
     </main>
   );
 }

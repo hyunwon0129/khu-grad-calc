@@ -10,10 +10,11 @@ interface Props {
   synced?: boolean;
   onProgram: (id: string) => void;
   onChoose: (step: Step) => void;
+  onSample: () => void;
   onClear: () => void;
 }
 
-export default function StartScreen({ majors, programId, savedCount, savedAt, synced = false, onProgram, onChoose, onClear }: Props) {
+export default function StartScreen({ majors, programId, savedCount, savedAt, synced = false, onProgram, onChoose, onSample, onClear }: Props) {
   const [confirming, setConfirming] = useState(false);
 
   return (
@@ -39,44 +40,49 @@ export default function StartScreen({ majors, programId, savedCount, savedAt, sy
         </section>
       )}
 
-      <section>
-        <h2>1. 내 교육과정</h2>
-        <label htmlFor="program">학과·학번</label>{' '}
-        <select id="program" value={programId} onChange={(e) => onProgram(e.target.value)}>
-          {majors.map((p) => (
-            <option key={p.programId} value={p.programId}>
-              {p.department} ({p.admissionYearRange[0]}학번){p.verified ? '' : ' · 검증 중'}
-            </option>
-          ))}
-        </select>
-        <p className="muted">졸업사정표로 입력하면 사정표에 적힌 학과로 자동 선택됩니다. 현재는 시험용 샘플 교육과정만 들어 있습니다.</p>
-        {savedCount > 0 && <p className="muted">학과를 바꾸면 입력한 과목이 초기화됩니다.</p>}
-      </section>
-
-      <section>
-        <h2>2. 이수 과목 입력 방식</h2>
-        <div className="choices">
-          <button type="button" className="choice" onClick={() => onChoose('import')}>
-            <strong>졸업사정표로 자동 입력</strong>
-            <span>학사정보시스템에서 받은 졸업사정표 PDF를 올리면 들은 과목을 읽어옵니다. 읽은 결과는 반영 전에 확인·수정할 수 있습니다.</span>
-          </button>
-          <button type="button" className="choice" onClick={() => onChoose('manual')}>
-            <strong>직접 입력</strong>
-            <span>과목 목록에서 들은 과목을 체크합니다. 목록에 없는 과목은 학수번호로 추가할 수 있습니다.</span>
-          </button>
+      <section className="hero">
+        <p className="hero-lead">졸업사정표 PDF 한 장으로<br />졸업까지 남은 학점과 요건을 바로 확인하세요</p>
+        <ul className="hero-points">
+          <li>모든 학과·학번 · 학교가 집계한 값 그대로</li>
+          <li>영어강의·SW·논문 등 학점 밖 요건까지</li>
+          <li>파일은 이 기기 밖으로 나가지 않음</li>
+        </ul>
+        <div className="hero-actions">
+          <button type="button" className="primary big" onClick={() => onChoose('import')}>졸업사정표 올리기</button>
+          <button type="button" className="link" onClick={onSample}>사정표 없이 예시로 둘러보기</button>
         </div>
       </section>
 
-      <section className="features">
-        <h2>결과 화면에서 볼 수 있는 것</h2>
-        <ul>
-          <li>영역별 이수 현황과 남은 학점</li>
-          <li>아직 안 들은 전공필수 과목</li>
-          <li>졸업까지 학기별 로드맵과 예상 충족 학기</li>
-          <li>다전공·마이크로디그리 추천과 근거</li>
-          <li>상담 때 붙여넣을 요약</li>
-        </ul>
-        <p className="muted">입력한 과목은 이 기기 브라우저에만 저장됩니다. 이름·학번·사정표 파일은 저장하지 않습니다.</p>
+      <section>
+        <h2>졸업사정표 PDF 받는 법</h2>
+        <ol className="steps-list">
+          <li><strong>인포21(학사정보시스템)에 로그인</strong><span className="muted">PC 브라우저 권장</span></li>
+          <li><strong>졸업 관련 메뉴에서 졸업사정표 조회</strong><span className="muted">메뉴 이름은 학기마다 조금씩 다를 수 있습니다</span></li>
+          <li><strong>인쇄 → 대상 'PDF로 저장'</strong><span className="muted">사진·캡처가 아닌 PDF로 저장해야 읽을 수 있습니다</span></li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>다른 방법</h2>
+        <div className="choices">
+          <button type="button" className="choice" onClick={() => onChoose('manual')}>
+            <strong>과목을 직접 입력</strong>
+            <span>사정표가 없을 때. 과목 목록에서 체크하거나 학수번호로 추가합니다.</span>
+          </button>
+        </div>
+        <details className="program-pick">
+          <summary>학과 교육과정 직접 선택 (과목 추천·로드맵용)</summary>
+          <label htmlFor="program">학과·학번</label>{' '}
+          <select id="program" value={programId} onChange={(e) => onProgram(e.target.value)}>
+            {majors.map((p) => (
+              <option key={p.programId} value={p.programId}>
+                {p.department} ({p.admissionYearRange[0]}학번){p.verified ? '' : ' · 검증 중'}
+              </option>
+            ))}
+          </select>
+          <p className="muted">사정표를 올리면 학과가 자동으로 선택됩니다. 현재는 시험용 샘플 교육과정만 들어 있습니다.</p>
+          {savedCount > 0 && <p className="muted">학과를 바꾸면 입력한 과목이 초기화됩니다.</p>}
+        </details>
       </section>
     </>
   );

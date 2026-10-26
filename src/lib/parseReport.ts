@@ -7,6 +7,7 @@ import {
   categorizeItems, categorizeLines, graduationFromItems, reconcile, summarizeLines,
   type ReportArea, type SchoolCategory,
 } from './reportLayout';
+import { checksFromItems, checksFromLines, type RequirementCheck } from './requirements';
 
 export interface ParsedRow {
   code: string;
@@ -28,6 +29,7 @@ export interface ParseResult {
   subtotalCount: number;            // 취득 / 기준 형태로 읽힌 소계 줄 수
   departmentHint: string | null;    // 사정표 머리 부분의 학과명 (…학과/학부/전공 단어만)
   areas: ReportArea[];              // 사정표 기준 영역별 취득/기준 (영역 취득에는 이번 학기 수강분 포함)
+  checks: RequirementCheck[];       // 학점 밖 졸업요건
 }
 
 // 학과명: 과목 목록이 시작되기 전(학생 정보 영역)에서 '…학과/…학부/…전공'으로 끝나는 단어만 꺼낸다.
@@ -148,6 +150,7 @@ export function parseReportLines(
     subtotalCount,
     departmentHint: findDepartment(headerLines),
     areas: summarizeLines(lines),
+    checks: [],
   };
 }
 
@@ -166,16 +169,17 @@ export function analyzeReport(
   const grad = items ? graduationFromItems(items) : null;
   const areas = grad ? [grad, ...base.areas.filter((a) => a.group !== '졸업')] : base.areas;
   const rows = reconcile(base.rows.map((r) => ({ ...r, category: cats.get(r.code) })), areas);
-  return { ...base, rows, areas };
+  const checks = items ? checksFromItems(items) : checksFromLines(lines);
+  return { ...base, rows, areas, checks };
 }
 
 /** 데모용 가상 사정표 텍스트. 실제 학생 정보가 아니며, 개인정보 제거 과정을 보여주려고 가짜 학번·전화번호를 넣었다. */
 export const SAMPLE_REPORT_LINES = [
   '출력일시 2026-10-25 01:30:00',
   '학번 2025123456 성명 홍길동 학과 [샘플] 가상학과',
-  '졸업학점 14 / 130',
-  '필수교과 0 / 4 0 / 17',
-  '배분이수교과 0 / 3 0 / 9',
+  '졸업학점 61 / 130',
+  '필수교과 4 / 4 17 / 17',
+  '배분이수교과 2 / 3 6 / 9',
   '자유이수 1 / 1 2 / 3',
   '11 SAMP1001 3 2025 / 1',
   '11 SAMP1002 3 2025 / 2',
@@ -184,6 +188,11 @@ export const SAMPLE_REPORT_LINES = [
   '05 SAMP3002 3 2026 / 1',
   '17 ZZZ1234 2 2025 / 2',
   '전공계: 15 ( 전필: 6/9 전선: 3/9 전기: 6/6 )',
+  '졸업평점 충족',
+  '영어강의 1 / 3',
+  '논문 0 / 1',
+  '졸업능력인증 면제',
+  'SW인증 6 / 6',
   'SAMP1001 SAMP1002 SAMP2001',
   '문의 031-000-0000 sample@example.com',
 ];

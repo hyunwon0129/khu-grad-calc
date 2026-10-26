@@ -1,12 +1,13 @@
 // 졸업사정표 가져오기: 파일 선택 → 기기 안에서 추출 → 확인·수정 → 적용
 // 이수구분은 학교가 사정표에 판정해 둔 값(학사제도 이수구분 코드)을 그대로 쓴다. 학과 교육과정 데이터가 없어도 된다.
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { Course, Program, TakenCourse, CourseStatus } from '../lib/types';
 import { analyzeReport, SAMPLE_REPORT_LINES, type ParseResult } from '../lib/parseReport';
 import { extractPdfText, type TextItem } from '../lib/pdfText';
 import { SCHOOL_CATEGORIES, SHORT_NAME, type ReportData, type SchoolCategory } from '../lib/reportLayout';
 
 interface Props {
+  startWithSample?: boolean;
   program: Program;
   courseMap: Map<string, Course>;
   onApply: (taken: TakenCourse[], custom: Course[], report: ReportData) => void;
@@ -30,7 +31,7 @@ export function toProgramCategory(program: Program, cat: SchoolCategory | ''): s
   return program.requirements.some((r) => r.category === short) ? short : '';
 }
 
-export default function ImportScreen({ program, courseMap, onApply }: Props) {
+export default function ImportScreen({ startWithSample = false, program, courseMap, onApply }: Props) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const [result, setResult] = useState<ParseResult | null>(null);
@@ -65,6 +66,11 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
       })),
     );
   };
+
+  useEffect(() => {
+    if (startWithSample) load([...SAMPLE_REPORT_LINES], null, 'SAMPLE');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const onFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -114,6 +120,7 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
       admissionYear: result.admissionYearHint,
       areas: result.areas,
       categories: Object.fromEntries(picked.filter((r) => r.category).map((r) => [r.code, r.category as SchoolCategory])),
+      checks: result.checks,
     };
     onApply(picked.map((r) => ({ code: r.code, term: r.term || '-', status: r.status })), custom, report);
   };
@@ -152,6 +159,7 @@ export default function ImportScreen({ program, courseMap, onApply }: Props) {
             {result.departmentHint && <li>학과 <strong>{result.departmentHint}</strong></li>}
             {result.admissionYearHint && <li>{result.admissionYearHint}학번</li>}
             <li>영역별 학점 {areaCount}개 영역</li>
+            {result.checks.length > 0 && <li>학점 밖 요건 {result.checks.length}개</li>}
             <li>중복 제거 {result.duplicatesRemoved}건</li>
             <li>개인정보 {result.piiLinesRemoved}건 삭제</li>
           </ul>

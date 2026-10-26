@@ -11,6 +11,7 @@
 //   - '필수교과 x/y a/b' = 영역(취득/기준) 학점(취득/기준)
 //   - 상단 표 '취득학점' 열 = 졸업학점 기준(기준 행) / 취득(취득 행)
 import type { TextItem } from './pdfText';
+import type { RequirementCheck } from './requirements';
 
 export type SchoolCategory =
   | '전공기초' | '전공필수' | '전공선택' | '교양필수' | '배분이수' | '자유이수' | '일반선택' | '교직';
@@ -41,6 +42,7 @@ export interface ReportData {
   admissionYear: number | null;
   areas: ReportArea[];
   categories: Record<string, SchoolCategory>; // 학수번호 → 학교 이수구분
+  checks?: RequirementCheck[];      // 학점 밖 졸업요건 판정 (평점 값은 없음)
 }
 
 export const SCHOOL_CATEGORIES: SchoolCategory[] = ['전공기초', '전공필수', '전공선택', '교양필수', '배분이수', '자유이수', '일반선택', '교직'];
