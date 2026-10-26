@@ -9,13 +9,14 @@ import type { AreaView } from './SchoolProgress';
 interface Props {
   report: ReportData;
   views: AreaView[];
+  plannedViews?: AreaView[] | null;  // 만약에 계획을 반영한 값
 }
 
 const STATUS_LABEL: Record<CheckStatus, string> = {
   met: '충족', unmet: '미충족', exempt: '면제', na: '해당 없음', unknown: '확인 필요',
 };
 
-export default function VerdictCard({ report, views }: Props) {
+export default function VerdictCard({ report, views, plannedViews }: Props) {
   const checks = report.checks ?? [];
   const verdict = buildVerdict(views, checks);
   const estimated = estimateSemestersLeft(report.admissionYear, currentTerm());
@@ -27,6 +28,15 @@ export default function VerdictCard({ report, views }: Props) {
   return (
     <section className="verdict" aria-label="졸업까지 남은 것">
       <p className={verdict.allDone ? 'verdict-headline ok' : 'verdict-headline'}>{verdict.headline}</p>
+      {plannedViews && (
+        <p className="verdict-plan-line">
+          <span className="chip">계획 반영</span>
+          {(() => {
+            const pv = buildVerdict(plannedViews, checks);
+            return pv.allDone ? '계획대로 들으면 학점·요건을 모두 채웁니다' : `계획대로 들으면 ${pv.headline.replace(/^졸업까지 /, '졸업까지 ')}`;
+          })()}
+        </p>
+      )}
 
       {verdict.remainingCredits > 0 && (
         <div className="verdict-plan">

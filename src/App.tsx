@@ -10,6 +10,7 @@ import { useCloudSync } from './lib/useCloudSync';
 import StartScreen from './components/StartScreen';
 import ImportScreen from './components/ImportScreen';
 import type { ReportData } from './lib/reportLayout';
+import type { PlannedItem } from './lib/whatif';
 import { matchProgram } from './lib/dept';
 import ManualScreen from './components/ManualScreen';
 import ResultScreen from './components/ResultScreen';
@@ -38,12 +39,13 @@ export default function App() {
   const [accountOpen, setAccountOpen] = useState(false);
   const [sampleOnOpen, setSampleOnOpen] = useState(false);
   const [report, setReport] = useState<ReportData | null>(validSaved?.report ?? null); // 졸업사정표 분석 결과
+  const [plans, setPlans] = useState<PlannedItem[]>(validSaved?.plans ?? []); // 만약에 계획
 
-  const data: UserData = { programId, taken, custom, excluded, maxCreditsPerSemester: maxCredits, report };
+  const data: UserData = { programId, taken, custom, excluded, maxCreditsPerSemester: maxCredits, report, plans };
 
   const apply = useCallback((d: UserData) => {
     if (majors.some((p) => p.programId === d.programId)) setProgramId(d.programId);
-    setTaken(d.taken); setCustom(d.custom); setExcluded(d.excluded); setMaxCredits(d.maxCreditsPerSemester); setReport(d.report ?? null);
+    setTaken(d.taken); setCustom(d.custom); setExcluded(d.excluded); setMaxCredits(d.maxCreditsPerSemester); setReport(d.report ?? null); setPlans(d.plans ?? []);
   }, []);
   const sync = useCloudSync(data, apply);
 
@@ -52,7 +54,7 @@ export default function App() {
     saveState(data);
     setSavedAt(new Date().toISOString().slice(0, 10));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [programId, taken, custom, excluded, maxCredits, report]);
+  }, [programId, taken, custom, excluded, maxCredits, report, plans]);
 
   // 화면이 바뀌면 맨 위부터 보이게
   useEffect(() => { window.scrollTo({ top: 0 }); }, [step]);
@@ -70,7 +72,7 @@ export default function App() {
 
   const resetAll = () => {
     clearState();
-    setTaken([]); setCustom([]); setExcluded([]); setMaxCredits(DEFAULT_MAX_CREDITS); setSavedAt(null); setReport(null);
+    setTaken([]); setCustom([]); setExcluded([]); setMaxCredits(DEFAULT_MAX_CREDITS); setSavedAt(null); setReport(null); setPlans([]);
     setStep('start');
   };
 
@@ -169,6 +171,8 @@ export default function App() {
           courseMap={courseMap}
           taken={taken}
           report={report}
+          plans={plans}
+          onPlans={setPlans}
           excluded={excluded}
           maxCredits={maxCredits}
           onExcluded={setExcluded}

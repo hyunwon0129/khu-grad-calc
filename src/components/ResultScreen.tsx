@@ -7,6 +7,8 @@ import { currentTerm } from '../lib/parseReport';
 import ProgressChart from './ProgressChart';
 import SchoolProgress, { areaViews } from './SchoolProgress';
 import VerdictCard from './VerdictCard';
+import WhatIfPanel from './WhatIfPanel';
+import { applyPlans, plannedByArea, type PlannedItem } from '../lib/whatif';
 import { buildVerdict } from '../lib/verdict';
 import type { ReportData } from '../lib/reportLayout';
 import { sameDept } from '../lib/dept';
@@ -17,6 +19,8 @@ interface Props {
   courseMap: Map<string, Course>;
   taken: TakenCourse[];
   report?: ReportData | null;
+  plans: PlannedItem[];
+  onPlans: (p: PlannedItem[]) => void;
   excluded: string[];
   maxCredits: number;
   onExcluded: (codes: string[]) => void;
@@ -127,7 +131,7 @@ export default function ResultScreen(p: Props) {
         </p>
       )}
 
-      {report && report.areas.length > 0 && <VerdictCard report={report} views={views} />}
+      {report && report.areas.length > 0 && <VerdictCard report={report} views={views} plannedViews={p.plans.length ? applyPlans(views, p.plans) : null} />}
 
       <section>
         <h2>이수 현황{report && <span className="h2-sub"> · 졸업사정표 기준</span>}</h2>
@@ -144,7 +148,10 @@ export default function ResultScreen(p: Props) {
         </p>
 
         {report && report.areas.length > 0 ? (
-          <SchoolProgress report={report} taken={taken} courseMap={courseMap} />
+          <>
+            <SchoolProgress report={report} taken={taken} courseMap={courseMap} planned={plannedByArea(p.plans)} />
+            <WhatIfPanel views={views} plans={p.plans} onPlans={p.onPlans} />
+          </>
         ) : report ? (
           <p className="warn">사정표에서 영역별 학점을 읽지 못했습니다. 아래 학과 교육과정 기준 결과를 참고하세요.</p>
         ) : null}

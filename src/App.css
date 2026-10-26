@@ -195,3 +195,20 @@ button.primary.big { font-size: 1.05rem; padding: 12px 22px; border-radius: 6px;
 .app-footer { display: flex; flex-direction: column; gap: 4px; }
 .about h3 { font-size: 0.98rem; margin: 8px 0 0; }
 .about ul { font-size: 0.92rem; gap: 6px; }
+
+/* 만약에 시뮬레이터 */
+.whatif { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; padding: 14px 16px; border: 1px dashed var(--accent); border-radius: 6px; }
+.whatif-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px; }
+.whatif h2 { margin: 0; font-size: 1rem; }
+.whatif > p { margin: 0; }
+.quick-adds { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.chip-btn { font-size: 0.82rem; padding: 3px 10px; border-radius: 999px; border-color: var(--accent); color: var(--accent); }
+.chip-btn:hover { background: var(--surface); }
+.whatif-form { display: flex; flex-wrap: wrap; gap: 6px; }
+.whatif-form input:not(.num) { flex: 1 1 140px; min-width: 0; }
+.plan-list { list-style: none; padding: 0; gap: 4px; font-size: 0.9rem; }
+.plan-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
+.plan-list .chip { margin: 0; }
+.plan-name { flex: 1 1 auto; min-width: 0; }
+.verdict-plan-line { margin: 0; font-weight: 600; color: var(--accent); }
+.verdict-plan-line .chip { margin-left: 0; color: var(--accent); border-color: var(--accent); }

@@ -9,6 +9,7 @@ interface Props {
   report: ReportData;
   taken: TakenCourse[];
   courseMap: Map<string, Course>;
+  planned?: Map<string, number>;   // 만약에 계획 학점 (영역별)
 }
 
 export interface AreaView extends ReportArea {
@@ -33,7 +34,8 @@ export function areaViews(report: ReportData, taken: TakenCourse[], courseMap: M
 
 const GROUP_ORDER: ReportArea['group'][] = ['졸업', '전공', '교양'];
 
-export default function SchoolProgress({ report, taken, courseMap }: Props) {
+export default function SchoolProgress({ report, taken, courseMap, planned = new Map() }: Props) {
+  const plannedTotal = [...planned.values()].reduce((s, v) => s + v, 0);
   const views = areaViews(report, taken, courseMap);
   const grad = views.find((v) => v.group === '졸업');
   const lacking = views.filter((v) => v.group !== '졸업' && v.remaining > 0);
@@ -54,13 +56,15 @@ export default function SchoolProgress({ report, taken, courseMap }: Props) {
               {grad.remaining ? `${grad.remaining}학점 남음` : '졸업학점 충족'}
             </span>
           </div>
-          <Bar earned={grad.done} pending={grad.pending} planned={0} required={grad.required} label="졸업학점" />
+          <Bar earned={grad.done} pending={grad.pending} planned={plannedTotal} required={grad.required} label="졸업학점" />
           <div className="progress-foot">
             <span className="muted">
               {grad.pending > 0 ? `이번 학기 ${grad.pending}학점을 마치면 ${grad.done + grad.pending}학점` : `${Math.round((grad.done / grad.required) * 100)}% 달성`}
             </span>
             <span className="grad">
-              {lacking.length === 0 ? '영역별 기준을 모두 채웠거나 이번 학기에 채웁니다' : `부족한 영역 ${lacking.length}개`}
+              {plannedTotal > 0
+                ? `계획 반영 시 ${Math.max(0, grad.remaining - plannedTotal)}학점 남음`
+                : lacking.length === 0 ? '영역별 기준을 모두 채웠거나 이번 학기에 채웁니다' : `부족한 영역 ${lacking.length}개`}
             </span>
           </div>
         </div>
@@ -75,9 +79,17 @@ export default function SchoolProgress({ report, taken, courseMap }: Props) {
             {list.map((a) => (
               <div key={a.name} className="progress-row school-row">
                 <span className="label">{a.name}</span>
-                <Bar earned={a.done} pending={a.pending} planned={0} required={a.required} label={a.name} />
+                <Bar earned={a.done} pending={a.pending} planned={planned.get(a.name) ?? 0} required={a.required} label={a.name} />
                 <span className="figure">{a.earned}<span className="muted">/{a.required}</span></span>
-                <span className={a.remaining ? 'remain warn' : 'remain ok'}>{a.remaining ? `${a.remaining} 남음` : '충족'}</span>
+                {(() => {
+                  const after = Math.max(0, a.remaining - (planned.get(a.name) ?? 0));
+                  const changed = after !== a.remaining;
+                  return (
+                    <span className={after ? 'remain warn' : 'remain ok'} title={changed ? `계획 전 ${a.remaining} 남음` : undefined}>
+                      {after ? `${after} 남음` : changed ? '계획 충족' : '충족'}
+                    </span>
+                  );
+                })()}
               </div>
             ))}
           </div>
@@ -87,6 +99,7 @@ export default function SchoolProgress({ report, taken, courseMap }: Props) {
       <div className="legend" aria-hidden="true">
         <span><i className="sw sw-done" />이수</span>
         {views.some((v) => v.pending > 0) && <span><i className="sw sw-ip" />이번 학기 수강 중</span>}
+        {plannedTotal > 0 && <span><i className="sw sw-plan" />계획</span>}
         <span><i className="sw sw-rest" />남은 학점</span>
         <span className="muted">영역 숫자는 이번 학기 수강분을 포함한 학교 집계입니다</span>
       </div>

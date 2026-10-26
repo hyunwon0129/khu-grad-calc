@@ -2,6 +2,7 @@
 // 브라우저 저장소가 막힌 환경(비공개 창 등)에서도 앱은 그대로 동작한다.
 import type { Course, TakenCourse } from './types';
 import type { ReportData } from './reportLayout';
+import type { PlannedItem } from './whatif';
 
 const KEY = 'khu-grad-calc:v1';
 
@@ -13,6 +14,7 @@ export interface UserData {
   excluded: string[];
   maxCreditsPerSemester: number;
   report?: ReportData | null;       // 졸업사정표 분석 결과 (학교 기준 영역별 학점·과목 분류)
+  plans?: PlannedItem[];            // 만약에 시뮬레이터의 계획 과목
 }
 
 export interface SavedState extends UserData {
@@ -27,6 +29,9 @@ export function sanitize(s: UserData): UserData {
     custom: (s.custom ?? []).map(({ code, name, credit, typeByProgram, source }) => ({ code, name, credit, typeByProgram, ...(source ? { source } : {}) })),
     excluded: (s.excluded ?? []).map(String),
     maxCreditsPerSemester: Number(s.maxCreditsPerSemester) || 9,
+    plans: (s.plans ?? []).slice(0, 40).map(({ id, name, category, credit }) => ({
+      id: String(id), name: String(name ?? '').slice(0, 40), category, credit: Math.max(0, Math.min(6, Number(credit) || 0)),
+    })),
     report: s.report
       ? {
           source: s.report.source === 'SAMPLE' ? 'SAMPLE' : 'PDF',
@@ -50,7 +55,7 @@ export function sameData(a: UserData, b: UserData): boolean {
 }
 
 export function isEmpty(s: UserData): boolean {
-  return s.taken.length === 0 && s.custom.length === 0 && s.excluded.length === 0 && !s.report;
+  return s.taken.length === 0 && s.custom.length === 0 && s.excluded.length === 0 && !s.report && !(s.plans?.length);
 }
 
 export function loadState(): SavedState | null {
