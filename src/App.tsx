@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import coursesData from './data/courses.json';
 import programsData from './data/programs.json';
 import type { Course, Program, TakenCourse } from './lib/types';
-import { clearState, isEmpty, loadState, saveState, type UserData } from './lib/storage';
+import { clearState, getNoSave, isEmpty, loadState, saveState, setNoSave, type UserData } from './lib/storage';
 import { cloudEnabled } from './lib/cloud';
 import { useCloudSync } from './lib/useCloudSync';
 import StartScreen from './components/StartScreen';
@@ -26,7 +26,8 @@ const DEFAULT_MAX_CREDITS = 9;
 export type Step = 'start' | 'import' | 'manual' | 'result' | 'about';
 
 export default function App() {
-  const saved = useMemo(() => loadState(), []);
+  const [noSave, setNoSaveState] = useState(getNoSave);
+  const saved = useMemo(() => (getNoSave() ? null : loadState()), []);
   const validSaved = saved && majors.some((p) => p.programId === saved.programId) ? saved : null;
 
   const [step, setStep] = useState<Step>('start');
@@ -50,11 +51,11 @@ export default function App() {
   const sync = useCloudSync(data, apply);
 
   useEffect(() => {
-    if (isEmpty(data)) { clearState(); return; }
+    if (noSave || isEmpty(data)) { clearState(); return; }
     saveState(data);
     setSavedAt(new Date().toISOString().slice(0, 10));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [programId, taken, custom, excluded, maxCredits, report, plans]);
+  }, [programId, taken, custom, excluded, maxCredits, report, plans, noSave]);
 
   // 화면이 바뀌면 맨 위부터 보이게
   useEffect(() => { window.scrollTo({ top: 0 }); }, [step]);
@@ -136,6 +137,8 @@ export default function App() {
         <ImportScreen
           key={sampleOnOpen ? 'sample' : 'file'}
           startWithSample={sampleOnOpen}
+          noSave={noSave}
+          onNoSave={(v) => { setNoSave(v); setNoSaveState(v); }}
           program={program}
           courseMap={courseMap}
           onApply={(rows, newCustom, newReport) => {

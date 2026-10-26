@@ -85,3 +85,15 @@ export function clearState(): void {
     /* 무시 */
   }
 }
+
+// 공용 PC 모드: 켜면 이 기기에 아무것도 저장하지 않는다 (설정 표시 1글자만 남김)
+const NOSAVE_KEY = 'khu-grad-calc:nosave';
+export function getNoSave(): boolean {
+  try { return localStorage.getItem(NOSAVE_KEY) === '1'; } catch { return false; }
+}
+export function setNoSave(v: boolean): void {
+  try {
+    if (v) { localStorage.setItem(NOSAVE_KEY, '1'); localStorage.removeItem(KEY); }
+    else localStorage.removeItem(NOSAVE_KEY);
+  } catch { /* 무시 */ }
+}

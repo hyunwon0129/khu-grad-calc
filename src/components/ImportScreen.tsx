@@ -9,6 +9,8 @@ import MatchBadge from './MatchBadge';
 
 interface Props {
   startWithSample?: boolean;
+  noSave?: boolean;
+  onNoSave?: (v: boolean) => void;
   program: Program;
   courseMap: Map<string, Course>;
   onApply: (taken: TakenCourse[], custom: Course[], report: ReportData) => void;
@@ -32,7 +34,7 @@ export function toProgramCategory(program: Program, cat: SchoolCategory | ''): s
   return program.requirements.some((r) => r.category === short) ? short : '';
 }
 
-export default function ImportScreen({ startWithSample = false, program, courseMap, onApply }: Props) {
+export default function ImportScreen({ startWithSample = false, noSave = false, onNoSave, program, courseMap, onApply }: Props) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const [result, setResult] = useState<ParseResult | null>(null);
@@ -139,6 +141,12 @@ export default function ImportScreen({ startWithSample = false, program, courseM
             <strong>파일은 이 브라우저 안에서만 읽습니다.</strong>
             <span>서버로 보내지 않습니다. 과목(학수번호·과목명·학점·학기·이수구분)과 영역별 학점만 꺼내고, 이름·학번·연락처·성적은 버립니다.</span>
           </div>
+          {onNoSave && (
+            <label className="consent" htmlFor="no-save">
+              <input id="no-save" type="checkbox" checked={noSave} onChange={(e) => onNoSave(e.target.checked)} />
+              <span><strong>공용 PC예요</strong> · 결과를 이 기기에 저장하지 않습니다. 창을 닫으면 모두 사라집니다.</span>
+            </label>
+          )}
           <label htmlFor="report-file" className="file-drop">
             <strong>{busy ? '읽는 중…' : '졸업사정표 PDF 선택'}</strong>
             <span className="muted">학사정보시스템 → 졸업사정표 → PDF로 저장한 파일 · 모든 학과 가능</span>
