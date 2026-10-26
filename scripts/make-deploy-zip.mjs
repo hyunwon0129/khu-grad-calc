@@ -28,5 +28,6 @@ copyFileSync(`${dist}/favicon.svg`, `release/${name}/favicon.svg`);
 for (const f of ['_headers', 'manifest.webmanifest', 'sw.js', 'icon-192.png', 'icon-512.png', 'icon-512-maskable.png']) {
   copyFileSync(`${dist}/${f}`, `release/${name}/${f}`);
 }
-execSync(`cd release && zip -qrX "${name}.zip" "${name}"`);
+// Netlify 빌드 서버에서는 폴더만 만들면 된다 (zip 불필요)
+if (!process.env.NETLIFY) execSync(`cd release && zip -qrX "${name}.zip" "${name}"`);
 console.log(`release/${name}.zip (index.html ${(out.length / 1024).toFixed(0)}KB)`);

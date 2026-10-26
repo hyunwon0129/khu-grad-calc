@@ -1,0 +1,7 @@
+# GitHub 저장소와 연결하면 push할 때마다 Netlify가 자동으로 빌드·배포한다.
+[build]
+  command = "npm test && PREVIEW=1 npx vite build && node scripts/make-deploy-zip.mjs"
+  publish = "release/khu-grad-calc-site"
+
+[build.environment]
+  NODE_VERSION = "22"
