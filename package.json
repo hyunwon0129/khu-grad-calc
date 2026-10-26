@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "validate": "node scripts/validate-data.mjs",
-    "preview:artifact": "PREVIEW=1 vite build && node scripts/build-preview.mjs"
+    "preview:artifact": "PREVIEW=1 vite build && node scripts/build-preview.mjs",
+    "deploy:zip": "vite build && node scripts/make-deploy-zip.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
