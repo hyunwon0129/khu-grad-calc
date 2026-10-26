@@ -1,0 +1,16 @@
+{
+  "name": "졸업요건 계산기",
+  "short_name": "졸업계산기",
+  "description": "졸업사정표 PDF 한 장으로 남은 졸업학점과 요건을 확인하는 비공식 도구. 파일은 기기 안에서만 처리됩니다.",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8b1d2c",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

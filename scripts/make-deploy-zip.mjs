@@ -25,6 +25,8 @@ rmSync('release', { recursive: true, force: true });
 mkdirSync(`release/${name}`, { recursive: true });
 writeFileSync(`release/${name}/index.html`, out);
 copyFileSync(`${dist}/favicon.svg`, `release/${name}/favicon.svg`);
-copyFileSync(`${dist}/_headers`, `release/${name}/_headers`);
+for (const f of ['_headers', 'manifest.webmanifest', 'sw.js', 'icon-192.png', 'icon-512.png', 'icon-512-maskable.png']) {
+  copyFileSync(`${dist}/${f}`, `release/${name}/${f}`);
+}
 execSync(`cd release && zip -qrX "${name}.zip" "${name}"`);
 console.log(`release/${name}.zip (index.html ${(out.length / 1024).toFixed(0)}KB)`);

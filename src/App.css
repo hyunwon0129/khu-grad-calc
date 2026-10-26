@@ -24,7 +24,7 @@
   --accent: #e0707f; --warn: #ef8a80; --ok: #7cc67f; --check-bg: #3b3317; --on-accent: #1a1012; color-scheme: dark;
 }
 
-body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.55; word-break: keep-all; overflow-wrap: anywhere; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.55; word-break: keep-all; overflow-wrap: break-word; }
 main {
   max-width: 860px; margin: 0 auto;
   padding-block: 16px 24px;
@@ -220,3 +220,27 @@ button.primary.big { font-size: 1.05rem; padding: 12px 22px; border-radius: 6px;
 .match-warn > p:first-child { color: var(--warn); font-weight: 600; }
 .match-warn ul { margin: 4px 0; font-size: 0.86rem; }
 .match-mark { display: inline-flex; justify-content: center; align-items: center; width: 1.2em; height: 1.2em; margin-right: 4px; border-radius: 50%; border: 1.5px solid currentColor; font-size: 0.75rem; font-weight: 700; }
+
+/* 확인 표: 표 칸이 글자 단위로 쪼개지지 않게, 휴대폰에서는 카드 */
+td.code, .review-table td.c-term { white-space: nowrap; }
+@media (max-width: 560px) {
+  .review-table thead { display: none; }
+  .review-table, .review-table tbody { display: block; }
+  .review-table tr {
+    display: grid; grid-template-columns: 28px minmax(0, 1fr) auto auto; gap: 4px 8px; align-items: center;
+    grid-template-areas: "inc name name credit" "inc code term status" "inc cat cat cat";
+    padding: 10px 4px; border-bottom: 1px solid var(--line);
+  }
+  .review-table td { border: none; padding: 0; }
+  .review-table .c-include { grid-area: inc; align-self: start; padding-top: 2px; }
+  .review-table .c-name { grid-area: name; font-weight: 600; }
+  .review-table .c-credit { grid-area: credit; }
+  .review-table .c-code { grid-area: code; color: var(--muted); }
+  .review-table .c-term { grid-area: term; color: var(--muted); font-size: 0.85rem; }
+  .review-table .c-status { grid-area: status; }
+  .review-table .c-cat { grid-area: cat; }
+  .review-table .c-cat select { width: 100%; }
+  .review-table.table-wrap, .table-wrap:has(.review-table) { overflow-x: visible; }
+}
+.unit { display: none; margin-left: 4px; font-size: 0.85rem; color: var(--muted); }
+@media (max-width: 560px) { .review-table .unit { display: inline; } .review-table .c-credit { white-space: nowrap; } }

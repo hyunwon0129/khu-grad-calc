@@ -172,29 +172,30 @@ export default function ImportScreen({ startWithSample = false, program, courseM
           </p>
 
           <div className="table-wrap">
-            <table>
+            <table className="review-table">
               <thead>
                 <tr><th>반영</th><th>이수구분</th><th>학수번호</th><th>과목명</th><th>학점</th><th>학기</th><th>상태</th></tr>
               </thead>
               <tbody>
                 {rows.map((r, i) => (
                   <tr key={`${r.code}-${r.term}`} className={r.needsCheck ? 'row-check' : undefined}>
-                    <td><input type="checkbox" checked={r.include} onChange={(e) => update(i, { include: e.target.checked })} aria-label={`${r.code} 반영`} /></td>
-                    <td>
+                    <td className="c-include"><input type="checkbox" checked={r.include} onChange={(e) => update(i, { include: e.target.checked })} aria-label={`${r.code} 반영`} /></td>
+                    <td className="c-cat">
                       <select value={r.category} aria-label={`${r.code} 이수구분`}
                         onChange={(e) => update(i, { category: e.target.value as SchoolCategory | '' })}>
                         <option value="">확인 필요</option>
                         {SCHOOL_CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
                       </select>
                     </td>
-                    <td className="code">{r.code}</td>
-                    <td>{r.name || <span className="muted">—</span>}</td>
-                    <td>
+                    <td className="code c-code">{r.code}</td>
+                    <td className="c-name">{r.name || <span className="muted">—</span>}</td>
+                    <td className="c-credit">
                       <input type="number" min={0} max={6} value={r.credit} className="num" aria-label={`${r.code} 학점`}
                         onChange={(e) => update(i, { credit: Number(e.target.value) })} />
+                      <span className="unit">학점</span>
                     </td>
-                    <td>{r.term || <span className="muted">못 읽음</span>}</td>
-                    <td>
+                    <td className="c-term">{r.term || <span className="muted">못 읽음</span>}</td>
+                    <td className="c-status">
                       <select value={r.status} aria-label={`${r.code} 상태`} onChange={(e) => update(i, { status: e.target.value as CourseStatus })}>
                         <option value="TAKEN">이수</option>
                         <option value="IN_PROGRESS">수강 중</option>
