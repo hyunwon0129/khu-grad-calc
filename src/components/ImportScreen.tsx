@@ -147,11 +147,21 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
               <span><strong>공용 PC예요</strong> · 결과를 이 기기에 저장하지 않습니다. 창을 닫으면 모두 사라집니다.</span>
             </label>
           )}
-          <label htmlFor="report-file" className="file-drop">
-            <strong>{busy ? '읽는 중…' : '졸업사정표 PDF 선택'}</strong>
-            <span className="muted">학사정보시스템 → 졸업사정표 → PDF로 저장한 파일 · 모든 학과 가능</span>
-            <input id="report-file" type="file" accept="application/pdf,.pdf" onChange={onFile} disabled={busy} />
-          </label>
+          {busy ? (
+            <div className="reading" role="status" aria-live="polite" aria-busy="true">
+              <strong>이 기기 안에서 사정표를 읽고 있어요</strong>
+              <span className="muted">보통 2~3초면 끝나요. 파일은 밖으로 나가지 않아요.</span>
+              <div className="skeleton" aria-hidden="true">
+                {[90, 70, 82, 60, 76].map((w, i) => <span key={i} style={{ width: `${w}%` }} />)}
+              </div>
+            </div>
+          ) : (
+            <label htmlFor="report-file" className="file-drop">
+              <strong>졸업사정표 PDF 선택</strong>
+              <span className="muted">학사정보시스템 → 졸업사정표 → PDF로 저장한 파일 · 모든 학과 가능</span>
+              <input id="report-file" type="file" accept="application/pdf,.pdf" onChange={onFile} />
+            </label>
+          )}
           <p>
             <button type="button" className="link" onClick={() => load([...SAMPLE_REPORT_LINES], null, 'SAMPLE')}>
               가상 사정표로 먼저 체험해 보기
@@ -218,9 +228,10 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
           {uncategorized > 0 && (
             <p className="warn">이수구분을 확인하지 못한 과목이 {uncategorized}개 있습니다. 위 표에서 골라 주세요.</p>
           )}
-          <div className="actions">
+          <div className="sticky-actions">
+            <span className="sticky-count"><strong>{rows.filter((r) => r.include).length}</strong>과목 반영{uncategorized > 0 && <span className="warn"> · 확인 필요 {uncategorized}</span>}</span>
+            <button type="button" className="link" onClick={() => { setResult(null); setRows([]); }}>다른 파일</button>
             <button type="button" className="primary" onClick={apply}>이 내용으로 계산하기</button>
-            <button type="button" className="link" onClick={() => { setResult(null); setRows([]); }}>다른 파일 선택</button>
           </div>
         </div>
       )}
