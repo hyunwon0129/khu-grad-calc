@@ -1,7 +1,7 @@
 // 앱 안 이용 안내·개인정보 처리 안내·면책
 import { cloudEnabled } from '../lib/cloud';
 
-export const APP_VERSION = '0.9.0';
+export const APP_VERSION = '0.9.1';
 export const DATA_BASIS = '2026학년도 학사제도안내';
 
 export default function AboutScreen({ onBack }: { onBack: () => void }) {
