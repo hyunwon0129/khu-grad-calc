@@ -33,8 +33,8 @@ import type { ReportData } from '../lib/reportLayout';
 import { sameDept } from '../lib/dept';
 
 const TABS = [
-  ['status', '이수 현황'], ['recommend', '추천 과목'], ['must', '필수 과목'], ['roadmap', '로드맵'],
-  ['liberal', '교양'], ['multi', '다전공·MD'], ['credits', '학기 학점'], ['share', '요약·공유'],
+  ['status', '이수 현황'], ['recommend', '다음 학기 과목'], ['plan', '학기 계획'],
+  ['liberal', '교양'], ['multi', '다전공·MD'], ['share', '요약·공유'],
 ] as const;
 type Tab = (typeof TABS)[number][0];
 const TAB_KEY = 'khu-grad-calc:tab';
@@ -198,50 +198,52 @@ export default function ResultScreen(p: Props) {
 
   // ── 졸업 요건 체크리스트
   const needMulti = multiRequired(admissionYear ?? (isSample ? null : program.admissionYearRange[0]), myDept ?? null);
+  // 같은 내용을 한 줄로 모은다: 졸업학점(+남은 학기 안에 가능한지), 전공(영역별), 교양(영역별+과목), 그 밖의 요건
   const rows: SummaryRow[] = [];
+  const left = (xs: { name: string; remaining: number }[]) => xs.filter((x) => x.remaining > 0).map((x) => `${x.name} ${x.remaining}`).join(' · ');
+  const capText = semesters <= 0 ? '남은 정규 학기 없음'
+    : creditPlan.shortfall > 0 ? `${semesters}학기 최대 ${creditPlan.capacity}학점으로는 ${creditPlan.shortfall}학점 부족`
+    : `${semesters}학기 동안 학기당 약 ${Math.ceil(creditsLeft / semesters)}학점`;
+  const capBad = creditsLeft > 0 && (semesters <= 0 || creditPlan.shortfall > 0);
   if (report && views.length) {
-    for (const v of views) {
-      if (/계$/.test(v.name)) continue;
-      const earned = v.group === '졸업' ? v.done : v.earned;
+    const grad = views.find((v) => v.group === '졸업');
+    if (grad) {
       rows.push({
-        key: `v-${v.name}`, label: v.group === '졸업' ? '졸업학점' : v.name,
-        status: v.remaining > 0 ? 'todo' : v.pending ? 'ongoing' : 'ok',
-        detail: `${earned}/${v.required}${v.remaining ? ` · ${v.remaining}학점 남음` : ''}`,
-        tab: /교양|배분|자유/.test(v.name) ? 'liberal' : 'status',
+        key: 'grad', label: '졸업학점', status: grad.remaining > 0 ? 'todo' : grad.pending ? 'ongoing' : 'ok',
+        detail: grad.remaining > 0 ? `${grad.remaining}학점 남음 (${grad.done}/${grad.required}) · ${capText}` : `${grad.done}/${grad.required}`,
+        tab: 'plan',
       });
     }
-    for (const c of report.checks ?? []) {
-      if (c.status === 'na') continue;
-      rows.push({ key: `c-${c.key}`, label: c.name, status: STATUS_ROW[c.status], detail: c.detail, tab: 'status' });
+    const major = views.filter((v) => v.group === '전공' && !/계$/.test(v.name));
+    if (major.length) {
+      const l = left(major);
+      rows.push({ key: 'major', label: '전공 학점', status: l ? 'todo' : 'ok', detail: l ? `${l}학점 남음` : '모두 충족', tab: 'status' });
     }
   } else {
-    for (const a of result.areas) {
-      rows.push({ key: `a-${a.category}`, label: `${a.category} (전공)`, status: a.remaining > 0 ? 'todo' : 'ok', detail: `${a.earned}/${a.required}${a.remaining ? ` · ${a.remaining}학점 남음` : ''}`, tab: 'status' });
-    }
+    const l = left(result.areas.map((a) => ({ name: a.category, remaining: a.remaining })));
+    rows.push({ key: 'major', label: '전공 학점', status: l ? 'todo' : 'ok', detail: l ? `${l}학점 남음 · ${capText}` : '모두 충족', tab: 'status' });
   }
   if (showCurriculum) {
     rows.push({
       key: 'must', label: '꼭 들어야 하는 전공 과목', status: missingRequired.length ? 'todo' : 'ok',
-      detail: missingRequired.length ? `${missingRequired.length}과목 남음` : '모두 이수', tab: 'must',
+      detail: missingRequired.length ? `${missingRequired.length}과목: ${missingRequired.slice(0, 3).map((c) => c.name).join(', ')}${missingRequired.length > 3 ? ' 등' : ''}` : '모두 이수', tab: 'recommend',
     });
   }
+  const libSchool = left(views.filter((v) => v.group === '교양' && !/계$/.test(v.name)));
   rows.push({
-    key: 'liberal', label: '교양 (후마니타스칼리지)', status: libTodo.length ? 'todo' : 'ok',
-    detail: libTodo.length ? libTodo.map((x) => `${x.kind} ${x.label}`).slice(0, 3).join(', ') + (libTodo.length > 3 ? ` 외 ${libTodo.length - 3}개` : '') : '남은 항목 없음',
+    key: 'liberal', label: '교양', status: libTodo.length || libSchool ? 'todo' : 'ok',
+    detail: libTodo.length ? libTodo.map((x) => (x.kind === '필수교과' ? x.label : `${x.kind} ${x.label}`)).slice(0, 4).join(', ') + (libTodo.length > 4 ? ` 외 ${libTodo.length - 4}개` : '')
+      : libSchool ? `${libSchool}학점 남음` : '모두 충족',
     tab: 'liberal',
   });
+  for (const c of report && views.length ? report.checks ?? [] : []) {
+    if (c.status === 'na') continue;
+    rows.push({ key: `c-${c.key}`, label: c.name, status: STATUS_ROW[c.status], detail: c.detail ?? c.hint, tab: c.status === 'unmet' ? 'status' : undefined });
+  }
   if (needMulti) {
-    rows.push({ key: 'multi', label: '다전공·마이크로디그리·부전공 1개 이상', status: 'check', detail: '2026학번부터 졸업요건 · 신청·이수 여부는 직접 확인', tab: 'multi' });
+    rows.push({ key: 'multi', label: '다전공·마이크로디그리·부전공', status: 'check', detail: '2026학번부터 1개 이상 필수', tab: 'multi' });
   }
-  if (creditsLeft > 0) {
-    rows.push({
-      key: 'credits', label: '남은 학기 안에 학점 채우기', status: creditPlan.shortfall > 0 || semesters <= 0 ? 'todo' : 'ok',
-      detail: semesters <= 0 ? '남은 정규 학기 없음'
-        : creditPlan.shortfall > 0 ? `최대 ${creditPlan.capacity}학점보다 ${creditPlan.shortfall}학점 많음`
-        : `${semesters}학기 동안 학기당 약 ${Math.ceil(creditsLeft / semesters)}학점`,
-      tab: 'credits',
-    });
-  }
+  if (!(report && views.length) && capBad) rows.push({ key: 'cap', label: '남은 학기 학점', status: 'todo', detail: capText, tab: 'plan' });
   for (const m of manualChecks(yearForCalc, myDept ?? null)) {
     if (/다전공/.test(m.name)) continue;
     rows.push({ key: `m-${m.name}`, label: m.name, status: 'check', detail: m.detail });
@@ -251,7 +253,7 @@ export default function ResultScreen(p: Props) {
     const pv = buildVerdict(applyPlans(views, p.plans), report?.checks ?? []);
     return pv.allDone ? '계획대로 들으면 학점·요건을 모두 채웁니다' : `계획대로 들으면 ${pv.headline}`;
   })() : null;
-  const tabs = TABS.filter(([k]) => showCurriculum || !['recommend', 'must', 'roadmap'].includes(k)).filter(([k]) => k !== 'share' || showCurriculum || report);
+  const tabs = TABS.filter(([k]) => showCurriculum || k !== 'recommend').filter(([k]) => k !== 'share' || showCurriculum || report);
   const activeTab: Tab = tabs.some(([k]) => k === tab) ? tab : 'status';
   const tabLabel = (k: string) => TABS.find(([x]) => x === k)?.[1] ?? k;
 
@@ -361,7 +363,7 @@ export default function ResultScreen(p: Props) {
       </section>
       )}
 
-      {showCurriculum && report && isSample && ['recommend', 'must', 'roadmap'].includes(activeTab) && (
+      {showCurriculum && report && isSample && ['recommend', 'plan'].includes(activeTab) && (
         <p className="notice"><span><strong>아래 추천은 시험용 샘플 교육과정 기준</strong> · {curriculumName} 데이터는 기능 확인용 가상 값입니다.</span></p>
       )}
 
@@ -380,12 +382,10 @@ export default function ResultScreen(p: Props) {
       />
       )}
 
-      {showCurriculum && activeTab === 'must' && (
-      <section>
-        <h2>꼭 들어야 하는 과목</h2>
-        {missingRequired.length === 0 ? (
-          <p className="ok">꼭 들어야 하는 전공 과목을 모두 이수했습니다.</p>
-        ) : (
+      {showCurriculum && activeTab === 'recommend' && (
+      <details className="must-more">
+        <summary>{missingRequired.length ? `아직 안 들은 꼭 들어야 하는 전공 과목 ${missingRequired.length}개` : '꼭 들어야 하는 전공 과목: 모두 이수'}</summary>
+        {missingRequired.length > 0 && (
           <ul className="must">
             {missingRequired.map((c) => (
               <li key={c.code}>
@@ -397,14 +397,19 @@ export default function ResultScreen(p: Props) {
             ))}
           </ul>
         )}
-        <p className="muted">전공필수는 학점을 다 채워도 빠지면 졸업할 수 없는 경우가 많습니다. 정확한 규정은 학과 교육과정에서 확인하세요.</p>
-      </section>
+        <p className="muted small">전공필수는 학점을 다 채워도 빠지면 졸업할 수 없는 경우가 많습니다. 정확한 규정은 학과 교육과정에서 확인하세요.</p>
+      </details>
       )}
 
-      {showCurriculum && activeTab === 'roadmap' && (
+      {activeTab === 'plan' && (
+        <CreditPlanPanel remaining={creditsLeft} remainingLabel={verdict ? '졸업학점' : '전공 학점'} semesters={semesters} onSemesters={setSemesters} estimated={estSem !== null}
+          limits={limits} onLimits={setLimits} schoolLimit={limit} plan={creditPlan} />
+      )}
+
+      {showCurriculum && activeTab === 'plan' && (
         <>
       <section>
-        <h2>학기별 로드맵</h2>
+        <h2>전공 과목 로드맵</h2>
         <div className="toolbar">
           <label htmlFor="max-credits">학기당 전공 학점</label>
           <input id="max-credits" type="number" min={3} max={21} step={3} value={maxCredits} className="num"
@@ -494,11 +499,6 @@ export default function ResultScreen(p: Props) {
         mustRemaining={mustRemaining}
         freeRemaining={freeRemaining}
       />
-      )}
-
-      {activeTab === 'credits' && (
-        <CreditPlanPanel remaining={creditsLeft} remainingLabel={verdict ? '졸업학점' : '전공 학점'} semesters={semesters} onSemesters={setSemesters} estimated={estSem !== null}
-          limits={limits} onLimits={setLimits} schoolLimit={limit} plan={creditPlan} />
       )}
 
       {(showCurriculum || report) && activeTab === 'share' && (

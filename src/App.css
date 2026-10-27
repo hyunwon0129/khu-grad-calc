@@ -368,3 +368,5 @@ a.button-like:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 .credit-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.92rem; }
 .credit-table th, .credit-table td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: left; }
 .credit-table tfoot td { font-weight: 600; }
+.must-more summary, .lib-detail summary { cursor: pointer; color: var(--accent); font-size: 0.92rem; }
+.must-more, .lib-detail { margin: 4px 0; }

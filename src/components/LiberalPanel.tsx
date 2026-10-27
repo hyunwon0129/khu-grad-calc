@@ -94,6 +94,8 @@ export default function LiberalPanel({ taken, courseMap, report, views, nowTerm,
 
       {st.notes.length > 0 && <ul className="lib-notes muted small">{st.notes.map((n) => <li key={n}>{n}</li>)}</ul>}
 
+      <details className="lib-detail">
+        <summary>필수교과·배분 영역별 이수 현황</summary>
       <div className="lib-grid">
         <div>
           <h3>필수교과 {s필수 && <span className="muted small">학교 집계 {s필수.earned}/{s필수.required}</span>}</h3>
@@ -121,6 +123,8 @@ export default function LiberalPanel({ taken, courseMap, report, views, nowTerm,
           )}
         </div>
       </div>
+
+      </details>
 
       {st.suggestions.some((s) => s.courses.length > 0) && (needArea > 0 || needBaebunCredits > 0) && (
         <>

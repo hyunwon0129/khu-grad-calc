@@ -47,12 +47,11 @@ export default function MultiPanel(p: Props) {
       {p.required && (
         <p className="notice notice-warn" role="note">
           <span>
-            <strong>2026학번부터 다전공·마이크로디그리·부전공 중 1개 이상이 졸업요건입니다</strong> · 의학·간호학·약학계열은 제외(약과학과는 적용).
-            부전공은 이 앱에서 계산하지 않으니 학과 시행세칙을 확인하세요. (2026 학사제도안내 97쪽 ⑫)
+            <strong>2026학번 졸업요건: 다전공·마이크로디그리·부전공 중 1개 이상</strong> · 의·간호·약학계열 제외, 약과학과 적용 (학사제도안내 97쪽). 부전공은 계산하지 않습니다.
           </span>
         </p>
       )}
-      <p className="muted small">{p.capNote} · 남은 학기 최대 {cap}학점 (학기 학점 탭에서 바꿀 수 있어요)</p>
+      <p className="muted small">{p.capNote} · 남은 학기 최대 {cap}학점 (학기 계획 탭에서 바꿀 수 있어요)</p>
 
       <ul className="facts">
         <li>꼭 채울 영역 학점 <strong>{p.mustRemaining}</strong></li>

@@ -30,10 +30,10 @@ export default function GradSummary({ headline, allDone, planLine, rows, tabLabe
     <li key={r.key} className={`check check-${r.status}`}>
       <span className="check-mark" aria-hidden="true">{MARK[r.status]}</span>
       <span className="check-name">{r.label}</span>
-      <span className="check-status">{STATUS[r.status]}{r.detail ? ` · ${r.detail}` : ''}</span>
+      <span className="check-status">{r.detail ?? STATUS[r.status]}</span>
       {r.tab && (
         <button type="button" className="link small check-open" onClick={() => onOpen(r.tab!)} aria-label={`${r.label} 자세히: ${tabLabel(r.tab)}`}>
-          {tabLabel(r.tab)} ›
+          자세히 ›
         </button>
       )}
     </li>
@@ -42,7 +42,7 @@ export default function GradSummary({ headline, allDone, planLine, rows, tabLabe
     <section className="verdict" aria-label="졸업까지 남은 요건">
       <p className={allDone ? 'verdict-headline ok' : 'verdict-headline'}>{headline}</p>
       {planLine && <p className="verdict-plan-line"><span className="chip">계획 반영</span>{planLine}</p>}
-      <h3>졸업 요건 체크 <span className="muted small">{left ? `남은 항목 ${left}개` : '남은 항목 없음'} · 누르면 아래에 자세히</span></h3>
+      <h3>졸업 요건 체크 <span className="muted small">{left ? `남은 항목 ${left}개` : '남은 항목 없음'}</span></h3>
       <ul className="grad-checklist">
         {open.map(item)}
       </ul>
