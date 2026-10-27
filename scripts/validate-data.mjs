@@ -40,12 +40,37 @@ for (const p of programs) {
   }
 
   for (const [a, b] of p.diagram?.edges ?? []) {
-    if (!p.courses.includes(a) || !p.courses.includes(b)) errors.push(`${p.programId}: 선수관계 ${a}→${b}에 과정 밖 과목`);
+    // 'A|B'는 둘 중 하나만 들으면 되는 선수과목
+    if (!a.split('|').every((x) => p.courses.includes(x)) || !p.courses.includes(b)) errors.push(`${p.programId}: 선수관계 ${a}→${b}에 과정 밖 과목`);
+  }
+  for (const g of p.choiceGroups ?? []) {
+    if (g.length < 2 || !g.every((x) => p.courses.includes(x))) errors.push(`${p.programId}: 택1 묶음 오류 ${g.join('|')}`);
+  }
+  for (const n of p.diagram?.nodes ?? []) {
+    if (!p.courses.includes(n.code)) errors.push(`${p.programId}: 로드맵 노드 ${n.code}가 과정 밖`);
+    if (n.year < 1 || n.year > 6) errors.push(`${p.programId}: ${n.code} 학년 범위 오류`);
   }
   if (!p.verified) warnings.push(`${p.programId}: 원문 대조 미검증`);
 }
 
+// 학과 기본구조표: 영역 합 = 계
+const { departments } = JSON.parse(readFileSync(new URL('../src/data/departments.json', import.meta.url)));
+const seen = new Set();
+for (const d of departments) {
+  const key = `${d.campus}:${d.name}`;
+  if (seen.has(key)) errors.push(`학과 중복: ${key}`);
+  seen.add(key);
+  for (const k of ['single', 'multi', 'minor']) {
+    const b = d[k];
+    if (b && b.기초 + b.필수 + b.선택 !== b.계 && !(d.name.includes('발광') || d.name.includes('구동'))) errors.push(`${key} ${k}: 영역 합 ≠ 계 (${b.기초}+${b.필수}+${b.선택}≠${b.계})`);
+  }
+}
+for (const p of programs.filter((x) => x.kind === 'MAJOR' && !x.programId.startsWith('SAMPLE'))) {
+  const d = departments.find((x) => x.campus === p.campus && x.name === p.department);
+  if (!d) warnings.push(`${p.programId}: 기본구조표에 학과 없음`);
+}
+
 warnings.forEach((w) => console.warn('⚠', w));
 errors.forEach((e) => console.error('✖', e));
-console.log(`\n과목 ${courses.length}개, 과정 ${programs.length}개 / 오류 ${errors.length}, 경고 ${warnings.length}`);
+console.log(`\n과목 ${courses.length}개, 과정 ${programs.length}개, 학과 ${departments.length}개 / 오류 ${errors.length}, 경고 ${warnings.length}`);
 process.exit(errors.length ? 1 : 0);

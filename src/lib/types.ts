@@ -23,6 +23,7 @@ export interface DiagramNode {
   code: string;
   year: number;      // 권장 학년
   semester: 1 | 2;   // 권장 학기
+  both?: boolean;    // 1·2학기 모두 개설
 }
 
 export interface Track {
@@ -44,9 +45,11 @@ export interface Program {
   overlapPolicy?: { withMajor: 'NONE' | 'FULL' | { limit: number } };
   source: { doc: string; year: number; url?: string };
   verified: boolean;  // 원문 대조 검증 여부 (false면 화면에 '검증 중')
+  note?: string;      // 화면에 보여 줄 데이터 안내 (기준 연도 차이 등)
+  choiceGroups?: string[][]; // 택1 과목 묶음 (하나만 들으면 됨)
   diagram?: {
     nodes: DiagramNode[];
-    edges: [string, string][]; // [선수과목, 후수과목]
+    edges: [string, string][]; // [선수과목, 후수과목]. 선수과목 'A|B'는 둘 중 하나
     tracks: Track[];
   };
 }
@@ -61,4 +64,19 @@ export interface Profile {
   admissionYear: number;   // 학번 전체가 아니라 입학연도만
   campus: Campus;
   department: string;
+}
+
+/** 2026 학사제도안내 전공별 교육과정 기본구조 한 줄 */
+export interface CreditBlock { 기초: number; 필수: number; 선택: number; 계: number }
+export interface DepartmentInfo {
+  campus: Campus;
+  college: string;
+  name: string;
+  grad: number | null;
+  single: CreditBlock | null;
+  multi: CreditBlock | null;
+  minor: CreditBlock | null;
+  otherMulti?: number;
+  multiBannedFor?: Campus[];
+  unreadable?: boolean;
 }

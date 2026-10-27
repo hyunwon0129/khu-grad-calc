@@ -1,6 +1,7 @@
 // 추천 알고리즘 간소화 버전 (체크리스트 문서 2장)
 import type { Course, Program, TakenCourse } from './types';
 import { calculate } from './calc';
+import { prereqMap, prereqsMet, choiceBlocked } from './prereq';
 
 const TYPE_PRIORITY: Record<string, number> = { 전필: 0, 전기: 1, 전선: 2 };
 
@@ -27,18 +28,17 @@ export function recommendNext(
   const gaps = new Set(
     calculate(program, courseMap, taken).areas.filter((a) => a.remaining > 0).map((a) => a.category),
   );
-  const prereqs = new Map<string, string[]>();
-  for (const [pre, post] of program.diagram?.edges ?? []) {
-    prereqs.set(post, [...(prereqs.get(post) ?? []), pre]);
-  }
+  const prereqs = prereqMap(program);
   const nodeOf = new Map((program.diagram?.nodes ?? []).map((n) => [n.code, n]));
 
   return program.courses
     .filter((code) => !done.has(code) && !inProgress.has(code) && courseMap.has(code))
+    .filter((code) => !choiceBlocked(program, code, new Set([...done, ...inProgress])))
     .map((code) => {
       const c = courseMap.get(code)!;
       const type = c.typeByProgram[program.programId] ?? '기타';
-      const missing = (prereqs.get(code) ?? []).filter((p) => !done.has(p) && !inProgress.has(p));
+      const have = (x: string) => done.has(x) || inProgress.has(x);
+      const missing = (prereqs.get(code) ?? []).filter((p) => !prereqsMet([p], have));
       const node = nodeOf.get(code);
       return {
         code,
@@ -48,7 +48,7 @@ export function recommendNext(
         year: node?.year ?? 9,
         semester: node?.semester ?? 1,
         available: missing.length === 0,
-        missingPrereqs: missing.map((m) => courseMap.get(m)?.name ?? m),
+        missingPrereqs: missing.map((m) => m.split('|').map((x) => courseMap.get(x)?.name ?? x).join(' 또는 ')),
         fillsGap: gaps.has(type),
       };
     })

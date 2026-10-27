@@ -4,8 +4,8 @@ import programs from '../data/programs.json';
 import type { Course, Program, TakenCourse } from './types';
 import { nextTerm, planRoadmap } from './planner';
 
-const courseMap = new Map((courses as Course[]).map((c) => [c.code, c]));
-const major = (programs as Program[])[0];
+const courseMap = new Map((courses as unknown as Course[]).map((c) => [c.code, c]));
+const major = (programs as unknown as Program[]).find((p) => p.programId === 'SAMPLE-2025-MAJOR')!;
 
 describe('로드맵', () => {
   it('학기 넘김', () => {

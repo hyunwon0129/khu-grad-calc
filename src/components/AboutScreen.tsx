@@ -1,7 +1,9 @@
 // 앱 안 이용 안내·개인정보 처리 안내·면책
 import { cloudEnabled } from '../lib/cloud';
+import Glossary from './Glossary';
+import FeedbackLink from './FeedbackLink';
 
-export const APP_VERSION = '0.9.1';
+export const APP_VERSION = '0.10.0';
 export const DATA_BASIS = '2026학년도 학사제도안내';
 
 export default function AboutScreen({ onBack }: { onBack: () => void }) {
@@ -30,8 +32,16 @@ export default function AboutScreen({ onBack }: { onBack: () => void }) {
       <ul>
         <li>남은 학점과 영역별 기준은 사정표에 적힌 학교 집계를 그대로 씁니다.</li>
         <li>이수구분 코드, 졸업요건, 다전공·마이크로디그리 규정은 {DATA_BASIS}를 따릅니다.</li>
-        <li>과목 추천·로드맵은 학과 교육과정 데이터가 있는 학과에서만 제공합니다.</li>
+        <li>과목 추천·로드맵은 학과 교육과정 데이터가 있는 학과에서만 제공합니다: 산업경영공학과(2025 교육과정), 컴퓨터공학과(2024), 경영학과(2026).</li>
+        <li>다전공 학점은 2026 학사제도안내의 전공별 기본구조표(서울·국제 120여 개 전공), 수강허용학점은 같은 책 64쪽 표를 씁니다.</li>
+        <li>학과 교육과정 원문이 이미지로만 올라온 해(예: 산업경영공학과 2026)는 가장 가까운 연도 표를 쓰고 화면에 알립니다.</li>
       </ul>
+
+      <h3>용어</h3>
+      <Glossary open />
+
+      <h3>의견·오류 제보</h3>
+      <p>계산이 사정표와 다르거나 읽기에 실패하면, 사정표 화면의 '제보하기'에서 내용을 가린 표 모양을 복사해 보내 주세요. <FeedbackLink /></p>
 
       <p className="muted">버전 {APP_VERSION} · 데이터 기준 {DATA_BASIS}</p>
       <div className="actions"><button type="button" onClick={onBack}>돌아가기</button></div>

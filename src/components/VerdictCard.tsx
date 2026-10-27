@@ -5,24 +5,32 @@ import { manualChecks, type CheckStatus } from '../lib/requirements';
 import { buildVerdict, estimateSemestersLeft, perSemester } from '../lib/verdict';
 import { currentTerm } from '../lib/parseReport';
 import type { AreaView } from './SchoolProgress';
+import { capacity, type CreditLimit } from '../lib/creditLimit';
 
 interface Props {
   report: ReportData;
   views: AreaView[];
   plannedViews?: AreaView[] | null;  // 만약에 계획을 반영한 값
+  limit?: CreditLimit | null;        // 학과·학번별 수강허용학점 (모르면 null)
 }
 
 const STATUS_LABEL: Record<CheckStatus, string> = {
   met: '충족', unmet: '미충족', exempt: '면제', na: '해당 없음', unknown: '확인 필요',
 };
 
-export default function VerdictCard({ report, views, plannedViews }: Props) {
+export default function VerdictCard({ report, views, plannedViews, limit: schoolLimit = null }: Props) {
   const checks = report.checks ?? [];
   const verdict = buildVerdict(views, checks);
   const estimated = estimateSemestersLeft(report.admissionYear, currentTerm());
   const [semesters, setSemesters] = useState<number>(estimated ?? 4);
-  const [limit, setLimit] = useState(18);
+  // 직접 바꾸기 전에는 학과·학번 기준(1·2학기가 다를 수 있음)을 쓴다
+  const [custom, setCustom] = useState<number | null>(null);
+  const nowTerm = currentTerm();
   const need = perSemester(verdict.remainingCredits, semesters);
+  const limitPair = custom !== null ? { first: custom, second: custom } : schoolLimit ?? { first: 18, second: 18 };
+  const cap = capacity(limitPair, nowTerm, semesters);
+  const limit = Math.min(limitPair.first, limitPair.second);
+  const limitText = limitPair.first === limitPair.second ? `${limitPair.first}학점` : `1학기 ${limitPair.first}·2학기 ${limitPair.second}학점`;
   const manual = manualChecks(report.admissionYear);
 
   return (
@@ -45,22 +53,27 @@ export default function VerdictCard({ report, views, plannedViews }: Props) {
             <input id="sem-remaining" type="number" min={0} max={12} value={semesters} className="num"
               onChange={(e) => setSemesters(Math.max(0, Number(e.target.value)))} />
             <label htmlFor="credit-limit">학기당 수강허용학점</label>
-            <input id="credit-limit" type="number" min={9} max={24} value={limit} className="num"
-              onChange={(e) => setLimit(Math.max(1, Number(e.target.value)))} />
+            <input id="credit-limit" type="number" min={9} max={24} value={custom ?? limit} className="num"
+              onChange={(e) => setCustom(Math.max(1, Number(e.target.value)))} />
+            {custom !== null && schoolLimit && (
+              <button type="button" className="link small" onClick={() => setCustom(null)}>학교 기준으로</button>
+            )}
           </div>
           {need === null ? (
             <p className="warn">남은 정규 학기가 없습니다. 계절학기나 추가 학기(수업연한 초과)가 필요합니다.</p>
           ) : (
             <p>
               이번 학기 이후 <strong>학기당 {need}학점</strong>씩 들으면 됩니다
-              {need > limit
-                ? <span className="warn"> · 수강허용학점({limit})보다 많아 계절학기나 추가 학기가 필요할 수 있습니다</span>
-                : <span className="muted"> · 수강허용학점 {limit}학점 안</span>}
+              {verdict.remainingCredits > cap
+                ? <span className="warn"> · 남은 학기 수강허용학점 합({cap}학점)보다 많아 계절학기나 추가 학기가 필요할 수 있습니다</span>
+                : <span className="muted"> · 수강허용학점 {limitText} 안</span>}
             </p>
           )}
           <p className="muted">
             {estimated !== null ? `남은 학기는 ${report.admissionYear}학번이 휴학 없이 8학기에 졸업한다고 보고 계산했습니다. ` : ''}
-            수강허용학점은 단과대학·학번마다 다릅니다(2026 학사제도안내 64쪽).
+            {schoolLimit && custom === null
+              ? `수강허용학점은 ${schoolLimit.basis} 기준 ${limitText}입니다(2026 학사제도안내 64쪽). 1학기는 등록 학기가 홀수인 학기입니다.`
+              : '수강허용학점은 단과대학·학번마다 다릅니다(2026 학사제도안내 64쪽).'}
           </p>
         </div>
       )}

@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import coursesData from './data/courses.json';
 import programsData from './data/programs.json';
-import type { Course, Program, TakenCourse } from './lib/types';
+import departmentsData from './data/departments.json';
+import type { Course, DepartmentInfo, Program, TakenCourse } from './lib/types';
 import { clearState, getNoSave, isEmpty, loadState, saveState, setNoSave, type UserData } from './lib/storage';
 import { cloudEnabled } from './lib/cloud';
 import { useCloudSync } from './lib/useCloudSync';
@@ -16,11 +17,13 @@ import ManualScreen from './components/ManualScreen';
 import ResultScreen from './components/ResultScreen';
 import AccountPanel from './components/AccountPanel';
 import AboutScreen, { APP_VERSION, DATA_BASIS } from './components/AboutScreen';
+import FeedbackLink from './components/FeedbackLink';
 import './App.css';
 
-const baseCourses = coursesData as Course[];
-const programs = programsData as Program[];
+const baseCourses = coursesData as unknown as Course[];
+const programs = programsData as unknown as Program[];
 const majors = programs.filter((p) => p.kind === 'MAJOR');
+const departments = departmentsData.departments as unknown as DepartmentInfo[];
 const DEFAULT_MAX_CREDITS = 9;
 
 export type Step = 'start' | 'import' | 'manual' | 'result' | 'about';
@@ -140,6 +143,7 @@ export default function App() {
           noSave={noSave}
           onNoSave={(v) => { setNoSave(v); setNoSaveState(v); }}
           program={program}
+          majors={majors}
           courseMap={courseMap}
           onApply={(rows, newCustom, newReport) => {
             // 이전 사정표에서 만든 과목은 버리고 이번 파일 것으로 교체 (직접 추가한 과목은 유지)
@@ -160,6 +164,8 @@ export default function App() {
       {step === 'manual' && (
         <ManualScreen
           program={program}
+          majors={majors}
+          onProgram={setProgramId}
           courseMap={courseMap}
           taken={taken}
           onChange={setTaken}
@@ -171,6 +177,7 @@ export default function App() {
         <ResultScreen
           program={program}
           programs={programs}
+          departments={departments}
           courseMap={courseMap}
           taken={taken}
           report={report}
@@ -190,7 +197,8 @@ export default function App() {
       <footer className="muted app-footer">
         <span>비공식 서비스 · 참고용이며 최종 졸업 판정은 학교 학사정보시스템 기준입니다.</span>
         <span>
-          <button type="button" className="link" onClick={() => setStep('about')}>이용 안내·개인정보</button>
+          <button type="button" className="link" onClick={() => setStep('about')}>이용 안내·용어·개인정보</button>
+          {' '}· <FeedbackLink />
           {' '}· v{APP_VERSION} · {DATA_BASIS} 기준
         </span>
       </footer>

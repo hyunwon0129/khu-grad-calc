@@ -2,6 +2,7 @@
 // 개설 여부(시간표) 데이터가 없으므로 권장 학기만 참고한다.
 import type { Course, Program, TakenCourse, Category } from './types';
 import { calculate } from './calc';
+import { prereqMap, prereqsMet, choiceBlocked } from './prereq';
 
 export interface PlannedCourse {
   code: string;
@@ -45,11 +46,11 @@ export function planRoadmap(
   let totalNeed = base.totalRemaining;
 
   const done = new Set(taken.map((t) => t.code));
-  const prereqs = new Map<string, string[]>();
-  for (const [pre, post] of program.diagram?.edges ?? []) prereqs.set(post, [...(prereqs.get(post) ?? []), pre]);
+  const prereqs = prereqMap(program);
   const nodeOf = new Map((program.diagram?.nodes ?? []).map((n) => [n.code, n]));
 
   let pool = program.courses.filter((c) => !done.has(c) && !excluded.has(c) && courseMap.get(c)?.typeByProgram[program.programId]);
+  pool = pool.filter((c) => !choiceBlocked(program, c, done));
   const semesters: PlanSemester[] = [];
   const plannedByCategory = new Map<Category, number>();
   const placed = new Set<string>();
@@ -59,12 +60,13 @@ export function planRoadmap(
   for (let i = 0; i < maxSemesters && stillNeeded(); i++, term = nextTerm(term)) {
     const parity = Number(term.split('-')[1]);
     const available = pool
-      .filter((c) => (prereqs.get(c) ?? []).every((p) => done.has(p) || placed.has(p)))
+      .filter((c) => prereqsMet(prereqs.get(c), (x) => done.has(x) || placed.has(x)))
+      .filter((c) => !choiceBlocked(program, c, placed))
       .map((code) => {
         const c = courseMap.get(code)!;
         const type = c.typeByProgram[program.programId];
         const node = nodeOf.get(code);
-        return { c, type, node, offParity: !!node && node.semester !== parity };
+        return { c, type, node, offParity: !!node && !node.both && node.semester !== parity };
       })
       .filter((x) => (need.get(x.type) ?? 0) > 0 || (totalNeed > 0 && !need.has(x.type)))
       .sort(
@@ -76,6 +78,7 @@ export function planRoadmap(
 
     const sem: PlanSemester = { term, courses: [], credits: 0 };
     for (const x of available) {
+      if (choiceBlocked(program, x.c.code, new Set(sem.courses.map((c) => c.code)))) continue;
       if (sem.credits + x.c.credit > maxCreditsPerSemester) continue;
       if ((need.get(x.type) ?? 0) <= 0 && need.has(x.type)) continue; // 같은 학기에 이미 채워짐
       sem.courses.push({ code: x.c.code, name: x.c.name, credit: x.c.credit, type: x.type, offParity: x.offParity });
@@ -93,7 +96,7 @@ export function planRoadmap(
 
   const shortfall = [...need.entries()].filter(([, v]) => v > 0).map(([category, credits]) => ({ category, credits }));
   const blocked = pool
-    .filter((c) => !(prereqs.get(c) ?? []).every((p) => done.has(p) || placed.has(p)))
+    .filter((c) => !prereqsMet(prereqs.get(c), (x) => done.has(x) || placed.has(x)))
     .map((c) => courseMap.get(c)?.name ?? c);
 
   let graduationTerm: string | null = null;

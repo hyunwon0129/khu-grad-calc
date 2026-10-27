@@ -6,12 +6,17 @@ import { analyzeReport, SAMPLE_REPORT_LINES, type ParseResult } from '../lib/par
 import { extractPdfText, type TextItem } from '../lib/pdfText';
 import { SCHOOL_CATEGORIES, SHORT_NAME, matchWithSchool, type ReportData, type SchoolCategory } from '../lib/reportLayout';
 import MatchBadge from './MatchBadge';
+import { matchProgram } from '../lib/dept';
+import { buildDiagnosis, type Diagnosis } from '../lib/diagnose';
+import { APP_VERSION } from './AboutScreen';
+import { FEEDBACK_URL } from './FeedbackLink';
 
 interface Props {
   startWithSample?: boolean;
   noSave?: boolean;
   onNoSave?: (v: boolean) => void;
   program: Program;
+  majors?: Program[];
   courseMap: Map<string, Course>;
   onApply: (taken: TakenCourse[], custom: Course[], report: ReportData) => void;
 }
@@ -34,12 +39,14 @@ export function toProgramCategory(program: Program, cat: SchoolCategory | ''): s
   return program.requirements.some((r) => r.category === short) ? short : '';
 }
 
-export default function ImportScreen({ startWithSample = false, noSave = false, onNoSave, program, courseMap, onApply }: Props) {
+export default function ImportScreen({ startWithSample = false, noSave = false, onNoSave, program: current, majors = [], courseMap, onApply }: Props) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const [result, setResult] = useState<ParseResult | null>(null);
   const [rows, setRows] = useState<EditRow[]>([]);
   const [source, setSource] = useState<'PDF' | 'SAMPLE'>('PDF');
+  const [diag, setDiag] = useState<Diagnosis | null>(null);
+  const [diagCopied, setDiagCopied] = useState<'idle' | 'ok' | 'manual'>('idle');
 
   // 직전에 불러온 사정표의 과목은 '알려진 과목'으로 취급하지 않는다 (새 파일에 이전 파일 정보가 섞이지 않게)
   const knownCourses = [...courseMap.values()].filter((c) => c.source !== 'import');
@@ -48,6 +55,9 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
 
   const load = (lines: string[], items: TextItem[] | null, src: 'PDF' | 'SAMPLE') => {
     const r = analyzeReport(lines, items, creditOf);
+    // 제보용으로 내용을 가린 '모양'만 남긴다 (원문은 아래에서 바로 버림)
+    setDiag(src === 'PDF' ? buildDiagnosis(lines, { items: items?.length ?? 0, courses: r.rows.length, areas: r.areas.length, version: APP_VERSION }) : null);
+    setDiagCopied('idle');
     lines.length = 0; // 추출한 원문은 분석 직후 버린다
     if (items) items.length = 0;
     if (r.rows.length === 0) {
@@ -92,6 +102,7 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
       console.error('[사정표 PDF]', err);
       const detail = err instanceof Error ? err.message : String(err);
       setError(`PDF를 읽지 못했습니다. 암호가 걸려 있거나 손상된 파일인지 확인해 주세요. (오류: ${detail.slice(0, 120)})`);
+      setDiag(buildDiagnosis([], { items: 0, courses: 0, areas: 0, error: detail, version: APP_VERSION }));
     } finally {
       setBusy(false);
     }
@@ -102,6 +113,8 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
 
   const apply = () => {
     if (!result) return;
+    // 사정표 학과에 맞는 교육과정이 있으면 그 기준으로 이수구분을 붙인다
+    const program = (result.departmentHint && matchProgram(majors, result.departmentHint, result.admissionYearHint)) || current;
     const picked = rows.filter((r) => r.include);
     // 교육과정 목록에 없는 과목은 사정표 값(과목명·학점·학교 이수구분)으로 보관한다.
     const custom: Course[] = picked
@@ -127,6 +140,27 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
     };
     onApply(picked.map((r) => ({ code: r.code, term: r.term || '-', status: r.status })), custom, report);
   };
+
+  const copyDiag = async () => {
+    if (!diag) return;
+    try { await navigator.clipboard.writeText(diag.text); setDiagCopied('ok'); } catch { setDiagCopied('manual'); }
+  };
+  const diagBox = diag && (
+    <details className="diag">
+      <summary>{error ? '읽기 문제 제보하기' : '읽은 결과가 이상한가요? 제보하기'}</summary>
+      <p className="muted small">
+        사정표의 글자를 모두 가린 <strong>표 모양</strong>만 복사합니다(한글→가, 영문→A, 숫자→0). 이름·학번·과목·성적은 들어가지 않습니다.
+        복사한 내용을 {FEEDBACK_URL ? '의견 보내기 창' : '개발자에게 보내는 메시지'}에 붙여 넣어 주세요.
+      </p>
+      <textarea readOnly className="summary" rows={6} value={diag.text} onFocus={(e) => e.currentTarget.select()} aria-label="제보 내용 미리보기" />
+      <div className="actions">
+        <button type="button" onClick={copyDiag}>가린 내용 복사</button>
+        {FEEDBACK_URL && <a href={FEEDBACK_URL} target="_blank" rel="noopener noreferrer">의견 보내기 열기</a>}
+        {diagCopied === 'ok' && <span className="ok" role="status">복사했습니다</span>}
+        {diagCopied === 'manual' && <span className="muted" role="status">자동 복사가 막혀 있습니다. 위 칸을 눌러 선택한 뒤 복사하세요.</span>}
+      </div>
+    </details>
+  );
 
   const uncategorized = rows.filter((r) => r.include && !r.category).length;
   const areaCount = result?.areas.length ?? 0;
@@ -168,6 +202,7 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
             </button>
           </p>
           {error && <p className="warn" role="alert">{error}</p>}
+          {error && diagBox}
         </div>
       )}
 
@@ -225,12 +260,13 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
             </table>
           </div>
 
+          {diagBox}
           {uncategorized > 0 && (
             <p className="warn">이수구분을 확인하지 못한 과목이 {uncategorized}개 있습니다. 위 표에서 골라 주세요.</p>
           )}
           <div className="sticky-actions">
             <span className="sticky-count"><strong>{rows.filter((r) => r.include).length}</strong>과목 반영{uncategorized > 0 && <span className="warn"> · 확인 필요 {uncategorized}</span>}</span>
-            <button type="button" className="link" onClick={() => { setResult(null); setRows([]); }}>다른 파일</button>
+            <button type="button" className="link" onClick={() => { setResult(null); setRows([]); setDiag(null); }}>다른 파일</button>
             <button type="button" className="primary" onClick={apply}>이 내용으로 계산하기</button>
           </div>
         </div>

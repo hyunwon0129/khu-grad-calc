@@ -1,57 +1,1808 @@
 [
-  {
-    "programId": "SAMPLE-2025-MAJOR",
-    "campus": "INTL",
-    "college": "[샘플] 공과대학",
-    "department": "[샘플] 가상학과",
-    "kind": "MAJOR",
-    "admissionYearRange": [2025, 2025],
-    "requirements": [
-      { "category": "전기", "minCredits": 6 },
-      { "category": "전필", "minCredits": 9 },
-      { "category": "전선", "minCredits": 9 }
-    ],
-    "totalMin": 24,
-    "courses": ["SAMP1001", "SAMP1002", "SAMP2001", "SAMP2002", "SAMP3001", "SAMP3002", "SAMP3003", "SAMP4001"],
-    "source": { "doc": "가상 데이터 (실제 교육과정 아님)", "year": 2025 },
-    "verified": false,
-    "diagram": {
-      "nodes": [
-        { "code": "SAMP1001", "year": 1, "semester": 1 },
-        { "code": "SAMP1002", "year": 1, "semester": 2 },
-        { "code": "SAMP2001", "year": 2, "semester": 1 },
-        { "code": "SAMP2002", "year": 2, "semester": 2 },
-        { "code": "SAMP3001", "year": 3, "semester": 1 },
-        { "code": "SAMP3002", "year": 3, "semester": 1 },
-        { "code": "SAMP3003", "year": 3, "semester": 2 },
-        { "code": "SAMP4001", "year": 4, "semester": 1 }
-      ],
-      "edges": [
-        ["SAMP1001", "SAMP2001"],
-        ["SAMP2001", "SAMP3001"],
-        ["SAMP1002", "SAMP3002"],
-        ["SAMP1002", "SAMP3003"]
-      ],
-      "tracks": [
-        { "name": "[샘플] 데이터 분석", "courses": ["SAMP1002", "SAMP3002"], "minCredits": 6 },
-        { "name": "[샘플] 운영 최적화", "courses": ["SAMP2001", "SAMP3001", "SAMP2002"], "minCredits": 9 }
-      ]
-    }
+ {
+  "programId": "IE-2025-MAJOR",
+  "campus": "INTL",
+  "college": "공과대학",
+  "department": "산업경영공학과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2025,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 24
+   },
+   {
+    "category": "전필",
+    "minCredits": 6
+   },
+   {
+    "category": "전선",
+    "minCredits": 49
+   }
+  ],
+  "totalMin": 79,
+  "courses": [
+   "AMTH1009",
+   "IE104",
+   "APHY1004",
+   "IE103",
+   "IE203",
+   "IE207",
+   "IE204",
+   "IE208",
+   "IE301",
+   "IE423",
+   "IE430",
+   "IE400",
+   "IE201",
+   "IE213",
+   "IE214",
+   "IE215",
+   "IE212",
+   "IE216",
+   "IE217",
+   "IE306",
+   "IE308",
+   "IE315",
+   "IE304",
+   "IE329",
+   "IE302",
+   "IE309",
+   "IE312",
+   "IE323",
+   "IE322",
+   "IE325",
+   "IE327",
+   "IE328",
+   "IE419",
+   "IE407",
+   "IE410",
+   "IE415",
+   "IE424",
+   "IE318",
+   "IE428",
+   "IE429",
+   "IE411",
+   "IE412",
+   "IE320",
+   "IE321",
+   "SWCON322",
+   "SWCON423",
+   "SWCON424",
+   "SWCON104"
+  ],
+  "choiceGroups": [
+   [
+    "IE104",
+    "SWCON104"
+   ],
+   [
+    "IE423",
+    "IE430"
+   ]
+  ],
+  "source": {
+   "doc": "2025 산업경영공학과 교육과정 및 졸업요건 (학과 홈페이지 교육과정 게시판)",
+   "year": 2025,
+   "url": "https://ie.khu.ac.kr/ie/user/bbs/BMSR00040/list.do?menuNo=17400010"
   },
-  {
-    "programId": "SAMPLE-DS-MD",
-    "campus": "INTL",
-    "college": "[샘플] 소프트웨어융합대학",
-    "department": "[샘플] 데이터과학 MD",
-    "kind": "MICRO_DEGREE",
-    "admissionYearRange": [2020, 2026],
-    "requirements": [
-      { "category": "전필", "minCredits": 6 },
-      { "category": "전선", "minCredits": 6 }
+  "verified": true,
+  "note": "2026학번도 이 과목표를 씁니다. 2026 교육과정 원문은 이미지라 과목을 읽지 못했고, 학점 기준(전기24·전필6·전선49)은 2026 학사제도안내 기본구조표와 같습니다.",
+  "diagram": {
+   "nodes": [
+    {
+     "code": "AMTH1009",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "IE104",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "APHY1004",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "IE103",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "IE203",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "IE207",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "IE204",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "IE208",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "IE301",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "IE423",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "IE430",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "IE400",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "IE201",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "IE213",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "IE214",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "IE215",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "IE212",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "IE216",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "IE217",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "IE306",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "IE308",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "IE315",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "IE304",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "IE329",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "IE302",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "IE309",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "IE312",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "IE323",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "IE322",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "IE325",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "IE327",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "IE328",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "IE419",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "IE407",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "IE410",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "IE415",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "IE424",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "IE318",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "IE428",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "IE429",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "IE411",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "IE412",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "IE320",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "IE321",
+     "year": 3,
+     "semester": 2
+    }
+   ],
+   "edges": [
+    [
+     "IE104|SWCON104",
+     "IE215"
     ],
-    "totalMin": 12,
-    "courses": ["SAMP1002", "SAMP3002", "SAMD2001", "SAMD3001"],
-    "source": { "doc": "가상 데이터 (실제 교육과정 아님)", "year": 2025 },
-    "verified": false
+    [
+     "IE104|SWCON104",
+     "IE322"
+    ],
+    [
+     "IE207",
+     "IE208"
+    ],
+    [
+     "IE208",
+     "IE312"
+    ],
+    [
+     "IE215",
+     "IE306"
+    ],
+    [
+     "IE308",
+     "IE309"
+    ],
+    [
+     "IE308",
+     "IE424"
+    ],
+    [
+     "IE208",
+     "IE407"
+    ]
+   ],
+   "tracks": []
   }
+ },
+ {
+  "programId": "CE-2024-MAJOR",
+  "campus": "INTL",
+  "college": "소프트웨어융합대학",
+  "department": "컴퓨터공학과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2024,
+   2024
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 15
+   },
+   {
+    "category": "전필",
+    "minCredits": 45
+   },
+   {
+    "category": "전선",
+    "minCredits": 27
+   }
+  ],
+  "totalMin": 87,
+  "courses": [
+   "AMTH1001",
+   "AMTH1004",
+   "AMTH1009",
+   "CSE201",
+   "EE211",
+   "CSE103",
+   "CSE203",
+   "CSE204",
+   "CSE301",
+   "CSE302",
+   "CSE304",
+   "CSE305",
+   "CSE327",
+   "CSE403",
+   "CSE405",
+   "CSE406",
+   "EE209",
+   "SWCON103",
+   "SWCON104",
+   "SWCON201",
+   "SWCON253",
+   "AI1002",
+   "AI3001",
+   "AI3004",
+   "CSE104",
+   "CSE224",
+   "CSE322",
+   "CSE324",
+   "CSE328",
+   "CSE330",
+   "CSE331",
+   "CSE332",
+   "CSE334",
+   "CSE335",
+   "CSE340",
+   "CSE423",
+   "CSE426",
+   "CSE428",
+   "CSE430",
+   "CSE431",
+   "CSE434",
+   "CSE436",
+   "CSE437",
+   "CSE438",
+   "CSE439",
+   "CSE440",
+   "CSE441",
+   "CSE442",
+   "CSE443",
+   "CSE444",
+   "CSE450",
+   "CSE451",
+   "CSE452",
+   "CSE453",
+   "CSE495",
+   "CSE496",
+   "CSE497",
+   "CSE499",
+   "EE210",
+   "SWCON211",
+   "SWCON212",
+   "SWCON221",
+   "SWCON254",
+   "SWCON302",
+   "SWCON311",
+   "SWCON312",
+   "SWCON313",
+   "SWCON331",
+   "SWCON366",
+   "SWCON370",
+   "SWCON491",
+   "SWCON492",
+   "SWCON493",
+   "SWCON495"
+  ],
+  "source": {
+   "doc": "2024학년도 교육과정 – 소프트웨어융합대학 컴퓨터공학과 시행세칙 (378~386쪽)",
+   "year": 2024,
+   "url": "https://ce.khu.ac.kr/ce25/user/bbs/BMSR00048/list.do?menuNo=21600025"
+  },
+  "verified": true,
+  "note": "전공선택 27학점 안에 산학필수 12학점(현장실습 포함)이 들어 있어야 합니다. 현장실습 학점은 과목 목록에 없어 사정표 값으로만 반영됩니다.",
+  "diagram": {
+   "nodes": [
+    {
+     "code": "AMTH1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "AMTH1004",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "AMTH1009",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "CSE201",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "EE211",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE103",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE203",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE204",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE301",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE302",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE304",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE305",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE327",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE403",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE405",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE406",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "EE209",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON103",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON104",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON201",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON253",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "AI1002",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "AI3001",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "AI3004",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE104",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE224",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE322",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE324",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE328",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE330",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE331",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE332",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE334",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE335",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE340",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE423",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE426",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE428",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE430",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE431",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE434",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE436",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE437",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE438",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE439",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE440",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE441",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE442",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE443",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE444",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE450",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE451",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE452",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE453",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE495",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE496",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE497",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSE499",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "EE210",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON211",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON212",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON221",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON254",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON302",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON311",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON312",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON313",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON331",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON366",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON370",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON491",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON492",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON493",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SWCON495",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    }
+   ],
+   "edges": [
+    [
+     "CSE103",
+     "CSE204"
+    ],
+    [
+     "EE209",
+     "CSE203"
+    ],
+    [
+     "CSE204",
+     "CSE304"
+    ],
+    [
+     "SWCON103",
+     "CSE406"
+    ],
+    [
+     "CSE406",
+     "CSE405"
+    ],
+    [
+     "AMTH1009",
+     "EE210"
+    ],
+    [
+     "SWCON104",
+     "SWCON201"
+    ],
+    [
+     "CSE203",
+     "CSE439"
+    ]
+   ],
+   "tracks": [
+    {
+     "name": "산학필수",
+     "courses": [
+      "CSE330",
+      "CSE334",
+      "CSE434",
+      "CSE436",
+      "CSE335",
+      "CSE437",
+      "CSE450",
+      "CSE451",
+      "CSE442",
+      "CSE438",
+      "SWCON302",
+      "CSE496",
+      "CSE497"
+     ],
+     "minCredits": 12
+    }
+   ]
+  }
+ },
+ {
+  "programId": "BIZ-2026-MAJOR",
+  "campus": "SEOUL",
+  "college": "경영대학",
+  "department": "경영학과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 12
+   },
+   {
+    "category": "전필",
+    "minCredits": 18
+   },
+   {
+    "category": "전선",
+    "minCredits": 33
+   }
+  ],
+  "totalMin": 63,
+  "courses": [
+   "MGMT1001",
+   "MGMT1003",
+   "MGMT1007",
+   "ACCT1001",
+   "ACCT1002",
+   "MGMT2001",
+   "MGMT2002",
+   "MGMT2003",
+   "MGMT2004",
+   "MGMT2005",
+   "MGMT4025",
+   "MGMT1002",
+   "MGMT1004",
+   "MGMT1005",
+   "MGMT1006",
+   "MGMT2006",
+   "MGMT2007",
+   "MGMT2008",
+   "MGMT2010",
+   "MGMT2011",
+   "MGMT2012",
+   "MGMT2013",
+   "MGMT2014",
+   "MGMT3001",
+   "MGMT3006",
+   "MGMT3007",
+   "MGMT3008",
+   "MGMT3009",
+   "MGMT3013",
+   "MGMT3014",
+   "MGMT3016",
+   "MGMT3020",
+   "MGMT3022",
+   "MGMT3024",
+   "MGMT3033",
+   "MGMT3034",
+   "MGMT3036",
+   "MGMT3037",
+   "MGMT3038",
+   "MGMT3331",
+   "MGMT3333",
+   "MGMT3334",
+   "MGMT3335",
+   "MGMT3336",
+   "MGMT3337",
+   "MGMT3339",
+   "MGMT3340",
+   "MGMT3341",
+   "MGMT3342",
+   "MGMT3343",
+   "MGMT3344",
+   "MGMT4004",
+   "MGMT4006",
+   "MGMT4009",
+   "MGMT4010",
+   "MGMT4011",
+   "MGMT4012",
+   "MGMT4021",
+   "MGMT4030",
+   "MGMT4033",
+   "MGMT4034",
+   "MGMT4035",
+   "MGMT4036",
+   "MGMT4037",
+   "MGMT4042",
+   "MGMT4043",
+   "MGMT4044",
+   "MGMT4047",
+   "MGMT4048"
+  ],
+  "source": {
+   "doc": "경영학과 교육과정 시행세칙(2026) [별표1] 교육과정 편성표",
+   "year": 2026,
+   "url": "https://com.khu.ac.kr/biz_kor/user/contents/view.do?menuNo=14500237"
+  },
+  "verified": true,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "MGMT1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT1003",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT1007",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT1002",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2001",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2002",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2003",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2004",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2005",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4025",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT1002",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT1004",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT1005",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT1006",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MGMT2006",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2007",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2008",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2010",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2011",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2012",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2013",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "MGMT2014",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MGMT3001",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3006",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3007",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "MGMT3008",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3009",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3013",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3014",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3016",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3020",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3022",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3024",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3033",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "MGMT3034",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "MGMT3036",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3037",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3038",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "MGMT3331",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "MGMT3333",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3334",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3335",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3336",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3337",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3339",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3340",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "MGMT3341",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3342",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3343",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT3344",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4004",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4006",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4009",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "MGMT4010",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "MGMT4011",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "MGMT4012",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4021",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "MGMT4030",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4033",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "MGMT4034",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4035",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4036",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4037",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "MGMT4042",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4043",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4044",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4047",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT4048",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "CE-2024-MULTI",
+  "campus": "INTL",
+  "college": "소프트웨어융합대학",
+  "department": "컴퓨터공학과",
+  "kind": "MULTI_MAJOR",
+  "admissionYearRange": [
+   2024,
+   2024
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 12
+   },
+   {
+    "category": "전필",
+    "minCredits": 27
+   },
+   {
+    "category": "전선",
+    "minCredits": 15
+   }
+  ],
+  "totalMin": 54,
+  "courses": [
+   "AMTH1004",
+   "AMTH1009",
+   "CSE201",
+   "EE211",
+   "CSE103",
+   "CSE203",
+   "CSE204",
+   "CSE301",
+   "CSE302",
+   "CSE304",
+   "CSE305",
+   "CSE327",
+   "CSE403",
+   "CSE405",
+   "CSE406",
+   "EE209",
+   "SWCON103",
+   "SWCON104",
+   "SWCON201",
+   "SWCON253",
+   "AI1002",
+   "AI3001",
+   "AI3004",
+   "CSE104",
+   "CSE224",
+   "CSE322",
+   "CSE324",
+   "CSE328",
+   "CSE330",
+   "CSE331",
+   "CSE332",
+   "CSE334",
+   "CSE335",
+   "CSE340",
+   "CSE423",
+   "CSE426",
+   "CSE428",
+   "CSE430",
+   "CSE431",
+   "CSE434",
+   "CSE436",
+   "CSE437",
+   "CSE438",
+   "CSE439",
+   "CSE440",
+   "CSE441",
+   "CSE442",
+   "CSE443",
+   "CSE444",
+   "CSE450",
+   "CSE451",
+   "CSE452",
+   "CSE453",
+   "CSE495",
+   "CSE496",
+   "CSE497",
+   "CSE499",
+   "EE210",
+   "SWCON211",
+   "SWCON212",
+   "SWCON221",
+   "SWCON254",
+   "SWCON302",
+   "SWCON311",
+   "SWCON312",
+   "SWCON313",
+   "SWCON331",
+   "SWCON366",
+   "SWCON370",
+   "SWCON491",
+   "SWCON492",
+   "SWCON493",
+   "SWCON495"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "2024학년도 교육과정 – 소프트웨어융합대학 컴퓨터공학과 시행세칙 (378~386쪽) [표2] 다전공 전공과목 편성표",
+   "year": 2024,
+   "url": "https://ce.khu.ac.kr/ce25/user/bbs/BMSR00048/list.do?menuNo=21600025"
+  },
+  "verified": true
+ },
+ {
+  "programId": "MD-ESG",
+  "campus": "SEOUL",
+  "college": "경영대학",
+  "department": "ESG 경영 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "MGMT1003",
+   "MGMT2014",
+   "ACCT4010",
+   "IS3537"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "경영학과 교육과정 시행세칙(2026) [별표7] 마이크로디그리 이수체계도",
+   "year": 2026,
+   "url": "https://com.khu.ac.kr/biz_kor/user/contents/view.do?menuNo=14500237"
+  },
+  "verified": true,
+  "note": "4과목 중 3과목(9학점)"
+ },
+ {
+  "programId": "MD-CULTURE",
+  "campus": "SEOUL",
+  "college": "경영대학",
+  "department": "문화산업경영 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "MGMT3339",
+   "MGMT1005",
+   "CUENT4002"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "경영학과 교육과정 시행세칙(2026) [별표7] 마이크로디그리 이수체계도",
+   "year": 2026,
+   "url": "https://com.khu.ac.kr/biz_kor/user/contents/view.do?menuNo=14500237"
+  },
+  "verified": true,
+  "note": "3과목 모두(9학점)"
+ },
+ {
+  "programId": "MD-BIOHEALTH",
+  "campus": "SEOUL",
+  "college": "경영대학",
+  "department": "바이오헬스산업경영 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "MGMT3022",
+   "MGMT4004",
+   "PHRM1003",
+   "OPS4227",
+   "PHS4222"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "경영학과 교육과정 시행세칙(2026) [별표7] 마이크로디그리 이수체계도",
+   "year": 2026,
+   "url": "https://com.khu.ac.kr/biz_kor/user/contents/view.do?menuNo=14500237"
+  },
+  "verified": true,
+  "note": "5과목 중 9학점 이상"
+ },
+ {
+  "programId": "SAMPLE-2025-MAJOR",
+  "campus": "INTL",
+  "college": "[샘플] 공과대학",
+  "department": "[샘플] 가상학과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2025,
+   2025
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 6
+   },
+   {
+    "category": "전필",
+    "minCredits": 9
+   },
+   {
+    "category": "전선",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 24,
+  "courses": [
+   "SAMP1001",
+   "SAMP1002",
+   "SAMP2001",
+   "SAMP2002",
+   "SAMP3001",
+   "SAMP3002",
+   "SAMP3003",
+   "SAMP4001"
+  ],
+  "source": {
+   "doc": "가상 데이터 (실제 교육과정 아님)",
+   "year": 2025
+  },
+  "verified": false,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "SAMP1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "SAMP1002",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "SAMP2001",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "SAMP2002",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "SAMP3001",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "SAMP3002",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "SAMP3003",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "SAMP4001",
+     "year": 4,
+     "semester": 1
+    }
+   ],
+   "edges": [
+    [
+     "SAMP1001",
+     "SAMP2001"
+    ],
+    [
+     "SAMP2001",
+     "SAMP3001"
+    ],
+    [
+     "SAMP1002",
+     "SAMP3002"
+    ],
+    [
+     "SAMP1002",
+     "SAMP3003"
+    ]
+   ],
+   "tracks": [
+    {
+     "name": "[샘플] 데이터 분석",
+     "courses": [
+      "SAMP1002",
+      "SAMP3002"
+     ],
+     "minCredits": 6
+    },
+    {
+     "name": "[샘플] 운영 최적화",
+     "courses": [
+      "SAMP2001",
+      "SAMP3001",
+      "SAMP2002"
+     ],
+     "minCredits": 9
+    }
+   ]
+  }
+ }
 ]

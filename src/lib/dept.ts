@@ -1,7 +1,9 @@
 // 학과명 비교: "[샘플] 가상학과", "가상 학과" 같은 표기 차이를 무시하고 비교한다.
 import type { Program } from './types';
 
-export const normDept = (s: string) => s.replace(/\[[^\]]*\]/g, '').replace(/\s+/g, '').trim();
+// 가운뎃점은 PDF·글꼴마다 문자가 달라(･ · ・ · ‧) 하나로 맞춘다
+export const normDept = (s: string) =>
+  s.replace(/\[[^\]]*\]/g, '').replace(/[\u00B7\u0387\u2027\u30FB\uFF65\u318D]/g, '·').replace(/\s+/g, '').trim();
 
 export function sameDept(a: string, b: string): boolean {
   return normDept(a) === normDept(b);

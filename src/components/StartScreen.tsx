@@ -76,11 +76,14 @@ export default function StartScreen({ majors, programId, savedCount, savedAt, sy
           <select id="program" value={programId} onChange={(e) => onProgram(e.target.value)}>
             {majors.map((p) => (
               <option key={p.programId} value={p.programId}>
-                {p.department} ({p.admissionYearRange[0]}학번){p.verified ? '' : ' · 검증 중'}
+                {p.department} ({p.admissionYearRange[0] === p.admissionYearRange[1] ? p.admissionYearRange[0] : `${p.admissionYearRange[0]}~${p.admissionYearRange[1]}`}학번){p.verified ? '' : ' · 시험용 샘플'}
               </option>
             ))}
           </select>
-          <p className="muted">사정표를 올리면 학과가 자동으로 선택됩니다. 현재는 시험용 샘플 교육과정만 들어 있습니다.</p>
+          <p className="muted">
+            사정표를 올리면 학과가 자동으로 선택됩니다. 과목 목록이 들어 있는 학과: {majors.filter((p) => p.verified).map((p) => p.department).join(', ')}.
+            다른 학과도 사정표만 있으면 남은 학점·요건과 다전공 추천을 볼 수 있습니다.
+          </p>
           {savedCount > 0 && <p className="muted">학과를 바꾸면 입력한 과목이 초기화됩니다.</p>}
         </details>
       </section>

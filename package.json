@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "validate": "node scripts/validate-data.mjs",
+    "build:data": "node scripts/build-data.mjs",
     "preview:artifact": "PREVIEW=1 vite build && node scripts/build-preview.mjs",
     "deploy:zip": "PREVIEW=1 vite build && node scripts/make-deploy-zip.mjs",
     "fixtures": "python3 scripts/fixtures/make_reports.py"

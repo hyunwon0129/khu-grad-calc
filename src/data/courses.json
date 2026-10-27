@@ -1,12 +1,1707 @@
 [
-  { "code": "SAMP1001", "name": "[샘플] 공학수학", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전기" } },
-  { "code": "SAMP1002", "name": "[샘플] 확률통계", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전기", "SAMPLE-DS-MD": "전선" } },
-  { "code": "SAMP2001", "name": "[샘플] 경영과학", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전필" } },
-  { "code": "SAMP2002", "name": "[샘플] 생산관리", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전필" } },
-  { "code": "SAMP3001", "name": "[샘플] 최적화", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전필" } },
-  { "code": "SAMP3002", "name": "[샘플] 데이터마이닝", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전선", "SAMPLE-DS-MD": "전필" } },
-  { "code": "SAMP3003", "name": "[샘플] 품질경영", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전선" } },
-  { "code": "SAMP4001", "name": "[샘플] 캡스톤디자인", "credit": 3, "typeByProgram": { "SAMPLE-2025-MAJOR": "전선" } },
-  { "code": "SAMD2001", "name": "[샘플] 파이썬프로그래밍", "credit": 3, "typeByProgram": { "SAMPLE-DS-MD": "전필" } },
-  { "code": "SAMD3001", "name": "[샘플] 머신러닝", "credit": 3, "typeByProgram": { "SAMPLE-DS-MD": "전선" } }
+ {
+  "code": "AMTH1009",
+  "name": "미분적분학",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전기",
+   "CE-2024-MAJOR": "전기",
+   "CE-2024-MULTI": "전기"
+  }
+ },
+ {
+  "code": "IE104",
+  "name": "기초프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "APHY1004",
+  "name": "일반물리",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "IE103",
+  "name": "산업경영공학의이해",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "IE203",
+  "name": "공학수학1",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "IE207",
+  "name": "실험통계학",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "IE204",
+  "name": "공학수학2",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "IE208",
+  "name": "응용통계학",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "IE301",
+  "name": "경영과학1",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "IE423",
+  "name": "창의적종합설계1(산업경영공학)",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "IE430",
+  "name": "창의적종합설계2(산업경영공학)",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "IE400",
+  "name": "졸업논문(산업경영공학)",
+  "credit": 0,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "IE201",
+  "name": "경제성공학",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE213",
+  "name": "데이터베이스",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE214",
+  "name": "제품개발및제조시스템",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE215",
+  "name": "데이터사이언스",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE212",
+  "name": "경영정보시스템",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE216",
+  "name": "생산경영론",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE217",
+  "name": "하이테크마케팅",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE306",
+  "name": "데이터마이닝",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE308",
+  "name": "인간공학",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE315",
+  "name": "공급사슬관리",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE304",
+  "name": "기술경영",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE329",
+  "name": "금융공학",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE302",
+  "name": "경영과학2",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE309",
+  "name": "인간컴퓨터인터페이스",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE312",
+  "name": "품질공학",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE323",
+  "name": "인공지능",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE322",
+  "name": "정보시스템설계및개발",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE325",
+  "name": "물류관리",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE327",
+  "name": "사물인터넷",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE328",
+  "name": "기술경영데이터분석",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE419",
+  "name": "서비스데이터사이언스",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE407",
+  "name": "컴퓨터시뮬레이션",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE410",
+  "name": "CAD/CAM",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE415",
+  "name": "기술사업화",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE424",
+  "name": "작업및안전관리",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE318",
+  "name": "산업경영알고리즘",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE428",
+  "name": "머신러닝",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE429",
+  "name": "경영경제데이터분석",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE411",
+  "name": "연구연수활동1(산업경영공학)",
+  "credit": 1,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE412",
+  "name": "연구연수활동2(산업경영공학)",
+  "credit": 1,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE320",
+  "name": "독립심화학습1(산업경영공학과)",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "IE321",
+  "name": "독립심화학습2(산업경영공학과)",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "SWCON322",
+  "name": "고급데이터마이닝",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "SWCON423",
+  "name": "프로세스마이닝",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "SWCON424",
+  "name": "금융데이터분석",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "SWCON104",
+  "name": "웹/파이선프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "IE-2025-MAJOR": "전기",
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "AMTH1001",
+  "name": "미분방정식",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "AMTH1004",
+  "name": "선형대수",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전기",
+   "CE-2024-MULTI": "전기"
+  }
+ },
+ {
+  "code": "CSE201",
+  "name": "이산구조",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전기",
+   "CE-2024-MULTI": "전기"
+  }
+ },
+ {
+  "code": "EE211",
+  "name": "확률및랜덤변수",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전기",
+   "CE-2024-MULTI": "전기"
+  }
+ },
+ {
+  "code": "CSE103",
+  "name": "객체지향프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전필"
+  }
+ },
+ {
+  "code": "CSE203",
+  "name": "컴퓨터구조",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전필"
+  }
+ },
+ {
+  "code": "CSE204",
+  "name": "자료구조",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전필"
+  }
+ },
+ {
+  "code": "CSE301",
+  "name": "운영체제",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전필"
+  }
+ },
+ {
+  "code": "CSE302",
+  "name": "컴퓨터네트워크",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전필"
+  }
+ },
+ {
+  "code": "CSE304",
+  "name": "알고리즘",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전필"
+  }
+ },
+ {
+  "code": "CSE305",
+  "name": "데이터베이스",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전필"
+  }
+ },
+ {
+  "code": "CSE327",
+  "name": "소프트웨어공학",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전필"
+  }
+ },
+ {
+  "code": "CSE403",
+  "name": "졸업논문(컴퓨터공학)",
+  "credit": 0,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전필"
+  }
+ },
+ {
+  "code": "CSE405",
+  "name": "졸업프로젝트",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전필"
+  }
+ },
+ {
+  "code": "CSE406",
+  "name": "캡스톤디자인",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "EE209",
+  "name": "논리회로",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON103",
+  "name": "디자인적사고",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON201",
+  "name": "오픈소스SW개발방법및도구",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON253",
+  "name": "기계학습",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전필",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "AI1002",
+  "name": "인공지능프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "AI3001",
+  "name": "고급딥러닝",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "AI3004",
+  "name": "빅데이터마이닝",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE104",
+  "name": "실감미디어컴퓨팅기초",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE224",
+  "name": "UI/UX프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE322",
+  "name": "컴파일러",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE324",
+  "name": "메타버스시스템",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE328",
+  "name": "프로그래밍언어론",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE330",
+  "name": "SW스타트업비즈니스",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE331",
+  "name": "딥러닝",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE332",
+  "name": "리눅스시스템프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE334",
+  "name": "SW스타트업프로젝트",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE335",
+  "name": "클라우드컴퓨팅",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE340",
+  "name": "실전기계학습",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE423",
+  "name": "정보보호",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE426",
+  "name": "영상처리",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE428",
+  "name": "컴퓨터그래픽스",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE430",
+  "name": "메타버스데이터처리",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE431",
+  "name": "인간-컴퓨터상호작용",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE434",
+  "name": "빅데이터프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE436",
+  "name": "빅데이터프로젝트",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE437",
+  "name": "클라우드프로젝트",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE438",
+  "name": "최신기술콜로키움1",
+  "credit": 2,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE439",
+  "name": "AIoT디지털시스템",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE440",
+  "name": "AIoT소프트웨어",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE441",
+  "name": "컴퓨터비젼",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE442",
+  "name": "블록체인",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE443",
+  "name": "AI네트워킹",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE444",
+  "name": "AIoT네트워크",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE450",
+  "name": "모바일/웹서비스프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE451",
+  "name": "모바일/웹서비스프로젝트",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE452",
+  "name": "소프트웨어보안",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE453",
+  "name": "웹보안",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE495",
+  "name": "독립심화학습1(컴퓨터공학과)",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE496",
+  "name": "연구연수활동1",
+  "credit": 1,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE497",
+  "name": "연구연수활동2",
+  "credit": 1,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "CSE499",
+  "name": "독립심화학습2(컴퓨터공학과)",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "EE210",
+  "name": "신호와시스템",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON211",
+  "name": "게임프로그래밍입문",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON212",
+  "name": "게임엔진기초",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON221",
+  "name": "마이크로서비스프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON254",
+  "name": "회로와신호",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON302",
+  "name": "최신기술콜로키움2",
+  "credit": 2,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON311",
+  "name": "게임그래픽프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON312",
+  "name": "게임인터랙티브테크놀로지",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON313",
+  "name": "가상/증강현실이론및실습",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON331",
+  "name": "로봇프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON366",
+  "name": "3D데이터처리",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON370",
+  "name": "풀스택서비스프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON491",
+  "name": "인공지능과게임프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON492",
+  "name": "풀스택서비스네트워킹",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON493",
+  "name": "자연언어처리",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "SWCON495",
+  "name": "강화학습",
+  "credit": 3,
+  "typeByProgram": {
+   "CE-2024-MAJOR": "전선",
+   "CE-2024-MULTI": "전선"
+  }
+ },
+ {
+  "code": "MGMT1001",
+  "name": "경영통계학",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "MGMT1003",
+  "name": "책임경영",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전기",
+   "MD-ESG": "MD"
+  }
+ },
+ {
+  "code": "MGMT1007",
+  "name": "경영학원론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "ACCT1001",
+  "name": "회계원리",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "ACCT1002",
+  "name": "관리회계1",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "MGMT2001",
+  "name": "경영정보시스템",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "MGMT2002",
+  "name": "마케팅원론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "MGMT2003",
+  "name": "생산운영관리",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "MGMT2004",
+  "name": "재무관리",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "MGMT2005",
+  "name": "조직행동론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "MGMT4025",
+  "name": "졸업논문(경영학)",
+  "credit": 0,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "MGMT1002",
+  "name": "경제학원론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT1004",
+  "name": "경영수학",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT1005",
+  "name": "경영커뮤니케이션",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선",
+   "MD-CULTURE": "MD"
+  }
+ },
+ {
+  "code": "MGMT1006",
+  "name": "통계기반데이터분석",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT2006",
+  "name": "경영과학",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT2007",
+  "name": "리더십개발",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT2008",
+  "name": "소비자행동론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT2010",
+  "name": "투자론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT2011",
+  "name": "경영프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT2012",
+  "name": "금융자산론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT2013",
+  "name": "경영과철학",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT2014",
+  "name": "ESG경영",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선",
+   "MD-ESG": "MD"
+  }
+ },
+ {
+  "code": "MGMT3001",
+  "name": "경영시뮬레이션",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3006",
+  "name": "금융파생상품론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3007",
+  "name": "노사관계론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3008",
+  "name": "마케팅조사론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3009",
+  "name": "보험학원론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3013",
+  "name": "의사결정모형및분석",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3014",
+  "name": "인적자원관리",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3016",
+  "name": "전략경영론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3020",
+  "name": "품질경영",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3022",
+  "name": "미래산업과경영혁신",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선",
+   "MD-BIOHEALTH": "MD"
+  }
+ },
+ {
+  "code": "MGMT3024",
+  "name": "비즈니스애널리틱스",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3033",
+  "name": "데이터관리및응용",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3034",
+  "name": "전자상거래",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3036",
+  "name": "금융시장론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3037",
+  "name": "조직이론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3038",
+  "name": "데이터기반경영전략",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3331",
+  "name": "상업교재연구및지도법",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3333",
+  "name": "전사적자원관리(ERP)",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3334",
+  "name": "금융모델링및프로그래밍",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3335",
+  "name": "연금론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3336",
+  "name": "운영전략",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3337",
+  "name": "디지털서비스생태계:설계와운영",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3339",
+  "name": "경영세미나",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선",
+   "MD-CULTURE": "MD"
+  }
+ },
+ {
+  "code": "MGMT3340",
+  "name": "생성형AI응용",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3341",
+  "name": "디지털마케팅",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3342",
+  "name": "지속가능마케팅",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3343",
+  "name": "마케팅커뮤니케이션",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT3344",
+  "name": "전략적브랜드관리",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4004",
+  "name": "경영특강",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선",
+   "MD-BIOHEALTH": "MD"
+  }
+ },
+ {
+  "code": "MGMT4006",
+  "name": "공급사슬관리",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4009",
+  "name": "금융리스크관리",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4010",
+  "name": "기업재무론",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4011",
+  "name": "디지털미디어경영",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4012",
+  "name": "마케팅전략",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4021",
+  "name": "조직개발",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4030",
+  "name": "캡스톤디자인(경영학)",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4033",
+  "name": "기업과사회-부의공진화게임",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4034",
+  "name": "독립심화학습1(경영학과)",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4035",
+  "name": "캡스톤디자인2(경영학)",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4036",
+  "name": "독립심화학습2(경영학과)",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4037",
+  "name": "AI비즈니스",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4042",
+  "name": "피플애널리틱스",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4043",
+  "name": "미래전략과디자인씽킹",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4044",
+  "name": "리더십과시스템",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4047",
+  "name": "마케팅애널리틱스",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "MGMT4048",
+  "name": "마케팅액션",
+  "credit": 3,
+  "typeByProgram": {
+   "BIZ-2026-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "ACCT4010",
+  "name": "ESG경영과재무보고",
+  "credit": 3,
+  "typeByProgram": {
+   "MD-ESG": "MD"
+  }
+ },
+ {
+  "code": "IS3537",
+  "name": "ESG의이론과사례",
+  "credit": 3,
+  "typeByProgram": {
+   "MD-ESG": "MD"
+  }
+ },
+ {
+  "code": "CUENT4002",
+  "name": "엔터테인먼트산업과정책",
+  "credit": 3,
+  "typeByProgram": {
+   "MD-CULTURE": "MD"
+  }
+ },
+ {
+  "code": "PHRM1003",
+  "name": "약학개론",
+  "credit": 2,
+  "typeByProgram": {
+   "MD-BIOHEALTH": "MD"
+  }
+ },
+ {
+  "code": "OPS4227",
+  "name": "생물의약품개발론",
+  "credit": 2,
+  "typeByProgram": {
+   "MD-BIOHEALTH": "MD"
+  }
+ },
+ {
+  "code": "PHS4222",
+  "name": "의약품개발",
+  "credit": 2,
+  "typeByProgram": {
+   "MD-BIOHEALTH": "MD"
+  }
+ },
+ {
+  "code": "SAMP1001",
+  "name": "[샘플] 공학수학",
+  "credit": 3,
+  "typeByProgram": {
+   "SAMPLE-2025-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "SAMP1002",
+  "name": "[샘플] 확률통계",
+  "credit": 3,
+  "typeByProgram": {
+   "SAMPLE-2025-MAJOR": "전기"
+  }
+ },
+ {
+  "code": "SAMP2001",
+  "name": "[샘플] 경영과학",
+  "credit": 3,
+  "typeByProgram": {
+   "SAMPLE-2025-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "SAMP2002",
+  "name": "[샘플] 생산관리",
+  "credit": 3,
+  "typeByProgram": {
+   "SAMPLE-2025-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "SAMP3001",
+  "name": "[샘플] 최적화",
+  "credit": 3,
+  "typeByProgram": {
+   "SAMPLE-2025-MAJOR": "전필"
+  }
+ },
+ {
+  "code": "SAMP3002",
+  "name": "[샘플] 데이터마이닝",
+  "credit": 3,
+  "typeByProgram": {
+   "SAMPLE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "SAMP3003",
+  "name": "[샘플] 품질경영",
+  "credit": 3,
+  "typeByProgram": {
+   "SAMPLE-2025-MAJOR": "전선"
+  }
+ },
+ {
+  "code": "SAMP4001",
+  "name": "[샘플] 캡스톤디자인",
+  "credit": 3,
+  "typeByProgram": {
+   "SAMPLE-2025-MAJOR": "전선"
+  }
+ }
 ]

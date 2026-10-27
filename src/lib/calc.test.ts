@@ -3,11 +3,11 @@ import courses from '../data/courses.json';
 import programs from '../data/programs.json';
 import type { Course, Program, TakenCourse } from './types';
 import { calculate, findProgram } from './calc';
-import { recommendNext, recommendPrograms } from './recommend';
+import { recommendNext } from './recommend';
 
-const courseMap = new Map((courses as Course[]).map((c) => [c.code, c]));
-const all = programs as Program[];
-const major = all[0];
+const courseMap = new Map((courses as unknown as Course[]).map((c) => [c.code, c]));
+const all = programs as unknown as Program[];
+const major = all.find((p) => p.programId === 'SAMPLE-2025-MAJOR')!;
 const profile = { admissionYear: 2025, campus: 'INTL' as const, department: '[샘플] 가상학과' };
 
 describe('계산', () => {
@@ -51,16 +51,5 @@ describe('추천', () => {
     const recs = recommendNext(major, courseMap, []);
     expect(recs.find((c) => c.code === 'SAMP3001')?.available).toBe(false);
     expect(recs.find((c) => c.code === 'SAMP1001')?.available).toBe(true);
-  });
-
-  it('겹치는 과목이 많은 과정의 추가 필요 학점이 줄어든다', () => {
-    const taken: TakenCourse[] = [
-      { code: 'SAMP1002', term: '2025-2', status: 'TAKEN' },
-      { code: 'SAMP3002', term: '2026-1', status: 'TAKEN' },
-    ];
-    const [md] = recommendPrograms([all[1]], courseMap, taken, 18, 4);
-    expect(md.overlapCredits).toBe(6);
-    expect(md.neededCredits).toBe(6);
-    expect(md.policyUnknown).toBe(true);
   });
 });

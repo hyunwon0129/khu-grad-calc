@@ -1,7 +1,14 @@
 import { useState } from 'react';
-import type { Course, Program, TakenCourse } from '../lib/types';
+import type { Course, DepartmentInfo, Program, TakenCourse } from '../lib/types';
 import { calculate } from '../lib/calc';
-import { recommendPrograms, trackProgress } from '../lib/recommend';
+import { trackProgress } from '../lib/recommend';
+import { choiceGroupOf } from '../lib/prereq';
+import { findDepartment } from '../lib/multi';
+import { creditLimit } from '../lib/creditLimit';
+import { estimateSemestersLeft } from '../lib/verdict';
+import MultiPanel from './MultiPanel';
+import ShareCard from './ShareCard';
+import Glossary from './Glossary';
 import { planRoadmap, nextTerm, termLabel } from '../lib/planner';
 import { currentTerm } from '../lib/parseReport';
 import ProgressChart from './ProgressChart';
@@ -18,6 +25,7 @@ import { sameDept } from '../lib/dept';
 interface Props {
   program: Program;
   programs: Program[];
+  departments: DepartmentInfo[];
   courseMap: Map<string, Course>;
   taken: TakenCourse[];
   report?: ReportData | null;
@@ -32,10 +40,9 @@ interface Props {
 }
 
 export default function ResultScreen(p: Props) {
-  const { program, programs, courseMap, taken, excluded, maxCredits } = p;
+  const { program, programs, departments, courseMap, taken, excluded, maxCredits } = p;
   const [includeInProgress, setIncludeInProgress] = useState(false);
   const [showPlan, setShowPlan] = useState(true);
-  const [semestersLeft, setSemestersLeft] = useState(4);
   const [copied, setCopied] = useState<'idle' | 'ok' | 'manual'>('idle');
   const [forceShow, setForceShow] = useState(false);
 
@@ -45,16 +52,24 @@ export default function ResultScreen(p: Props) {
     fromTerm: nextTerm(nowTerm), maxCreditsPerSemester: maxCredits, excluded: new Set(excluded),
   });
   const tracks = trackProgress(program, courseMap, taken);
-  const others = recommendPrograms(
-    programs.filter((x) => x.kind !== 'MAJOR' && x.campus === program.campus),
-    courseMap, taken, result.totalRemaining, semestersLeft,
-  );
 
   const takenCodes = new Set(taken.map((t) => t.code));
   const ipCodes = new Set(taken.filter((t) => t.status === 'IN_PROGRESS').map((t) => t.code));
+  // 꼭 들어야 하는 과목: 전공필수 + (과목 학점 합이 기준과 같아 전부 들어야 하는) 전공기초. 택1 묶음은 하나만
+  const typeOf = (c: Course) => c.typeByProgram[program.programId];
+  const basicReq = program.requirements.find((r) => r.category === '전기')?.minCredits ?? 0;
+  const basicAll = program.courses.map((c) => courseMap.get(c)).filter((c): c is Course => !!c && typeOf(c) === '전기');
+  const basicPool = basicAll.reduce((s, c) => (choiceGroupOf(program, c.code)?.[0] ?? c.code) === c.code ? s + c.credit : s, 0);
+  const mustTypes = new Set(['전필', ...(basicReq > 0 && basicPool === basicReq ? ['전기'] : [])]);
   const missingRequired = program.courses
     .map((c) => courseMap.get(c))
-    .filter((c): c is Course => !!c && c.typeByProgram[program.programId] === '전필' && !takenCodes.has(c.code));
+    .filter((c): c is Course => !!c && mustTypes.has(typeOf(c)) && !takenCodes.has(c.code))
+    .filter((c) => {
+      const g = choiceGroupOf(program, c.code);
+      if (!g) return true;
+      if (g.some((x) => takenCodes.has(x))) return false;
+      return g[0] === c.code; // 묶음 대표 하나만 보여 준다
+    });
   const uncounted = taken.filter((t) => !courseMap.get(t.code)?.typeByProgram[program.programId]).length;
   const hasPending = ipCodes.size > 0;
 
@@ -65,6 +80,17 @@ export default function ResultScreen(p: Props) {
 
   const report = p.report ?? null;
   const views = report ? areaViews(report, taken, courseMap) : [];
+  const isSample = program.programId.startsWith('SAMPLE');
+  const myDeptName = report?.department ?? (isSample ? null : program.department);
+  const myDept = findDepartment(departments, myDeptName, report?.department ? null : program.campus);
+  const student = { campus: myDept?.campus ?? (isSample ? null : program.campus), department: myDeptName };
+  const admissionYear = report?.admissionYear ?? null;
+  const limit = creditLimit(myDept, admissionYear ?? program.admissionYearRange[0]);
+  const areaLeft = views.filter((v) => v.group !== '졸업' && !/계$/.test(v.name)).reduce((s, v) => s + v.remaining, 0);
+  const gradLeft = views.find((v) => v.group === '졸업')?.remaining ?? 0;
+  const mustRemaining = report && views.length ? areaLeft : result.totalRemaining;
+  const freeRemaining = report && views.length ? Math.max(0, gradLeft - areaLeft) : 0;
+  const yearOff = !!admissionYear && !isSample && (admissionYear < program.admissionYearRange[0] || admissionYear > program.admissionYearRange[1]);
   const schoolSummary = report
     ? [
         `[졸업요건 현황] ${report.department ?? ''} ${report.admissionYear ? `${report.admissionYear}학번` : ''} · 졸업사정표 기준`.replace(/\s+/g, ' '),
@@ -100,7 +126,7 @@ export default function ResultScreen(p: Props) {
       `전공 ${result.totalEarned}/${result.totalRequired}학점 (잔여 ${result.totalRemaining})`,
       ...result.areas.map((a) => `- ${a.category} ${a.earned}/${a.required}${a.remaining ? ` (잔여 ${a.remaining})` : ' 완료'}`),
     ]),
-    missingRequired.length ? `미이수 전필: ${missingRequired.map((c) => c.name).join(', ')}` : '전필: 모두 이수',
+    missingRequired.length ? `미이수 필수 과목: ${missingRequired.map((c) => c.name).join(', ')}` : '필수 과목: 모두 이수',
     gradLabel,
   ];
   const summary = [
@@ -125,6 +151,15 @@ export default function ResultScreen(p: Props) {
           </span>
         </section>
       )}
+      {showCurriculum && !isSample && (program.note || yearOff) && (
+        <p className="notice">
+          <span>
+            <strong>{program.department} 과목 데이터: {program.source.year}학년도 교육과정</strong>
+            {yearOff && ` · ${admissionYear}학번 교육과정과 다를 수 있어요.`}
+            {program.note && ` ${program.note}`}
+          </span>
+        </p>
+      )}
       {showCurriculum && !program.verified && !report && (
         <p className="notice">
           <span>
@@ -133,7 +168,7 @@ export default function ResultScreen(p: Props) {
         </p>
       )}
 
-      {report && report.areas.length > 0 && <VerdictCard report={report} views={views} plannedViews={p.plans.length ? applyPlans(views, p.plans) : null} />}
+      {report && report.areas.length > 0 && <VerdictCard report={report} views={views} plannedViews={p.plans.length ? applyPlans(views, p.plans) : null} limit={limit} />}
 
       <section>
         <h2>이수 현황{report && <span className="h2-sub"> · 졸업사정표 기준</span>}</h2>
@@ -202,12 +237,15 @@ export default function ResultScreen(p: Props) {
       <section>
         <h2>꼭 들어야 하는 과목</h2>
         {missingRequired.length === 0 ? (
-          <p className="ok">전공필수 과목을 모두 이수했습니다.</p>
+          <p className="ok">꼭 들어야 하는 전공 과목을 모두 이수했습니다.</p>
         ) : (
           <ul className="must">
             {missingRequired.map((c) => (
               <li key={c.code}>
-                <span className="chip warn-chip">전필</span>{c.name} <span className="muted code">{c.code} · {c.credit}학점</span>
+                <span className="chip warn-chip">{typeOf(c)}</span>
+                {choiceGroupOf(program, c.code)
+                  ? <>{choiceGroupOf(program, c.code)!.map((x) => courseMap.get(x)?.name ?? x).join(' 또는 ')} <span className="muted">· 택1</span></>
+                  : <>{c.name} <span className="muted code">{c.code} · {c.credit}학점</span></>}
               </li>
             ))}
           </ul>
@@ -287,25 +325,22 @@ export default function ResultScreen(p: Props) {
         </>
       )}
 
-      <section>
-        <h2>다전공·MD 추천</h2>
-        <label htmlFor="sem-left">남은 학기</label>{' '}
-        <input id="sem-left" type="number" min={1} max={8} value={semestersLeft} className="num" onChange={(e) => setSemestersLeft(Number(e.target.value))} />
-        <ul>
-          {others.map((o) => (
-            <li key={o.program.programId}>
-              <strong>{o.program.department}</strong> — {o.reason}
-              {!o.feasible && <span className="warn"> · 남은 학기 안에 어려움</span>}
-              {o.policyUnknown && <span className="muted"> · 중복 인정 규정은 학교 공지 확인</span>}
-            </li>
-          ))}
-          {others.length === 0 && <li className="muted">추천할 다전공·MD 데이터가 아직 없습니다.</li>}
-        </ul>
-      </section>
+      <MultiPanel
+        departments={departments}
+        programs={programs}
+        courseMap={courseMap}
+        taken={taken}
+        student={student}
+        nowTerm={nowTerm}
+        initialSemesters={estimateSemestersLeft(admissionYear, nowTerm) || 4}
+        limit={limit}
+        mustRemaining={mustRemaining}
+        freeRemaining={freeRemaining}
+      />
 
       {(showCurriculum || report) && (
       <section>
-        <h2>상담용 요약</h2>
+        <h2>요약·공유</h2>
         <p className="muted">지도교수 상담이나 학과 사무실 문의 때 붙여넣기 좋은 요약입니다. 이름·학번은 들어가지 않습니다.</p>
         <textarea id="summary" className="summary" readOnly value={summary} rows={summary.split('\n').length}
           onFocus={(e) => e.currentTarget.select()} />
@@ -314,8 +349,18 @@ export default function ResultScreen(p: Props) {
           {copied === 'ok' && <span className="ok" role="status">복사했습니다</span>}
           {copied === 'manual' && <span className="muted" role="status">자동 복사가 막혀 있습니다. 위 칸을 눌러 선택한 뒤 복사하세요.</span>}
         </div>
+        <ShareCard
+          title={report ? `${report.department ?? ''} ${report.admissionYear ? `${report.admissionYear}학번` : ''}`.trim() || '내 졸업요건' : curriculumName}
+          headline={report && views.length ? buildVerdict(views, report.checks ?? []).headline : result.totalRemaining ? `전공 ${result.totalRemaining}학점이 남았습니다` : '전공 학점을 모두 채웠습니다'}
+          bars={report && views.length
+            ? views.filter((v) => !/계$/.test(v.name)).map((v) => ({ name: v.name, earned: v.group === '졸업' ? v.done : v.earned, required: v.required }))
+            : result.areas.map((a) => ({ name: a.category, earned: a.earned, required: a.required }))}
+          footnote={report ? (report.source === 'SAMPLE' ? '가상 사정표 예시 · 비공식 참고용' : '졸업사정표 기준 · 비공식 참고용') : `${curriculumName} 교육과정 기준 · 비공식 참고용`}
+        />
       </section>
       )}
+
+      <Glossary />
     </>
   );
 }
