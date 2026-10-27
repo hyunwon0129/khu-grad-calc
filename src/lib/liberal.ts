@@ -184,3 +184,23 @@ export function analyzeLiberal(
 
   return { rules, areaRule, required, areaState, areaCovered, coveredEst, unknownAreaCourses, credits, substBaebun, freeSeminar, suggestions, freeSuggestions, nextSemester: sem, notes };
 }
+
+/** 더 들어야 할 교양 한 줄 목록 (요약 체크리스트·교양 탭 공용). school은 사정표 영역(교양필수·배분이수·자유이수) */
+export function liberalTodo(
+  st: LiberalStatus,
+  data: LiberalData,
+  school: { name: string; remaining: number }[] = [],
+): { kind: '필수교과' | '배분이수' | '자유이수'; label: string; detail?: string }[] {
+  const s = (n: string) => school.find((v) => v.name === n);
+  const out: { kind: '필수교과' | '배분이수' | '자유이수'; label: string; detail?: string }[] = [];
+  for (const r of st.required.filter((x) => x.state === 'todo')) out.push({ kind: '필수교과', label: r.name, detail: `${r.credit}학점 · ${r.year}학년 권장${r.note ? ` · ${r.note}` : ''}` });
+  const needArea = st.areaRule ? Math.max(0, st.rules.배분영역 - st.coveredEst) : 0;
+  const sb = s('배분이수');
+  const needBaebun = sb ? sb.remaining : Math.max(0, st.rules.배분 - st.credits.배분);
+  if (needArea > 0) out.push({ kind: '배분이수', label: `${needArea}개 영역 더`, detail: st.areaState.filter((a) => a.state === 'todo').map((a) => `${a.area}. ${a.name}`).join(' / ') });
+  else if (needBaebun > 0) out.push({ kind: '배분이수', label: `${needBaebun}학점 더`, detail: st.areaRule ? undefined : '영역 구분 없음' });
+  if (st.freeSeminar === 'todo') out.push({ kind: '자유이수', label: data.requiredFree.name, detail: `필수${data.requiredFree.note ? ` · ${data.requiredFree.note}` : ''}${data.requiredFree.alt ? ` · '${data.requiredFree.alt}'로 대신 가능(공과대학 등)` : ''}` });
+  const sf = s('자유이수');
+  if (sf && sf.remaining > 0) out.push({ kind: '자유이수', label: `${sf.remaining}학점 더` });
+  return out;
+}

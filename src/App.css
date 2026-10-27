@@ -340,3 +340,31 @@ a.button-like:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 .lib-exempt summary { cursor: pointer; color: var(--accent); font-weight: 600; }
 .lib-exempt ul { margin: 6px 0; padding-left: 18px; }
 .lib-notes { margin: 4px 0; padding-left: 18px; }
+
+/* 결과 화면: 요건 체크리스트 + 세부 탭 */
+.grad-checklist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.grad-checklist .check { grid-template-columns: 1.4em minmax(0, 1fr) auto; grid-template-areas: "mark name open" ". status status"; padding: 6px 0; border-bottom: 1px solid var(--line); }
+@media (min-width: 720px) {
+  .grad-checklist .check { grid-template-columns: 1.4em minmax(8em, 14em) minmax(0, 1fr) auto; grid-template-areas: "mark name status open"; }
+}
+.grad-done { display: flex; gap: 8px; align-items: baseline; margin: 0; color: var(--ok); }
+.grad-done .check-mark { flex: none; }
+.grad-checklist .check:last-child { border-bottom: 0; }
+.grad-checklist .check-mark { grid-area: mark; }
+.grad-checklist .check-name { grid-area: name; font-weight: 600; }
+.grad-checklist .check-status { grid-area: status; font-size: 0.86rem; }
+.grad-checklist .check-open { grid-area: open; white-space: nowrap; }
+.check-ok .check-mark, .check-ok .check-status { color: var(--ok); }
+.check-todo .check-mark, .check-todo .check-status { color: var(--warn); }
+.check-ongoing .check-mark, .check-ongoing .check-status { color: var(--accent); }
+.check-check .check-mark, .check-check .check-status { color: var(--muted); }
+.result-tabs { position: sticky; top: 0; z-index: 5; display: flex; gap: 4px; overflow-x: auto; padding: 8px 0; background: var(--bg); border-bottom: 1px solid var(--line); scrollbar-width: thin; }
+.result-tabs .tab { flex: 0 0 auto; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: inherit; font: inherit; font-size: 0.9rem; cursor: pointer; }
+.result-tabs .tab.active { background: var(--accent); border-color: var(--accent); color: var(--on-accent, #fff); font-weight: 600; }
+.tab-panel { scroll-margin-top: 56px; display: flex; flex-direction: column; gap: 24px; }
+.credit-extra { border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; margin: 12px 0; }
+.credit-extra legend { font-weight: 600; font-size: 0.92rem; padding: 0 4px; }
+.credit-extra p { margin: 4px 0; }
+.credit-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.92rem; }
+.credit-table th, .credit-table td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: left; }
+.credit-table tfoot td { font-weight: 600; }

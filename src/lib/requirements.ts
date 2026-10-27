@@ -113,13 +113,26 @@ export function checksFromLines(lines: string[]): RequirementCheck[] {
 }
 
 /** 사정표로 확인할 수 없어 직접 확인해야 하는 요건 */
-export function manualChecks(admissionYear: number | null): { name: string; detail: string }[] {
+export function manualChecks(admissionYear: number | null, dept?: { college: string; name: string } | null): { name: string; detail: string }[] {
   const list = [
     { name: '등록 학기 8학기 이상', detail: '건축학과 10학기, 6년제 의약학계열 12학기. 편입생은 인정학기 포함' },
   ];
-  if (admissionYear !== null && admissionYear >= 2026) {
+  if (multiRequired(admissionYear, dept) !== false && admissionYear !== null && admissionYear >= 2026) {
     list.push({ name: '다전공·마이크로디그리·부전공 중 1개 이상', detail: '2026학년도 입학생부터 적용 (의학·간호학·약학계열 제외)' });
   }
   list.push({ name: '트랙·공학교육인증 신청자', detail: '신청한 경우 해당 이수요건도 충족해야 합니다' });
   return list;
+}
+
+/** 졸업요건 ⑫ 다전공·마이크로디그리·부전공 중 1개 이상 (2026 학사제도안내 97쪽)
+ *  2026학년도 입학생(신·편입)부터. 의학·간호학·약학계열은 제외하되 약과학과는 적용.
+ *  true: 해당, false: 해당 없음, null: 학번을 몰라 판단 불가 */
+export function multiRequired(admissionYear: number | null, dept?: { college: string; name: string } | null): boolean | null {
+  if (admissionYear === null) return null;
+  if (admissionYear < 2026) return false;
+  if (dept) {
+    const exemptCollege = /의과대학|치과대학|한의과대학|간호|약학대학/.test(dept.college);
+    if (exemptCollege && !/약과학/.test(dept.name)) return false;
+  }
+  return true;
 }

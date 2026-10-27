@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Course, DepartmentInfo, Program, TakenCourse } from '../lib/types';
 import { calculate } from '../lib/calc';
 import { trackProgress } from '../lib/recommend';
@@ -18,7 +18,12 @@ import { planRoadmap, nextTerm, termLabel } from '../lib/planner';
 import { currentTerm } from '../lib/parseReport';
 import ProgressChart from './ProgressChart';
 import SchoolProgress, { areaViews } from './SchoolProgress';
-import VerdictCard from './VerdictCard';
+import GradSummary, { type SummaryRow } from './GradSummary';
+import CreditPlanPanel from './CreditPlanPanel';
+import { planCredits, type TermLimits } from '../lib/creditPlan';
+import { manualChecks, multiRequired } from '../lib/requirements';
+import liberalData from '../data/liberal.json';
+import { analyzeLiberal, liberalTodo, type LiberalData } from '../lib/liberal';
 import WhatIfPanel from './WhatIfPanel';
 import MatchBadge from './MatchBadge';
 import { matchWithSchool } from '../lib/reportLayout';
@@ -26,6 +31,17 @@ import { applyPlans, plannedByArea, type PlannedItem } from '../lib/whatif';
 import { buildVerdict } from '../lib/verdict';
 import type { ReportData } from '../lib/reportLayout';
 import { sameDept } from '../lib/dept';
+
+const TABS = [
+  ['status', '이수 현황'], ['recommend', '추천 과목'], ['must', '필수 과목'], ['roadmap', '로드맵'],
+  ['liberal', '교양'], ['multi', '다전공·MD'], ['credits', '학기 학점'], ['share', '요약·공유'],
+] as const;
+type Tab = (typeof TABS)[number][0];
+const TAB_KEY = 'khu-grad-calc:tab';
+const readTab = (): Tab => {
+  try { const v = localStorage.getItem(TAB_KEY); return (TABS.some(([k]) => k === v) ? v : 'status') as Tab; } catch { return 'status'; }
+};
+const STATUS_ROW = { met: 'ok', exempt: 'ok', unmet: 'todo', unknown: 'check', na: 'ok' } as const;
 
 interface Props {
   program: Program;
@@ -52,6 +68,13 @@ export default function ResultScreen(p: Props) {
   const [showPlan, setShowPlan] = useState(true);
   const [copied, setCopied] = useState<'idle' | 'ok' | 'manual'>('idle');
   const [forceShow, setForceShow] = useState(false);
+  const [tab, setTabState] = useState<Tab>(readTab);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const setTab = (t: Tab, scroll = false) => {
+    setTabState(t);
+    try { localStorage.setItem(TAB_KEY, t); } catch { /* 저장 못 해도 동작 */ }
+    if (scroll) requestAnimationFrame(() => panelRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+  };
 
   const result = calculate(program, courseMap, taken, includeInProgress);
   const nowTerm = currentTerm();
@@ -148,6 +171,90 @@ export default function ResultScreen(p: Props) {
     ...(showCurriculum ? curriculumSummary : []),
   ].join('\n');
 
+  // ── 학기 학점 계획 (1·2학기 수강허용학점이 다를 수 있고, 다음 학기에만 +3·세이브)
+  const yearForCalc = admissionYear ?? (isSample ? null : program.admissionYearRange[0]);
+  const estSem = estimateSemestersLeft(yearForCalc, nowTerm);
+  const [semesters, setSemesters] = useState<number>(estSem ?? 4);
+  const [limits, setLimits] = useState<TermLimits>(() => ({ first: limit?.first ?? 18, second: limit?.second ?? 18, honorsBonus: false, saved: 0 }));
+  const limitKey = limit ? `${limit.first}/${limit.second}` : '';
+  useEffect(() => {
+    if (limit) setLimits((l) => ({ ...l, first: limit.first, second: limit.second }));
+    // 학과·학번이 바뀌면 학교 기준으로 다시 맞춘다
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [limitKey]);
+  const verdict = report && views.length ? buildVerdict(views, report.checks ?? []) : null;
+  const creditsLeft = verdict ? verdict.remainingCredits : result.totalRemaining;
+  const creditPlan = planCredits(creditsLeft, nowTerm, semesters, limits);
+  const capPlan = planCredits(0, nowTerm, semesters, limits);
+  const capNote = limits.first === limits.second ? `학기당 ${limits.first}학점 기준` : `1학기 ${limits.first}·2학기 ${limits.second}학점 기준`;
+
+  // ── 교양 남은 것
+  const libData = liberalData as unknown as LiberalData;
+  const nextSem = Number(nextTerm(nowTerm).split('-')[1]) as 1 | 2;
+  const libStatus = analyzeLiberal(libData, taken, courseMap, {
+    nextSemester: nextSem, schoolCategory: report?.categories, options: p.libOptions, dept: myDept ?? null, admissionYear: yearForCalc,
+  });
+  const libTodo = liberalTodo(libStatus, libData, views);
+
+  // ── 졸업 요건 체크리스트
+  const needMulti = multiRequired(admissionYear ?? (isSample ? null : program.admissionYearRange[0]), myDept ?? null);
+  const rows: SummaryRow[] = [];
+  if (report && views.length) {
+    for (const v of views) {
+      if (/계$/.test(v.name)) continue;
+      const earned = v.group === '졸업' ? v.done : v.earned;
+      rows.push({
+        key: `v-${v.name}`, label: v.group === '졸업' ? '졸업학점' : v.name,
+        status: v.remaining > 0 ? 'todo' : v.pending ? 'ongoing' : 'ok',
+        detail: `${earned}/${v.required}${v.remaining ? ` · ${v.remaining}학점 남음` : ''}`,
+        tab: /교양|배분|자유/.test(v.name) ? 'liberal' : 'status',
+      });
+    }
+    for (const c of report.checks ?? []) {
+      if (c.status === 'na') continue;
+      rows.push({ key: `c-${c.key}`, label: c.name, status: STATUS_ROW[c.status], detail: c.detail, tab: 'status' });
+    }
+  } else {
+    for (const a of result.areas) {
+      rows.push({ key: `a-${a.category}`, label: `${a.category} (전공)`, status: a.remaining > 0 ? 'todo' : 'ok', detail: `${a.earned}/${a.required}${a.remaining ? ` · ${a.remaining}학점 남음` : ''}`, tab: 'status' });
+    }
+  }
+  if (showCurriculum) {
+    rows.push({
+      key: 'must', label: '꼭 들어야 하는 전공 과목', status: missingRequired.length ? 'todo' : 'ok',
+      detail: missingRequired.length ? `${missingRequired.length}과목 남음` : '모두 이수', tab: 'must',
+    });
+  }
+  rows.push({
+    key: 'liberal', label: '교양 (후마니타스칼리지)', status: libTodo.length ? 'todo' : 'ok',
+    detail: libTodo.length ? libTodo.map((x) => `${x.kind} ${x.label}`).slice(0, 3).join(', ') + (libTodo.length > 3 ? ` 외 ${libTodo.length - 3}개` : '') : '남은 항목 없음',
+    tab: 'liberal',
+  });
+  if (needMulti) {
+    rows.push({ key: 'multi', label: '다전공·마이크로디그리·부전공 1개 이상', status: 'check', detail: '2026학번부터 졸업요건 · 신청·이수 여부는 직접 확인', tab: 'multi' });
+  }
+  if (creditsLeft > 0) {
+    rows.push({
+      key: 'credits', label: '남은 학기 안에 학점 채우기', status: creditPlan.shortfall > 0 || semesters <= 0 ? 'todo' : 'ok',
+      detail: semesters <= 0 ? '남은 정규 학기 없음'
+        : creditPlan.shortfall > 0 ? `최대 ${creditPlan.capacity}학점보다 ${creditPlan.shortfall}학점 많음`
+        : `${semesters}학기 동안 학기당 약 ${Math.ceil(creditsLeft / semesters)}학점`,
+      tab: 'credits',
+    });
+  }
+  for (const m of manualChecks(yearForCalc, myDept ?? null)) {
+    if (/다전공/.test(m.name)) continue;
+    rows.push({ key: `m-${m.name}`, label: m.name, status: 'check', detail: m.detail });
+  }
+  const headline = verdict ? verdict.headline : result.totalRemaining ? `전공 ${result.totalRemaining}학점이 남았습니다` : '전공 학점을 모두 채웠습니다';
+  const planLine = verdict && p.plans.length ? (() => {
+    const pv = buildVerdict(applyPlans(views, p.plans), report?.checks ?? []);
+    return pv.allDone ? '계획대로 들으면 학점·요건을 모두 채웁니다' : `계획대로 들으면 ${pv.headline}`;
+  })() : null;
+  const tabs = TABS.filter(([k]) => showCurriculum || !['recommend', 'must', 'roadmap'].includes(k)).filter(([k]) => k !== 'share' || showCurriculum || report);
+  const activeTab: Tab = tabs.some(([k]) => k === tab) ? tab : 'status';
+  const tabLabel = (k: string) => TABS.find(([x]) => x === k)?.[1] ?? k;
+
   return (
     <>
       {mismatch && (
@@ -182,7 +289,18 @@ export default function ResultScreen(p: Props) {
         </p>
       )}
 
-      {report && report.areas.length > 0 && <VerdictCard report={report} views={views} plannedViews={p.plans.length ? applyPlans(views, p.plans) : null} limit={limit} />}
+      <GradSummary headline={headline} allDone={verdict ? verdict.allDone : result.totalRemaining === 0} planLine={planLine}
+        rows={rows} tabLabel={tabLabel} onOpen={(t) => setTab(t as Tab, true)} />
+
+      <div className="result-tabs" role="tablist" aria-label="세부 항목">
+        {tabs.map(([k, label]) => (
+          <button key={k} type="button" role="tab" id={`tab-${k}`} aria-selected={activeTab === k} aria-controls="tab-panel"
+            className={activeTab === k ? 'tab active' : 'tab'} onClick={() => setTab(k)}>{label}</button>
+        ))}
+      </div>
+
+      <div className="tab-panel" id="tab-panel" role="tabpanel" aria-labelledby={`tab-${activeTab}`} ref={panelRef}>
+      {activeTab === 'status' && (
 
       <section>
         <h2>이수 현황{report && <span className="h2-sub"> · 졸업사정표 기준</span>}</h2>
@@ -241,13 +359,13 @@ export default function ResultScreen(p: Props) {
           <button type="button" className="link" onClick={p.onReimport}>사정표 다시 불러오기</button>
         </div>
       </section>
+      )}
 
-      {showCurriculum && report && isSample && (
+      {showCurriculum && report && isSample && ['recommend', 'must', 'roadmap'].includes(activeTab) && (
         <p className="notice"><span><strong>아래 추천은 시험용 샘플 교육과정 기준</strong> · {curriculumName} 데이터는 기능 확인용 가상 값입니다.</span></p>
       )}
 
-      {showCurriculum && (
-        <>
+      {showCurriculum && activeTab === 'recommend' && (
       <RecommendPanel
         program={program}
         programs={programs}
@@ -260,7 +378,9 @@ export default function ResultScreen(p: Props) {
         plannedNames={new Set(p.plans.map((x) => x.name))}
         onPlan={report && report.areas.length ? (c) => p.onPlans([...p.plans, { id: newPlanId(), name: c.name, category: SHORT_TO_SCHOOL[c.type] ?? '전공선택', credit: c.credit }]) : undefined}
       />
+      )}
 
+      {showCurriculum && activeTab === 'must' && (
       <section>
         <h2>꼭 들어야 하는 과목</h2>
         {missingRequired.length === 0 ? (
@@ -279,7 +399,10 @@ export default function ResultScreen(p: Props) {
         )}
         <p className="muted">전공필수는 학점을 다 채워도 빠지면 졸업할 수 없는 경우가 많습니다. 정확한 규정은 학과 교육과정에서 확인하세요.</p>
       </section>
+      )}
 
+      {showCurriculum && activeTab === 'roadmap' && (
+        <>
       <section>
         <h2>학기별 로드맵</h2>
         <div className="toolbar">
@@ -352,24 +475,33 @@ export default function ResultScreen(p: Props) {
         </>
       )}
 
+      {activeTab === 'liberal' && (
       <LiberalPanel taken={taken} courseMap={courseMap} report={report} views={views} nowTerm={nowTerm}
         admissionYear={admissionYear ?? (isSample ? null : program.admissionYearRange[0])} dept={myDept ?? null}
         options={p.libOptions} onOptions={p.onLibOptions} />
+      )}
 
+      {activeTab === 'multi' && (
       <MultiPanel
         departments={departments}
         programs={programs}
         courseMap={courseMap}
         taken={taken}
         student={student}
-        nowTerm={nowTerm}
-        initialSemesters={estimateSemestersLeft(admissionYear, nowTerm) || 4}
-        limit={limit}
+        cap={capPlan.capacity}
+        capNote={`남은 ${semesters}학기 · ${capNote}`}
+        required={needMulti}
         mustRemaining={mustRemaining}
         freeRemaining={freeRemaining}
       />
+      )}
 
-      {(showCurriculum || report) && (
+      {activeTab === 'credits' && (
+        <CreditPlanPanel remaining={creditsLeft} remainingLabel={verdict ? '졸업학점' : '전공 학점'} semesters={semesters} onSemesters={setSemesters} estimated={estSem !== null}
+          limits={limits} onLimits={setLimits} schoolLimit={limit} plan={creditPlan} />
+      )}
+
+      {(showCurriculum || report) && activeTab === 'share' && (
       <section>
         <h2>요약·공유</h2>
         <p className="muted">지도교수 상담이나 학과 사무실 문의 때 붙여넣기 좋은 요약입니다. 이름·학번은 들어가지 않습니다.</p>
@@ -390,6 +522,7 @@ export default function ResultScreen(p: Props) {
         />
       </section>
       )}
+      </div>
 
       <Glossary />
     </>

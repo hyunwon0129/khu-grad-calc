@@ -3,7 +3,6 @@
 import { useMemo, useState } from 'react';
 import type { Course, DepartmentInfo, Program, TakenCourse } from '../lib/types';
 import { recommendMd, recommendMulti, ownMajorShift, type Student } from '../lib/multi';
-import { capacity, type CreditLimit } from '../lib/creditLimit';
 
 interface Props {
   departments: DepartmentInfo[];
@@ -11,9 +10,9 @@ interface Props {
   courseMap: Map<string, Course>;
   taken: TakenCourse[];
   student: Student;
-  nowTerm: string;
-  initialSemesters: number;
-  limit: CreditLimit | null;
+  cap: number;             // 남은 학기 최대 학점 (학기 학점 탭 기준)
+  capNote: string;
+  required: boolean | null; // 2026학번 졸업요건 ⑫ 해당 여부
   mustRemaining: number;   // 남은 학기에 꼭 채워야 하는 영역 학점 (전공·교양 영역 남은 학점)
   freeRemaining: number;   // 졸업학점 중 영역 지정 없이 남은 학점 (다전공 과목으로 채우면 추가 부담 없음)
 }
@@ -22,12 +21,11 @@ const CAMPUS = { SEOUL: '서울', INTL: '국제' } as const;
 const SHOW = 6;
 
 export default function MultiPanel(p: Props) {
-  const [semesters, setSemesters] = useState(p.initialSemesters);
   const [query, setQuery] = useState('');
   const [campusFilter, setCampusFilter] = useState<'ALL' | 'SEOUL' | 'INTL'>('ALL');
   const [showAll, setShowAll] = useState(false);
 
-  const cap = p.limit ? capacity(p.limit, p.nowTerm, semesters) : semesters * 18;
+  const cap = p.cap;
   const room = Math.max(0, cap - p.mustRemaining);
   const all = useMemo(
     () => recommendMulti(p.departments, p.programs, p.courseMap, p.taken, p.student, room),
@@ -46,14 +44,15 @@ export default function MultiPanel(p: Props) {
     <section className="multi">
       <h2>다전공·마이크로디그리</h2>
 
-      <div className="toolbar">
-        <label htmlFor="sem-left">남은 학기</label>
-        <input id="sem-left" type="number" min={1} max={8} value={semesters} className="num"
-          onChange={(e) => setSemesters(Math.max(1, Math.min(8, Number(e.target.value) || 1)))} />
-        <span className="muted">
-          {p.limit ? `수강허용 1학기 ${p.limit.first}·2학기 ${p.limit.second}학점 기준` : '학기당 18학점 기준'} · 남은 학기 최대 {cap}학점
-        </span>
-      </div>
+      {p.required && (
+        <p className="notice notice-warn" role="note">
+          <span>
+            <strong>2026학번부터 다전공·마이크로디그리·부전공 중 1개 이상이 졸업요건입니다</strong> · 의학·간호학·약학계열은 제외(약과학과는 적용).
+            부전공은 이 앱에서 계산하지 않으니 학과 시행세칙을 확인하세요. (2026 학사제도안내 97쪽 ⑫)
+          </span>
+        </p>
+      )}
+      <p className="muted small">{p.capNote} · 남은 학기 최대 {cap}학점 (학기 학점 탭에서 바꿀 수 있어요)</p>
 
       <ul className="facts">
         <li>꼭 채울 영역 학점 <strong>{p.mustRemaining}</strong></li>

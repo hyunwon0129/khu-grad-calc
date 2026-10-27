@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import liberalData from '../data/liberal.json';
 import type { Course, DepartmentInfo, TakenCourse } from '../lib/types';
-import { analyzeLiberal, meetsEnglishScore, type ItemState, type LiberalData, type LiberalOptions, type StudentType } from '../lib/liberal';
+import { analyzeLiberal, liberalTodo, meetsEnglishScore, type ItemState, type LiberalData, type LiberalOptions, type StudentType } from '../lib/liberal';
 import type { ReportData } from '../lib/reportLayout';
 import type { AreaView } from './SchoolProgress';
 import { nextTerm, termLabel } from '../lib/planner';
@@ -34,10 +34,10 @@ export default function LiberalPanel({ taken, courseMap, report, views, nowTerm,
     nextSemester: sem, schoolCategory: report?.categories, options, dept: dept ?? null, admissionYear,
   });
   const school = (name: string) => views.find((v) => v.name === name);
-  const s필수 = school('교양필수'), s배분 = school('배분이수'), s자유 = school('자유이수');
+  const s필수 = school('교양필수'), s배분 = school('배분이수');
   const pre2019 = !!admissionYear && admissionYear < 2019;
 
-  const todoRequired = st.required.filter((r) => r.state === 'todo');
+  const todo = liberalTodo(st, data, views);
   const needArea = st.areaRule ? Math.max(0, st.rules.배분영역 - st.coveredEst) : 0;
   const needBaebunCredits = s배분 ? s배분.remaining : Math.max(0, st.rules.배분 - st.credits.배분);
   const scoreNum = Number(score);
@@ -84,23 +84,10 @@ export default function LiberalPanel({ taken, courseMap, report, views, nowTerm,
 
       <h3>더 들어야 할 교양 <span className="muted small">{termLabel(term)} 기준</span></h3>
       <ul className="lib-need">
-        {todoRequired.map((r) => (
-          <li key={r.name}><span className="chip warn-chip">필수교과</span><strong>{r.name}</strong> <span className="muted small">{r.credit}학점 · {r.year}학년 권장{r.note ? ` · ${r.note}` : ''}</span></li>
+        {todo.map((x) => (
+          <li key={x.kind + x.label}><span className="chip warn-chip">{x.kind}</span><strong>{x.label}</strong>{x.detail && <span className="muted small"> {x.detail}</span>}</li>
         ))}
-        {needArea > 0 && (
-          <li><span className="chip warn-chip">배분이수</span><strong>{needArea}개 영역 더</strong>
-            <span className="muted small"> 아직 안 들은 영역: {st.areaState.filter((a) => a.state === 'todo').map((a) => `${a.area}. ${a.name}`).join(' / ')}
-              {st.unknownAreaCourses.length > 0 && ` (영역 모르는 과목 ${st.unknownAreaCourses.length}개는 다른 영역으로 셈)`}</span>
-          </li>
-        )}
-        {needArea === 0 && needBaebunCredits > 0 && (
-          <li><span className="chip warn-chip">배분이수</span><strong>{needBaebunCredits}학점 더</strong>{!st.areaRule && <span className="muted small"> 영역 구분 없음</span>}</li>
-        )}
-        {st.freeSeminar === 'todo' && (
-          <li><span className="chip warn-chip">자유이수</span><strong>{data.requiredFree.name}</strong> <span className="muted small">필수 · {data.requiredFree.note}{data.requiredFree.alt ? ` · '${data.requiredFree.alt}'로 대신 가능(공과대학 등)` : ''}</span></li>
-        )}
-        {s자유 && s자유.remaining > 0 && <li><span className="chip warn-chip">자유이수</span><strong>{s자유.remaining}학점 더</strong></li>}
-        {todoRequired.length === 0 && needArea === 0 && needBaebunCredits === 0 && st.freeSeminar !== 'todo' && !(s자유?.remaining) && (
+        {todo.length === 0 && (
           <li className="ok">교양 요건을 모두 채웠거나 이번 학기에 채웁니다{s필수?.remaining ? ` (학교 집계 교양필수 ${s필수.remaining}학점 남음 — 면제·대체는 학교에 신청해야 반영)` : ''}.</li>
         )}
       </ul>

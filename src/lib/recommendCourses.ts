@@ -5,7 +5,7 @@
 //  - 다른 과목의 선수과목이라 먼저 들어야 하는 과목             과목당 +6 (최대 +18)
 //  - 권장 학년이 지금 학년 이하(늦어지고 있음)                  +10, 더 늦으면 +15
 //  - 다음 학기에 개설되는 과목                                  +8 / 다음 학기 미개설 −20
-//  - 관심 다전공에서도 인정되는 과목                            +8
+//  - 관심 다전공에서도 인정되는 과목                            +12 (묶음에 최소 1과목은 꼭 넣음)
 //  - 권장 학년보다 2학년 이상 이른 과목                          학년 차이마다 −6
 // 선수과목을 아직 안 들은 과목은 '선수과목 먼저' 목록으로 따로 보낸다.
 import type { Category, Course, Program, TakenCourse } from './types';
@@ -43,6 +43,7 @@ export interface Recommendation {
   blocked: ScoredCourse[];      // 선수과목이 먼저 필요한 과목, 점수순
   bundle: ScoredCourse[];       // 다음 학기 추천 묶음
   bundleCredits: number;
+  multiCount: number;            // 묶음 중 관심 다전공에서도 인정되는 과목 수
 }
 
 /** 입학연도와 학기로 학년 계산 (휴학 없이 진급한다고 가정) */
@@ -125,7 +126,7 @@ export function recommendCourses(
       if (offeredNext) { score += 8; reasons.push({ kind: 'term', label: `${parity}학기 개설` }); }
       else { score -= 20; reasons.push({ kind: 'off', label: `${parity === 1 ? 2 : 1}학기에만 개설` }); }
     }
-    if (multiSet.has(code)) { score += 8; reasons.push({ kind: 'multi', label: `${opt.multiProgram!.department}에도 인정` }); }
+    if (multiSet.has(code)) { score += 12; reasons.push({ kind: 'multi', label: `${opt.multiProgram!.department}에도 인정` }); }
     if (c.credit === 0 && (!studentYear || studentYear < 4)) score -= 30; // 졸업논문 등은 마지막 학년에
 
     const missing = (prereqs.get(code) ?? []).filter((p) => !prereqsMet([p], (x) => have.has(x)));
@@ -155,5 +156,20 @@ export function recommendCourses(
     picked.push(x); pickedCodes.add(x.code); credits += x.credit;
     left.set(x.type, l - x.credit);
   }
-  return { term, studentYear, ranked, blocked, bundle: picked, bundleCredits: credits };
+  // 관심 다전공을 골랐으면, 거기서도 인정되는 과목을 묶음에 최소 1과목 넣는다
+  if (multiSet.size && !picked.some((x) => multiSet.has(x.code))) {
+    const cand = ranked.find((x) => multiSet.has(x.code) && x.offeredNext !== false && x.credit > 0 && !pickedCodes.has(x.code) && !choiceBlocked(program, x.code, pickedCodes));
+    if (cand) {
+      if (credits + cand.credit > limit) {
+        // 필수가 아닌 과목 중 점수가 가장 낮은 것과 바꾼다
+        const idx = [...picked].reverse().findIndex((x) => !mustTypes.has(x.type));
+        if (idx >= 0) {
+          const out = picked.splice(picked.length - 1 - idx, 1)[0];
+          credits -= out.credit; pickedCodes.delete(out.code);
+        }
+      }
+      if (credits + cand.credit <= limit) { picked.push(cand); pickedCodes.add(cand.code); credits += cand.credit; }
+    }
+  }
+  return { term, studentYear, ranked, blocked, bundle: picked, bundleCredits: credits, multiCount: picked.filter((x) => multiSet.has(x.code)).length };
 }

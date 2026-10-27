@@ -46,8 +46,17 @@ describe('다음 학기 추천 (점수 방식)', () => {
     const withMulti = recommendCourses(ie, courseMap, [], { nowTerm: '2025-2', admissionYear: 2025, multiProgram: ce });
     const s0 = base.ranked.concat(base.blocked).find((c) => c.code === 'AMTH1009')!.score;
     const s1 = withMulti.ranked.concat(withMulti.blocked).find((c) => c.code === 'AMTH1009')!;
-    expect(s1.score).toBe(s0 + 8);
+    expect(s1.score).toBe(s0 + 12);
     expect(s1.reasons.some((x) => x.kind === 'multi')).toBe(true);
+  });
+
+  it('관심 다전공을 고르면 묶음이 바뀌어 그 전공 인정 과목이 최소 1개 들어간다', () => {
+    const ce = all.find((p) => p.programId === 'CE-2024-MULTI')!;
+    const base = recommendCourses(ie, courseMap, [], { nowTerm: '2025-2', admissionYear: 2025, maxCredits: 3 });
+    const withMulti = recommendCourses(ie, courseMap, [], { nowTerm: '2025-2', admissionYear: 2025, maxCredits: 3, multiProgram: ce });
+    expect(base.bundle.map((c) => c.code)).not.toEqual(withMulti.bundle.map((c) => c.code));
+    expect(withMulti.multiCount).toBe(1);
+    expect(withMulti.bundleCredits).toBeLessThanOrEqual(3);
   });
 
   it('국제·서울 모든 과정에서 오류 없이 추천이 나온다', () => {

@@ -19,9 +19,12 @@ interface Props {
 }
 
 const SHOW = 8;
+const MULTI_KEY = 'khu-grad-calc:multi-interest';
 
 export default function RecommendPanel(p: Props) {
-  const [multiId, setMultiId] = useState('');
+  // 탭을 오가도 관심 다전공이 유지되게 이 브라우저에만 기억한다
+  const [multiId, setMultiIdState] = useState(() => { try { return localStorage.getItem(MULTI_KEY) ?? ''; } catch { return ''; } });
+  const setMultiId = (v: string) => { setMultiIdState(v); try { localStorage.setItem(MULTI_KEY, v); } catch { /* 무시 */ } };
   const [showAll, setShowAll] = useState(false);
 
   // 관심 다전공 후보: 과목 목록이 있는 다른 학과 (다전공 과정 우선)
@@ -41,6 +44,11 @@ export default function RecommendPanel(p: Props) {
   const rec = recommendCourses(p.program, p.courseMap, p.taken, {
     nowTerm: p.nowTerm, admissionYear: p.admissionYear, gaps: p.gaps, multiProgram, maxCredits: p.maxCredits,
   });
+  // 관심 다전공 과정에서 다음 학기에 미리 들을 만한 과목 (내 전공과 겹치지 않아도)
+  const multiRec = multiProgram
+    ? recommendCourses(multiProgram, p.courseMap, p.taken, { nowTerm: p.nowTerm, admissionYear: p.admissionYear, maxCredits: 6 }).bundle
+        .filter((c) => !rec.bundle.some((b) => b.code === c.code)).slice(0, 3)
+    : [];
   const list = showAll ? rec.ranked.slice(0, 30) : rec.ranked.slice(0, SHOW);
 
   const row = (c: ScoredCourse, opts: { inBundle?: boolean } = {}) => (
@@ -85,10 +93,25 @@ export default function RecommendPanel(p: Props) {
       {rec.bundle.length > 0 ? (
         <>
           <h3>추천 묶음 <span className="muted small">전공 {rec.bundleCredits}학점 · 학기당 전공 {p.maxCredits}학점 기준</span></h3>
+          {multiProgram && (
+            <p className={rec.multiCount ? 'ok small' : 'muted small'}>
+              {rec.multiCount
+                ? `${multiProgram.department}에서도 인정되는 과목 ${rec.multiCount}개를 넣었습니다.`
+                : `${multiProgram.department}과 겹치면서 다음 학기에 들을 수 있는 전공 과목이 없어 묶음은 그대로입니다. 아래 다전공 준비 과목을 함께 보세요.`}
+            </p>
+          )}
           <ul className="rec-list">{rec.bundle.map((c) => row(c, { inBundle: true }))}</ul>
         </>
       ) : (
         <p className="ok">다음 학기에 꼭 채워야 할 전공 영역이 없습니다.</p>
+      )}
+
+      {multiRec.length > 0 && (
+        <>
+          <h3>{multiProgram!.department} 다전공 준비 과목 <span className="muted small">다음 학기에 들을 수 있는 기초·필수 과목</span></h3>
+          <ul className="rec-list">{multiRec.map((c) => row(c))}</ul>
+          <p className="muted small">다전공은 2학기 이상 등록 후 신청·선발되어야 수강신청이 가능합니다. 선발 전에 들은 과목도 다전공 학점으로 인정되는지 학과에 확인하세요.</p>
+        </>
       )}
 
       <details className="rec-more" open={showAll}>
@@ -113,7 +136,7 @@ export default function RecommendPanel(p: Props) {
           <li>다른 과목의 선수과목: 과목당 +6 (최대 +18)</li>
           <li>권장 학년이 지금 학년이면 +10, 이미 지났으면 +15, 2학년 이상 이르면 학년마다 −6</li>
           <li>다음 학기 개설 +8, 다음 학기 미개설 −20</li>
-          <li>관심 다전공에서도 인정: +8</li>
+          <li>관심 다전공에서도 인정: +12, 그리고 추천 묶음에 최소 1과목은 넣습니다.</li>
           <li>선수과목을 안 들은 과목은 따로 모으고, 택1 과목은 하나만 추천합니다.</li>
         </ul>
       </details>
