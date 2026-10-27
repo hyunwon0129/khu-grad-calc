@@ -8,6 +8,9 @@ import { creditLimit } from '../lib/creditLimit';
 import { estimateSemestersLeft } from '../lib/verdict';
 import MultiPanel from './MultiPanel';
 import ShareCard from './ShareCard';
+import RecommendPanel from './RecommendPanel';
+import { newPlanId } from '../lib/whatif';
+import type { SchoolCategory } from '../lib/reportLayout';
 import Glossary from './Glossary';
 import { planRoadmap, nextTerm, termLabel } from '../lib/planner';
 import { currentTerm } from '../lib/parseReport';
@@ -90,6 +93,12 @@ export default function ResultScreen(p: Props) {
   const gradLeft = views.find((v) => v.group === '졸업')?.remaining ?? 0;
   const mustRemaining = report && views.length ? areaLeft : result.totalRemaining;
   const freeRemaining = report && views.length ? Math.max(0, gradLeft - areaLeft) : 0;
+  // 추천에 쓸 영역별 남은 학점: 사정표가 있고 학과가 같으면 학교 집계, 아니면 교육과정 계산
+  const SCHOOL_TO_SHORT: Record<string, string> = { 전공기초: '전기', 전공필수: '전필', 전공선택: '전선' };
+  const recGaps = report && views.length && !(report.department && !sameDept(report.department, program.department))
+    ? new Map(views.filter((v) => SCHOOL_TO_SHORT[v.name]).map((v) => [SCHOOL_TO_SHORT[v.name], v.remaining] as [string, number]))
+    : undefined;
+  const SHORT_TO_SCHOOL: Record<string, SchoolCategory> = { 전기: '전공기초', 전필: '전공필수', 전선: '전공선택' };
   const yearOff = !!admissionYear && !isSample && (admissionYear < program.admissionYearRange[0] || admissionYear > program.admissionYearRange[1]);
   const schoolSummary = report
     ? [
@@ -235,6 +244,19 @@ export default function ResultScreen(p: Props) {
 
       {showCurriculum && (
         <>
+      <RecommendPanel
+        program={program}
+        programs={programs}
+        courseMap={courseMap}
+        taken={taken}
+        nowTerm={nowTerm}
+        admissionYear={admissionYear ?? (isSample ? null : program.admissionYearRange[0])}
+        gaps={recGaps && recGaps.size ? recGaps : undefined}
+        maxCredits={maxCredits}
+        plannedNames={new Set(p.plans.map((x) => x.name))}
+        onPlan={report && report.areas.length ? (c) => p.onPlans([...p.plans, { id: newPlanId(), name: c.name, category: SHORT_TO_SCHOOL[c.type] ?? '전공선택', credit: c.credit }]) : undefined}
+      />
+
       <section>
         <h2>꼭 들어야 하는 과목</h2>
         {missingRequired.length === 0 ? (
