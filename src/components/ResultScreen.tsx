@@ -121,7 +121,7 @@ export default function ResultScreen(p: Props) {
   const curriculumName = `${program.department} ${program.admissionYearRange[0]}학번`;
 
   const curriculumSummary = [
-    `[${report ? '학과 교육과정 기준 추천' : '졸업요건 현황'}] ${curriculumName} 교육과정${program.verified ? '' : ' (시험용 샘플)'}`,
+    `[${report ? '학과 교육과정 기준 추천' : '졸업요건 현황'}] ${curriculumName} 교육과정${isSample ? ' (시험용 샘플)' : ''}`,
     ...(report ? [] : [
       `전공 ${result.totalEarned}/${result.totalRequired}학점 (잔여 ${result.totalRemaining})`,
       ...result.areas.map((a) => `- ${a.category} ${a.earned}/${a.required}${a.remaining ? ` (잔여 ${a.remaining})` : ' 완료'}`),
@@ -151,16 +151,17 @@ export default function ResultScreen(p: Props) {
           </span>
         </section>
       )}
-      {showCurriculum && !isSample && (program.note || yearOff) && (
+      {showCurriculum && !isSample && (program.note || yearOff || !program.verified) && (
         <p className="notice">
           <span>
             <strong>{program.department} 과목 데이터: {program.source.year}학년도 교육과정</strong>
             {yearOff && ` · ${admissionYear}학번 교육과정과 다를 수 있어요.`}
             {program.note && ` ${program.note}`}
+            {!program.verified && ' 책자에서 일부 과목을 읽지 못해 과목 목록이 완전하지 않을 수 있습니다.'}
           </span>
         </p>
       )}
-      {showCurriculum && !program.verified && !report && (
+      {showCurriculum && isSample && !report && (
         <p className="notice">
           <span>
             <strong>시험용 샘플 교육과정 기준</strong> · {curriculumName} 데이터는 기능 확인용으로 만든 가상 값이라 실제 학과 요건과 다릅니다.
@@ -199,7 +200,7 @@ export default function ResultScreen(p: Props) {
 
         {(!report || report.areas.length === 0) && showCurriculum && (
           <>
-            {!program.verified && (
+            {isSample && (
               <p className="notice"><span><strong>시험용 샘플 교육과정 기준</strong> · {curriculumName} 데이터는 기능 확인용 가상 값입니다.</span></p>
             )}
             {taken.length > 0 && counted === 0 && (
@@ -228,7 +229,7 @@ export default function ResultScreen(p: Props) {
         </div>
       </section>
 
-      {showCurriculum && report && !program.verified && (
+      {showCurriculum && report && isSample && (
         <p className="notice"><span><strong>아래 추천은 시험용 샘플 교육과정 기준</strong> · {curriculumName} 데이터는 기능 확인용 가상 값입니다.</span></p>
       )}
 

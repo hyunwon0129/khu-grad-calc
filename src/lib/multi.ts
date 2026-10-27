@@ -65,7 +65,8 @@ export function recommendMulti(
       for (const code of prog.courses) {
         if (!have.has(code)) continue;
         const c = courseMap.get(code);
-        const k = KEY[c?.typeByProgram[prog.programId] ?? ''];
+        let k = KEY[c?.typeByProgram[prog.programId] ?? ''];
+        if (d.mergedBasic && k === '기초') k = '필수';
         if (!c || !k) continue;
         raw[k] += c.credit;
         if (c.credit > 0) overlapCourses.push(c.name);

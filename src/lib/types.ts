@@ -79,4 +79,5 @@ export interface DepartmentInfo {
   otherMulti?: number;
   multiBannedFor?: Campus[];
   unreadable?: boolean;
+  mergedBasic?: boolean; // 다전공 기준이 '전공기초+전공필수 합산'으로 정해진 학과 (전기 과목도 필수 학점으로 셈)
 }

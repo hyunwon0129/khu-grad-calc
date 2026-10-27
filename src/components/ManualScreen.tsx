@@ -111,15 +111,15 @@ export default function ManualScreen({ program, majors, courseMap, taken, onChan
       <div className="toolbar">
         <label htmlFor="manual-program">학과</label>
         <select id="manual-program" value={pid} onChange={(e) => onProgram(e.target.value)}>
-          {majors.map((p) => (
+          {[...majors].sort((a, b) => Number(a.programId.startsWith('SAMPLE')) - Number(b.programId.startsWith('SAMPLE')) || a.department.localeCompare(b.department, 'ko') || a.admissionYearRange[0] - b.admissionYearRange[0]).map((p) => (
             <option key={p.programId} value={p.programId}>
-              {p.department} · {p.admissionYearRange[0] === p.admissionYearRange[1] ? p.admissionYearRange[0] : `${p.admissionYearRange[0]}~${p.admissionYearRange[1]}`}학번{p.verified ? '' : ' (샘플)'}
+              {p.department} · {p.admissionYearRange[0] === p.admissionYearRange[1] ? p.admissionYearRange[0] : `${p.admissionYearRange[0]}~${p.admissionYearRange[1]}`}학번{p.programId.startsWith('SAMPLE') ? ' (샘플)' : p.verified ? '' : ' (일부 과목 확인 중)'}
             </option>
           ))}
         </select>
       </div>
       <p className="muted small">
-        목록에 있는 학과: {majors.filter((p) => p.verified).map((p) => p.department).join(', ')}.
+        과목 목록이 있는 학과 {new Set(majors.filter((p) => p.verified).map((p) => p.department)).size}개 (국제캠퍼스 전체·경영학과).
         다른 학과는 졸업사정표를 올리면 학교 집계로 계산됩니다.
       </p>
 

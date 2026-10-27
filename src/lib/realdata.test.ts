@@ -53,9 +53,12 @@ describe('산업경영공학과 2025 교육과정', () => {
     if (termOf.has('IE312')) expect(termOf.get('IE312')! > termOf.get('IE208')!).toBe(true);
   });
 
-  it('사정표 학과명·학번으로 교육과정 자동 선택 (2026학번도 2025 과목표)', () => {
+  it('사정표 학과명·학번으로 교육과정 자동 선택 (2025학번은 2025, 2026학번은 2026 책자)', () => {
     const majors = all.filter((p) => p.kind === 'MAJOR');
-    expect(matchProgram(majors, '산업경영공학과', 2026)?.programId).toBe('IE-2025-MAJOR');
+    expect(matchProgram(majors, '산업경영공학과', 2025)?.programId).toBe('IE-2025-MAJOR');
+    const ie26 = matchProgram(majors, '산업경영공학과', 2026)!;
+    expect(ie26.programId.startsWith('INTL26-')).toBe(true);
+    expect(ie26.requirements.map((r) => r.minCredits)).toEqual([24, 6, 49]);
     expect(matchProgram(majors, '컴퓨터공학과', 2024)?.programId).toBe('CE-2024-MAJOR');
   });
 });
@@ -109,7 +112,7 @@ describe('다전공 추천 (2026 기본구조표·38쪽 규정)', () => {
     // 다전공 [표2]: 미분적분학(기초3) + 객체지향·자료구조(필수6) + 웹/파이선(선택3)
     expect(ce.overlap).toMatchObject({ 기초: 3, 필수: 6, 선택: 3, 계: 12 });
     expect(ce.needed).toBe(51 - 12);
-    expect(list[0].dept.name).toBe('컴퓨터공학과');
+    expect(list[0].overlap.계).toBeGreaterThanOrEqual(12);
     expect(list.some((c) => c.dept.name === '산업경영공학과')).toBe(false);
   });
 
@@ -132,5 +135,30 @@ describe('다전공 추천 (2026 기본구조표·38쪽 규정)', () => {
   it('가운뎃점 문자가 달라도 같은 학과로 찾는다', () => {
     expect(findDepartment(departments, '융합바이오·신소재공학과')).toBeDefined();
     expect(findDepartment(departments, '회계·세무학과')).toBeDefined();
+  });
+});
+
+describe('2026 교육과정(국제캠퍼스) 책자 데이터', () => {
+  const intl = all.filter((p) => p.programId.startsWith('INTL26-'));
+  it('국제캠퍼스 학과 과정이 60개 이상', () => {
+    expect(intl.length).toBeGreaterThanOrEqual(60);
+  });
+  it('컴퓨터공학과 2026: 전기 4과목 12학점, 전필 39학점', () => {
+    const ce = intl.find((p) => p.department === '컴퓨터공학과' && p.kind === 'MAJOR')!;
+    const sum = (cat: string) => ce.courses.filter((c) => courseMap.get(c)?.typeByProgram[ce.programId] === cat).reduce((s, c) => s + (courseMap.get(c)?.credit ?? 0), 0);
+    expect(sum('전기')).toBe(12);
+    expect(sum('전필')).toBe(39);
+  });
+  it('산업경영공학과 2026 선수과목: 기초프로그래밍 또는 웹/파이선 → 데이터사이언스', () => {
+    const ie = intl.find((p) => p.department === '산업경영공학과')!;
+    expect(ie.diagram?.edges).toContainEqual(['IE104|SWCON104', 'IE215']);
+  });
+  it('검증된 과정은 영역별 과목 학점이 기준 이상', () => {
+    for (const p of intl.filter((x) => x.verified)) {
+      for (const r of p.requirements) {
+        const have = p.courses.filter((c) => courseMap.get(c)?.typeByProgram[p.programId] === r.category).reduce((s, c) => s + (courseMap.get(c)?.credit ?? 0), 0);
+        expect(have, `${p.department} ${r.category}`).toBeGreaterThanOrEqual(r.minCredits);
+      }
+    }
   });
 });

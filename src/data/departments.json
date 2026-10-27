@@ -2689,20 +2689,51 @@
    "college": "전자정보대학",
    "name": "전자공학과",
    "grad": 130,
-   "single": null,
-   "multi": null,
-   "minor": null,
-   "unreadable": true
+   "single": {
+    "기초": 25,
+    "필수": 23,
+    "선택": 28,
+    "계": 76
+   },
+   "multi": {
+    "기초": 0,
+    "필수": 30,
+    "선택": 21,
+    "계": 51
+   },
+   "minor": {
+    "기초": 0,
+    "필수": 9,
+    "선택": 12,
+    "계": 21
+   },
+   "otherMulti": 3,
+   "mergedBasic": true
   },
   {
    "campus": "INTL",
    "college": "전자정보대학",
    "name": "반도체공학과",
    "grad": 130,
-   "single": null,
-   "multi": null,
-   "minor": null,
-   "unreadable": true
+   "single": {
+    "기초": 25,
+    "필수": 29,
+    "선택": 25,
+    "계": 79
+   },
+   "multi": {
+    "기초": 0,
+    "필수": 30,
+    "선택": 21,
+    "계": 51
+   },
+   "minor": {
+    "기초": 0,
+    "필수": 9,
+    "선택": 12,
+    "계": 21
+   },
+   "mergedBasic": true
   }
  ]
 }

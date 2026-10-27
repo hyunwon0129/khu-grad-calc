@@ -2684,5 +2684,59 @@ null,
 "campus": "INTL",
 "name": "인공지능반도체",
 "sumOk": true
+},
+{
+"grad": 130.0,
+"single": [
+25.0,
+23.0,
+28.0,
+76.0
+],
+"otherSingle": 6.0,
+"multi": [
+0.0,
+30.0,
+21.0,
+51.0
+],
+"otherMulti": 3.0,
+"minor": [
+null,
+9.0,
+12.0,
+21.0
+],
+"campus": "INTL",
+"name": "전자공학과",
+"sumOk": true,
+"mergedBasic": true
+},
+{
+"grad": 130.0,
+"single": [
+25.0,
+29.0,
+25.0,
+79.0
+],
+"otherSingle": 6.0,
+"multi": [
+0.0,
+30.0,
+21.0,
+51.0
+],
+"otherMulti": 0.0,
+"minor": [
+null,
+9.0,
+12.0,
+21.0
+],
+"campus": "INTL",
+"name": "반도체공학과",
+"sumOk": true,
+"mergedBasic": true
 }
 ]

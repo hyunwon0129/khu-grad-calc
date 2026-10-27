@@ -51,7 +51,7 @@ const programs = [];
     college: '공과대학',
     department: '산업경영공학과',
     kind: 'MAJOR',
-    admissionYearRange: [2025, 2026],
+    admissionYearRange: [2025, 2025],
     requirements: [
       { category: '전기', minCredits: 24 },
       { category: '전필', minCredits: 6 },
@@ -66,7 +66,7 @@ const programs = [];
       url: 'https://ie.khu.ac.kr/ie/user/bbs/BMSR00040/list.do?menuNo=17400010',
     },
     verified: true,
-    note: '2026학번도 이 과목표를 씁니다. 2026 교육과정 원문은 이미지라 과목을 읽지 못했고, 학점 기준(전기24·전필6·전선49)은 2026 학사제도안내 기본구조표와 같습니다.',
+    note: '2025학년도 교육과정 기준입니다. 2026학번은 2026 교육과정 책자 기준 과정을 씁니다.',
     diagram: { nodes: nodesOf(ie.rows), edges: ie.pre, tracks: [] },
   });
 }
@@ -209,6 +209,65 @@ const programs = [];
   }
 }
 
+
+// ── 2026학년도 교육과정(국제캠퍼스) 책자 → 국제캠퍼스 전 학과 ─────────────────
+// data-src/intl-2026.json 은 scripts/book/ 의 파서로 책자 [별표1] 교육과정 편성표·선수과목 지정표에서 뽑은 것
+{
+  const book = JSON.parse(read('data-src/intl-2026.json'));
+  const rawStruct = JSON.parse(read('data-src/structure-2026.raw.json'));
+  const dot = (x) => x.replace(/[\u00B7\u0387\u2027\u30FB\uFF65\u318D]/g, '·').replace(/\s+/g, '');
+  const structOf = (name) => rawStruct.find((r) => r.campus === 'INTL' && dot(r.name) === dot(name));
+  const slug = (name) => [...name].map((ch) => ch.charCodeAt(0).toString(36)).join('').slice(0, 24).toUpperCase();
+  const KEY = { 전기: 0, 전필: 1, 전선: 2 };
+  let n = 0;
+  for (const dep of book.departments) {
+    for (const appName of dep.app) {
+      const st = structOf(appName);
+      if (!st) { console.warn('기본구조표에 없음:', appName); continue; }
+      const isMajor = !!st.single;
+      const block = isMajor ? st.single : st.multi;
+      if (!block) continue;
+      const id = `INTL26-${slug(appName)}`;
+      const college = st.campus === 'INTL' ? null : null;
+      const rows = dep.courses.filter((r) => Number.isInteger(r.credit));
+      const used = [];
+      for (const r of rows) {
+        const c = courses.get(r.code);
+        if (c && c.credit !== r.credit) continue; // 다른 과정과 학점이 다르게 적힌 과목은 건너뜀
+        addCourse(r.code, r.name, r.credit, id, r.cat);
+        used.push(r);
+      }
+      const reqs = ['전기', '전필', '전선']
+        .map((cat) => ({ category: cat, minCredits: block[KEY[cat]] ?? 0 }))
+        .filter((r) => r.minCredits > 0);
+      programs.push({
+        programId: id,
+        campus: 'INTL',
+        college: '',
+        department: st.name,
+        kind: isMajor ? 'MAJOR' : 'MULTI_MAJOR',
+        admissionYearRange: [2026, 2026],
+        requirements: reqs,
+        totalMin: block[3],
+        courses: used.map((r) => r.code),
+        source: {
+          doc: `2026학년도 교육과정(국제캠퍼스) ${dep.book} [별표1] 교육과정 편성표 (${dep.pages[0]}쪽~)`,
+          year: 2026,
+        },
+        verified: reqs.every((q) => used.filter((u) => u.cat === q.category).reduce((a, u) => a + u.credit, 0) >= q.minCredits),
+        note: dep.app.length > 1 ? `${dep.book} 공통 편성표를 씁니다. 전공별 필수 과목은 학과 시행세칙을 확인하세요.` : undefined,
+        diagram: {
+          nodes: nodesOf(used),
+          edges: dep.prereqs.filter(([a, b]) => used.some((u) => u.code === b) && a.split('|').every((x) => used.some((u) => u.code === x))),
+          tracks: [],
+        },
+      });
+      n++;
+    }
+  }
+  console.log(`국제캠퍼스 2026 과정 ${n}개`);
+}
+
 // ── 시험용 샘플 (가상 사정표 체험용) ─────────────────────────────
 {
   const oldCourses = JSON.parse(read('src/data/courses.json'));
@@ -240,7 +299,7 @@ const COLLEGE = {
   },
   INTL: {
     공과대학: ['기계공학', '지능로봇공학', '항공우주모빌리티', '산업경영공학과', '원자력공학과', '화학공학과', '신소재공학과', '사회기반시스템공학과', '건축공학과', '환경학', '환경공학', '건축학과'],
-    전자정보대학: ['생체의공학과'],
+    전자정보대학: ['전자공학과', '반도체공학과', '생체의공학과'],
     소프트웨어융합대학: ['컴퓨터공학과', '인공지능학과', '소프트웨어융합학과'],
     응용과학대학: ['응용수학과', '응용물리학과', '응용화학과', '우주과학과'],
     생명과학대학: ['스마트팜과학과', '식물･환경신소재공학과', '식품생명공학과', '원예생명공학과', '유전생명공학과', '한방생명공학과', '융합바이오·신소재공학과'],
@@ -282,12 +341,9 @@ const departments = raw.map((r) => {
     minor: toBlock(r.minor),
     ...(r.otherMulti ? { otherMulti: r.otherMulti } : {}),
     ...(banned.length ? { multiBannedFor: [...new Set(banned)] } : {}),
+    ...(r.mergedBasic ? { mergedBasic: true } : {}),
   };
 });
-// 표에서 칸이 합쳐져 숫자를 확정하지 못한 학과: 다전공 학점은 비워 둔다 (화면에 '학과 확인 필요')
-for (const name of ['전자공학과', '반도체공학과']) {
-  departments.push({ campus: 'INTL', college: '전자정보대학', name, grad: 130, single: null, multi: null, minor: null, unreadable: true });
-}
 
 const order = { MAJOR: 0, MULTI_MAJOR: 1, MICRO_DEGREE: 2, MINOR: 3 };
 programs.sort((a, b) => Number(a.programId.startsWith('SAMPLE')) - Number(b.programId.startsWith('SAMPLE')) || order[a.kind] - order[b.kind]);
