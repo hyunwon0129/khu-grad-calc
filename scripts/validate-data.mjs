@@ -13,7 +13,7 @@ const byCode = new Map();
 for (const c of courses) {
   if (!codeRe.test(c.code)) errors.push(`학수번호 형식 오류: ${c.code}`);
   if (byCode.has(c.code)) errors.push(`학수번호 중복: ${c.code}`);
-  if (!Number.isInteger(c.credit) || c.credit < 0 || c.credit > 6) errors.push(`학점 범위 오류: ${c.code} (${c.credit})`);
+  if (!Number.isInteger(c.credit) || c.credit < 0 || c.credit > 24) errors.push(`학점 범위 오류: ${c.code} (${c.credit})`);
   byCode.set(c.code, c);
 }
 

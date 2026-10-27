@@ -81,7 +81,7 @@ export default function StartScreen({ majors, programId, savedCount, savedAt, sy
             ))}
           </select>
           <p className="muted">
-            사정표를 올리면 학과가 자동으로 선택됩니다. 과목 목록이 들어 있는 학과는 {new Set(majors.filter((p) => p.verified).map((p) => p.department)).size}개입니다(국제캠퍼스 전체 2026 교육과정, 경영학과 2026).
+            사정표를 올리면 학과가 자동으로 선택됩니다. 과목 목록이 들어 있는 학과는 {new Set(majors.filter((p) => p.verified).map((p) => p.department)).size}개입니다(서울·국제캠퍼스 2026 교육과정 기준).
             다른 학과도 사정표만 있으면 남은 학점·요건과 다전공 추천을 볼 수 있습니다.
           </p>
           {savedCount > 0 && <p className="muted">학과를 바꾸면 입력한 과목이 초기화됩니다.</p>}

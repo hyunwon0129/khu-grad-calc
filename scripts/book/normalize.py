@@ -3,6 +3,8 @@ import json, re, sys, collections
 rows = json.load(open(sys.argv[1]))['rows']
 pre = json.load(open(sys.argv[2]))
 OUT = sys.argv[3]
+EXTRA_MAP = json.load(open(sys.argv[4])) if len(sys.argv) > 4 else {}
+SOURCE = sys.argv[5] if len(sys.argv) > 5 else '2026학년도 교육과정(국제캠퍼스) 책자'
 MAP = {
  '기계공학부': ['기계공학', '지능로봇공학', '항공우주모빌리티'],
  '환경학및환경공학과': ['환경학', '환경공학'],
@@ -13,7 +15,10 @@ MAP = {
  '첨단바이오소재 융합전공': ['첨단바이오신소재'], '웨어러블 디자인 테크놀로지 융합전공': [], '우주탐사 융합전공': [], 'h-STEM 융합전공': [],
  '체육대학': [], '자유전공학부': [],
 }
-good = [r for r in rows if r['credit'] is not None and (r['s1'] or r['s2']) and r['year'] and r['dept']]
+MAP.update(EXTRA_MAP)
+good = [r for r in rows if r['credit'] is not None and (r['s1'] or r['s2'] or r.get('noMarks')) and r['year'] and r['dept']]
+for r in good:
+    if r.get('noMarks') and not (r['s1'] or r['s2']): r['s1'] = r['s2'] = True
 names = collections.Counter()
 for r in good:
     if r['name'] and not re.search(r'학과$', r['name']): names[(r['code'], r['name'])] += 1
@@ -32,7 +37,7 @@ for r in good:
     if cur is None or (cur['cat'] is None and r['cat']): by[d][r['code']] = r
 out = []
 for d, cm in by.items():
-    app = MAP.get(d, [re.sub(r'\s*융합전공$', '', d)])
+    app = MAP.get(d, [] if EXTRA_MAP else [re.sub(r'\s*융합전공$', '', d)])
     if not app: continue
     lst = []
     seen_order = sorted(cm.values(), key=lambda r: (r['page'], 0))
@@ -61,5 +66,5 @@ for d, cm in by.items():
         if p['post'] in codes and all(x in codes for x in pres):
             pr.append(['|'.join(dict.fromkeys(pres)), p['post']])
     out.append(dict(book=d, app=app, courses=lst, prereqs=pr, pages=sorted(set(r['page'] for r in cm.values()))[:3]))
-json.dump(dict(source='2026학년도 교육과정(국제캠퍼스) 책자', departments=out), open(OUT, 'w'), ensure_ascii=False, indent=1)
+json.dump(dict(source=SOURCE, departments=out), open(OUT, 'w'), ensure_ascii=False, indent=1)
 print(len(out), 'depts', sum(len(x['courses']) for x in out), 'courses', sum(len(x['prereqs']) for x in out), 'prereqs')

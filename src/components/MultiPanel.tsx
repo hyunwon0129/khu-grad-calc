@@ -80,7 +80,7 @@ export default function MultiPanel(p: Props) {
       </div>
 
       <p className="muted small">
-        겹치는 과목은 과목 목록이 있는 학과({new Set(p.programs.filter((x) => x.kind !== 'MICRO_DEGREE' && !x.programId.startsWith('SAMPLE')).map((x) => x.department)).size}개, 국제캠퍼스 전체·경영학과)만 계산합니다.
+        겹치는 과목은 과목 목록이 있는 학과({new Set(p.programs.filter((x) => x.kind !== 'MICRO_DEGREE' && !x.programId.startsWith('SAMPLE')).map((x) => x.department)).size}개, 서울·국제캠퍼스)만 계산합니다.
         나머지는 다전공 기준 학점만 보여 줍니다.
       </p>
       <ul className="multi-list">

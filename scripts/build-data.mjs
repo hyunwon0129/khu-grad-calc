@@ -210,25 +210,29 @@ const programs = [];
 }
 
 
-// ── 2026학년도 교육과정(국제캠퍼스) 책자 → 국제캠퍼스 전 학과 ─────────────────
-// data-src/intl-2026.json 은 scripts/book/ 의 파서로 책자 [별표1] 교육과정 편성표·선수과목 지정표에서 뽑은 것
-{
-  const book = JSON.parse(read('data-src/intl-2026.json'));
+// ── 2026학년도 학과 교육과정 원문 → 국제캠퍼스(책자) · 서울캠퍼스(학과별 시행세칙) ──────────
+// data-src/intl-2026.json, seoul-2026.json 은 scripts/book/ 의 파서로 [별표1] 교육과정 편성표·선수과목 지정표에서 뽑은 것
+const YEAR_OVERRIDE = { SEOUL: { 사학과: 2023, 아동가족학과: 2025, 한국무용전공: 2024, 의예과: 2025, 의학과: 2025 } };
+for (const [file, campus, prefix, docName] of [
+  ['data-src/intl-2026.json', 'INTL', 'INTL26', '2026학년도 교육과정(국제캠퍼스)'],
+  ['data-src/seoul-2026.json', 'SEOUL', 'SEOUL26', '학과 교육과정 시행세칙(서울캠퍼스)'],
+]) {
+  const book = JSON.parse(read(file));
   const rawStruct = JSON.parse(read('data-src/structure-2026.raw.json'));
   const dot = (x) => x.replace(/[\u00B7\u0387\u2027\u30FB\uFF65\u318D]/g, '·').replace(/\s+/g, '');
-  const structOf = (name) => rawStruct.find((r) => r.campus === 'INTL' && dot(r.name) === dot(name));
+  const structOf = (name) => rawStruct.find((r) => r.campus === campus && dot(r.name) === dot(name));
   const slug = (name) => [...name].map((ch) => ch.charCodeAt(0).toString(36)).join('').slice(0, 24).toUpperCase();
   const KEY = { 전기: 0, 전필: 1, 전선: 2 };
   let n = 0;
   for (const dep of book.departments) {
     for (const appName of dep.app) {
       const st = structOf(appName);
-      if (!st) { console.warn('기본구조표에 없음:', appName); continue; }
-      const isMajor = !!st.single;
+      if (!st) { console.warn('기본구조표에 없음:', campus, appName); continue; }
+      const isMajor = !!(st.single && st.single[3]);
       const block = isMajor ? st.single : st.multi;
       if (!block) continue;
-      const id = `INTL26-${slug(appName)}`;
-      const college = st.campus === 'INTL' ? null : null;
+      const year = YEAR_OVERRIDE[campus]?.[st.name] ?? 2026;
+      const id = `${prefix}-${slug(appName)}`;
       const rows = dep.courses.filter((r) => Number.isInteger(r.credit));
       const used = [];
       for (const r of rows) {
@@ -242,20 +246,18 @@ const programs = [];
         .filter((r) => r.minCredits > 0);
       programs.push({
         programId: id,
-        campus: 'INTL',
+        campus,
         college: '',
         department: st.name,
         kind: isMajor ? 'MAJOR' : 'MULTI_MAJOR',
-        admissionYearRange: [2026, 2026],
+        admissionYearRange: [year, year],
         requirements: reqs,
         totalMin: block[3],
         courses: used.map((r) => r.code),
-        source: {
-          doc: `2026학년도 교육과정(국제캠퍼스) ${dep.book} [별표1] 교육과정 편성표 (${dep.pages[0]}쪽~)`,
-          year: 2026,
-        },
+        source: { doc: `${year}학년도 ${docName} ${dep.book} [별표1] 교육과정 편성표`, year },
         verified: reqs.every((q) => used.filter((u) => u.cat === q.category).reduce((a, u) => a + u.credit, 0) >= q.minCredits),
-        note: dep.app.length > 1 ? `${dep.book} 공통 편성표를 씁니다. 전공별 필수 과목은 학과 시행세칙을 확인하세요.` : undefined,
+        note: dep.app.length > 1 ? `${dep.book} 공통 편성표를 씁니다. 전공별 필수 과목은 학과 시행세칙을 확인하세요.`
+          : year !== 2026 ? `${year}학년도 교육과정 기준입니다(2026 원문을 아직 받지 못함). 학점 기준은 2026 기본구조표를 씁니다.` : undefined,
         diagram: {
           nodes: nodesOf(used),
           edges: dep.prereqs.filter(([a, b]) => used.some((u) => u.code === b) && a.split('|').every((x) => used.some((u) => u.code === x))),
@@ -265,7 +267,7 @@ const programs = [];
       n++;
     }
   }
-  console.log(`국제캠퍼스 2026 과정 ${n}개`);
+  console.log(`${campus} 과정 ${n}개`);
 }
 
 // ── 시험용 샘플 (가상 사정표 체험용) ─────────────────────────────

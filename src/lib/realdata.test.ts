@@ -162,3 +162,16 @@ describe('2026 교육과정(국제캠퍼스) 책자 데이터', () => {
     }
   });
 });
+
+describe('서울캠퍼스 학과 시행세칙 데이터', () => {
+  const seoul = all.filter((p) => p.programId.startsWith('SEOUL26-'));
+  const sum = (p: Program, cat: string) => p.courses.filter((c) => courseMap.get(c)?.typeByProgram[p.programId] === cat).reduce((s, c) => s + (courseMap.get(c)?.credit ?? 0), 0);
+  it('서울캠퍼스 과정 35개 이상', () => { expect(seoul.length).toBeGreaterThanOrEqual(35); });
+  it('국어국문학과: 전기 9·전필 15 (2026 기본구조표와 일치)', () => {
+    const p = seoul.find((x) => x.department === '국어국문학과')!;
+    expect(sum(p, '전기')).toBe(9); expect(sum(p, '전필')).toBe(15);
+  });
+  it('사학과는 2023 교육과정이라 입학연도 범위가 2023', () => {
+    expect(seoul.find((x) => x.department === '사학과')!.admissionYearRange).toEqual([2023, 2023]);
+  });
+});

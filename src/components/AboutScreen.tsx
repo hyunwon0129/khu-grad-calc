@@ -3,7 +3,7 @@ import { cloudEnabled } from '../lib/cloud';
 import Glossary from './Glossary';
 import FeedbackLink from './FeedbackLink';
 
-export const APP_VERSION = '0.11.0';
+export const APP_VERSION = '0.12.0';
 export const DATA_BASIS = '2026학년도 학사제도안내';
 
 export default function AboutScreen({ onBack }: { onBack: () => void }) {
@@ -32,7 +32,7 @@ export default function AboutScreen({ onBack }: { onBack: () => void }) {
       <ul>
         <li>남은 학점과 영역별 기준은 사정표에 적힌 학교 집계를 그대로 씁니다.</li>
         <li>이수구분 코드, 졸업요건, 다전공·마이크로디그리 규정은 {DATA_BASIS}를 따릅니다.</li>
-        <li>과목 추천·로드맵은 학과 교육과정 데이터가 있는 학과에서만 제공합니다: 국제캠퍼스 전 학과·융합전공(2026학년도 교육과정 책자), 산업경영공학과 2025, 컴퓨터공학과 2024, 경영학과 2026. 서울캠퍼스 학과는 준비 중입니다.</li>
+        <li>과목 추천·로드맵은 학과 교육과정 데이터가 있는 학과에서만 제공합니다: 국제캠퍼스 전 학과·융합전공(2026학년도 교육과정 책자)과 서울캠퍼스 40개 학과·전공(학과별 2026 시행세칙, 일부 2023~2025). 무역학과·국제통상금융투자학부·회계세무·빅데이터응용·음악대학·간호학과(학수번호 없음) 등은 원문을 받는 대로 추가합니다.</li>
         <li>다전공 학점은 2026 학사제도안내의 전공별 기본구조표(서울·국제 120여 개 전공), 수강허용학점은 같은 책 64쪽 표를 씁니다.</li>
         <li>학과 교육과정 원문이 이미지로만 올라온 해(예: 산업경영공학과 2026)는 가장 가까운 연도 표를 쓰고 화면에 알립니다.</li>
       </ul>

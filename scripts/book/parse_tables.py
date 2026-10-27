@@ -3,16 +3,17 @@ import pdfplumber
 PDF, OUT, TOC, PAGES = sys.argv[1:5]
 toc = open(TOC).read()
 ents = []
-for m in re.finditer(r'^\s*(?:◆\s*)?(.+?)\s*[·\.]{3,}\s*(\d{2,4})\s*$', toc, re.M):
+for m in re.finditer(r'^\s*(?:◆\s*)?(.+?)\s*[·\.]{3,}\s*(\d{1,4})\s*$', toc, re.M):
     name, pg = re.sub(r'\s*교육과정$', '', m.group(1).strip()), int(m.group(2))
-    if pg >= 127: ents.append((name, pg))
+    if pg >= 1: ents.append((name, pg))
 ents.sort(key=lambda x: x[1])
 CODE = re.compile(r'^[A-Z]{2,6}\d{3,6}$')
-LABEL_TOK = {'(Basic)','(Required)','(Elective)','(Major','전공','기초','필수','선택','산학','교직','심화','전공기초','전공필수','전공선택','산학필수','교직전선','전공심화','구분','이수'}
+LABEL_TOK = {'전기','전필','전선','(Basic)','(Required)','(Elective)','(Major','전공','기초','필수','선택','산학','교직','심화','전공기초','전공필수','전공선택','산학필수','교직전선','전공심화','구분','이수'}
 def norm_cat(s):
     s = s.replace(' ', '')
     for k, v in [('Basic','전기'),('Required','전필'),('Elective','전선'),('전공기초','전기'),('전공필수','전필'),('산학필수','전선'),('전공선택','전선'),('교직','교직'),('전공심화','전선')]:
         if k in s: return v, k
+    if s in ('전기', '전필', '전선'): return s, s
     return None, None
 rows = []
 pages = [int(x) for x in PAGES.split(',')]
@@ -27,6 +28,13 @@ with pdfplumber.open(PDF) as pdf:
         code_x0 = min(c['x0'] for c in codes)
         # 학기 칸
         sem = sorted([w for w in head if w['text'] in ('1학기', '2학기')], key=lambda w: w['x0'])
+        if len(sem) < 2:
+            sem = sorted([w for w in head if w['text'] in ('1학', '2학')], key=lambda w: w['x0'])
+        if len(sem) < 2:
+            g = [w for w in head if w['text'].startswith('1학기2학기')]
+            if g:
+                w = g[0]; mid = (w['x0'] + w['x1']) / 2
+                sem = [dict(w, x0=w['x0'], x1=mid), dict(w, x0=mid, x1=w['x1'])]
         if len(sem) >= 2:
             x1 = (sem[0]['x0'] + sem[0]['x1']) / 2; x2 = (sem[1]['x0'] + sem[1]['x1']) / 2
         else:
@@ -88,10 +96,10 @@ with pdfplumber.open(PDF) as pdf:
                 if re.match(r'^\d+/\d+$', w['text']): credit = None; break
             yr = [w for w in right if re.match(r'^\d(-\d)?$|^\d,\d$|^\d~\d$', w['text']) and w['x1'] < x1 - 4]
             year = yr[-1]['text'] if yr else ''
-            marks = [w for w in right if re.search(r'[◯○●]', w['text'])]
+            marks = [w for w in right if re.search(r'[◯○●]', w['text']) or w['text'] in ('o', 'O')]
             near = lambda x: any(abs((m['x0'] + m['x1']) / 2 - x) < 9 for m in marks)
             rows.append(dict(page=pno + 1, seq=int(seq[0]['text']) if seq else None, code=c['text'], cat=(lcat[0] if lcat else cat_lab[0][0][0] if cat_lab else rcat[0] if rcat else None),
-                             catY=None, name=name, credit=credit, year=year, s1=near(x1), s2=near(x2),
+                             catY=None, name=name, credit=credit, year=year, s1=near(x1), s2=near(x2), noMarks=not any(re.search(r'[◯○●]', w['text']) or w['text'] in ('o','O') for w in words),
                              _cats=[(cc[0], cy) for cc, cy in cats], _y=y))
 # 병합 셀: 라벨 없는 행은 같은 구분 그룹(순번 연속)의 라벨 중 가장 가까운 것, 없으면 앞 행 값
 def dept_of(p):

@@ -119,7 +119,7 @@ export default function ManualScreen({ program, majors, courseMap, taken, onChan
         </select>
       </div>
       <p className="muted small">
-        과목 목록이 있는 학과 {new Set(majors.filter((p) => p.verified).map((p) => p.department)).size}개 (국제캠퍼스 전체·경영학과).
+        과목 목록이 있는 학과 {new Set(majors.filter((p) => p.verified).map((p) => p.department)).size}개 (서울·국제캠퍼스).
         다른 학과는 졸업사정표를 올리면 학교 집계로 계산됩니다.
       </p>
 
