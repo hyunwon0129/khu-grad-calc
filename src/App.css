@@ -370,3 +370,4 @@ a.button-like:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 .credit-table tfoot td { font-weight: 600; }
 .must-more summary, .lib-detail summary { cursor: pointer; color: var(--accent); font-size: 0.92rem; }
 .must-more, .lib-detail { margin: 4px 0; }
+.bar-legend { margin: 4px 0 0; font-size: 0.75rem; gap: 4px 12px; }

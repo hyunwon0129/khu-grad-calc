@@ -10,6 +10,18 @@ interface Props {
   graduationLabel?: string | null;
 }
 
+/** 막대 색 안내 (막대 바로 아래에 작게) */
+export function BarLegend({ pending, planned, plannedLabel = '계획' }: { pending: boolean; planned: boolean; plannedLabel?: string }) {
+  return (
+    <p className="legend bar-legend">
+      <span><i className="sw sw-done" aria-hidden="true" />이수한 학점</span>
+      {pending && <span><i className="sw sw-ip" aria-hidden="true" />이번 학기 수강 중</span>}
+      {planned && <span><i className="sw sw-plan" aria-hidden="true" />{plannedLabel}</span>}
+      <span><i className="sw sw-rest" aria-hidden="true" />남은 학점</span>
+    </p>
+  );
+}
+
 export function Bar({ earned, pending, planned, required, label }: {
   earned: number; pending: number; planned: number; required: number; label: string;
 }) {
@@ -47,6 +59,7 @@ export default function ProgressChart({ result, showPending, planned = new Map()
           </span>
         </div>
         <Bar earned={result.totalEarned} pending={totalPending} planned={totalPlanned} required={result.totalRequired} label="전공 합계" />
+        <BarLegend pending={totalPending > 0} planned={totalPlanned > 0} plannedLabel="로드맵 계획" />
         <div className="progress-foot">
           <span className="muted">{totalPct}% 달성</span>
           {graduationLabel && <span className="grad">{graduationLabel}</span>}
@@ -68,13 +81,7 @@ export default function ProgressChart({ result, showPending, planned = new Map()
         ))}
       </div>
 
-      <div className="legend" aria-hidden="true">
-        <span><i className="sw sw-done" />취득</span>
-        {totalPending > 0 && <span><i className="sw sw-ip" />수강 중</span>}
-        {totalPlanned > 0 && <span><i className="sw sw-plan" />로드맵 계획</span>}
-        <span><i className="sw sw-rest" />남은 학점</span>
-        {result.overflow > 0 && <span className="muted">기준 초과 {result.overflow}학점은 일반선택 처리 여부를 학교 규정으로 확인하세요</span>}
-      </div>
+      {result.overflow > 0 && <p className="muted small">기준 초과 {result.overflow}학점은 일반선택 처리 여부를 학교 규정으로 확인하세요</p>}
     </div>
   );
 }

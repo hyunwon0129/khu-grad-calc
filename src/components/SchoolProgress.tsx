@@ -3,7 +3,7 @@
 import type { Course, TakenCourse } from '../lib/types';
 import type { ReportArea, ReportData, SchoolCategory } from '../lib/reportLayout';
 import { SCHOOL_CATEGORIES } from '../lib/reportLayout';
-import { Bar } from './ProgressChart';
+import { Bar, BarLegend } from './ProgressChart';
 
 interface Props {
   report: ReportData;
@@ -57,6 +57,7 @@ export default function SchoolProgress({ report, taken, courseMap, planned = new
             </span>
           </div>
           <Bar earned={grad.done} pending={grad.pending} planned={plannedTotal} required={grad.required} label="졸업학점" />
+          <BarLegend pending={views.some((v) => v.pending > 0)} planned={plannedTotal > 0} plannedLabel="만약에 계획" />
           <div className="progress-foot">
             <span className="muted">
               {grad.pending > 0 ? `이번 학기 ${grad.pending}학점을 마치면 ${grad.done + grad.pending}학점` : `${Math.round((grad.done / grad.required) * 100)}% 달성`}
@@ -96,13 +97,7 @@ export default function SchoolProgress({ report, taken, courseMap, planned = new
         );
       })}
 
-      <div className="legend" aria-hidden="true">
-        <span><i className="sw sw-done" />이수</span>
-        {views.some((v) => v.pending > 0) && <span><i className="sw sw-ip" />이번 학기 수강 중</span>}
-        {plannedTotal > 0 && <span><i className="sw sw-plan" />계획</span>}
-        <span><i className="sw sw-rest" />남은 학점</span>
-        <span className="muted">영역 숫자는 이번 학기 수강분을 포함한 학교 집계입니다</span>
-      </div>
+      <p className="muted small">영역 숫자는 이번 학기 수강분을 포함한 학교 집계입니다.</p>
 
       <details className="course-groups">
         <summary>학교 이수구분별 과목 {taken.length}개 보기</summary>
