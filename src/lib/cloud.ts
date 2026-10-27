@@ -2,7 +2,7 @@
 // 서버로 보내는 것은 storage.ts의 UserData(학수번호·학기·설정)뿐이다.
 // 사정표 파일·이름·학번은 서버로 보내지 않는다.
 import { createClient, type Session, type SupabaseClient } from '@supabase/supabase-js';
-import { sanitize, type UserData } from './storage';
+import { getNoSave, sanitize, type UserData } from './storage';
 
 const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
@@ -15,7 +15,13 @@ export const providers: Provider[] = String(import.meta.env.VITE_AUTH_PROVIDERS 
 
 export const supabase: SupabaseClient | null =
   url && anonKey
-    ? createClient(url, anonKey, { auth: { persistSession: true, detectSessionInUrl: true, flowType: 'pkce' } })
+    ? createClient(url, anonKey, {
+        auth: {
+          persistSession: true, detectSessionInUrl: true, flowType: 'pkce',
+          // 공용 PC 모드면 로그인 정보도 탭을 닫을 때 사라지게 sessionStorage에 둔다
+          ...(getNoSave() && typeof sessionStorage !== 'undefined' ? { storage: sessionStorage } : {}),
+        },
+      })
     : null;
 
 export const cloudEnabled = supabase !== null;
@@ -48,9 +54,10 @@ export function onSession(cb: (s: Session | null) => void): () => void {
   return () => data.subscription.unsubscribe();
 }
 
-export async function fetchCloud(): Promise<UserData | null> {
+// RLS가 본인 행만 돌려주지만, 혹시 정책이 잘못 설정돼도 남의 행을 건드리지 않게 user_id로 한 번 더 거른다
+export async function fetchCloud(userId: string): Promise<UserData | null> {
   if (!supabase) return null;
-  const { data, error } = await supabase.from(TABLE).select('data').maybeSingle();
+  const { data, error } = await supabase.from(TABLE).select('data').eq('user_id', userId).maybeSingle();
   if (error) throw error;
   return data ? sanitize(data.data as UserData) : null;
 }
@@ -64,9 +71,9 @@ export async function pushCloud(userId: string, d: UserData): Promise<void> {
 }
 
 /** 서버에 저장된 내 데이터 행 삭제 */
-export async function deleteCloud(): Promise<void> {
+export async function deleteCloud(userId: string): Promise<void> {
   if (!supabase) return;
-  const { error } = await supabase.from(TABLE).delete().not('user_id', 'is', null);
+  const { error } = await supabase.from(TABLE).delete().eq('user_id', userId);
   if (error) throw error;
 }
 
@@ -76,4 +83,23 @@ export async function deleteAccount(): Promise<void> {
   const { error } = await supabase.functions.invoke('delete-account', { method: 'POST' });
   if (error) throw error;
   await supabase.auth.signOut();
+}
+
+/** 이 기기의 기록이 어느 계정 것인지 (다른 사람이 같은 기기에서 로그인할 때 남의 기록이 올라가지 않게) */
+const OWNER_KEY = 'khu-grad-calc:owner';
+export function getLocalOwner(): string | null {
+  try { return localStorage.getItem(OWNER_KEY); } catch { return null; }
+}
+export function setLocalOwner(id: string | null): void {
+  try { if (id) localStorage.setItem(OWNER_KEY, id); else localStorage.removeItem(OWNER_KEY); } catch { /* 무시 */ }
+}
+
+/** 서버 오류를 한국어 안내로 (원문에 토큰 등이 섞여도 화면에 그대로 내보내지 않는다) */
+export function friendlyError(e: unknown): string {
+  const m = e instanceof Error ? e.message : String(e);
+  if (/rate limit|too many|429/i.test(m)) return '요청이 너무 많습니다. 잠시 후 다시 시도하세요.';
+  if (/invalid.*email|email.*invalid/i.test(m)) return '이메일 주소를 확인해 주세요.';
+  if (/fetch|network|Failed to/i.test(m)) return '서버에 연결하지 못했습니다. 인터넷 연결을 확인하세요.';
+  if (/JWT|token|session/i.test(m)) return '로그인이 만료되었습니다. 다시 로그인해 주세요.';
+  return '처리하지 못했습니다. 잠시 후 다시 시도하세요.';
 }

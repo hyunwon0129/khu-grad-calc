@@ -102,7 +102,7 @@ export default function App() {
       </header>
 
       {cloudEnabled && accountOpen && (
-        <AccountPanel session={sync.session} status={sync.status} lastSynced={sync.lastSynced} onClose={() => setAccountOpen(false)} />
+        <AccountPanel session={sync.session} status={sync.status} lastSynced={sync.lastSynced} onClose={() => setAccountOpen(false)} onClearLocal={resetAll} />
       )}
 
       {sync.conflict && (
@@ -114,6 +114,17 @@ export default function App() {
           <div className="actions">
             <button type="button" className="primary" onClick={() => sync.resolveConflict('cloud')}>계정 기록 불러오기</button>
             <button type="button" onClick={() => sync.resolveConflict('local')}>이 기기 기록으로 계정 덮어쓰기</button>
+          </div>
+        </section>
+      )}
+
+      {sync.askUpload && (
+        <section className="resume" role="alertdialog" aria-label="이 기기 기록 올리기">
+          <strong>{sync.askUpload === 'other' ? '이 기기 기록은 다른 계정에서 쓰던 것입니다' : '이 기기에 있는 기록을 계정에 저장할까요?'}</strong>
+          <span className="muted">과목 {taken.length}개{report ? ' · 사정표 분석 결과' : ''}. 본인 기록이 아니면 비우고 시작하세요.</span>
+          <div className="actions">
+            <button type="button" className="primary" onClick={() => sync.resolveUpload(true, resetAll)}>내 기록이 맞아요, 저장</button>
+            <button type="button" onClick={() => sync.resolveUpload(false, resetAll)}>비우고 시작</button>
           </div>
         </section>
       )}

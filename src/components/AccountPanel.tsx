@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import type { Session } from '@supabase/supabase-js';
 import {
-  deleteAccount, deleteCloud, providers, signInWithEmail, signInWithProvider, signOut, type Provider,
+  deleteAccount, deleteCloud, friendlyError, providers, setLocalOwner, signInWithEmail, signInWithProvider, signOut, type Provider,
 } from '../lib/cloud';
 
 export type SyncStatus = 'idle' | 'loading' | 'saving' | 'saved' | 'error' | 'waiting';
@@ -12,6 +12,7 @@ interface Props {
   status: SyncStatus;
   lastSynced: Date | null;
   onClose: () => void;
+  onClearLocal: () => void;   // 이 기기 기록 지우기 (공용 PC에서 로그아웃할 때)
 }
 
 const PROVIDER_LABEL: Record<Provider, string> = { kakao: '카카오로 로그인', google: 'Google로 로그인' };
@@ -24,7 +25,8 @@ function writeConsent(v: boolean) {
   try { if (v) localStorage.setItem(CONSENT_KEY, '1'); else localStorage.removeItem(CONSENT_KEY); } catch { /* 무시 */ }
 }
 
-export default function AccountPanel({ session, status, lastSynced, onClose }: Props) {
+export default function AccountPanel({ session, status, lastSynced, onClose, onClearLocal }: Props) {
+  const [clearOnLogout, setClearOnLogout] = useState(false);
   const [consent, setConsent] = useState(readConsent);
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -34,7 +36,7 @@ export default function AccountPanel({ session, status, lastSynced, onClose }: P
   const run = async (fn: () => Promise<void>, done?: string) => {
     setError(''); setMessage('처리 중…');
     try { await fn(); setMessage(done ?? ''); }
-    catch (e) { setError(e instanceof Error ? e.message : String(e)); }
+    catch (e) { setMessage(''); setError(friendlyError(e)); }
   };
 
   if (session) {
@@ -51,15 +53,24 @@ export default function AccountPanel({ session, status, lastSynced, onClose }: P
             <div className={status === 'error' ? 'warn' : 'muted'} role="status">{statusText[status]}</div>
           </div>
           <div className="actions">
-            <button type="button" onClick={() => run(signOut)}>로그아웃</button>
+            <button type="button" onClick={() => run(async () => {
+              await signOut();
+              setLocalOwner(null);
+              if (clearOnLogout) onClearLocal();
+            })}>로그아웃</button>
             <button type="button" className="link" onClick={onClose}>닫기</button>
           </div>
         </div>
 
+        <label className="consent small" htmlFor="clear-on-logout">
+          <input id="clear-on-logout" type="checkbox" checked={clearOnLogout} onChange={(e) => setClearOnLogout(e.target.checked)} />
+          <span>로그아웃할 때 이 기기의 기록도 지우기 (공용 PC)</span>
+        </label>
+
         <details>
           <summary>계정·데이터 관리</summary>
           <div className="stack">
-            <p className="muted">서버에는 교육과정 선택, 들은 과목(학수번호·과목명·학점·학기·이수구분), 영역별 학점, 로드맵 설정만 저장됩니다. 로그인용 이메일은 인증 서비스에 보관됩니다.</p>
+            <p className="muted">서버에는 교육과정 선택, 들은 과목(학수번호·과목명·학점·학기·이수구분), 사정표의 학과·입학연도·영역별 학점·요건 충족 여부, 계획·교양 설정만 저장됩니다. 이름·학번·성적·사정표 파일은 저장하지 않습니다. 로그인용 이메일은 인증 서비스에 보관됩니다.</p>
             {confirm === 'none' && (
               <div className="actions">
                 <button type="button" className="link" onClick={() => setConfirm('data')}>서버에 저장된 내 데이터 삭제</button>
@@ -69,14 +80,14 @@ export default function AccountPanel({ session, status, lastSynced, onClose }: P
             {confirm === 'data' && (
               <div className="confirm">
                 <span>서버의 과목 기록을 지웁니다. 이 기기에 있는 기록은 남습니다.</span>
-                <button type="button" onClick={() => run(async () => { await deleteCloud(); setConfirm('none'); }, '서버 데이터를 삭제했습니다.')}>삭제</button>
+                <button type="button" onClick={() => run(async () => { await deleteCloud(session.user.id); setConfirm('none'); }, '서버 데이터를 삭제했습니다.')}>삭제</button>
                 <button type="button" className="link" onClick={() => setConfirm('none')}>취소</button>
               </div>
             )}
             {confirm === 'account' && (
               <div className="confirm">
                 <span>계정과 서버 데이터를 모두 지웁니다. 되돌릴 수 없습니다.</span>
-                <button type="button" onClick={() => run(async () => { await deleteAccount(); writeConsent(false); setConfirm('none'); }, '탈퇴 처리했습니다.')}>탈퇴</button>
+                <button type="button" onClick={() => run(async () => { await deleteAccount(); writeConsent(false); setLocalOwner(null); setConfirm('none'); }, '탈퇴 처리했습니다.')}>탈퇴</button>
                 <button type="button" className="link" onClick={() => setConfirm('none')}>취소</button>
               </div>
             )}
@@ -101,7 +112,7 @@ export default function AccountPanel({ session, status, lastSynced, onClose }: P
       <label className="consent" htmlFor="consent">
         <input id="consent" type="checkbox" checked={consent} onChange={(e) => { setConsent(e.target.checked); writeConsent(e.target.checked); }} />
         <span>
-          교육과정 선택, 들은 과목(학수번호·과목명·학점·학기·이수구분), 사정표의 영역별 학점을 서버에 저장하는 데 동의합니다.
+          교육과정 선택, 들은 과목(학수번호·과목명·학점·학기·이수구분), 사정표의 학과·입학연도·영역별 학점·요건 충족 여부를 서버에 저장하는 데 동의합니다.
           {' '}이름·학번·성적·사정표 파일은 저장하지 않으며, 언제든 삭제·탈퇴할 수 있습니다.
         </span>
       </label>

@@ -29,3 +29,40 @@ create policy "본인 삭제" on public.grad_progress
 -- 비로그인(anon) 사용자는 아무것도 할 수 없다
 revoke all on public.grad_progress from anon;
 grant select, insert, update, delete on public.grad_progress to authenticated;
+
+-- ── 서버 쪽 데이터 검사 (브라우저의 sanitize를 우회해 직접 API를 호출해도 막히게)
+-- 1) data는 객체여야 하고 허용한 키만 남긴다 (이름·학번·성적 같은 키를 넣어도 저장되지 않음)
+-- 2) user_id는 항상 요청한 본인으로 고정, updated_at은 서버 시각
+create or replace function public.grad_progress_guard()
+returns trigger
+language plpgsql
+security invoker
+set search_path = ''
+as $$
+declare
+  allowed text[] := array['programId','taken','custom','excluded','maxCreditsPerSemester','report','plans','libOptions'];
+  report_allowed text[] := array['source','importedAt','department','admissionYear','areas','categories','checks'];
+begin
+  if jsonb_typeof(new.data) <> 'object' then
+    raise exception 'data must be an object';
+  end if;
+  if jsonb_typeof(coalesce(new.data->'taken', '[]'::jsonb)) <> 'array' or jsonb_array_length(coalesce(new.data->'taken', '[]'::jsonb)) > 400 then
+    raise exception 'taken must be an array (max 400)';
+  end if;
+  select coalesce(jsonb_object_agg(k, v), '{}'::jsonb) into new.data
+    from jsonb_each(new.data) as e(k, v) where k = any(allowed);
+  if jsonb_typeof(new.data->'report') = 'object' then
+    new.data := jsonb_set(new.data, '{report}', (
+      select coalesce(jsonb_object_agg(k, v), '{}'::jsonb) from jsonb_each(new.data->'report') as e(k, v) where k = any(report_allowed)
+    ));
+  end if;
+  new.user_id := auth.uid();
+  new.updated_at := now();
+  return new;
+end;
+$$;
+
+drop trigger if exists grad_progress_guard on public.grad_progress;
+create trigger grad_progress_guard
+  before insert or update on public.grad_progress
+  for each row execute function public.grad_progress_guard();
