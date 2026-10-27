@@ -3,7 +3,7 @@ import { cloudEnabled } from '../lib/cloud';
 import Glossary from './Glossary';
 import FeedbackLink from './FeedbackLink';
 
-export const APP_VERSION = '0.13.0';
+export const APP_VERSION = '0.14.0';
 export const DATA_BASIS = '2026학년도 학사제도안내';
 
 export default function AboutScreen({ onBack }: { onBack: () => void }) {
@@ -35,6 +35,7 @@ export default function AboutScreen({ onBack }: { onBack: () => void }) {
         <li>과목 추천·로드맵은 학과 교육과정 데이터가 있는 학과에서만 제공합니다: 국제캠퍼스 전 학과·융합전공(2026학년도 교육과정 책자)과 서울캠퍼스 40개 학과·전공(학과별 2026 시행세칙, 일부 2023~2025). 무역학과·국제통상금융투자학부·회계세무·빅데이터응용·음악대학·간호학과(학수번호 없음) 등은 원문을 받는 대로 추가합니다.</li>
         <li>다전공 학점은 2026 학사제도안내의 전공별 기본구조표(서울·국제 120여 개 전공), 수강허용학점은 같은 책 64쪽 표를 씁니다.</li>
         <li>학과 교육과정 원문이 이미지로만 올라온 해(예: 산업경영공학과 2026)는 가장 가까운 연도 표를 쓰고 화면에 알립니다.</li>
+        <li>교양은 후마니타스칼리지 2026 교양교육과정(필수교과 17·배분이수 3개 영역 9·자유이수 3학점)과 교양 편성표 485과목으로 남은 과목을 알려 줍니다.</li>
         <li>다음 학기 추천은 전공필수·남은 영역 학점·선수과목·권장 학년·개설 학기·관심 다전공을 점수로 매겨 고릅니다. 결과 화면 '추천 기준'에서 점수표를 볼 수 있습니다.</li>
       </ul>
 

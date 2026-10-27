@@ -8,12 +8,14 @@ for m in re.finditer(r'^\s*(?:◆\s*)?(.+?)\s*[·\.]{3,}\s*(\d{1,4})\s*$', toc, 
     if pg >= 1: ents.append((name, pg))
 ents.sort(key=lambda x: x[1])
 CODE = re.compile(r'^[A-Z]{2,6}\d{3,6}$')
-LABEL_TOK = {'전기','전필','전선','(Basic)','(Required)','(Elective)','(Major','전공','기초','필수','선택','산학','교직','심화','전공기초','전공필수','전공선택','산학필수','교직전선','전공심화','구분','이수'}
+LABEL_TOK = {'필수교과','배분이수','자유이수','전기','전필','전선','(Basic)','(Required)','(Elective)','(Major','전공','기초','필수','선택','산학','교직','심화','전공기초','전공필수','전공선택','산학필수','교직전선','전공심화','구분','이수'}
 def norm_cat(s):
     s = s.replace(' ', '')
     for k, v in [('Basic','전기'),('Required','전필'),('Elective','전선'),('전공기초','전기'),('전공필수','전필'),('산학필수','전선'),('전공선택','전선'),('교직','교직'),('전공심화','전선')]:
         if k in s: return v, k
     if s in ('전기', '전필', '전선'): return s, s
+    for k, v in [('필수교과', '교필'), ('배분이수', '배분'), ('자유이수', '자유')]:
+        if k in s: return v, k
     return None, None
 rows = []
 pages = [int(x) for x in PAGES.split(',')]

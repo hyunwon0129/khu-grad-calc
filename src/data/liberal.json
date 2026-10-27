@@ -1,0 +1,4930 @@
+{
+ "source": "2026학년도 교육과정(국제캠퍼스) Ⅲ. 교양교육과정 — 후마니타스칼리지 교양교육과정 기본구조표·[별표3] 교양교육과정 편성표·[별표7] 교과목 해설서",
+ "basis": "2024학번 이후 기준(2023학번 이전은 경과조치)",
+ "areas": {
+  "1": "생명, 우주, 인간",
+  "2": "분석, 추론, 논리",
+  "3": "상징, 문화, 소통",
+  "4": "사회, 공동체, 평화",
+  "5": "지능, 정보, 미래"
+ },
+ "required": [
+  {
+   "name": "인간의가치탐색",
+   "codes": [
+    "GEC1102"
+   ],
+   "credit": 3,
+   "year": 1
+  },
+  {
+   "name": "세계와시민",
+   "codes": [
+    "GEC1104"
+   ],
+   "credit": 3,
+   "year": 1
+  },
+  {
+   "name": "빅뱅에서문명까지",
+   "codes": [
+    "GEC0103"
+   ],
+   "credit": 3,
+   "year": 1
+  },
+  {
+   "name": "성찰과표현",
+   "codes": [
+    "GEC1105"
+   ],
+   "credit": 3,
+   "year": 1
+  },
+  {
+   "name": "주제연구",
+   "codes": [
+    "GEC2001"
+   ],
+   "credit": 3,
+   "year": 2,
+   "after": "성찰과표현"
+  },
+  {
+   "name": "대학영어",
+   "codes": [
+    "GEC1403"
+   ],
+   "credit": 2,
+   "year": 1
+  }
+ ],
+ "rules": {
+  "필수": 17,
+  "배분": 9,
+  "배분영역": 3,
+  "자유": 3,
+  "총": 29
+ },
+ "courses": [
+  {
+   "code": "GEC1102",
+   "name": "인간의가치탐색",
+   "credit": 3,
+   "kind": "필수",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEC1104",
+   "name": "세계와시민",
+   "credit": 3,
+   "kind": "필수",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEC0103",
+   "name": "빅뱅에서문명까지",
+   "credit": 3,
+   "kind": "필수",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEC1105",
+   "name": "성찰과표현",
+   "credit": 3,
+   "kind": "필수",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEC2001",
+   "name": "주제연구",
+   "credit": 3,
+   "kind": "필수",
+   "area": null,
+   "year": 2,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEC1403",
+   "name": "대학영어",
+   "credit": 2,
+   "kind": "필수",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11029",
+   "name": "21세기금융세계화와불평등",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "IPE108",
+   "name": "4차산업의이해와IOT기술활용과분석",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11017",
+   "name": "관계,공간,감각의재구성Exploring Industry, Ideology",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11018",
+   "name": "Greek Mythology and Creative Writing",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1501",
+   "name": "On Justice",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11028",
+   "name": "SDG5성평등",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1458",
+   "name": "SF영화와미래정치",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1502",
+   "name": "SF영화의상상력:미래의평화와윤리",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1301",
+   "name": "가면의축제:동서양연희의문명사",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1125",
+   "name": "건강한노화",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED2976",
+   "name": "경계와접경의인류학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1405",
+   "name": "경제학적사유의원리",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11075",
+   "name": "고령화사회의뇌이야기",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1202",
+   "name": "고양이의물리학:자연계의숨은법칙",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1353",
+   "name": "고전과여성",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1989",
+   "name": "고전명작과예술의문명사",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11062",
+   "name": "고전읽기:SF소설",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11050",
+   "name": "고전읽기:감시와처벌",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11058",
+   "name": "고전읽기:같기도하고,아니같기도하고",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11051",
+   "name": "고전읽기:계몽의변증법",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11064",
+   "name": "고전읽기:공감의시대",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11048",
+   "name": "고전읽기:과학혁명의구조",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1801",
+   "name": "고전읽기:그리스비극",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1802",
+   "name": "고전읽기:김수영",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11059",
+   "name": "고전읽기:꿈의해석",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1824",
+   "name": "고전읽기:나쓰메소세키",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1803",
+   "name": "고전읽기:노자장자",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1804",
+   "name": "고전읽기:논어",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11052",
+   "name": "고전읽기:돈의철학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1830",
+   "name": "고전읽기:루쉰",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1807",
+   "name": "고전읽기:무라카미하루키",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1835",
+   "name": "고전읽기:박경리토지",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1808",
+   "name": "고전읽기:박지원",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1836",
+   "name": "고전읽기:보르헤스",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11049",
+   "name": "고전읽기:부분과전체",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1809",
+   "name": "고전읽기:불경",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1837",
+   "name": "고전읽기:비트겐슈타인",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1838",
+   "name": "고전읽기:사기",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1839",
+   "name": "고전읽기:사르트르",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1810",
+   "name": "고전읽기:삼국유사",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1811",
+   "name": "고전읽기:성서",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1812",
+   "name": "고전읽기:셰익스피어",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11054",
+   "name": "고전읽기:슬픈열대",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11061",
+   "name": "고전읽기:시적인간과생태적인간",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11103",
+   "name": "고전읽기:아르키메데스",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1841",
+   "name": "고전읽기:아리스토텔레스",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11104",
+   "name": "고전읽기:유클리드원론",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1846",
+   "name": "고전읽기:율곡",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1831",
+   "name": "고전읽기:이기적유전자vs.생명의음악",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11055",
+   "name": "고전읽기:인간의조건",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1813",
+   "name": "고전읽기:인도신화",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1814",
+   "name": "고전읽기:자본론",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1848",
+   "name": "고전읽기:정약용",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1850",
+   "name": "고전읽기:종의기원",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1805",
+   "name": "고전읽기:차라투스트라는이렇게말했다",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11056",
+   "name": "고전읽기:총균쇠",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11057",
+   "name": "고전읽기:침묵의봄",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1852",
+   "name": "고전읽기:카뮈",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1816",
+   "name": "고전읽기:카프카",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11040",
+   "name": "고전읽기:칼세이건",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1853",
+   "name": "고전읽기:코란",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11060",
+   "name": "고전읽기:코스모스",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1817",
+   "name": "고전읽기:톨스토이",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11063",
+   "name": "고전읽기:특이점이온다",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1725",
+   "name": "고전읽기:페미니즘",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1345",
+   "name": "고전읽기:평전",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1855",
+   "name": "고전읽기:프란츠파농",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1819",
+   "name": "고전읽기:프로이트",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1856",
+   "name": "고전읽기:플라톤",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1857",
+   "name": "고전읽기:한비자,묵자",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1820",
+   "name": "고전읽기:황순원",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1529",
+   "name": "공간과권력으로보는세계",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1305",
+   "name": "공감의인류학:감정이입과의인화",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1503",
+   "name": "공동체윤리의빛과그늘",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1101",
+   "name": "공생:세포에서사회까지",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1450",
+   "name": "공정경쟁과소비자보호",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1539",
+   "name": "공학기초수학",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1226",
+   "name": "과학시간에물어보고싶었지만묻지못했던질문들:자연과학의철학적문제들",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1306",
+   "name": "과학예술문화의만남",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1204",
+   "name": "과학적사고란무엇인가",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1997",
+   "name": "관계의생태론:문화인류학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1602",
+   "name": "구별의정치학:인종,계급,성",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1860",
+   "name": "국가폭력과트라우마",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11047",
+   "name": "국제사회와법",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1603",
+   "name": "국화와칼:만들어진일본의전통",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1664",
+   "name": "그리스신화와철학",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1996",
+   "name": "그림속의인문학",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11026",
+   "name": "근대의시선과공간:뮤지엄과엑스포",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11021",
+   "name": "글,그림그리고문화콘텐츠",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1861",
+   "name": "글로벌라틴아메리카",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1651",
+   "name": "글로벌전통문화",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": false
+  },
+  {
+   "code": "GED1126",
+   "name": "긍정심리학:인성의강점을이해하기",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1466",
+   "name": "기술혁신과전략의융합",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1540",
+   "name": "기초미분적분학",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1630",
+   "name": "기후와역사",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1998",
+   "name": "길과문명:초원길비단길바닷길",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1128",
+   "name": "뇌속의나:인식의해부학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11038",
+   "name": "니덤의수수께끼:근대문명의빛과그림자",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1723",
+   "name": "다양성과교차성의젠더문화",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1631",
+   "name": "다이나믹한국근현대사",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1415",
+   "name": "대안사회구상하기",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1468",
+   "name": "대학생을위한실용금융",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11086",
+   "name": "데이터액티비즘",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11009",
+   "name": "도덕의과학",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1416",
+   "name": "돈의발명:조개에서도토리까지",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1977",
+   "name": "동물을통해배우는인류학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1508",
+   "name": "동아시아문명론",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1509",
+   "name": "동아시아의서양문명수용론",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1334",
+   "name": "동양고전수필의향기",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1206",
+   "name": "동양사상과과학기술",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1136",
+   "name": "동의보감을통한몸과마음의이해",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11006",
+   "name": "동학다시읽기",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11073",
+   "name": "두세계의만남:영어와한국어",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1511",
+   "name": "두얼굴의인류사:전쟁과평화",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1454",
+   "name": "디아스포라",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11082",
+   "name": "디지털문법과젠더코드",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1606",
+   "name": "디지털사회의문화디지털협업과커뮤니케이션:",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1418",
+   "name": "AI시대의정보흐름과활용뛰는중국따라잡기:현대중국알기",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1862",
+   "name": "라틴아메리카문학과예술",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1994",
+   "name": "라틴어와서구문명",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11014",
+   "name": "롤러코스터의과학:퍼텐셜",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1309",
+   "name": "르네상스:예술의혁명",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1965",
+   "name": "마녀사냥:그광기의역사",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1103",
+   "name": "마음의탄생:뇌,의식,마음",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11011",
+   "name": "마음챙김과비폭력대화",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11015",
+   "name": "만성질병과건강관리",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1736",
+   "name": "만화로세상보기",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1346",
+   "name": "매체와메시지:미디어의이해",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1970",
+   "name": "메카-필로소피아:인간화된기계와기계화된인간사이",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1358",
+   "name": "명작에취하다:예술감상법",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1246",
+   "name": "모두를위한물리학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11043",
+   "name": "모두를위한인공지능과윤리적실제",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1104",
+   "name": "몸과생명",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1982",
+   "name": "몸의노래:의료인문학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1105",
+   "name": "몸의발견무대를장악하라:아이디어제안,",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1987",
+   "name": "설득,그리고발표문명감염그리고진화",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1661",
+   "name": "문명과세계체제그리고인류의미래:근대이후세계의형성과그너머",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1513",
+   "name": "문명의충돌과조화",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1534",
+   "name": "문명전환기퀀텀리더십",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1974",
+   "name": "문명전환시대의정치:포스트민주주의와포퓰리즘",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11019",
+   "name": "문명패러다임의혁명:서구근대화과정의현재적이해",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1981",
+   "name": "문학과아픔:신화에서SF까지",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1245",
+   "name": "문화세계의변혁,안드로이드세상",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": false
+  },
+  {
+   "code": "GED1609",
+   "name": "문화유산과역사지리",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1535",
+   "name": "미국드라마로보는초강대국의정치",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1311",
+   "name": "미디어아트와문화",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11042",
+   "name": "미래,기술,경영",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11041",
+   "name": "미래를질문하는예술",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1727",
+   "name": "미래사회와도시계획",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1643",
+   "name": "미래학과미래마인드",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1632",
+   "name": "민주주의피트니스",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1419",
+   "name": "배터리:문명을움직이는작은상자",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1337",
+   "name": "불교와정신분석학",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1208",
+   "name": "불편한진실:기후변화",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1452",
+   "name": "비만의사회학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1703",
+   "name": "비판적사고란무엇인가",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1244",
+   "name": "빅데이터를통한세상바로알기",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1721",
+   "name": "빅데이터와스포츠산업",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1704",
+   "name": "사고와논리:개념,명제,논증",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1611",
+   "name": "사농공상:역사의주연과조연",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1129",
+   "name": "사람뇌의이해",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1237",
+   "name": "사막과함께살기:기후변화와전환사회",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1650",
+   "name": "삼국지인문학",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1314",
+   "name": "상징,은유,반어:복잡성의시학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1971",
+   "name": "생각과앎의힘",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1106",
+   "name": "생명,영원한블루오션",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1107",
+   "name": "생명과생명공학:자본,국가,과학,정치",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1108",
+   "name": "생명과학의미래",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1531",
+   "name": "생명윤리,찬성과반대",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1109",
+   "name": "생명의그물망:인간,동식물,환경,지구",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1544",
+   "name": "생명의언어",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1110",
+   "name": "생명의역사35억년:세포의춤",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1121",
+   "name": "생명이란무엇인가:물질과정보의이중주",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11076",
+   "name": "생태독성학퍼즐의비밀:환경오염과바이오필리아의교차점탐구",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11030",
+   "name": "생활속의금융",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1614",
+   "name": "서양사상의번역과동아시아의근대",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11106",
+   "name": "설득의기술",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1615",
+   "name": "설탕과소금:사소한것들의역사",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1645",
+   "name": "세계금융사",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1616",
+   "name": "세계속의한국:국토와인간",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11031",
+   "name": "세계속한국의생존과파워",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1422",
+   "name": "세계의공동체:사례연구",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1516",
+   "name": "세계의평화주의자들",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11012",
+   "name": "세상속의수학",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1339",
+   "name": "소리언어의해부와실습",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1617",
+   "name": "소셜네트워크:소통과집단지성",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1865",
+   "name": "수사학과영작문",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1707",
+   "name": "수와문명:문명을바꾼수학적발견",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1543",
+   "name": "수학과세상",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1990",
+   "name": "숨겨진패턴",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11022",
+   "name": "숲과생활",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1113",
+   "name": "스마트식생활과건강",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11068",
+   "name": "스토리를구성하는요소",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1135",
+   "name": "스포츠경쟁력과자기계발",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1426",
+   "name": "스포츠와정치",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1318",
+   "name": "시는어떻게내게로오는가",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1238",
+   "name": "시로읽는팔도지리",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11077",
+   "name": "시민과학:과학하는시민",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1663",
+   "name": "시민생활과법",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED2977",
+   "name": "시와문명전환:지속성은어떻게가능한가",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1634",
+   "name": "신화와문화:동서양",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1618",
+   "name": "실크로드와누들로드:문명의창조와전달",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1517",
+   "name": "십자가와초승달:기독교와이슬람",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11046",
+   "name": "씨네페미니즘의롱테이크",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1619",
+   "name": "아버지의자화상:한국현대사의발자취",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1320",
+   "name": "악기의탄생:동서양음악의문명사",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1518",
+   "name": "애타주의(altruism):상호성의윤리",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1655",
+   "name": "야담으로읽는한국역사와문화",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11083",
+   "name": "약과건강",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1868",
+   "name": "언어와문학의이해",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1321",
+   "name": "언어의경계:신성한가,속된가?",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11074",
+   "name": "에너지문제와과학기술의역할",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": false
+  },
+  {
+   "code": "GED11085",
+   "name": "여성의몸,사이보그,시간성",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11045",
+   "name": "여성의문학문학속여성",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1869",
+   "name": "여성학개론",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1657",
+   "name": "여행을통한인간의삶의가치증진",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1620",
+   "name": "역사학적해석의방법들",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1646",
+   "name": "영국희극:아이러니,블랙유머,풍자",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1341",
+   "name": "영미문학읽기:소설과영화가로지르기",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1347",
+   "name": "영미아동문학산책",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1342",
+   "name": "영어로본한국사회",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1621",
+   "name": "영토의경계와흔적:이민,이주,이동",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1656",
+   "name": "영화로보는스포츠문화",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1665",
+   "name": "영화로읽는도시인문학:환동해도시와문화지리",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1349",
+   "name": "영화와문학",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1361",
+   "name": "영화와소설에나타난한국인의서사",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1432",
+   "name": "예술을통한공동체만들기",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1940",
+   "name": "예술치료의원리와실제",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1710",
+   "name": "예측하는미래:통계와확률",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1532",
+   "name": "우리가만들어가는통일",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1343",
+   "name": "우리문화유전자읽기",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1463",
+   "name": "우리시대페미니즘의의제와전망",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1240",
+   "name": "우주:별을잊은그대에게",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1250",
+   "name": "우주탐사:당면한미래",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11016",
+   "name": "운동과건강",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1215",
+   "name": "원자의춤",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1228",
+   "name": "위기의생태계와미래",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1973",
+   "name": "위대한정치:초인의미학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1666",
+   "name": "유럽문화와도시문명",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1622",
+   "name": "유럽문화의이해",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1520",
+   "name": "율법을넘어서:윤리적보편주의",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1363",
+   "name": "음식과문화:글로벌&로컬트렌드와이슈",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1979",
+   "name": "음식의윤리학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1526",
+   "name": "음악과권력:충돌혹은타협의역사",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1131",
+   "name": "의료와법률",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1324",
+   "name": "의미의탄생:언어",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1132",
+   "name": "의생명과학속위대한발견과미래",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11081",
+   "name": "이동의자유와원격사회",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11065",
+   "name": "이미지와재현의젠더분석",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11105",
+   "name": "이성의함정:마음은항상합리적인가",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1638",
+   "name": "인간,장소,지명",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1216",
+   "name": "인간과도구:기술문명의전개",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1217",
+   "name": "인간과생활속의로봇",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1116",
+   "name": "인간과식물",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1122",
+   "name": "인간관계의생명론",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1711",
+   "name": "인간-컴퓨터중심세계",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1360",
+   "name": "인간행동의이해:심리학",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1999",
+   "name": "인공지능과라이프3.0",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1542",
+   "name": "인공지능과예술",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11013",
+   "name": "인공지능을위한선형대수",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11080",
+   "name": "인공진화론,기술의시대를살아가는지혜",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11037",
+   "name": "인구와주거",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11072",
+   "name": "인권과기억",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1242",
+   "name": "인류역사를바꾼첨단재료",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1230",
+   "name": "인류의큰걸음:과학사의위대한발견들",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1647",
+   "name": "인류학과음식문화",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1325",
+   "name": "인문학과문화콘텐츠",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1123",
+   "name": "인체와생명",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1434",
+   "name": "인터넷과법",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1871",
+   "name": "일본대중문화의이해",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11078",
+   "name": "적정기술:브리콜뢰르의꿈",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1992",
+   "name": "전기와자기의만남",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11071",
+   "name": "전쟁과평화속여성인권",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1726",
+   "name": "정신분석과성차의발견",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1527",
+   "name": "정의란무엇인가",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": false
+  },
+  {
+   "code": "GED1447",
+   "name": "정치의인문학적탐색",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1435",
+   "name": "정치학적사유의원리",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1713",
+   "name": "제논의역설에서카오스이론까지:무한과유한의변증법",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1326",
+   "name": "젠더,섹슈얼리티,문학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11079",
+   "name": "젠더로읽는진화심리학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1640",
+   "name": "젠더와역사:평등과차이의정치사",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1984",
+   "name": "좋은에너지나쁜에너지다른에너지",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1648",
+   "name": "주체와유토피아:우토푸스(Utopus)의꿈",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1739",
+   "name": "지구화시대의미학극장",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1731",
+   "name": "지속가능한평화를위한국제질서",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1119",
+   "name": "진화와인간본성",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1966",
+   "name": "질병의진화적이해:우리는왜아픈걸까",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1719",
+   "name": "질적연구와데이터분석",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1362",
+   "name": "짝짓기의진화심리학",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1327",
+   "name": "천개의공감:현대인의심리분석",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1983",
+   "name": "철학의눈으로본의학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1538",
+   "name": "철학자를위한물리학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11020",
+   "name": "청춘을위한영화예찬",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11039",
+   "name": "캠퍼스식물의이해",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1329",
+   "name": "커뮤니케이션과디자인",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1991",
+   "name": "코딩하는아티스트",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1248",
+   "name": "큰맥락에서사고하기:시스템다이나믹스",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1715",
+   "name": "통계의진실과오류",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1716",
+   "name": "통합적사고론",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1223",
+   "name": "특허와지적재산권",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1951",
+   "name": "패션디자인의세계",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1528",
+   "name": "평화와갈등",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1980",
+   "name": "포스트휴먼시대의의료와인간",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1124",
+   "name": "폭력과치유",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11027",
+   "name": "폭력의진화:통섭적관점",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1717",
+   "name": "프로그래밍을통한논리적사유연습",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1537",
+   "name": "프로그래밍입문",
+   "credit": 3,
+   "kind": "배분",
+   "area": 5,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1873",
+   "name": "하이쿠의세계",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1235",
+   "name": "하천문화의이해와르네상스",
+   "credit": 3,
+   "kind": "배분",
+   "area": 1,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11024",
+   "name": "한국고전문학과영상",
+   "credit": 3,
+   "kind": "배분",
+   "area": 3,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1626",
+   "name": "한국근현대사의이해",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1975",
+   "name": "한국문학과세계문학",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1730",
+   "name": "한국문화의이해",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1437",
+   "name": "한국사회의정치적이슈들",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11053",
+   "name": "한국의역사와문화",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11067",
+   "name": "한국의이슈와경제",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1732",
+   "name": "핵없는세계를위한국제사회의노력",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1134",
+   "name": "행복의생명과학적이해",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1440",
+   "name": "행복이란무엇인가",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1461",
+   "name": "현대도시론",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11070",
+   "name": "현대동아시아의평화와인권",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1225",
+   "name": "현대사회와과학",
+   "credit": 3,
+   "kind": "배분",
+   "area": 2,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1649",
+   "name": "민족성과서브컬처호모무지쿠스:음악으로경계넘나들기",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1524",
+   "name": "호모에티쿠스:윤리적인간의탄생",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED11084",
+   "name": "환경과건강",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1232",
+   "name": "환경과과학기술",
+   "credit": 3,
+   "kind": "배분",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GED1628",
+   "name": "황하와장강:중국역사의발자취",
+   "credit": 3,
+   "kind": "배분",
+   "area": 4,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1989",
+   "name": "4차산업혁명의변화:사물인터넷",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1988",
+   "name": "C샵을통한창의적사고",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11006",
+   "name": "가창실기",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1658",
+   "name": "건강과웰니스",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1991",
+   "name": "게임과네트워크:이론과코딩",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11010",
+   "name": "게임시나리오창작교실",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1601",
+   "name": "골프",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11007",
+   "name": "공공미술과사회:공공미술프로젝트",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11054",
+   "name": "공학과경영",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1977",
+   "name": "공학도를위한소프트스킬",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1603",
+   "name": "국선도",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1330",
+   "name": "글로벌세미나",
+   "credit": 2,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1123",
+   "name": "기록하는인간:호모비블로스(HomoBiblos)",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "IPE102",
+   "name": "기업윤리와사회적책임",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11003",
+   "name": "기초러시아어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11002",
+   "name": "기초스페인어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11001",
+   "name": "기초일본어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11000",
+   "name": "기초중국어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11004",
+   "name": "기초프랑스어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1985",
+   "name": "네트워크기술로인한사회변화",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11012",
+   "name": "대중문화와음악",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1333",
+   "name": "독립연구1",
+   "credit": 2,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1334",
+   "name": "독립연구2",
+   "credit": 2,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1609",
+   "name": "동계스포츠:스노우보드",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": false,
+   "s2": true
+  },
+  {
+   "code": "GEE1611",
+   "name": "동계스포츠:스키",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": false,
+   "s2": true
+  },
+  {
+   "code": "GEE11062",
+   "name": "동아시아문화산책",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1133",
+   "name": "드라마창작교실:갈등과반전",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1995",
+   "name": "디지털사진촬영과표현",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1986",
+   "name": "디지털세계의신인류:인공지능과머신러닝",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1974",
+   "name": "디지털전환과4차산업혁명:기술적접근",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1613",
+   "name": "레크레이션",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11040",
+   "name": "르포르타주:가려진세계의보고서",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11014",
+   "name": "매체와현대예술",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11016",
+   "name": "무대위의세상;연극,오페라,뮤지컬",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1339",
+   "name": "문화콘텐츠창업",
+   "credit": 2,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1615",
+   "name": "배드민턴",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1670",
+   "name": "볼링",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1343",
+   "name": "빅데이터를통한세상바로알기:R로배우는데이터분석코딩",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1127",
+   "name": "사물인터넷과미래사회",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1996",
+   "name": "사운드와테크놀로지",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1984",
+   "name": "사이버스페이스문화",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11018",
+   "name": "사진의이해와감상",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1969",
+   "name": "사회혁신리빙랩",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1993",
+   "name": "새김과찍기:현대판화",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1953",
+   "name": "새로운생명체:인공지능",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11019",
+   "name": "색채와상상력",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1997",
+   "name": "생활속의공예:미와쓰임새",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11020",
+   "name": "세계의춤우리의춤",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1180",
+   "name": "소설창작교실:서사는힘이세다",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1980",
+   "name": "소프트웨어개발자를위한C프로그래밍",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1954",
+   "name": "소프트웨어적사유",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11021",
+   "name": "소프트웨어적사유와인공지능",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1619",
+   "name": "수상스포츠(교양)",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1620",
+   "name": "수상스포츠:수상스키",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1624",
+   "name": "수영",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11022",
+   "name": "스포츠댄스와아트퍼포먼스",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1625",
+   "name": "스포츠명가에게배우는재미와감동",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1626",
+   "name": "승마",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11008",
+   "name": "시나리오창작교실",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1971",
+   "name": "시민과예술",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1187",
+   "name": "시창작교실",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1956",
+   "name": "신입생워크숍1:워밍업",
+   "credit": 2,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": false
+  },
+  {
+   "code": "GEE1957",
+   "name": "신입생워크숍2:스타트업",
+   "credit": 2,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": false,
+   "s2": true
+  },
+  {
+   "code": "GEE11023",
+   "name": "실내악,음악적얼굴이살아있는벗들의음악",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1994",
+   "name": "아이디어를시각화하기",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1344",
+   "name": "앱인벤터로배우는코딩세상",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1193",
+   "name": "언어와컴퓨터",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11024",
+   "name": "얼쑤난타",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11060",
+   "name": "열린경영학",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11005",
+   "name": "영어시사토론",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11041",
+   "name": "영어에세이쓰기",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11042",
+   "name": "영어토론과논쟁",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11025",
+   "name": "영화속그림읽기",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11026",
+   "name": "영화제작기초",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11027",
+   "name": "오케스트라의오늘",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11061",
+   "name": "온라인커머스창업과라이브쇼핑",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1630",
+   "name": "요가",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1632",
+   "name": "요트",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11028",
+   "name": "우리가락으로만나는세상",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1671",
+   "name": "운동과체중관리",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11029",
+   "name": "움직임과소통,국립현대무용단과함께",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1633",
+   "name": "웨이트트레이닝",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1970",
+   "name": "웰니스시대의레포츠문화의이해",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1635",
+   "name": "윈드서핑",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1218",
+   "name": "응급처치및안전관리",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1636",
+   "name": "응급처치및전문관리론",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1668",
+   "name": "인공암벽등반",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1975",
+   "name": "인공지능을위한기계학습",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1983",
+   "name": "인공지능을위한수학",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11059",
+   "name": "인류세,공생,큐레이팅",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1979",
+   "name": "인터넷과메타버스",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1990",
+   "name": "인터넷과미디어콘텐츠기술",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11056",
+   "name": "일상의공연학",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11030",
+   "name": "작곡의밑그림:화성학",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11031",
+   "name": "재즈음악의이해와감상",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1952",
+   "name": "전공탐색및기업가정신세미나",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1638",
+   "name": "조깅과워킹",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11043",
+   "name": "중급고전한문",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11044",
+   "name": "중급일본어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1963",
+   "name": "지구를생각하는예술",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1982",
+   "name": "지구를생각하는인공지능",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1243",
+   "name": "창업경영과기업가정신",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1349",
+   "name": "창업과Thinking Design",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "IPE503",
+   "name": "창업과기업가정신",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1992",
+   "name": "창업세미나:스타트업에서빅테크까지",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1341",
+   "name": "창업전략과모의창업",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11045",
+   "name": "초급고전한문",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11046",
+   "name": "초급독일어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11047",
+   "name": "초급라틴어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11048",
+   "name": "초급러시아어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11049",
+   "name": "초급스페인어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11050",
+   "name": "초급일본어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11051",
+   "name": "초급중국어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11052",
+   "name": "초급프랑스어",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11009",
+   "name": "출판편집교실",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11032",
+   "name": "춤으로만나는한류,K-POP댄스",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1978",
+   "name": "컴퓨터게임개론:이론과기술",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11033",
+   "name": "컴퓨터그래픽기초",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11034",
+   "name": "클래식기타의연주와감상",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11035",
+   "name": "클래식음악산책",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1642",
+   "name": "탁구",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1644",
+   "name": "태권도",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1648",
+   "name": "테니스",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1650",
+   "name": "토탈컨디셔닝(체력및몸매관리)",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1976",
+   "name": "파이썬과데이터마이닝",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1345",
+   "name": "파이썬으로배우는소프트웨어코딩",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11015",
+   "name": "판화와표현기법을통한인식의확대",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11036",
+   "name": "포스트모던아트읽기",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1652",
+   "name": "필라테스",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1987",
+   "name": "학습과사고:파이썬과딥러닝",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1264",
+   "name": "한국어1",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1265",
+   "name": "한국어1(교양)",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1266",
+   "name": "한국어2",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1267",
+   "name": "한국어2(교양)",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11017",
+   "name": "한국어와중국어문법이야기",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1958",
+   "name": "한국어의이해1",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1959",
+   "name": "한국어의이해2",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1960",
+   "name": "한국어의이해3",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1961",
+   "name": "한국어의이해4",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1275",
+   "name": "한방과건강생활",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11053",
+   "name": "한자의이해",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11037",
+   "name": "합창의재발견",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1661",
+   "name": "행복한여가를위한야외활동",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11038",
+   "name": "현대미술라운드테이블",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1998",
+   "name": "현대사회키워드로스포츠읽기",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1657",
+   "name": "현대생활과체육",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11039",
+   "name": "현대회화실기",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1669",
+   "name": "호신술",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11013",
+   "name": "회화를통한자기얼굴찾기",
+   "credit": 3,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1332",
+   "name": "후마니타스세미나",
+   "credit": 1,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE11011",
+   "name": "후마니타스예술특강",
+   "credit": 2,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  },
+  {
+   "code": "GEE1286",
+   "name": "후마니타스특강",
+   "credit": 2,
+   "kind": "자유",
+   "area": null,
+   "year": 1,
+   "s1": true,
+   "s2": true
+  }
+ ],
+ "requiredFree": {
+  "name": "전공탐색및기업가정신세미나",
+  "codes": [
+   "GEE1952",
+   "GEE1992"
+  ],
+  "alt": "창업세미나;스타트업에서빅테크까지",
+  "note": "외국인학생·편입생 면제"
+ }
+}

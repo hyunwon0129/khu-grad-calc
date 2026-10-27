@@ -9,6 +9,7 @@ import { estimateSemestersLeft } from '../lib/verdict';
 import MultiPanel from './MultiPanel';
 import ShareCard from './ShareCard';
 import RecommendPanel from './RecommendPanel';
+import LiberalPanel from './LiberalPanel';
 import { newPlanId } from '../lib/whatif';
 import type { SchoolCategory } from '../lib/reportLayout';
 import Glossary from './Glossary';
@@ -347,6 +348,8 @@ export default function ResultScreen(p: Props) {
 
         </>
       )}
+
+      <LiberalPanel taken={taken} courseMap={courseMap} report={report} views={views} nowTerm={nowTerm} admissionYear={admissionYear} />
 
       <MultiPanel
         departments={departments}

@@ -320,3 +320,18 @@ a.button-like:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 .rec-more { margin-top: 10px; }
 .rec-more summary { cursor: pointer; color: var(--accent); font-weight: 600; }
 .recommend h3 { margin: 14px 0 4px; font-size: 1rem; }
+
+/* 교양 */
+.lib-need { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.lib-need .chip { margin-left: 0; }
+.lib-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+@media (max-width: 560px) { .lib-grid { grid-template-columns: 1fr; } }
+.lib-check { list-style: none; padding: 0; margin: 4px 0; }
+.lib-check li { padding: 2px 0; }
+.lib-done span[aria-hidden] { color: var(--ok); font-weight: 700; }
+.lib-ongoing span[aria-hidden] { color: var(--accent); font-weight: 700; }
+.lib-check .lib-todo span[aria-hidden] { color: var(--warn); font-weight: 700; }
+.lib-none { color: var(--muted); }
+.lib-area { margin: 6px 0; }
+.lib-area ul { margin: 2px 0 0; padding-left: 18px; }
+.liberal h3 { margin: 14px 0 4px; font-size: 1rem; }
