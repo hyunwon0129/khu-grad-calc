@@ -343,16 +343,30 @@ a.button-like:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 
 /* 결과 화면: 요건 체크리스트 + 세부 탭 */
 .grad-checklist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
-.grad-checklist .check { grid-template-columns: 1.4em minmax(0, 1fr) auto; grid-template-areas: "mark name open" ". status status"; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.grad-checklist .check { grid-template-columns: 1.4em minmax(0, 1fr) auto; grid-template-areas: "mark name open" ". meters meters" ". status status"; row-gap: 4px; padding: 8px 0; border-bottom: 1px solid var(--line); }
 @media (min-width: 720px) {
-  .grad-checklist .check { grid-template-columns: 1.4em minmax(8em, 14em) minmax(0, 1fr) auto; grid-template-areas: "mark name status open"; }
+  .grad-checklist .check { grid-template-columns: 1.4em 9.5em minmax(0, 1fr) auto; grid-template-areas: "mark name meters open" ". . status status"; }
 }
+.grad-checklist .check-status { color: var(--muted); }
+.grad-checklist .check-todo .check-status { color: var(--fg); }
+.meters { grid-area: meters; display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; min-width: 0; }
+.meter { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+.meter .pbar { width: 72px; flex: none; }
+.meter-wide { flex: 1 1 100%; }
+.meter-wide .pbar { flex: 1; width: auto; }
+.meter-name { color: var(--muted); }
+.meter-num { min-width: 3.2em; }
+.meter-full .meter-num { color: var(--ok); }
+.dots { display: inline-flex; gap: 3px; flex-wrap: wrap; max-width: 220px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--line); display: inline-block; }
+.dot-done { background: var(--accent); }
+.dot-ip { background: repeating-linear-gradient(135deg, var(--accent) 0 2px, transparent 2px 4px); border: 1px solid var(--accent); }
 .grad-done { display: flex; gap: 8px; align-items: baseline; margin: 0; color: var(--ok); }
 .grad-done .check-mark { flex: none; }
 .grad-checklist .check:last-child { border-bottom: 0; }
 .grad-checklist .check-mark { grid-area: mark; }
 .grad-checklist .check-name { grid-area: name; font-weight: 600; }
-.grad-checklist .check-status { grid-area: status; font-size: 0.86rem; }
+.grad-checklist .check-status { grid-area: status; font-size: 0.84rem; justify-self: start; text-align: left; }
 .grad-checklist .check-open { grid-area: open; white-space: nowrap; }
 .check-ok .check-mark, .check-ok .check-status { color: var(--ok); }
 .check-todo .check-mark, .check-todo .check-status { color: var(--warn); }

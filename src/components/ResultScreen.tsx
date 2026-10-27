@@ -18,7 +18,7 @@ import { planRoadmap, nextTerm, termLabel } from '../lib/planner';
 import { currentTerm } from '../lib/parseReport';
 import ProgressChart from './ProgressChart';
 import SchoolProgress, { areaViews } from './SchoolProgress';
-import GradSummary, { type SummaryRow } from './GradSummary';
+import GradSummary, { type Meter, type SummaryRow } from './GradSummary';
 import CreditPlanPanel from './CreditPlanPanel';
 import { planCredits, type TermLimits } from '../lib/creditPlan';
 import { manualChecks, multiRequired } from '../lib/requirements';
@@ -205,40 +205,62 @@ export default function ResultScreen(p: Props) {
     : creditPlan.shortfall > 0 ? `${semesters}학기 최대 ${creditPlan.capacity}학점으로는 ${creditPlan.shortfall}학점 부족`
     : `${semesters}학기 동안 학기당 약 ${Math.ceil(creditsLeft / semesters)}학점`;
   const capBad = creditsLeft > 0 && (semesters <= 0 || creditPlan.shortfall > 0);
+  const SHORT: Record<string, string> = { 전공기초: '기초', 전공필수: '필수', 전공선택: '선택', 교양필수: '필수', 배분이수: '배분', 자유이수: '자유' };
+  const viewMeters = (vs: typeof views): Meter[] => vs.map((v) => ({ name: SHORT[v.name] ?? v.name, done: v.done, pending: v.pending, required: v.required, unit: '학점' }));
   if (report && views.length) {
     const grad = views.find((v) => v.group === '졸업');
     if (grad) {
       rows.push({
         key: 'grad', label: '졸업학점', status: grad.remaining > 0 ? 'todo' : grad.pending ? 'ongoing' : 'ok',
-        detail: grad.remaining > 0 ? `${grad.remaining}학점 남음 (${grad.done}/${grad.required}) · ${capText}` : `${grad.done}/${grad.required}`,
+        meters: [{ done: grad.done, pending: grad.pending, required: grad.required, unit: '학점' }],
+        detail: grad.remaining > 0 ? `${grad.remaining}학점 남음 · ${capText}` : undefined,
         tab: 'plan',
       });
     }
     const major = views.filter((v) => v.group === '전공' && !/계$/.test(v.name));
     if (major.length) {
       const l = left(major);
-      rows.push({ key: 'major', label: '전공 학점', status: l ? 'todo' : 'ok', detail: l ? `${l}학점 남음` : '모두 충족', tab: 'status' });
+      rows.push({ key: 'major', label: '전공', status: l ? 'todo' : 'ok', meters: viewMeters(major), tab: 'status' });
     }
   } else {
     const l = left(result.areas.map((a) => ({ name: a.category, remaining: a.remaining })));
-    rows.push({ key: 'major', label: '전공 학점', status: l ? 'todo' : 'ok', detail: l ? `${l}학점 남음 · ${capText}` : '모두 충족', tab: 'status' });
-  }
-  if (showCurriculum) {
     rows.push({
-      key: 'must', label: '꼭 들어야 하는 전공 과목', status: missingRequired.length ? 'todo' : 'ok',
-      detail: missingRequired.length ? `${missingRequired.length}과목: ${missingRequired.slice(0, 3).map((c) => c.name).join(', ')}${missingRequired.length > 3 ? ' 등' : ''}` : '모두 이수', tab: 'recommend',
+      key: 'major', label: '전공', status: l ? 'todo' : 'ok',
+      meters: result.areas.map((a) => ({ name: a.category, done: a.earned, required: a.required, unit: '학점' as const })),
+      detail: l ? capText : undefined, tab: 'status',
     });
   }
-  const libSchool = left(views.filter((v) => v.group === '교양' && !/계$/.test(v.name)));
+  if (showCurriculum) {
+    const mustAll = program.courses.map((c) => courseMap.get(c))
+      .filter((c): c is Course => !!c && mustTypes.has(typeOf(c)) && (choiceGroupOf(program, c.code)?.[0] ?? c.code) === c.code).length;
+    rows.push({
+      key: 'must', label: '꼭 들을 전공 과목', status: missingRequired.length ? 'todo' : 'ok',
+      meters: mustAll ? [{ done: Math.max(0, mustAll - missingRequired.length), required: mustAll, unit: '과목' }] : undefined,
+      detail: missingRequired.length ? `남은 과목: ${missingRequired.slice(0, 3).map((c) => c.name).join(', ')}${missingRequired.length > 3 ? ` 외 ${missingRequired.length - 3}개` : ''}` : undefined,
+      tab: 'recommend',
+    });
+  }
+  const libViews = views.filter((v) => v.group === '교양' && !/계$/.test(v.name));
+  const libSchool = left(libViews);
   rows.push({
     key: 'liberal', label: '교양', status: libTodo.length || libSchool ? 'todo' : 'ok',
-    detail: libTodo.length ? libTodo.map((x) => (x.kind === '필수교과' ? x.label : `${x.kind} ${x.label}`)).slice(0, 4).join(', ') + (libTodo.length > 4 ? ` 외 ${libTodo.length - 4}개` : '')
-      : libSchool ? `${libSchool}학점 남음` : '모두 충족',
+    meters: libViews.length ? viewMeters(libViews) : [
+      { name: '필수', done: libStatus.credits.필수, required: libStatus.rules.필수, unit: '학점' },
+      { name: '배분', done: libStatus.credits.배분, required: libStatus.rules.배분, unit: '학점' },
+      { name: '자유', done: libStatus.credits.자유, required: libStatus.rules.자유, unit: '학점' },
+    ],
+    detail: libTodo.length ? `남은 것: ${libTodo.map((x) => (x.kind === '필수교과' ? x.label : `${x.kind} ${x.label}`)).slice(0, 3).join(', ')}${libTodo.length > 3 ? ` 외 ${libTodo.length - 3}개` : ''}` : undefined,
     tab: 'liberal',
   });
   for (const c of report && views.length ? report.checks ?? [] : []) {
     if (c.status === 'na') continue;
-    rows.push({ key: `c-${c.key}`, label: c.name, status: STATUS_ROW[c.status], detail: c.detail ?? c.hint, tab: c.status === 'unmet' ? 'status' : undefined });
+    const m = c.detail?.match(/^(\d+)\/(\d+)(과목|학점)?$/);
+    rows.push({
+      key: `c-${c.key}`, label: c.name, status: STATUS_ROW[c.status],
+      meters: m && Number(m[2]) > 0 ? [{ done: Math.min(Number(m[1]), Number(m[2])), required: Number(m[2]), unit: m[3] === '학점' ? '학점' : '과목' }] : undefined,
+      detail: m ? undefined : c.detail ?? c.hint,
+      tab: c.status === 'unmet' ? 'status' : undefined,
+    });
   }
   if (needMulti) {
     rows.push({ key: 'multi', label: '다전공·마이크로디그리·부전공', status: 'check', detail: '2026학번부터 1개 이상 필수', tab: 'multi' });
