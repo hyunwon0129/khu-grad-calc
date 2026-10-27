@@ -10,6 +10,7 @@ import MultiPanel from './MultiPanel';
 import ShareCard from './ShareCard';
 import RecommendPanel from './RecommendPanel';
 import LiberalPanel from './LiberalPanel';
+import type { LiberalOptions } from '../lib/liberal';
 import { newPlanId } from '../lib/whatif';
 import type { SchoolCategory } from '../lib/reportLayout';
 import Glossary from './Glossary';
@@ -35,6 +36,8 @@ interface Props {
   report?: ReportData | null;
   plans: PlannedItem[];
   onPlans: (p: PlannedItem[]) => void;
+  libOptions: LiberalOptions;
+  onLibOptions: (o: LiberalOptions) => void;
   excluded: string[];
   maxCredits: number;
   onExcluded: (codes: string[]) => void;
@@ -349,7 +352,9 @@ export default function ResultScreen(p: Props) {
         </>
       )}
 
-      <LiberalPanel taken={taken} courseMap={courseMap} report={report} views={views} nowTerm={nowTerm} admissionYear={admissionYear} />
+      <LiberalPanel taken={taken} courseMap={courseMap} report={report} views={views} nowTerm={nowTerm}
+        admissionYear={admissionYear ?? (isSample ? null : program.admissionYearRange[0])} dept={myDept ?? null}
+        options={p.libOptions} onOptions={p.onLibOptions} />
 
       <MultiPanel
         departments={departments}

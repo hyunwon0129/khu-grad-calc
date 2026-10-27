@@ -3,6 +3,7 @@
 import type { Course, TakenCourse } from './types';
 import type { ReportData } from './reportLayout';
 import type { PlannedItem } from './whatif';
+import type { LiberalOptions } from './liberal';
 
 const KEY = 'khu-grad-calc:v1';
 
@@ -15,6 +16,7 @@ export interface UserData {
   maxCreditsPerSemester: number;
   report?: ReportData | null;       // 졸업사정표 분석 결과 (학교 기준 영역별 학점·과목 분류)
   plans?: PlannedItem[];            // 만약에 시뮬레이터의 계획 과목
+  libOptions?: LiberalOptions;      // 교양 면제·학생 구분 (점수는 저장하지 않음)
 }
 
 export interface SavedState extends UserData {
@@ -32,6 +34,10 @@ export function sanitize(s: UserData): UserData {
     plans: (s.plans ?? []).slice(0, 40).map(({ id, name, category, credit }) => ({
       id: String(id), name: String(name ?? '').slice(0, 40), category, credit: Math.max(0, Math.min(6, Number(credit) || 0)),
     })),
+    ...(s.libOptions ? { libOptions: {
+      studentType: (['일반', '외국인', '편입생'] as const).includes(s.libOptions.studentType) ? s.libOptions.studentType : '일반',
+      englishExempt: !!s.libOptions.englishExempt,
+    } } : {}),
     report: s.report
       ? {
           source: s.report.source === 'SAMPLE' ? 'SAMPLE' : 'PDF',

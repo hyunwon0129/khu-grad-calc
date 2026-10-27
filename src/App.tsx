@@ -12,6 +12,7 @@ import StartScreen from './components/StartScreen';
 import ImportScreen from './components/ImportScreen';
 import type { ReportData } from './lib/reportLayout';
 import type { PlannedItem } from './lib/whatif';
+import { DEFAULT_LIB_OPTIONS, type LiberalOptions } from './lib/liberal';
 import { matchProgram } from './lib/dept';
 import ManualScreen from './components/ManualScreen';
 import ResultScreen from './components/ResultScreen';
@@ -44,12 +45,13 @@ export default function App() {
   const [sampleOnOpen, setSampleOnOpen] = useState(false);
   const [report, setReport] = useState<ReportData | null>(validSaved?.report ?? null); // 졸업사정표 분석 결과
   const [plans, setPlans] = useState<PlannedItem[]>(validSaved?.plans ?? []); // 만약에 계획
+  const [libOptions, setLibOptions] = useState<LiberalOptions>(validSaved?.libOptions ?? DEFAULT_LIB_OPTIONS); // 교양 면제·학생 구분
 
-  const data: UserData = { programId, taken, custom, excluded, maxCreditsPerSemester: maxCredits, report, plans };
+  const data: UserData = { programId, taken, custom, excluded, maxCreditsPerSemester: maxCredits, report, plans, libOptions };
 
   const apply = useCallback((d: UserData) => {
     if (majors.some((p) => p.programId === d.programId)) setProgramId(d.programId);
-    setTaken(d.taken); setCustom(d.custom); setExcluded(d.excluded); setMaxCredits(d.maxCreditsPerSemester); setReport(d.report ?? null); setPlans(d.plans ?? []);
+    setTaken(d.taken); setCustom(d.custom); setExcluded(d.excluded); setMaxCredits(d.maxCreditsPerSemester); setReport(d.report ?? null); setPlans(d.plans ?? []); setLibOptions(d.libOptions ?? DEFAULT_LIB_OPTIONS);
   }, []);
   const sync = useCloudSync(data, apply);
 
@@ -58,7 +60,7 @@ export default function App() {
     saveState(data);
     setSavedAt(new Date().toISOString().slice(0, 10));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [programId, taken, custom, excluded, maxCredits, report, plans, noSave]);
+  }, [programId, taken, custom, excluded, maxCredits, report, plans, libOptions, noSave]);
 
   // 화면이 바뀌면 맨 위부터 보이게
   useEffect(() => { window.scrollTo({ top: 0 }); }, [step]);
@@ -76,7 +78,7 @@ export default function App() {
 
   const resetAll = () => {
     clearState();
-    setTaken([]); setCustom([]); setExcluded([]); setMaxCredits(DEFAULT_MAX_CREDITS); setSavedAt(null); setReport(null); setPlans([]);
+    setTaken([]); setCustom([]); setExcluded([]); setMaxCredits(DEFAULT_MAX_CREDITS); setSavedAt(null); setReport(null); setPlans([]); setLibOptions(DEFAULT_LIB_OPTIONS);
     setStep('start');
   };
 
@@ -183,6 +185,8 @@ export default function App() {
           report={report}
           plans={plans}
           onPlans={setPlans}
+          libOptions={libOptions}
+          onLibOptions={setLibOptions}
           excluded={excluded}
           maxCredits={maxCredits}
           onExcluded={setExcluded}

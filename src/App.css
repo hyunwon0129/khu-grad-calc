@@ -335,3 +335,8 @@ a.button-like:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 .lib-area { margin: 6px 0; }
 .lib-area ul { margin: 2px 0 0; padding-left: 18px; }
 .liberal h3 { margin: 14px 0 4px; font-size: 1rem; }
+.lib-options { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 6px 0; }
+.lib-exempt { margin: 4px 0 8px; }
+.lib-exempt summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+.lib-exempt ul { margin: 6px 0; padding-left: 18px; }
+.lib-notes { margin: 4px 0; padding-left: 18px; }
