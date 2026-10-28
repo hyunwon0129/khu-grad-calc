@@ -31,7 +31,7 @@ export default function WhatIfPanel({ views, plans, onPlans }: Props) {
         <h2>만약에 이 과목들을 들으면?</h2>
         {plans.length > 0 && <span className="chip">{plans.length}과목 · {total}학점 계획</span>}
       </div>
-      <p className="muted">다음 학기에 들을 과목을 영역과 학점으로 넣어 보세요. 위 막대에 테두리로 표시되고 결론이 바로 바뀝니다.</p>
+      <p className="muted">다음 학기 과목을 넣어 보세요. 결과가 바로 바뀝니다.</p>
 
       {suggestions.length > 0 && (
         <div className="quick-adds">

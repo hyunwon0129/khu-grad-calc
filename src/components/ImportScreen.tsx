@@ -168,23 +168,33 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
   return (
     <section>
       <h2>졸업사정표로 자동 입력</h2>
+      <ol className="stepper" aria-label="진행 단계">
+        {['파일 선택', '내용 확인', '결과 보기'].map((label, i) => {
+          const cur = result ? 1 : 0;
+          return (
+            <li key={label} className={i < cur ? 'done' : i === cur ? 'current' : ''} aria-current={i === cur ? 'step' : undefined}>
+              <span className="stepper-num">{i < cur ? '✓' : i + 1}</span><span>{label}</span>
+            </li>
+          );
+        })}
+      </ol>
 
       {!result && (
         <div className="stack">
           <div className="notice">
-            <strong>파일은 이 브라우저 안에서만 읽습니다.</strong>
-            <span>서버로 보내지 않습니다. 과목(학수번호·과목명·학점·학기·이수구분)과 영역별 학점만 꺼내고, 이름·학번·연락처·성적은 버립니다.</span>
+            <strong>파일은 내 브라우저 안에서만 읽어요.</strong>
+            <span>과목과 영역별 학점만 꺼내고, 이름·학번·연락처·성적은 버려요.</span>
           </div>
           {onNoSave && (
             <label className="consent" htmlFor="no-save">
               <input id="no-save" type="checkbox" checked={noSave} onChange={(e) => onNoSave(e.target.checked)} />
-              <span><strong>공용 PC예요</strong> · 결과를 이 기기에 저장하지 않습니다. 창을 닫으면 모두 사라집니다.</span>
+              <span><strong>공용 PC예요</strong> · 저장하지 않고, 창을 닫으면 지워져요</span>
             </label>
           )}
           {busy ? (
             <div className="reading" role="status" aria-live="polite" aria-busy="true">
               <strong>이 기기 안에서 사정표를 읽고 있어요</strong>
-              <span className="muted">보통 2~3초면 끝나요. 파일은 밖으로 나가지 않아요.</span>
+              <span className="muted">보통 2~3초 걸려요</span>
               <div className="skeleton" aria-hidden="true">
                 {[90, 70, 82, 60, 76].map((w, i) => <span key={i} style={{ width: `${w}%` }} />)}
               </div>
@@ -192,13 +202,13 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
           ) : (
             <label htmlFor="report-file" className="file-drop">
               <strong>졸업사정표 PDF 선택</strong>
-              <span className="muted">학사정보시스템 → 졸업사정표 → PDF로 저장한 파일 · 모든 학과 가능</span>
+              <span className="muted">인포21에서 저장한 졸업사정표 PDF</span>
               <input id="report-file" type="file" accept="application/pdf,.pdf" onChange={onFile} />
             </label>
           )}
           <p>
             <button type="button" className="link" onClick={() => load([...SAMPLE_REPORT_LINES], null, 'SAMPLE')}>
-              가상 사정표로 먼저 체험해 보기
+              예시 사정표로 체험하기
             </button>
           </p>
           {error && <p className="warn" role="alert">{error}</p>}
@@ -208,7 +218,7 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
 
       {result && (
         <div className="stack">
-          <ul className="facts">
+          <ul className="facts facts-grid">
             <li>읽은 과목 <strong>{rows.length}</strong>개{source === 'SAMPLE' && ' (가상 사정표)'}</li>
             {result.departmentHint && <li>학과 <strong>{result.departmentHint}</strong></li>}
             {result.admissionYearHint && <li>{result.admissionYearHint}학번</li>}
@@ -221,7 +231,7 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
             <MatchBadge result={matchWithSchool(rows.filter((r) => r.include).map((r) => ({ credit: r.credit, status: r.status, category: r.category })), result.areas)} />
           )}
           <p className="muted">
-            이수구분은 학교가 사정표에 표시한 값입니다(학사제도안내의 이수구분 코드 기준). 노란 줄만 확인하고, 빼야 할 과목은 체크를 해제하세요.
+            이수구분은 사정표에 적힌 값이에요. 노란 줄만 확인하고, 뺄 과목은 체크를 풀어 주세요.
           </p>
 
           <div className="table-wrap">
@@ -262,12 +272,12 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
 
           {diagBox}
           {uncategorized > 0 && (
-            <p className="warn">이수구분을 확인하지 못한 과목이 {uncategorized}개 있습니다. 위 표에서 골라 주세요.</p>
+            <p className="warn">이수구분 미지정 {uncategorized}개 · 표에서 골라야 학점에 반영돼요</p>
           )}
           <div className="sticky-actions">
             <span className="sticky-count"><strong>{rows.filter((r) => r.include).length}</strong>과목 반영{uncategorized > 0 && <span className="warn"> · 확인 필요 {uncategorized}</span>}</span>
             <button type="button" className="link" onClick={() => { setResult(null); setRows([]); setDiag(null); }}>다른 파일</button>
-            <button type="button" className="primary" onClick={apply}>이 내용으로 계산하기</button>
+            <button type="button" className="primary" onClick={apply}>계산하기</button>
           </div>
         </div>
       )}

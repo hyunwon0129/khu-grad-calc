@@ -131,7 +131,7 @@ export default function ManualScreen({ program, majors, courseMap, taken, onChan
         <span className="muted">{takenCodes.size}과목 선택됨</span>
       </div>
       {untyped > 0 && (
-        <p className="warn">이수구분이 정해지지 않은 과목 {untyped}개가 있습니다. 표의 구분 칸에서 지정해야 학점에 반영됩니다.</p>
+        <p className="warn">이수구분 미지정 {untyped}개 · 지정해야 학점에 반영돼요</p>
       )}
 
       {[...groups.entries()].map(([label, list]) => {

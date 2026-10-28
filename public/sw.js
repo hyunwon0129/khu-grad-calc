@@ -1,6 +1,6 @@
 // 오프라인용 서비스 워커. 같은 출처의 앱 파일만 캐시한다 (사정표 파일은 네트워크로 오가지 않으므로 캐시 대상 아님).
-const CACHE = 'khu-grad-calc-v1';
-const CORE = ['./', './index.html', './manifest.webmanifest', './favicon.svg', './icon-192.png', './icon-512.png'];
+const CACHE = 'khu-grad-calc-v2';
+const CORE = ['./', './index.html', './manifest.webmanifest', './favicon.png', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE).catch(() => {})).then(() => self.skipWaiting()));

@@ -20,6 +20,7 @@ import AccountPanel from './components/AccountPanel';
 import WelcomeScreen from './components/WelcomeScreen';
 import AboutScreen, { APP_VERSION, DATA_BASIS } from './components/AboutScreen';
 import FeedbackLink from './components/FeedbackLink';
+import emblemUrl from './assets/brand/emblem.png?inline';
 import './App.css';
 
 const baseCourses = coursesData as unknown as Course[];
@@ -103,7 +104,13 @@ export default function App() {
     <main>
       <header>
         <div className="header-row">
-          <h1>졸업요건 계산기</h1>
+          <div className="brand">
+            <img className="brand-emblem" src={emblemUrl} alt="경희대학교 휘장" width={60} height={40} />
+            <div className="brand-text">
+              <span className="brand-univ">경희대학교</span>
+              <h1>졸업요건 계산기 <span className="chip unofficial">비공식 참고용</span></h1>
+            </div>
+          </div>
           {cloudEnabled && gate === 'app' && (loggedIn ? (
             <div className="account-actions">
               <button type="button" className="link small account-name" onClick={() => setAccountOpen((v) => !v)} aria-expanded={accountOpen} title="계정·데이터 관리">
@@ -116,9 +123,10 @@ export default function App() {
           ))}
         </div>
         <p className="muted header-badge">
-          <span className="lock" aria-hidden="true">●</span> 사정표는 이 기기 안에서만 처리됩니다
-          {loggedIn ? ' · 과목·학점 기록만 계정에 동기화됩니다' : ''}
+          <span className="lock" aria-hidden="true">●</span> 사정표는 내 기기 안에서만 처리돼요
+          {loggedIn ? ' · 과목·학점 기록만 계정에 동기화돼요' : ''}
         </p>
+        <span className="motif" aria-hidden="true" />
       </header>
 
       {cloudEnabled && gate === 'app' && accountOpen && (
@@ -239,9 +247,9 @@ export default function App() {
       {step === 'about' && <AboutScreen onBack={() => setStep('start')} />}
 
       <footer className="muted app-footer">
-        <span>비공식 서비스 · 참고용이며 최종 졸업 판정은 학교 학사정보시스템 기준입니다.</span>
+        <span>비공식 참고용 · 최종 판정은 학사정보시스템 기준</span>
         <span>
-          <button type="button" className="link" onClick={() => setStep('about')}>이용 안내·용어·개인정보</button>
+          <button type="button" className="link" onClick={() => setStep('about')}>이용 안내</button>
           {' '}· <FeedbackLink />
           {' '}· v{APP_VERSION} · {DATA_BASIS} 기준
         </span>

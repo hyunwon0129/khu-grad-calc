@@ -29,7 +29,7 @@ if (/src="\.\/assets|href="\.\/assets/.test(out)) throw new Error('외부 assets
 rmSync('release', { recursive: true, force: true });
 mkdirSync(`release/${name}`, { recursive: true });
 writeFileSync(`release/${name}/index.html`, outCsp);
-copyFileSync(`${dist}/favicon.svg`, `release/${name}/favicon.svg`);
+copyFileSync(`${dist}/favicon.png`, `release/${name}/favicon.png`);
 for (const f of ['_headers', 'manifest.webmanifest', 'sw.js', 'icon-192.png', 'icon-512.png', 'icon-512-maskable.png']) {
   copyFileSync(`${dist}/${f}`, `release/${name}/${f}`);
 }

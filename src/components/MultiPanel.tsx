@@ -51,7 +51,7 @@ export default function MultiPanel(p: Props) {
           </span>
         </p>
       )}
-      <p className="muted small">{p.capNote} · 남은 학기 최대 {cap}학점 (학기 계획 탭에서 바꿀 수 있어요)</p>
+      <p className="muted small">{p.capNote} · 남은 학기 최대 {cap}학점 (학점 계획 탭에서 바꿀 수 있어요)</p>
 
       <ul className="facts">
         <li>꼭 채울 영역 학점 <strong>{p.mustRemaining}</strong></li>

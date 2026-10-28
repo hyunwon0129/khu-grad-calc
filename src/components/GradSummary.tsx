@@ -13,8 +13,13 @@ export interface SummaryRow {
   tab?: string;        // 눌렀을 때 열 탭
 }
 
+export interface Stats { label: string; required: number; done: number; pending: number; remaining: number }
+
 interface Props {
   headline: string;
+  stats?: Stats;
+  statNote?: string;
+  onStats?: () => void;
   allDone: boolean;
   planLine?: string | null;
   rows: SummaryRow[];
@@ -46,7 +51,7 @@ function MeterView({ m, wide }: { m: Meter; wide: boolean }) {
 const MARK: Record<RowStatus, string> = { ok: '✓', todo: '!', ongoing: '…', check: '?' };
 const STATUS: Record<RowStatus, string> = { ok: '충족', todo: '남음', ongoing: '수강 중', check: '확인 필요' };
 
-export default function GradSummary({ headline, allDone, planLine, rows, tabLabel, onOpen }: Props) {
+export default function GradSummary({ headline, allDone, planLine, rows, tabLabel, onOpen, stats, statNote, onStats }: Props) {
   const left = rows.filter((r) => r.status === 'todo').length;
   // 남은 것·확인할 것은 위에, 충족한 것은 한 줄로, 직접 확인할 일반 요건은 접어 둔다
   const manual = rows.filter((r) => r.status === 'check' && !r.tab);
@@ -71,6 +76,28 @@ export default function GradSummary({ headline, allDone, planLine, rows, tabLabe
     <section className="verdict" aria-label="졸업까지 남은 요건">
       <p className={allDone ? 'verdict-headline ok' : 'verdict-headline'}>{headline}</p>
       {planLine && <p className="verdict-plan-line"><span className="chip">계획 반영</span>{planLine}</p>}
+      {stats && (
+        <div className="stat-cards">
+          <div className="stat stat-total">
+            <span className="stat-label">{stats.label === '졸업학점' ? '총 졸업학점' : '전공 기준'}</span>
+            <strong className="stat-num">{stats.required}<small>학점</small></strong>
+            <span className="stat-sub">졸업 기준</span>
+          </div>
+          <div className="stat stat-done">
+            <span className="stat-label">이수학점</span>
+            <strong className="stat-num">{stats.done}<small>학점</small></strong>
+            <span className="stat-sub">{stats.pending ? `이번 학기 ${stats.pending}학점 수강 중` : '지금까지 이수'}</span>
+          </div>
+          <button type="button" className="stat stat-left" onClick={onStats} aria-label={`남은 학점 ${stats.remaining}학점, 학점 계획 보기`}>
+            <span className="stat-label">남은 학점</span>
+            <strong className="stat-num">{stats.remaining}<small>학점</small></strong>
+            <span className="stat-sub">{statNote}</span>
+          </button>
+          <div className="stat-bar">
+            <Bar earned={stats.done} pending={stats.pending} planned={0} required={stats.required} label={stats.label} />
+          </div>
+        </div>
+      )}
       <h3>졸업 요건 체크 <span className="muted small">{left ? `남은 항목 ${left}개` : '남은 항목 없음'}</span></h3>
       <BarLegend pending={rows.some((r) => r.meters?.some((m) => (m.pending ?? 0) > 0))} planned={false} />
       <ul className="grad-checklist">

@@ -33,8 +33,8 @@ import type { ReportData } from '../lib/reportLayout';
 import { sameDept } from '../lib/dept';
 
 const TABS = [
-  ['status', '이수 현황'], ['recommend', '다음 학기 과목'], ['plan', '학기 계획'],
-  ['liberal', '교양'], ['multi', '다전공·MD'], ['share', '요약·공유'],
+  ['status', '현황'], ['recommend', '추천 과목'], ['plan', '학점 계획'],
+  ['liberal', '교양'], ['multi', '다전공'], ['share', '요약'],
 ] as const;
 type Tab = (typeof TABS)[number][0];
 const TAB_KEY = 'khu-grad-calc:tab';
@@ -208,15 +208,6 @@ export default function ResultScreen(p: Props) {
   const SHORT: Record<string, string> = { 전공기초: '기초', 전공필수: '필수', 전공선택: '선택', 교양필수: '필수', 배분이수: '배분', 자유이수: '자유' };
   const viewMeters = (vs: typeof views): Meter[] => vs.map((v) => ({ name: SHORT[v.name] ?? v.name, done: v.done, pending: v.pending, required: v.required, unit: '학점' }));
   if (report && views.length) {
-    const grad = views.find((v) => v.group === '졸업');
-    if (grad) {
-      rows.push({
-        key: 'grad', label: '졸업학점', status: grad.remaining > 0 ? 'todo' : grad.pending ? 'ongoing' : 'ok',
-        meters: [{ done: grad.done, pending: grad.pending, required: grad.required, unit: '학점' }],
-        detail: grad.remaining > 0 ? `${grad.remaining}학점 남음 · ${capText}` : undefined,
-        tab: 'plan',
-      });
-    }
     const major = views.filter((v) => v.group === '전공' && !/계$/.test(v.name));
     if (major.length) {
       const l = left(major);
@@ -227,7 +218,7 @@ export default function ResultScreen(p: Props) {
     rows.push({
       key: 'major', label: '전공', status: l ? 'todo' : 'ok',
       meters: result.areas.map((a) => ({ name: a.category, done: a.earned, required: a.required, unit: '학점' as const })),
-      detail: l ? capText : undefined, tab: 'status',
+      tab: 'status',
     });
   }
   if (showCurriculum) {
@@ -265,11 +256,17 @@ export default function ResultScreen(p: Props) {
   if (needMulti) {
     rows.push({ key: 'multi', label: '다전공·마이크로디그리·부전공', status: 'check', detail: '2026학번부터 1개 이상 필수', tab: 'multi' });
   }
-  if (!(report && views.length) && capBad) rows.push({ key: 'cap', label: '남은 학기 학점', status: 'todo', detail: capText, tab: 'plan' });
+  if (capBad) rows.push({ key: 'cap', label: '남은 학기 학점', status: 'todo', detail: capText, tab: 'plan' });
   for (const m of manualChecks(yearForCalc, myDept ?? null)) {
     if (/다전공/.test(m.name)) continue;
     rows.push({ key: `m-${m.name}`, label: m.name, status: 'check', detail: m.detail });
   }
+  // 맨 위 숫자 카드 3장 (2안): 기준 / 이수 / 남은 학점
+  const gradView = views.find((v) => v.group === '졸업');
+  const stats = gradView
+    ? { label: '졸업학점', required: gradView.required, done: gradView.done, pending: gradView.pending, remaining: gradView.remaining }
+    : { label: '전공 학점', required: result.totalRequired, done: result.totalEarned, pending: 0, remaining: result.totalRemaining };
+  const statNote = stats.remaining > 0 ? capText : '모두 채웠어요';
   const headline = verdict ? verdict.headline : result.totalRemaining ? `전공 ${result.totalRemaining}학점이 남았습니다` : '전공 학점을 모두 채웠습니다';
   const planLine = verdict && p.plans.length ? (() => {
     const pv = buildVerdict(applyPlans(views, p.plans), report?.checks ?? []);
@@ -314,6 +311,7 @@ export default function ResultScreen(p: Props) {
       )}
 
       <GradSummary headline={headline} allDone={verdict ? verdict.allDone : result.totalRemaining === 0} planLine={planLine}
+        stats={stats} statNote={statNote} onStats={() => setTab('plan', true)}
         rows={rows} tabLabel={tabLabel} onOpen={(t) => setTab(t as Tab, true)} />
 
       <div className="result-tabs" role="tablist" aria-label="세부 항목">

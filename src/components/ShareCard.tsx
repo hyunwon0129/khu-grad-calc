@@ -15,21 +15,21 @@ const W = 1080, H = 1350;
 
 function draw(ctx: CanvasRenderingContext2D, p: Props) {
   const font = (w: number, size: number) => `${w} ${size}px "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif`;
-  ctx.fillStyle = '#ffffff';
+  ctx.fillStyle = '#FBF7EE';
   ctx.fillRect(0, 0, W, H);
-  ctx.fillStyle = '#8b1d2c';
+  ctx.fillStyle = '#A40F16';
   ctx.fillRect(0, 0, W, 16);
 
-  ctx.fillStyle = '#6f6669';
+  ctx.fillStyle = '#5F5A5B';
   ctx.font = font(500, 34);
   ctx.fillText('졸업요건 계산기', 80, 110);
-  ctx.fillStyle = '#1f1a1c';
+  ctx.fillStyle = '#2A2022';
   ctx.font = font(600, 40);
   ctx.fillText(p.title, 80, 170);
 
   // 결론 (길면 두 줄로)
   ctx.font = font(700, 64);
-  ctx.fillStyle = '#8b1d2c';
+  ctx.fillStyle = '#A40F16';
   const words = p.headline.split(' ');
   const lines: string[] = [];
   let cur = '';
@@ -43,21 +43,21 @@ function draw(ctx: CanvasRenderingContext2D, p: Props) {
   let y = 290 + Math.min(3, lines.length) * 80 + 40;
   for (const b of p.bars.slice(0, 8)) {
     const rate = b.required ? Math.min(1, b.earned / b.required) : 0;
-    ctx.fillStyle = '#1f1a1c';
+    ctx.fillStyle = '#2A2022';
     ctx.font = font(600, 34);
     ctx.fillText(b.name, 80, y);
-    ctx.fillStyle = '#6f6669';
+    ctx.fillStyle = '#5F5A5B';
     ctx.font = font(500, 32);
     const fig = `${b.earned} / ${b.required}`;
     ctx.fillText(fig, W - 80 - ctx.measureText(fig).width, y);
-    ctx.fillStyle = '#f0ebed';
+    ctx.fillStyle = '#E2D7C0';
     ctx.fillRect(80, y + 18, W - 160, 22);
-    ctx.fillStyle = rate >= 1 ? '#2e7d32' : '#8b1d2c';
+    ctx.fillStyle = rate >= 1 ? '#2F6B3B' : '#A40F16';
     ctx.fillRect(80, y + 18, (W - 160) * rate, 22);
     y += 100;
   }
 
-  ctx.fillStyle = '#6f6669';
+  ctx.fillStyle = '#5F5A5B';
   ctx.font = font(400, 26);
   ctx.fillText(p.footnote ?? '졸업사정표 기준 · 비공식 참고용', 80, H - 90);
   ctx.fillText('이름·학번·성적은 들어 있지 않습니다', 80, H - 50);
