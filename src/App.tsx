@@ -6,7 +6,7 @@ import programsData from './data/programs.json';
 import departmentsData from './data/departments.json';
 import type { Course, DepartmentInfo, Program, TakenCourse } from './lib/types';
 import { clearState, getNoSave, isEmpty, loadState, saveState, setNoSave, type UserData } from './lib/storage';
-import { cloudEnabled } from './lib/cloud';
+import { cloudEnabled, setLocalOwner, signOut } from './lib/cloud';
 import { useCloudSync } from './lib/useCloudSync';
 import StartScreen from './components/StartScreen';
 import ImportScreen from './components/ImportScreen';
@@ -104,11 +104,16 @@ export default function App() {
       <header>
         <div className="header-row">
           <h1>졸업요건 계산기</h1>
-          {cloudEnabled && gate === 'app' && (
-            <button type="button" className="account-btn" onClick={() => setAccountOpen((v) => !v)} aria-expanded={accountOpen}>
-              {loggedIn ? (sync.session?.user.email?.split('@')[0] ?? '내 계정') : '로그인'}
-            </button>
-          )}
+          {cloudEnabled && gate === 'app' && (loggedIn ? (
+            <div className="account-actions">
+              <button type="button" className="link small account-name" onClick={() => setAccountOpen((v) => !v)} aria-expanded={accountOpen} title="계정·데이터 관리">
+                {sync.session?.user.email?.split('@')[0] ?? '내 계정'}
+              </button>
+              <button type="button" className="account-btn" onClick={async () => { setAccountOpen(false); setLocalOwner(null); await signOut(); }}>로그아웃</button>
+            </div>
+          ) : (
+            <button type="button" className="account-btn" onClick={() => setAccountOpen((v) => !v)} aria-expanded={accountOpen}>로그인</button>
+          ))}
         </div>
         <p className="muted header-badge">
           <span className="lock" aria-hidden="true">●</span> 사정표는 이 기기 안에서만 처리됩니다

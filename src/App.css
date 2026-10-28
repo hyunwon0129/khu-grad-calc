@@ -398,3 +398,5 @@ a.button-like:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 .account-welcome { border: 0; padding: 0; }
 .welcome-guest { justify-content: flex-start; }
 .guest-btn { margin-top: auto; width: 100%; padding: 11px 12px; font-weight: 600; }
+.account-actions { display: flex; align-items: center; gap: 10px; }
+.account-name { max-width: 10em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
