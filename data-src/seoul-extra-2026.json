@@ -7033,6 +7033,1644 @@
 7,
 8
 ]
+},
+{
+"book": "성악과",
+"app": [
+"성악과"
+],
+"courses": [
+{
+"code": "VOICE1006",
+"name": "이태리 가곡 클래스 1",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE1007",
+"name": "이태리 가곡 클래스 2",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE1001",
+"name": "독일 가곡 클래스 1",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE2001",
+"name": "독일 가곡 클래스 2",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE1002",
+"name": "성악실기 1",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "VOICE1003",
+"name": "성악실기 2",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "VOICE2004",
+"name": "성악실기 3",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "VOICE2005",
+"name": "성악실기 4",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "VOICE3001",
+"name": "성악실기 5",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "VOICE3002",
+"name": "성악실기 6",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "VOICE4004",
+"name": "성악실기 7",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "VOICE4005",
+"name": "성악실기 8",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "VOICE4014",
+"name": "졸업논문(성악)",
+"credit": 0,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "MUSIC1003",
+"name": "시창청음 1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC1004",
+"name": "시창청음 2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC1008",
+"name": "화성법 1",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC1009",
+"name": "화성법 2",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2011",
+"name": "음악사 1",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2012",
+"name": "음악사 2",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC3012",
+"name": "음악사 3",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC3013",
+"name": "음악사 4",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE2002",
+"name": "무대 자세 및 연기법 1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE2003",
+"name": "무대 자세 및 연기법 2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE2011",
+"name": "무대자세 및 연기법3",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE2012",
+"name": "무대자세 및 연기법 4",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE4018",
+"name": "음악 교수법",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC4002",
+"name": "지휘법 1",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC4003",
+"name": "지휘법 2",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC1001",
+"name": "부전공 1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC1002",
+"name": "부전공 2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2003",
+"name": "부전공 3",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2004",
+"name": "부전공 4",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE3008",
+"name": "실용 이태리어1",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE2008",
+"name": "프랑스 가곡 클래스 1",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE3006",
+"name": "프랑스 가곡 클래스 2",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE3003",
+"name": "영미 가곡 및 IPA 1",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE4007",
+"name": "영미 가곡 및 IPA 2",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE4016",
+"name": "연주자과정 1",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE4017",
+"name": "연주자과정 2",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2009",
+"name": "연주 1",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2010",
+"name": "연주 2",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC3010",
+"name": "연주 3",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC3011",
+"name": "연주 4",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC1006",
+"name": "합창 1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC1007",
+"name": "합창 2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2013",
+"name": "합창 3",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2014",
+"name": "합창 4",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC3014",
+"name": "합창 5",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC3015",
+"name": "합창 6",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE4021",
+"name": "합창 7",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE4022",
+"name": "합창 8",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE3004",
+"name": "오페라 클래스 1",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE3005",
+"name": "오페라 클래스 2",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE4010",
+"name": "오페라 클래스 3",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE4011",
+"name": "오페라 클래스 4",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE2009",
+"name": "독일 가곡 클래스 3",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE2010",
+"name": "독일 가곡 클래스 4",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "VOICE0002",
+"name": "오페라사",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE2013",
+"name": "성악앙상블1",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE4019",
+"name": "독립심화학습1 (성악과)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "VOICE4020",
+"name": "독립심화학습2 (성악과)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC404",
+"name": "음악진로와 탐색",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "EDU3150",
+"name": "66 교과 교육론 (음악)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "EDU3151",
+"name": "교과교재연구및지도법(음악)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "EDU3355",
+"name": "68 교과교수법(음악)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+7,
+8
+]
+},
+{
+"book": "기악과",
+"app": [
+"기악과"
+],
+"courses": [
+{
+"code": "MUSIC1003",
+"name": "시창청음 1",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC1004",
+"name": "시창청음 2",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC1008",
+"name": "화성법 1",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC1009",
+"name": "화성법 2",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2011",
+"name": "음악사 1",
+"credit": 2,
+"cat": "전기",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2012",
+"name": "음악사 2",
+"credit": 2,
+"cat": "전기",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR1003",
+"name": "관현실기1",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR1004",
+"name": "관현실기2",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR2005",
+"name": "관현실기3",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR2006",
+"name": "관현실기4",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR3003",
+"name": "관현실기5",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR3004",
+"name": "관현실기6",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR4003",
+"name": "관현실기7",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR4004",
+"name": "관현실기8",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR4015",
+"name": "졸업논문(기악)",
+"credit": 0,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "MUSIC2001",
+"name": "화성법 3",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2002",
+"name": "화성법 4",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR4007",
+"name": "기악문헌 1",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR4008",
+"name": "기악문헌 2",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2005",
+"name": "시창청음 3",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2006",
+"name": "시창청음 4",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC3012",
+"name": "음악사 3",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC3013",
+"name": "음악사 4",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC3003",
+"name": "음악분석 및 형식론",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC3004",
+"name": "고급 음악분석 및 형식론",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC4002",
+"name": "지휘법 1",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC4003",
+"name": "지휘법 2",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR1013",
+"name": "현악합주1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR1014",
+"name": "현악합주2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR2019",
+"name": "현악합주3",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR2020",
+"name": "현악합주4",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR1001",
+"name": "관악합주1",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR1002",
+"name": "관악합주2",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR2003",
+"name": "관악합주3",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR2004",
+"name": "관악합주4",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR3001",
+"name": "관악합주5",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR3002",
+"name": "관악합주6",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR4001",
+"name": "관악합주7",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR4002",
+"name": "관악합주8",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "MUSIC1005",
+"name": "실내악1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2007",
+"name": "실내악2",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2008",
+"name": "실내악3",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC3007",
+"name": "실내악4",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR3020",
+"name": "실내악5",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR4024",
+"name": "실내악6",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC1001",
+"name": "부전공 1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC1002",
+"name": "부전공 2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2009",
+"name": "연주 1",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2010",
+"name": "연주 2",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC3010",
+"name": "연주 3",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC3011",
+"name": "연주 4",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR1005",
+"name": "교향악1",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR1006",
+"name": "교향악2",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR2007",
+"name": "교향악3",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR2008",
+"name": "교향악4",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR3006",
+"name": "교향악5",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR3007",
+"name": "교향악6",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR4005",
+"name": "교향악7",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR4006",
+"name": "교향악8",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR2009",
+"name": "오케스트라 레퍼토리1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR2010",
+"name": "오케스트라 레퍼토리2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC404",
+"name": "음악진로와 탐색",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR3022",
+"name": "캡스톤디자인1 (관현)",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR3023",
+"name": "캡스톤디자인2 (관현)",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR4022",
+"name": "독립심화학습1 (기악과)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR4023",
+"name": "독립심화학습2 (기악과)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR2021",
+"name": "음악감상및해석",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "EDU3150",
+"name": "66 교과 교육론 (음악)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "EDU3151",
+"name": "교과교재연구및지도법(음악)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "EDU3355",
+"name": "68 교과교수법(음악)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR1011",
+"name": "피아노 실기 1",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR1012",
+"name": "피아노 실기 2",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR2017",
+"name": "피아노 실기 3",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR2018",
+"name": "피아노 실기 4",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR3016",
+"name": "피아노 실기 5",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR3017",
+"name": "피아노 실기 6",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR4020",
+"name": "피아노 실기 7",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR4021",
+"name": "피아노 실기 8",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR3014",
+"name": "피아노 문헌 1",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR3015",
+"name": "피아노 문헌 2",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR4018",
+"name": "피아노 문헌 3",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR4019",
+"name": "피아노 문헌 4",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC3016",
+"name": "20세기 음악",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "INSTR2001",
+"name": "건반 화성학 1",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR2002",
+"name": "건반 화성학 2",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR3005",
+"name": "관현악법",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC1006",
+"name": "합창 1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC1007",
+"name": "합창 2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2013",
+"name": "합창 3",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2014",
+"name": "합창 4",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR1009",
+"name": "피아노듀오 1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR1010",
+"name": "피아노듀오 2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR2015",
+"name": "피아노듀오 3",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR2016",
+"name": "피아노듀오 4",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR4009",
+"name": "반주법 1",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR4010",
+"name": "반주법 2",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2003",
+"name": "부전공 3",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2004",
+"name": "부전공 4",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC3005",
+"name": "부전공 5",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC3006",
+"name": "부전공 6",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR4016",
+"name": "피아노 교수법 1",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR4017",
+"name": "피아노 교수법 2",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR1007",
+"name": "초견과총보독법 1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR1008",
+"name": "초견과총보독법 2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR3018",
+"name": "피아노의 구조와 조율 1",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR3019",
+"name": "피아노의 구조와 조율 2",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR2013",
+"name": "컴퓨터 미디어 응용 1",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR2014",
+"name": "컴퓨터 미디어 응용 2",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC3001",
+"name": "국악개론 1",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC3002",
+"name": "국악개론 2",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR3021",
+"name": "알렉산더 테크닉",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR3024",
+"name": "캡스톤디자인1 (피아노)",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "INSTR3025",
+"name": "캡스톤디자인2 (피아노)",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "INSTR3026",
+"name": "건반악기사",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+26,
+27,
+42
+]
 }
 ]
 }

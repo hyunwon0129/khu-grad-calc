@@ -37708,6 +37708,1173 @@
   }
  },
  {
+  "programId": "SEOUL26-125T12YTY64",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "성악과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 8
+   },
+   {
+    "category": "전필",
+    "minCredits": 16
+   },
+   {
+    "category": "전선",
+    "minCredits": 40
+   }
+  ],
+  "totalMin": 64,
+  "courses": [
+   "VOICE1006",
+   "VOICE1007",
+   "VOICE1001",
+   "VOICE2001",
+   "VOICE1002",
+   "VOICE1003",
+   "VOICE2004",
+   "VOICE2005",
+   "VOICE3001",
+   "VOICE3002",
+   "VOICE4004",
+   "VOICE4005",
+   "VOICE4014",
+   "MUSIC1003",
+   "MUSIC1004",
+   "MUSIC1008",
+   "MUSIC1009",
+   "MUSIC2011",
+   "MUSIC2012",
+   "MUSIC3012",
+   "MUSIC3013",
+   "VOICE2002",
+   "VOICE2003",
+   "VOICE2011",
+   "VOICE2012",
+   "VOICE4018",
+   "MUSIC1001",
+   "MUSIC1002",
+   "MUSIC2003",
+   "MUSIC2004",
+   "VOICE3008",
+   "VOICE2008",
+   "VOICE3006",
+   "VOICE3003",
+   "VOICE4007",
+   "VOICE4016",
+   "VOICE4017",
+   "MUSIC2009",
+   "MUSIC2010",
+   "MUSIC3010",
+   "MUSIC3011",
+   "MUSIC1006",
+   "MUSIC1007",
+   "MUSIC2013",
+   "MUSIC2014",
+   "MUSIC3014",
+   "MUSIC3015",
+   "VOICE4021",
+   "VOICE4022",
+   "VOICE3004",
+   "VOICE3005",
+   "VOICE4010",
+   "VOICE4011",
+   "VOICE2009",
+   "VOICE2010",
+   "VOICE0002",
+   "VOICE2013",
+   "VOICE4019",
+   "VOICE4020",
+   "MUSIC404",
+   "EDU3150",
+   "EDU3151",
+   "EDU3355"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 성악과 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": true,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "VOICE1006",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "VOICE1007",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "VOICE1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "VOICE2001",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "VOICE1002",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "VOICE1003",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "VOICE2004",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "VOICE2005",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "VOICE3001",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "VOICE3002",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "VOICE4004",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "VOICE4005",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "VOICE4014",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MUSIC1003",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC1004",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC1008",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC1009",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2011",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2012",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC3012",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC3013",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "VOICE2002",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "VOICE2003",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "VOICE2011",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "VOICE2012",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "VOICE4018",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC1002",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2003",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2004",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "VOICE3008",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "VOICE2008",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "VOICE3006",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "VOICE3003",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "VOICE4007",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "VOICE4016",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "VOICE4017",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2009",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2010",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC3010",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC3011",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC1006",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC1007",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2013",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2014",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC3014",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC3015",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "VOICE4021",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "VOICE4022",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "VOICE3004",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "VOICE3005",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "VOICE4010",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "VOICE4011",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "VOICE2009",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "VOICE2010",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "VOICE0002",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "VOICE2013",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "VOICE4019",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "VOICE4020",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC404",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "EDU3150",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "EDU3151",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "EDU3355",
+     "year": 3,
+     "semester": 2
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-YEO12YTY64",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "기악과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 10
+   },
+   {
+    "category": "전필",
+    "minCredits": 16
+   },
+   {
+    "category": "전선",
+    "minCredits": 38
+   }
+  ],
+  "totalMin": 64,
+  "courses": [
+   "MUSIC1003",
+   "MUSIC1004",
+   "MUSIC1008",
+   "MUSIC1009",
+   "MUSIC2011",
+   "MUSIC2012",
+   "INSTR1003",
+   "INSTR1004",
+   "INSTR2005",
+   "INSTR2006",
+   "INSTR3003",
+   "INSTR3004",
+   "INSTR4003",
+   "INSTR4004",
+   "INSTR4015",
+   "MUSIC2001",
+   "MUSIC2002",
+   "INSTR4007",
+   "INSTR4008",
+   "MUSIC2005",
+   "MUSIC2006",
+   "MUSIC3012",
+   "MUSIC3013",
+   "MUSIC3003",
+   "MUSIC3004",
+   "INSTR1013",
+   "INSTR1014",
+   "INSTR2019",
+   "INSTR2020",
+   "INSTR1001",
+   "INSTR1002",
+   "INSTR2003",
+   "INSTR2004",
+   "INSTR3001",
+   "INSTR3002",
+   "INSTR4001",
+   "INSTR4002",
+   "MUSIC1005",
+   "MUSIC2007",
+   "MUSIC2008",
+   "MUSIC3007",
+   "INSTR3020",
+   "INSTR4024",
+   "MUSIC1001",
+   "MUSIC1002",
+   "MUSIC2009",
+   "MUSIC2010",
+   "MUSIC3010",
+   "MUSIC3011",
+   "INSTR1005",
+   "INSTR1006",
+   "INSTR2007",
+   "INSTR2008",
+   "INSTR3006",
+   "INSTR3007",
+   "INSTR4005",
+   "INSTR4006",
+   "INSTR2009",
+   "INSTR2010",
+   "MUSIC404",
+   "INSTR3022",
+   "INSTR3023",
+   "INSTR4022",
+   "INSTR4023",
+   "INSTR2021",
+   "EDU3150",
+   "EDU3151",
+   "EDU3355",
+   "INSTR1011",
+   "INSTR1012",
+   "INSTR2017",
+   "INSTR2018",
+   "INSTR3016",
+   "INSTR3017",
+   "INSTR4020",
+   "INSTR4021",
+   "INSTR3014",
+   "INSTR3015",
+   "INSTR4018",
+   "INSTR4019",
+   "MUSIC3016",
+   "INSTR2001",
+   "INSTR2002",
+   "INSTR3005",
+   "MUSIC1006",
+   "MUSIC1007",
+   "MUSIC2013",
+   "MUSIC2014",
+   "INSTR1009",
+   "INSTR1010",
+   "INSTR2015",
+   "INSTR2016",
+   "INSTR4009",
+   "INSTR4010",
+   "MUSIC2003",
+   "MUSIC2004",
+   "MUSIC3005",
+   "MUSIC3006",
+   "INSTR4016",
+   "INSTR4017",
+   "INSTR1007",
+   "INSTR1008",
+   "INSTR3018",
+   "INSTR3019",
+   "INSTR2013",
+   "INSTR2014",
+   "MUSIC3001",
+   "MUSIC3002",
+   "INSTR3021",
+   "INSTR3024",
+   "INSTR3025",
+   "INSTR3026"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 기악과 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": true,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "MUSIC1003",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC1004",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC1008",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC1009",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2011",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2012",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "INSTR1003",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR1004",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR2005",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR2006",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR3003",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR3004",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR4003",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR4004",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR4015",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MUSIC2001",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2002",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "INSTR4007",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "INSTR4008",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2005",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2006",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC3012",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC3013",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC3003",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC3004",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "INSTR1013",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "INSTR1014",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "INSTR2019",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "INSTR2020",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "INSTR1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "INSTR1002",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "INSTR2003",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "INSTR2004",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "INSTR3001",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR3002",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR4001",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR4002",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MUSIC1005",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2007",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2008",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC3007",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "INSTR3020",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "INSTR4024",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC1002",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2009",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2010",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC3010",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC3011",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "INSTR1005",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR1006",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR2007",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR2008",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR3006",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR3007",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR4005",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR4006",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR2009",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "INSTR2010",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC404",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "INSTR3022",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "INSTR3023",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "INSTR4022",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "INSTR4023",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "INSTR2021",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "EDU3150",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "EDU3151",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "EDU3355",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "INSTR1011",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR1012",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR2017",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR2018",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR3016",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR3017",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR4020",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR4021",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR3014",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "INSTR3015",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "INSTR4018",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "INSTR4019",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC3016",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "INSTR2001",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "INSTR2002",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "INSTR3005",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC1006",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC1007",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2013",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2014",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "INSTR1009",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "INSTR1010",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "INSTR2015",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "INSTR2016",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "INSTR4009",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "INSTR4010",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2003",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2004",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC3005",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC3006",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "INSTR4016",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "INSTR4017",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "INSTR1007",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "INSTR1008",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "INSTR3018",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "INSTR3019",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "INSTR2013",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "INSTR2014",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC3001",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC3002",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "INSTR3021",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "INSTR3024",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "INSTR3025",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "INSTR3026",
+     "year": 3,
+     "semester": 2
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
   "programId": "CE-2024-MULTI",
   "campus": "INTL",
   "college": "소프트웨어융합대학",
