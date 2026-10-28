@@ -496,3 +496,9 @@ button.stat-left:hover { border-color: var(--warn); }
 .field input, .field select { width: 100%; }
 .demo-box { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
 .demo-box .fields { width: 100%; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.program-quick { display: flex; flex-direction: column; gap: 8px; }
+.program-quick h2 { margin: 0; }
+.program-quick p { margin: 0; }
+.program-quick-row { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+.program-quick-row .field { flex: 1 1 260px; }
+.program-quick-row button { flex: 0 0 auto; min-width: 96px; }

@@ -16,6 +16,9 @@ interface Props {
 
 export default function StartScreen({ majors, programId, savedCount, savedAt, synced = false, onProgram, onChoose, onSample, onClear }: Props) {
   const [confirming, setConfirming] = useState(false);
+  // 실제 학과를 먼저, 시험용 샘플은 맨 뒤
+  const sortedMajors = [...majors].sort((a, b) => Number(a.programId.startsWith('SAMPLE')) - Number(b.programId.startsWith('SAMPLE')) || a.department.localeCompare(b.department, 'ko') || a.admissionYearRange[0] - b.admissionYearRange[0]);
+  const [pick, setPick] = useState(programId);
 
   return (
     <>
@@ -53,6 +56,29 @@ export default function StartScreen({ majors, programId, savedCount, savedAt, sy
         </div>
       </section>
 
+      <section className="program-quick card-lite" aria-labelledby="program-quick-title">
+        <h2 id="program-quick-title">학과 교육과정 바로 보기</h2>
+        <p className="muted small">사정표 없이 내 학과의 필수 과목·추천 과목·로드맵을 볼 수 있어요</p>
+        <form className="program-quick-row" onSubmit={(e) => {
+          e.preventDefault();
+          if (pick !== programId) onProgram(pick);
+          onChoose('result');
+        }}>
+          <label className="field" htmlFor="program">학과·학번
+            <select id="program" value={pick} onChange={(e) => setPick(e.target.value)}>
+              {sortedMajors.map((p) => (
+                <option key={p.programId} value={p.programId}>
+                  {p.department} ({p.admissionYearRange[0] === p.admissionYearRange[1] ? p.admissionYearRange[0] : `${p.admissionYearRange[0]}~${p.admissionYearRange[1]}`}학번){p.programId.startsWith('SAMPLE') ? ' · 시험용 샘플' : p.verified ? '' : ' · 일부 과목 확인 중'}
+                </option>
+              ))}
+            </select>
+          </label>
+          <button type="submit" className="primary">확인</button>
+        </form>
+        {savedCount > 0 && pick !== programId && <p className="warn small">다른 학과로 바꾸면 이 기기에 입력한 과목이 지워져요</p>}
+        <p className="muted small">과목 목록이 있는 학과는 {new Set(majors.filter((p) => p.verified).map((p) => p.department)).size}개예요. 사정표를 올리면 학과가 자동으로 골라져요.</p>
+      </section>
+
       <section>
         <h2>사정표 PDF 받는 법</h2>
         <ol className="step-cards">
@@ -70,22 +96,6 @@ export default function StartScreen({ majors, programId, savedCount, savedAt, sy
             <span>사정표가 없을 때 과목을 직접 골라요</span>
           </button>
         </div>
-        <details className="program-pick">
-          <summary>학과 교육과정 직접 고르기</summary>
-          <label htmlFor="program">학과·학번</label>{' '}
-          <select id="program" value={programId} onChange={(e) => onProgram(e.target.value)}>
-            {[...majors].sort((a, b) => Number(a.programId.startsWith('SAMPLE')) - Number(b.programId.startsWith('SAMPLE')) || a.department.localeCompare(b.department, 'ko') || a.admissionYearRange[0] - b.admissionYearRange[0]).map((p) => (
-              <option key={p.programId} value={p.programId}>
-                {p.department} ({p.admissionYearRange[0] === p.admissionYearRange[1] ? p.admissionYearRange[0] : `${p.admissionYearRange[0]}~${p.admissionYearRange[1]}`}학번){p.programId.startsWith('SAMPLE') ? ' · 시험용 샘플' : p.verified ? '' : ' · 일부 과목 확인 중'}
-              </option>
-            ))}
-          </select>
-          <p className="muted">
-            사정표를 올리면 학과가 자동으로 골라져요. 과목 목록이 있는 학과는 {new Set(majors.filter((p) => p.verified).map((p) => p.department)).size}개예요(2026 교육과정).
-            다른 학과도 사정표만 있으면 남은 학점·요건을 볼 수 있어요.
-          </p>
-          {savedCount > 0 && <p className="muted">학과를 바꾸면 입력한 과목이 지워져요.</p>}
-        </details>
       </section>
     </>
   );
