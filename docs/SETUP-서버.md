@@ -1,11 +1,11 @@
 # 로그인·배포 설정 (서버 없이, 무료)
 
-구성: **화면 = Netlify(정적 호스팅, https://nungnungkyunghee.netlify.app)**, **로그인·DB = Supabase 무료 플랜**.
+구성: **화면 = GitHub Pages(https://hyunwon0129.github.io/khu-grad-calc/)**, 예비로 Netlify(https://nungnungkyunghee.netlify.app, 무료 플랜은 배포 1회당 15크레딧·월 300크레딧), **로그인·DB = Supabase 무료 플랜**.
 보안 검토 결과는 `docs/보안검토.md`에 있습니다.
 직접 운영하는 서버는 없습니다. 사정표 PDF 분석은 계속 사용자 브라우저 안에서만 합니다.
 
 ```
-[학생 브라우저] ──(정적 파일)── Netlify
+[학생 브라우저] ──(정적 파일)── GitHub Pages
       │  PDF 분석·계산은 여기서만
       └─(학수번호·학기·설정, HTTPS)── Supabase  ─ 로그인(이메일 링크/카카오/구글)
                                               └ grad_progress 테이블 (본인 행만 접근, RLS)
@@ -22,8 +22,8 @@
    - `anon` `public` 키 → `VITE_SUPABASE_ANON_KEY`
    - ⚠️ `service_role` 키는 앱·저장소·채팅 어디에도 붙여넣지 마세요.
 4. **Authentication → URL Configuration**
-   - Site URL: `https://nungnungkyunghee.netlify.app/`
-   - Redirect URLs: 위 주소와 `http://localhost:5173/`만 (와일드카드 `*` 쓰지 않기)
+   - Site URL: `https://hyunwon0129.github.io/khu-grad-calc/`
+   - Redirect URLs: 위 주소, `https://nungnungkyunghee.netlify.app/`, `http://localhost:5173/`만 (와일드카드 `*` 쓰지 않기)
 5. **Authentication → Rate Limits / Emails**: 기본값 유지(메일 발송 제한), 로그인 링크 유효시간은 1시간 이하
 6. **Authentication → Sign In / Providers → Email**: 비밀번호 로그인은 끄고 Magic Link만 사용 (비밀번호를 받지 않음)
 
@@ -48,12 +48,16 @@ npm run dev                  # 오른쪽 위 '로그인' 버튼이 생김
 npm i -g supabase
 supabase login
 supabase link --project-ref <프로젝트 ref>
-supabase secrets set ALLOWED_ORIGINS=https://nungnungkyunghee.netlify.app,http://localhost:5173
+supabase secrets set ALLOWED_ORIGINS=https://hyunwon0129.github.io,https://nungnungkyunghee.netlify.app,http://localhost:5173
 supabase functions deploy delete-account
 ```
 배포하지 않으면 '회원 탈퇴' 버튼이 오류를 냅니다. ('서버 데이터 삭제'는 함수 없이 동작)
 
-## 5. Netlify에 연결
+## 5. GitHub Pages (기본)
+
+저장소 Settings → Pages → Source: **GitHub Actions**. main에 push하면 `.github/workflows/deploy.yml`이 테스트 → 단일 파일 빌드 → 배포합니다. 공개 Supabase 값은 워크플로에 들어 있습니다.
+
+## 6. Netlify (예비)
 
 1. Netlify → 사이트 → **Site configuration → Environment variables**에 추가
    - `VITE_SUPABASE_URL` = Project URL (`https://<ref>.supabase.co`)
@@ -63,7 +67,7 @@ supabase functions deploy delete-account
    (주소가 `https://<ref>.supabase.co` 형식이 아니면 빌드가 실패하게 해 두었습니다)
 3. 오른쪽 위에 '로그인' 버튼이 생기면 완료
 
-## 6. 점검 체크리스트
+## 7. 점검 체크리스트
 
 - [ ] 로그인 안 한 상태로 `grad_progress`를 조회하면 빈 결과 (RLS)
 - [ ] A 계정으로 저장한 데이터가 B 계정에서 안 보임

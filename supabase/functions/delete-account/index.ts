@@ -3,7 +3,7 @@
 // 브라우저에는 service_role 키를 절대 넣지 않는다. 이 함수 안에서만 서버 환경변수로 쓴다.
 import { createClient } from 'jsr:@supabase/supabase-js@2';
 
-// 허용할 앱 주소 (쉼표 구분). 예: supabase secrets set ALLOWED_ORIGINS=https://nungnungkyunghee.netlify.app
+// 허용할 앱 주소 (쉼표 구분). 예: supabase secrets set ALLOWED_ORIGINS=https://hyunwon0129.github.io,https://nungnungkyunghee.netlify.app
 const allowed = (Deno.env.get('ALLOWED_ORIGINS') ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 
 function corsFor(origin: string | null) {
