@@ -2026,6 +2026,42 @@
   }
  },
  {
+  "code": "PREME2019",
+  "name": "의학통계학",
+  "credit": 3,
+  "typeByProgram": {
+   "MD-MEDAI": "MD",
+   "SEOUL26-13DK1348Y64": "전필"
+  }
+ },
+ {
+  "code": "AI1001",
+  "name": "인공지능개론",
+  "credit": 3,
+  "typeByProgram": {
+   "MD-MEDAI": "MD",
+   "INTL26-13EGY5X13UOZAD1655Y64": "전필"
+  }
+ },
+ {
+  "code": "BME424",
+  "name": "멀티모달머신러닝개론",
+  "credit": 3,
+  "typeByProgram": {
+   "MD-MEDAI": "MD",
+   "INTL26-123H14FO13DKY5X1655Y64": "전선"
+  }
+ },
+ {
+  "code": "PREME2031",
+  "name": "의료AI프로젝트",
+  "credit": 3,
+  "typeByProgram": {
+   "MD-MEDAI": "MD",
+   "SEOUL26-13DK1348Y64": "전선"
+  }
+ },
+ {
   "code": "APHY1000",
   "name": "물리학1",
   "credit": 3,
@@ -5772,14 +5808,6 @@
   }
  },
  {
-  "code": "BME424",
-  "name": "멀티모달머신러닝개론",
-  "credit": 3,
-  "typeByProgram": {
-   "INTL26-123H14FO13DKY5X1655Y64": "전선"
-  }
- },
- {
   "code": "BME425",
   "name": "멀티모달의료영상처리",
   "credit": 3,
@@ -5852,14 +5880,6 @@
   "credit": 3,
   "typeByProgram": {
    "INTL26-13EGY5X13UOZAD1655Y64": "전기"
-  }
- },
- {
-  "code": "AI1001",
-  "name": "인공지능개론",
-  "credit": 3,
-  "typeByProgram": {
-   "INTL26-13EGY5X13UOZAD1655Y64": "전필"
   }
  },
  {
@@ -31685,14 +31705,6 @@
   }
  },
  {
-  "code": "PREME2019",
-  "name": "의학통계학",
-  "credit": 3,
-  "typeByProgram": {
-   "SEOUL26-13DK1348Y64": "전필"
-  }
- },
- {
   "code": "PREME2020",
   "name": "융합과학및의료인문학",
   "credit": 3,
@@ -31786,14 +31798,6 @@
   "credit": 1,
   "typeByProgram": {
    "SEOUL26-13DK1348Y64": "전필"
-  }
- },
- {
-  "code": "PREME2031",
-  "name": "의료AI프로젝트",
-  "credit": 3,
-  "typeByProgram": {
-   "SEOUL26-13DK1348Y64": "전선"
   }
  },
  {

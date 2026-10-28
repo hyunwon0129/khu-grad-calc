@@ -188,13 +188,20 @@ const programs = [];
       list: [['MGMT3022', '미래산업과경영혁신', 3], ['MGMT4004', '경영특강', 3], ['PHRM1003', '약학개론', 2], ['OPS4227', '생물의약품개발론', 2], ['PHS4222', '의약품개발', 2]],
       rule: '5과목 중 9학점 이상',
     },
+    {
+      // 의료인공지능 특화인재 양성사업단 학부과정 마이크로디그리 선발 세칙(2026.03.01 수정) — 국제·서울 모든 재학생 신청 가능
+      id: 'MD-MEDAI', name: '의료인공지능 MD', min: 12, campus: 'BOTH', college: '의료인공지능 특화인재 양성사업단',
+      list: [['PREME2019', '의학통계학', 3], ['AI1001', '인공지능개론', 3], ['BME424', '멀티모달머신러닝개론', 3], ['PREME2031', '의료AI프로젝트', 3]],
+      rule: 'A(의학통계학)·B(인공지능개론)·C(멀티모달머신러닝개론)·D(의료AI프로젝트) 영역별 1과목 이상, 12학점 (AI Dentist 트랙 11학점). 2학기 이상 재학 후 서류·면접 선발',
+    },
   ];
   for (const md of mds) {
     md.list.forEach(([code, name, credit]) => addCourse(code, courses.get(code)?.name ?? name, credit, md.id, 'MD'));
     programs.push({
       programId: md.id,
-      campus: 'SEOUL',
-      college: '경영대학',
+      campus: md.campus === 'BOTH' ? 'SEOUL' : 'SEOUL',
+      ...(md.campus === 'BOTH' ? { anyCampus: true } : {}),
+      college: md.college ?? '경영대학',
       department: md.name,
       kind: 'MICRO_DEGREE',
       admissionYearRange: [2020, 2026],
@@ -202,7 +209,7 @@ const programs = [];
       totalMin: md.min,
       courses: md.list.map(([c]) => c),
       overlapPolicy: { withMajor: 'FULL' },
-      source: mdSource,
+      source: md.id === 'MD-MEDAI' ? { doc: '의료인공지능 특화인재 양성사업단 학부과정 마이크로디그리 선발 세칙(2026.03.01 수정)', year: 2026 } : mdSource,
       verified: true,
       note: md.rule,
     });

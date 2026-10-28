@@ -120,7 +120,7 @@ export function recommendMd(programs: Program[], courseMap: Map<string, Course>,
         earned,
         needed: Math.max(0, p.totalMin - earned),
         takenNames: done.map((c) => courseMap.get(c)?.name ?? c),
-        otherCampus: !!campus && p.campus !== campus,
+        otherCampus: !!campus && p.campus !== campus && !p.anyCampus,
       };
     })
     .sort((a, b) => a.needed - b.needed || Number(a.otherCampus) - Number(b.otherCampus));

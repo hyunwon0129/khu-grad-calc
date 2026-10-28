@@ -115,13 +115,25 @@ export default function MultiPanel(p: Props) {
         <p className="muted">근거: 2026 학사제도안내 38~43쪽</p>
       </details>
 
+      <details className="acc student-designed">
+        <summary><strong>학생설계전공</strong><span className="muted">원하는 다전공이 없을 때 직접 설계 · 다전공으로 인정</span></summary>
+        <ul>
+          <li><strong>3개 이상 학부(과)</strong>의 전공과목 60학점 이상으로 교육과정을 짜고(학부(과)마다 12학점 이상), 그중 <strong>39학점 이상</strong>을 이수하면 다전공으로 인정돼요.</li>
+          <li>구성: 전공기초 6~12 · 전공필수 6~12 · 전공선택 18~30학점. 본전공과는 최대 12학점까지 중복 인정, 선발 전에 들은 과목도 인정돼요.</li>
+          <li>신청 자격: 2학기 이상 이수(편입생 1학기) · 33학점 이상 취득 · 평점평균 3.3 이상. 서류 심사 후 선발돼요.</li>
+          <li>의·약학계열, 간호과학대학, 예체능계열 과목은 넣을 수 없어요(본인 소속이면 가능).</li>
+          <li>8학기 이상 등록 후 졸업논문을 통과해야 학위가 나와요.</li>
+        </ul>
+        <p className="muted small">근거: 경희대학교 학생설계전공 가이드북. 2026학번 졸업요건(다전공·MD·부전공 1개 이상)도 학생설계전공으로 채울 수 있어요.</p>
+      </details>
+
       <h3>마이크로디그리 <span className="muted small">1인당 최대 3개 · 전공·교양 학점과 중복 인정</span></h3>
       <ul className="multi-list">
         {mds.map((m) => (
           <li key={m.program.programId} className="multi-item">
             <div className="multi-head">
               <strong>{m.program.department}</strong>
-              <span className="muted">{CAMPUS[m.program.campus]} · {m.program.college}</span>
+              <span className="muted">{m.program.anyCampus ? '두 캠퍼스' : CAMPUS[m.program.campus]} · {m.program.college}</span>
               {m.otherCampus && <span className="chip">다른 캠퍼스</span>}
             </div>
             <div className="multi-body">
@@ -133,7 +145,7 @@ export default function MultiPanel(p: Props) {
         ))}
         {mds.length === 0 && <li className="muted">마이크로디그리 데이터가 아직 없습니다.</li>}
       </ul>
-      <p className="muted small">공개된 과정만 넣었어요(현재 경영학과 3개). 2학기 이상 이수하면 신청할 수 있어요</p>
+      <p className="muted small">공개된 과정만 넣었어요(경영학과 3개, 의료인공지능 1개). 2학기 이상 이수하면 신청할 수 있어요</p>
     </section>
   );
 }

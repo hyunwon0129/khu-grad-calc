@@ -42360,6 +42360,40 @@
   "note": "5과목 중 9학점 이상"
  },
  {
+  "programId": "MD-MEDAI",
+  "campus": "SEOUL",
+  "anyCampus": true,
+  "college": "의료인공지능 특화인재 양성사업단",
+  "department": "의료인공지능 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "PREME2019",
+   "AI1001",
+   "BME424",
+   "PREME2031"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "의료인공지능 특화인재 양성사업단 학부과정 마이크로디그리 선발 세칙(2026.03.01 수정)",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "A(의학통계학)·B(인공지능개론)·C(멀티모달머신러닝개론)·D(의료AI프로젝트) 영역별 1과목 이상, 12학점 (AI Dentist 트랙 11학점). 2학기 이상 재학 후 서류·면접 선발"
+ },
+ {
   "programId": "SAMPLE-2025-MAJOR",
   "campus": "INTL",
   "college": "[샘플] 공과대학",

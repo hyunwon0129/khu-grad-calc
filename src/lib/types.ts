@@ -52,6 +52,7 @@ export interface Program {
     edges: [string, string][]; // [선수과목, 후수과목]. 선수과목 'A|B'는 둘 중 하나
     tracks: Track[];
   };
+  anyCampus?: boolean;      // 두 캠퍼스 학생 모두 신청 가능한 과정(마이크로디그리)
 }
 
 export interface TakenCourse {
