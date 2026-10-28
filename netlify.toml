@@ -5,3 +5,8 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  # 로그인 서버 (Supabase). 둘 다 브라우저에 공개되는 값이라 여기 적어도 된다.
+  # service_role / sb_secret_ 키는 절대 여기나 저장소에 넣지 않는다.
+  VITE_SUPABASE_URL = "https://bqjfztnkaifsiutpygfy.supabase.co"
+  VITE_SUPABASE_ANON_KEY = "sb_publishable_FaEHoCL1J4GQ35h3DvEceQ_F4h-bikU"
+  VITE_AUTH_PROVIDERS = ""
