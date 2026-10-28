@@ -29688,832 +29688,6 @@
   }
  },
  {
-  "programId": "SEOUL26-14RC13DK1348Y64",
-  "campus": "SEOUL",
-  "college": "",
-  "department": "치의예과",
-  "kind": "MAJOR",
-  "admissionYearRange": [
-   2026,
-   2026
-  ],
-  "requirements": [
-   {
-    "category": "전기",
-    "minCredits": 21
-   },
-   {
-    "category": "전필",
-    "minCredits": 17
-   }
-  ],
-  "totalMin": 38,
-  "courses": [
-   "DEN1001",
-   "DEN1002",
-   "DEN1003",
-   "DEN1004",
-   "DEN1005",
-   "DEN1006",
-   "DEN2007",
-   "DEN2008",
-   "DEN2009",
-   "DEN2010",
-   "DEN2011",
-   "DEN2012",
-   "DEN2013",
-   "DEN2014",
-   "DEN2015",
-   "DEN2016",
-   "DEN2017",
-   "DEN2018",
-   "DEN2019",
-   "DENT1121",
-   "DENT1002",
-   "DENT1003",
-   "DENT1004",
-   "DENT1005",
-   "DENT1006",
-   "DENT1007",
-   "DENT1008",
-   "DENT1009",
-   "DENT1010",
-   "DENT1025",
-   "DENT1012",
-   "DENT1013",
-   "DENT1014",
-   "DENT1015",
-   "DENT1016",
-   "DENT1017",
-   "DENT1018",
-   "DENT1019",
-   "DENT1020",
-   "DENT1021",
-   "DENT1022",
-   "DENT1023",
-   "DENT1024",
-   "DENT2031",
-   "DENT2002",
-   "DENT2003",
-   "DENT2004",
-   "DENT2005",
-   "DENT2006",
-   "DENT2007",
-   "DENT2008",
-   "DENT2009",
-   "DENT2010",
-   "DENT2012",
-   "DENT2013",
-   "DENT2014",
-   "DENT2032",
-   "DENT2016",
-   "DENT2017",
-   "DENT2018",
-   "DENT2019",
-   "DENT2020",
-   "DENT2021",
-   "DENT2022",
-   "DENT2023",
-   "DENT2024",
-   "DENT2035",
-   "DENT2036",
-   "DENT2026",
-   "DENT2027",
-   "DENT2028",
-   "DENT2029",
-   "DENT2030",
-   "DENT3032",
-   "DENT3001",
-   "DENT3002",
-   "DENT3003",
-   "DENT3004",
-   "DENT3005",
-   "DENT3006",
-   "DENT3007",
-   "DENT3008",
-   "DENT3009",
-   "DENT3010",
-   "DENT3011",
-   "DENT3012",
-   "DENT3013",
-   "DENT3014",
-   "DENT3015",
-   "DENT3031",
-   "DENT3016",
-   "DENT3017",
-   "DENT3018",
-   "DENT3019",
-   "DENT3020",
-   "DENT3021",
-   "DENT3022",
-   "DENT3023",
-   "DENT3024",
-   "DENT3025",
-   "DENT3026",
-   "DENT3027",
-   "DENT3028",
-   "DENT3029",
-   "DENT3030",
-   "DENT4001",
-   "DENT4002",
-   "DENT4004",
-   "DENT4005",
-   "DENT4006",
-   "DENT4007",
-   "DENT4008",
-   "DENT4009",
-   "DENT4010",
-   "DENT4011",
-   "DENT4012",
-   "DENT4013",
-   "DENT4014",
-   "DENT4015",
-   "DENT4016",
-   "DENT4017",
-   "DENT4018",
-   "DENT4019",
-   "DENT4020",
-   "DENT4021",
-   "DENT4022",
-   "DENT4023",
-   "DENT4024",
-   "DENT4025",
-   "DENT4026",
-   "DENT4027",
-   "DENT4028",
-   "DENT4029",
-   "DENT4031",
-   "DENT4035",
-   "DENT4036"
-  ],
-  "source": {
-   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 치의예과/전공명(영문명)PredentistryCourse [별표1] 교육과정 편성표",
-   "year": 2026
-  },
-  "verified": true,
-  "diagram": {
-   "nodes": [
-    {
-     "code": "DEN1001",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DEN1002",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DEN1003",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DEN1004",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DEN1005",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DEN1006",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DEN2007",
-     "year": 3,
-     "semester": 1
-    },
-    {
-     "code": "DEN2008",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DEN2009",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DEN2010",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DEN2011",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DEN2012",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DEN2013",
-     "year": 3,
-     "semester": 2
-    },
-    {
-     "code": "DEN2014",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DEN2015",
-     "year": 4,
-     "semester": 2
-    },
-    {
-     "code": "DEN2016",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DEN2017",
-     "year": 6,
-     "semester": 2
-    },
-    {
-     "code": "DENT1121",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT1002",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT1003",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT1004",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT1005",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT1006",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT1007",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT1008",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT1009",
-     "year": 4,
-     "semester": 1
-    },
-    {
-     "code": "DENT1010",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT1025",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT1012",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT1013",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT1014",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT1015",
-     "year": 4,
-     "semester": 2
-    },
-    {
-     "code": "DENT1016",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT1017",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT1018",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT1019",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT1020",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT1021",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT1022",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT1023",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT1024",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT2031",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT2002",
-     "year": 4,
-     "semester": 1
-    },
-    {
-     "code": "DENT2003",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT2004",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT2005",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT2006",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT2007",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT2008",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT2009",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT2010",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT2012",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT2013",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT2014",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT2032",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT2016",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT2017",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT2018",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT2019",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT2020",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT2021",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT2022",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT2023",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT2024",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT2035",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT2036",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT2026",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT2027",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT2028",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT2029",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT3032",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT3001",
-     "year": 4,
-     "semester": 1
-    },
-    {
-     "code": "DENT3002",
-     "year": 4,
-     "semester": 1
-    },
-    {
-     "code": "DENT3003",
-     "year": 4,
-     "semester": 1
-    },
-    {
-     "code": "DENT3004",
-     "year": 4,
-     "semester": 1
-    },
-    {
-     "code": "DENT3005",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT3006",
-     "year": 4,
-     "semester": 1
-    },
-    {
-     "code": "DENT3007",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT3008",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT3009",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT3010",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT3011",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT3012",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT3013",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT3014",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT3015",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT3031",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT3016",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT3017",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT3018",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT3019",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT3020",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT3021",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT3022",
-     "year": 4,
-     "semester": 2
-    },
-    {
-     "code": "DENT3023",
-     "year": 4,
-     "semester": 2
-    },
-    {
-     "code": "DENT3024",
-     "year": 4,
-     "semester": 2
-    },
-    {
-     "code": "DENT3025",
-     "year": 4,
-     "semester": 2
-    },
-    {
-     "code": "DENT3026",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT3027",
-     "year": 4,
-     "semester": 2
-    },
-    {
-     "code": "DENT3028",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT3029",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT3030",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT4001",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT4002",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT4004",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT4005",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT4006",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT4007",
-     "year": 1,
-     "semester": 1
-    },
-    {
-     "code": "DENT4008",
-     "year": 4,
-     "semester": 1
-    },
-    {
-     "code": "DENT4009",
-     "year": 4,
-     "semester": 1
-    },
-    {
-     "code": "DENT4010",
-     "year": 4,
-     "semester": 1
-    },
-    {
-     "code": "DENT4011",
-     "year": 4,
-     "semester": 1
-    },
-    {
-     "code": "DENT4012",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT4013",
-     "year": 4,
-     "semester": 1
-    },
-    {
-     "code": "DENT4014",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT4015",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT4016",
-     "year": 2,
-     "semester": 1
-    },
-    {
-     "code": "DENT4017",
-     "year": 4,
-     "semester": 2
-    },
-    {
-     "code": "DENT4018",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT4019",
-     "year": 4,
-     "semester": 2
-    },
-    {
-     "code": "DENT4020",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT4021",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT4022",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT4023",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT4024",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT4025",
-     "year": 1,
-     "semester": 2
-    },
-    {
-     "code": "DENT4026",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT4027",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT4028",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT4029",
-     "year": 2,
-     "semester": 2
-    },
-    {
-     "code": "DENT4031",
-     "year": 2,
-     "semester": 2
-    }
-   ],
-   "edges": [],
-   "tracks": []
-  }
- },
- {
   "programId": "SEOUL26-Y4D13J01655Y64",
   "campus": "SEOUL",
   "college": "",
@@ -34462,6 +33636,3652 @@
   }
  },
  {
+  "programId": "SEOUL26-115O10CO13ICY5X",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "발레전공",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2024,
+   2024
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 7
+   },
+   {
+    "category": "전필",
+    "minCredits": 20
+   },
+   {
+    "category": "전선",
+    "minCredits": 37
+   }
+  ],
+  "totalMin": 64,
+  "courses": [
+   "DAN1106",
+   "DAN1100",
+   "DAN1104",
+   "DAN1075",
+   "DAN1001",
+   "DAN2113",
+   "DAN2114",
+   "DAN2115",
+   "DAN2116",
+   "DAN3117",
+   "DAN3118",
+   "DAN4121",
+   "DAN4122",
+   "DAN3119",
+   "DAN3120",
+   "DAN4123",
+   "DAN4124",
+   "DAN4125",
+   "DAN1103",
+   "DAN2104",
+   "DAN2105",
+   "DAN3108",
+   "DAN3106",
+   "DAN3107",
+   "DAN3109",
+   "DAN4112",
+   "DAN4111",
+   "DAN4135",
+   "DAN3129",
+   "DAN4130",
+   "DAN4131",
+   "DAN2119",
+   "DAN2010",
+   "DAN2006",
+   "DAN2121",
+   "DAN2122",
+   "DAN2123",
+   "DAN2120",
+   "DAN2004",
+   "DAN2007",
+   "DAN3022",
+   "DAN3023",
+   "DAN3026",
+   "DAN3130",
+   "DAN3126",
+   "DAN3021",
+   "DAN3025",
+   "DAN3024",
+   "DAN4133",
+   "DAN4040",
+   "DAN4132",
+   "DAN3127",
+   "DAN0110",
+   "DAN2013",
+   "DAN2015",
+   "DAN3032",
+   "DAN3033",
+   "DAN4042",
+   "DAN4034",
+   "DAN4035"
+  ],
+  "source": {
+   "doc": "2024학년도 학과 교육과정 시행세칙(서울캠퍼스) 발레전공 [별표1] 교육과정 편성표",
+   "year": 2024
+  },
+  "verified": true,
+  "note": "2024학년도 교육과정 기준입니다(2026 원문을 아직 받지 못함). 학점 기준은 2026 기본구조표를 씁니다.",
+  "diagram": {
+   "nodes": [
+    {
+     "code": "DAN1106",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DAN1100",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DAN1104",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DAN1075",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DAN1001",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DAN2113",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2114",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN2115",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2116",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN3117",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3118",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN4121",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4122",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN3119",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3120",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN4123",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4124",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN4125",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "DAN1103",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2104",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2105",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DAN3108",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3106",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DAN3107",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN3109",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN4112",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4111",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN4135",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN3129",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN4130",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4131",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN2119",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2010",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2006",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2121",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2122",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2123",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2120",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN2004",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN2007",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN3022",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3023",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3026",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN3130",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN3126",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN3021",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN3025",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN3024",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN4133",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4040",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4132",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN3127",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN0110",
+     "year": 6,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "DAN2013",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2015",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN3032",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3033",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN4042",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4034",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN4035",
+     "year": 4,
+     "semester": 2
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-169WZCW10Z8138P13ICY5X",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "현대무용전공",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2024,
+   2024
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 7
+   },
+   {
+    "category": "전필",
+    "minCredits": 20
+   },
+   {
+    "category": "전선",
+    "minCredits": 37
+   }
+  ],
+  "totalMin": 64,
+  "courses": [
+   "DAN1105",
+   "DAN1075",
+   "DAN1106",
+   "DAN1045",
+   "DAN1001",
+   "DAN2088",
+   "DAN2089",
+   "DAN2086",
+   "DAN2087",
+   "DAN3090",
+   "DAN3091",
+   "DAN4095",
+   "DAN4096",
+   "DAN3122",
+   "DAN3123",
+   "DAN4126",
+   "DAN4127",
+   "DAN4094",
+   "DAN1103",
+   "DAN2104",
+   "DAN2118",
+   "DAN3079",
+   "DAN3124",
+   "DAN3080",
+   "DAN3081",
+   "DAN4128",
+   "DAN4129",
+   "DAN3131",
+   "DAN4134",
+   "DAN3129",
+   "DAN4130",
+   "DAN4131",
+   "DAN2119",
+   "DAN2010",
+   "DAN2006",
+   "DAN2121",
+   "DAN2122",
+   "DAN2123",
+   "DAN2120",
+   "DAN2004",
+   "DAN2007",
+   "DAN3022",
+   "DAN3023",
+   "DAN3026",
+   "DAN3130",
+   "DAN3126",
+   "DAN3021",
+   "DAN3025",
+   "DAN3024",
+   "DAN4133",
+   "DAN4040",
+   "DAN4132",
+   "DAN3127",
+   "DAN0083",
+   "DAN2013",
+   "DAN2015",
+   "DAN3032",
+   "DAN3033",
+   "DAN4042",
+   "DAN4034",
+   "DAN4035"
+  ],
+  "source": {
+   "doc": "2024학년도 학과 교육과정 시행세칙(서울캠퍼스) 현대무용전공 [별표1] 교육과정 편성표",
+   "year": 2024
+  },
+  "verified": true,
+  "note": "2024학년도 교육과정 기준입니다(2026 원문을 아직 받지 못함). 학점 기준은 2026 기본구조표를 씁니다.",
+  "diagram": {
+   "nodes": [
+    {
+     "code": "DAN1105",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DAN1075",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DAN1106",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DAN1045",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DAN1001",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DAN2088",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2089",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN2086",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2087",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN3090",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3091",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN4095",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4096",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN3122",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3123",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN4126",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4127",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN4094",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "DAN1103",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2104",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2118",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DAN3079",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3124",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3080",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN3081",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DAN4128",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4129",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN3131",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN4134",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN3129",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN4130",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4131",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN2119",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2010",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2006",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2121",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2122",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2123",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2120",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN2004",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN2007",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN3022",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3023",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3026",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN3130",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN3126",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN3021",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN3025",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN3024",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN4133",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4040",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4132",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN3127",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN0083",
+     "year": 6,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "DAN2013",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DAN2015",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DAN3032",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DAN3033",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DAN4042",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DAN4034",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DAN4035",
+     "year": 4,
+     "semester": 2
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-14RC13DK1348Y64",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "치의예과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 21
+   },
+   {
+    "category": "전필",
+    "minCredits": 17
+   }
+  ],
+  "totalMin": 38,
+  "courses": [
+   "DEN1001",
+   "DEN1002",
+   "DEN1003",
+   "DEN1004",
+   "DEN1005",
+   "DEN1006",
+   "DEN2007",
+   "DEN2008",
+   "DEN2009",
+   "DEN2010",
+   "DEN2011",
+   "DEN2012",
+   "DEN2013",
+   "DEN2014",
+   "DEN2015",
+   "DEN2016",
+   "DEN2017",
+   "DEN2018",
+   "DEN2019"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 치의예과 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": true,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "DEN1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DEN1002",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DEN1003",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DEN1004",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DEN1005",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DEN1006",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DEN2007",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DEN2008",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DEN2009",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DEN2010",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DEN2011",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DEN2012",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DEN2013",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DEN2014",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DEN2015",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DEN2016",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DEN2017",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DEN2018",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DEN2019",
+     "year": 2,
+     "semester": 2
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-14RC13DK1655Y64",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "치의학과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전필",
+    "minCredits": 168.5
+   },
+   {
+    "category": "전선",
+    "minCredits": 6
+   }
+  ],
+  "totalMin": 174.5,
+  "courses": [
+   "DENT1121",
+   "DENT1002",
+   "DENT1003",
+   "DENT1004",
+   "DENT1005",
+   "DENT1006",
+   "DENT1007",
+   "DENT1008",
+   "DENT1009",
+   "DENT1010",
+   "DENT1025",
+   "DENT1012",
+   "DENT1013",
+   "DENT1014",
+   "DENT1015",
+   "DENT1016",
+   "DENT1017",
+   "DENT1018",
+   "DENT1019",
+   "DENT1020",
+   "DENT1021",
+   "DENT1022",
+   "DENT1023",
+   "DENT1024",
+   "DENT2031",
+   "DENT2002",
+   "DENT2003",
+   "DENT2004",
+   "DENT2005",
+   "DENT2006",
+   "DENT2007",
+   "DENT2008",
+   "DENT2009",
+   "DENT2010",
+   "DENT2012",
+   "DENT2013",
+   "DENT2014",
+   "DENT2032",
+   "DENT2016",
+   "DENT2017",
+   "DENT2018",
+   "DENT2019",
+   "DENT2020",
+   "DENT2021",
+   "DENT2022",
+   "DENT2023",
+   "DENT2024",
+   "DENT2035",
+   "DENT2036",
+   "DENT2026",
+   "DENT2027",
+   "DENT2028",
+   "DENT2029",
+   "DENT2030",
+   "DENT3032",
+   "DENT3001",
+   "DENT3002",
+   "DENT3003",
+   "DENT3004",
+   "DENT3005",
+   "DENT3006",
+   "DENT3007",
+   "DENT3008",
+   "DENT3009",
+   "DENT3010",
+   "DENT3011",
+   "DENT3012",
+   "DENT3013",
+   "DENT3014",
+   "DENT3015",
+   "DENT3031",
+   "DENT3016",
+   "DENT3017",
+   "DENT3018",
+   "DENT3019",
+   "DENT3020",
+   "DENT3021",
+   "DENT3022",
+   "DENT3023",
+   "DENT3024",
+   "DENT3025",
+   "DENT3026",
+   "DENT3027",
+   "DENT3028",
+   "DENT3029",
+   "DENT3030",
+   "DENT4001",
+   "DENT4002",
+   "DENT4004",
+   "DENT4005",
+   "DENT4006",
+   "DENT4007",
+   "DENT4008",
+   "DENT4009",
+   "DENT4010",
+   "DENT4011",
+   "DENT4012",
+   "DENT4013",
+   "DENT4014",
+   "DENT4015",
+   "DENT4016",
+   "DENT4017",
+   "DENT4018",
+   "DENT4019",
+   "DENT4020",
+   "DENT4021",
+   "DENT4022",
+   "DENT4023",
+   "DENT4024",
+   "DENT4025",
+   "DENT4026",
+   "DENT4027",
+   "DENT4028",
+   "DENT4029",
+   "DENT4031",
+   "DENT4035",
+   "DENT4036"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 치의학과 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": false,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "DENT1121",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DENT1002",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DENT1003",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DENT1004",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DENT1005",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DENT1006",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DENT1007",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DENT1008",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DENT1009",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DENT1010",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DENT1025",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1012",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1013",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1014",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1015",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1016",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1017",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1018",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1019",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1020",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1021",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1022",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1023",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT1024",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "DENT2031",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2002",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2003",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2004",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2005",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2006",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2007",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2008",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2009",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2010",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2012",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2013",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2014",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DENT2032",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2016",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2017",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2018",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2019",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2020",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2021",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2022",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2023",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2024",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2035",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2036",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2026",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2027",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2028",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2029",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT2030",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DENT3032",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3001",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3002",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3003",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3004",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3005",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3006",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3007",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3008",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3009",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3010",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3011",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3012",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3013",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3014",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3015",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3031",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DENT3016",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3017",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3018",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3019",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3020",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3021",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3022",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3023",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3024",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3025",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3026",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3027",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3028",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3029",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT3030",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "DENT4001",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4002",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4004",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4005",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4006",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4007",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4008",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4009",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4010",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4011",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4012",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4013",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4014",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4015",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4016",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DENT4017",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4018",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4019",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4020",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4021",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4022",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4023",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4024",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4025",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4026",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4027",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4028",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4029",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4031",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4035",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "DENT4036",
+     "year": 4,
+     "semester": 2
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-16DOY4K1EG5126010Z81655Y",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "회계･세무학과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 12
+   },
+   {
+    "category": "전필",
+    "minCredits": 24
+   },
+   {
+    "category": "전선",
+    "minCredits": 27
+   }
+  ],
+  "totalMin": 63,
+  "courses": [
+   "MGMT1001",
+   "MGMT1003",
+   "MGMT1007",
+   "ACCT1001",
+   "ACCT1002",
+   "ACCT2004",
+   "ACCT2005",
+   "ACCT2006",
+   "MGMT2001",
+   "MGMT2002",
+   "MGMT2004",
+   "MGMT2005",
+   "ACCT4007",
+   "ACCT2001",
+   "ACCT2002",
+   "ACCT2003",
+   "ACCT2007",
+   "ACCT3001",
+   "ACCT3005",
+   "ACCT3002",
+   "ACCT3003",
+   "ACCT3004",
+   "ACCT3007",
+   "ACCT3008",
+   "ACCT3012",
+   "ACCT3013",
+   "ACCT4001",
+   "ACCT4002",
+   "ACCT4004",
+   "ACCT4005",
+   "ACCT4006",
+   "ACCT4008",
+   "ACCT4009",
+   "ACCT4010"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 회계･세무학과 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": true,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "MGMT1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT1003",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT1007",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT1002",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT2004",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT2005",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT2006",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2001",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2002",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2004",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2005",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT4007",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT2001",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT2002",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT2003",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT2007",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT3001",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT3005",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT3002",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT3003",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT3004",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT3007",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT3008",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT3012",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT3013",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT4001",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "ACCT4002",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "ACCT4004",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "ACCT4005",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "ACCT4006",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "ACCT4008",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT4009",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "ACCT4010",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-10ZC16C4132S15BK15CC13EG",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "문화엔터테인먼트학과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 6
+   },
+   {
+    "category": "전필",
+    "minCredits": 9
+   },
+   {
+    "category": "전선",
+    "minCredits": 48
+   }
+  ],
+  "totalMin": 63,
+  "courses": [
+   "CUENT1004",
+   "CUENT1001",
+   "TOURM1607",
+   "ECON1001",
+   "CUENT1002",
+   "TOURM1602",
+   "CUENT2003",
+   "CUENT3008",
+   "CUENT4001",
+   "CUENT2004",
+   "CUENT2008",
+   "CUENT2010",
+   "CUENT2011",
+   "CUENT2001",
+   "CUENT2012",
+   "CUENT2013",
+   "CUENT2005",
+   "CUENT2007",
+   "CUENT2014",
+   "CUENT3017",
+   "CUENT3006",
+   "CUENT3012",
+   "CUENT3013",
+   "CUENT3018",
+   "CUENT3004",
+   "CUENT3019",
+   "CUENT3015",
+   "CUENT3007",
+   "CUENT3020",
+   "CUENT3009",
+   "CUENT3016",
+   "CUENT4015",
+   "CUENT4003",
+   "CUENT4005",
+   "CUENT4006",
+   "CUENT4008",
+   "CUENT4016",
+   "CUENT4004",
+   "CUENT4013",
+   "CUENT4011",
+   "CUENT2006",
+   "CUENT2002",
+   "CUENT4009",
+   "CUENT4010",
+   "CUENT4014",
+   "CUENT4007"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 문화엔터테인먼트학과 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": true,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "CUENT1004",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CUENT1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "TOURM1607",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ECON1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CUENT1002",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "TOURM1602",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CUENT2003",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CUENT3008",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CUENT4001",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CUENT2004",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "CUENT2008",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "CUENT2010",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "CUENT2011",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "CUENT2001",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "CUENT2012",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "CUENT2013",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "CUENT2005",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "CUENT2007",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "CUENT2014",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "CUENT3017",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "CUENT3006",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "CUENT3012",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "CUENT3013",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "CUENT3018",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "CUENT3004",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "CUENT3019",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "CUENT3015",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "CUENT3007",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "CUENT3020",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "CUENT3009",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "CUENT3016",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "CUENT4015",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CUENT4003",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CUENT4005",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CUENT4006",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CUENT4008",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CUENT4016",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "CUENT4004",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "CUENT4013",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "CUENT4011",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "CUENT2006",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CUENT2002",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CUENT4009",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CUENT4010",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "CUENT4014",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CUENT4007",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-11L1ZG013EC15BK13DD138P1",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "빅데이터응용학과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 12
+   },
+   {
+    "category": "전필",
+    "minCredits": 18
+   },
+   {
+    "category": "전선",
+    "minCredits": 33
+   }
+  ],
+  "totalMin": 63,
+  "courses": [
+   "MGMT1001",
+   "MGMT1003",
+   "MGMT1007",
+   "ACCT1001",
+   "BDAS1001",
+   "BDAS1002",
+   "BDAS1004",
+   "BDAS2001",
+   "BDAS4001",
+   "MGMT2001",
+   "MGMT2002",
+   "MGMT2004",
+   "MGMT2005",
+   "BDAS1003",
+   "BDAS2004",
+   "BDAS2005",
+   "BDAS2006",
+   "BDAS2007",
+   "BDAS3001",
+   "BDAS3003",
+   "BDAS3005",
+   "BDAS3007",
+   "BDAS3008",
+   "BDAS3009",
+   "BDAS3011",
+   "BDAS3012",
+   "BDAS4002",
+   "BDAS4005",
+   "BDAS4006",
+   "BDAS4007",
+   "BDAS4008",
+   "BDAS4009"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 빅데이터응용학과 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": true,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "MGMT1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT1003",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT1007",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ACCT1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "BDAS1001",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "BDAS1002",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "BDAS1004",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "BDAS2001",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "BDAS4001",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2001",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2002",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2004",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "MGMT2005",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "BDAS1003",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "BDAS2004",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "BDAS2005",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "BDAS2006",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "BDAS2007",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "BDAS3001",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "BDAS3003",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "BDAS3005",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "BDAS3007",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "BDAS3008",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "BDAS3009",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "BDAS3011",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "BDAS3012",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "BDAS4002",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "BDAS4005",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "BDAS4006",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "BDAS4007",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "BDAS4008",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "BDAS4009",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-13LC10OC1228132D1655Y64",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "조리산업학과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 12
+   },
+   {
+    "category": "전필",
+    "minCredits": 12
+   },
+   {
+    "category": "전선",
+    "minCredits": 40
+   }
+  ],
+  "totalMin": 64,
+  "courses": [
+   "CUIN1001",
+   "CUIN1002",
+   "CUIN1004",
+   "CUIN1006",
+   "CUIN2001",
+   "CUIN2002",
+   "CUIN1007",
+   "CUIN2004",
+   "CUIN4001",
+   "CUIN2007",
+   "CUIN2005",
+   "CUIN2008",
+   "CUIN3004",
+   "CUIN3010",
+   "CUIN3016",
+   "CUIN3001",
+   "CUIN3014",
+   "CUIN3006",
+   "CUIN3017",
+   "CUIN3008",
+   "CUIN3015",
+   "CUIN4002",
+   "CUIN4017",
+   "CUIN4006",
+   "CUIN4007",
+   "CUIN4009",
+   "CUIN4013",
+   "CUIN4014",
+   "CUIN4015"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 조리산업학과 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": true,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "CUIN1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "CUIN1002",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "CUIN1004",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "CUIN1006",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "CUIN2001",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "CUIN2002",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "CUIN1007",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "CUIN2004",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "CUIN4001",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CUIN2007",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "CUIN2005",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "CUIN2008",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "CUIN3004",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "CUIN3010",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "CUIN3016",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "CUIN3001",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "CUIN3014",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "CUIN3006",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "CUIN3017",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "CUIN3008",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "CUIN3015",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "CUIN4002",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CUIN4017",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CUIN4006",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CUIN4007",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CUIN4009",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "CUIN4013",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "CUIN4014",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CUIN4015",
+     "year": 4,
+     "semester": 2
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-XZ816BC1655Y64",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "간호학과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 18
+   },
+   {
+    "category": "전필",
+    "minCredits": 80
+   },
+   {
+    "category": "전선",
+    "minCredits": 6
+   }
+  ],
+  "totalMin": 104,
+  "courses": [
+   "NURS109",
+   "NURS1007",
+   "NURS2004",
+   "NURS2015",
+   "NURS2006",
+   "NURS1010",
+   "NURS2014",
+   "NURS2013",
+   "NURS1001",
+   "NURS1003",
+   "NURS2003",
+   "NURS2001",
+   "NURS2016",
+   "NURS2009",
+   "NURS2017",
+   "NURS2012",
+   "NURS2011",
+   "NURS2008",
+   "NURS3001",
+   "NURS3007",
+   "NURS3005",
+   "NURS3002",
+   "NURS3003",
+   "NURS3006",
+   "NURS3004",
+   "NURS3014",
+   "NURS3045",
+   "NURS3011",
+   "NURS3016",
+   "NURS3010",
+   "NURS3015",
+   "NURS3048",
+   "NURS3019",
+   "NURS3020",
+   "NURS3021",
+   "NURS3046",
+   "NURS3047",
+   "NURS3049",
+   "NURS4004",
+   "NURS4046",
+   "NURS4012",
+   "NURS4003",
+   "NURS4010",
+   "NURS4015",
+   "NURS4047",
+   "NURS4009",
+   "NURS4049",
+   "NURS4048",
+   "NURS4051",
+   "NURS4052",
+   "NURS4050",
+   "NURS4053",
+   "NURS4054",
+   "NURS4014",
+   "NURS3009",
+   "NURS3008",
+   "NURS3017",
+   "NURS4007",
+   "NURS4005",
+   "NURS4018",
+   "NURS4017",
+   "NURS4058",
+   "NURS4059",
+   "NURS3027",
+   "NURS4060"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 간호학과 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "간호학과 공통 편성표를 씁니다. 전공별 필수 과목은 학과 시행세칙을 확인하세요.",
+  "diagram": {
+   "nodes": [
+    {
+     "code": "NURS109",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "NURS1007",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "NURS2004",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS2015",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS2006",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "NURS1010",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "NURS2014",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS2013",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "NURS1003",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "NURS2003",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS2001",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS2016",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS2009",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS2017",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS2012",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS2011",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS2008",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS3001",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3007",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3005",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3002",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3003",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3006",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3004",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3014",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "NURS3045",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "NURS3011",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3016",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "NURS3010",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "NURS3015",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "NURS3048",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS3019",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS3020",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS3021",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS3046",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS3047",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS3049",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4004",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS4046",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS4012",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4003",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS4010",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS4015",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4047",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4009",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4049",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4048",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4051",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4052",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4050",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4053",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4054",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4014",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS3009",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS3008",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS3017",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS4007",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4005",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS4018",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4017",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4058",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS4059",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS3027",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS4060",
+     "year": 4,
+     "semester": 2
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-XZ816BC1655Y6414130CXZ81",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "간호학과(야간)",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 8
+   },
+   {
+    "category": "전필",
+    "minCredits": 25
+   },
+   {
+    "category": "전선",
+    "minCredits": 27
+   }
+  ],
+  "totalMin": 60,
+  "courses": [
+   "NURS109",
+   "NURS1007",
+   "NURS2004",
+   "NURS2015",
+   "NURS2006",
+   "NURS1010",
+   "NURS2014",
+   "NURS2013",
+   "NURS1001",
+   "NURS1003",
+   "NURS2003",
+   "NURS2001",
+   "NURS2016",
+   "NURS2009",
+   "NURS2017",
+   "NURS2012",
+   "NURS2011",
+   "NURS2008",
+   "NURS3001",
+   "NURS3007",
+   "NURS3005",
+   "NURS3002",
+   "NURS3003",
+   "NURS3006",
+   "NURS3004",
+   "NURS3014",
+   "NURS3045",
+   "NURS3011",
+   "NURS3016",
+   "NURS3010",
+   "NURS3015",
+   "NURS3048",
+   "NURS3019",
+   "NURS3020",
+   "NURS3021",
+   "NURS3046",
+   "NURS3047",
+   "NURS3049",
+   "NURS4004",
+   "NURS4046",
+   "NURS4012",
+   "NURS4003",
+   "NURS4010",
+   "NURS4015",
+   "NURS4047",
+   "NURS4009",
+   "NURS4049",
+   "NURS4048",
+   "NURS4051",
+   "NURS4052",
+   "NURS4050",
+   "NURS4053",
+   "NURS4054",
+   "NURS4014",
+   "NURS3009",
+   "NURS3008",
+   "NURS3017",
+   "NURS4007",
+   "NURS4005",
+   "NURS4018",
+   "NURS4017",
+   "NURS4058",
+   "NURS4059",
+   "NURS3027",
+   "NURS4060"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 간호학과 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": false,
+  "note": "간호학과 공통 편성표를 씁니다. 전공별 필수 과목은 학과 시행세칙을 확인하세요.",
+  "diagram": {
+   "nodes": [
+    {
+     "code": "NURS109",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "NURS1007",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "NURS2004",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS2015",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS2006",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "NURS1010",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "NURS2014",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS2013",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "NURS1003",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "NURS2003",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS2001",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS2016",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS2009",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS2017",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS2012",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS2011",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS2008",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS3001",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3007",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3005",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3002",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3003",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3006",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3004",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3014",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "NURS3045",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "NURS3011",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NURS3016",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "NURS3010",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "NURS3015",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "NURS3048",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS3019",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS3020",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS3021",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS3046",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS3047",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS3049",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4004",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS4046",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS4012",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4003",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS4010",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS4015",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4047",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4009",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4049",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4048",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4051",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4052",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4050",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4053",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4054",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NURS4014",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS3009",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS3008",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS3017",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NURS4007",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4005",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "NURS4018",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4017",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NURS4058",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS4059",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS3027",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "NURS4060",
+     "year": 4,
+     "semester": 2
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
   "programId": "CE-2024-MULTI",
   "campus": "INTL",
   "college": "소프트웨어융합대학",
@@ -37811,6 +40631,1626 @@
      "code": "MATH3704",
      "year": 3,
      "semester": 1
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-231T142333362T2P32191T32",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "KA(Korean-Anglophone)컨텐츠비평",
+  "kind": "MULTI_MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전필",
+    "minCredits": 12
+   },
+   {
+    "category": "전선",
+    "minCredits": 27
+   }
+  ],
+  "totalMin": 39,
+  "courses": [
+   "KL2104",
+   "KL2105",
+   "KL3105",
+   "KL3106",
+   "KL4210",
+   "KL2213",
+   "KL3214",
+   "KL4212",
+   "KL2214",
+   "KL4211",
+   "KL4101",
+   "KL4102",
+   "KL4214",
+   "KL4213",
+   "KL3225",
+   "KL3226",
+   "KL2204",
+   "KL4103",
+   "KL3222",
+   "KL3223",
+   "ENGLI1003",
+   "ENGLI2012",
+   "ENGLI1001",
+   "ENGLI1004",
+   "ENGLI3019",
+   "ENGLI2002",
+   "ENGLI2006",
+   "ENGLI2003",
+   "ENGLI4002",
+   "ENGLI4001",
+   "ENGLI4003",
+   "ENGLI2009",
+   "ENGLI3021",
+   "ENGLI3007",
+   "ENGLI2010",
+   "ENGLI3016",
+   "ENGLI3017",
+   "ENGLI2007",
+   "ENGLI4016"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) KA(Korean-Anglophone)컨텐츠비평 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": false,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "KL2104",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "KL2105",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "KL3105",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "KL3106",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "KL4210",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "KL2213",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "KL3214",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "KL4212",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "KL2214",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "KL4211",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "KL4101",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "KL4102",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "KL4214",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "KL4213",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "KL3225",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "KL3226",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "KL2204",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "KL4103",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "KL3222",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "KL3223",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "ENGLI1003",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "ENGLI2012",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ENGLI1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "ENGLI1004",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "ENGLI3019",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "ENGLI2002",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "ENGLI2006",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "ENGLI2003",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "ENGLI4002",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "ENGLI4001",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "ENGLI4003",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "ENGLI2009",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "ENGLI3021",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "ENGLI3007",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "ENGLI2010",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "ENGLI3016",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "ENGLI3017",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "ENGLI2007",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "ENGLI4016",
+     "year": 4,
+     "semester": 2
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-122416DOY64165513CL165L1",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "사회과학융합전공",
+  "kind": "MULTI_MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 6
+   },
+   {
+    "category": "전필",
+    "minCredits": 6
+   },
+   {
+    "category": "전선",
+    "minCredits": 27
+   }
+  ],
+  "totalMin": 39,
+  "courses": [
+   "PA2005",
+   "JCOMM1101",
+   "CSS2002",
+   "SOC2006",
+   "CSS4001",
+   "JCOMM2059",
+   "JCOMM3039",
+   "JCOMM3040",
+   "JCOMM3070",
+   "JCOMM3076",
+   "JCOMM4047",
+   "JCOMM4208",
+   "SOC2010",
+   "SOC3037",
+   "SOC4037",
+   "SOC4034",
+   "PA3038",
+   "PA4036",
+   "ECON3001",
+   "ECON4055",
+   "ECON4067",
+   "TRADE2055",
+   "TRADE2020",
+   "TRADE3052",
+   "JCOMM0004",
+   "JCOMM2061",
+   "PSC3052",
+   "PA4039",
+   "SOC4048",
+   "JCOMM3054",
+   "ECON3055",
+   "TRADE3037",
+   "PSC3066",
+   "PA4042",
+   "SOC4049",
+   "JCOMM3072",
+   "ECON3060",
+   "TRADE4049",
+   "ECON1004",
+   "ECON1003",
+   "CSS2001",
+   "TRADE1016",
+   "PA2008",
+   "SOC2005",
+   "ECON2041",
+   "CSS1001",
+   "CSS311",
+   "CSS310",
+   "PA3039",
+   "SOC2007",
+   "SOC4046",
+   "ECON3043",
+   "ECON4062",
+   "PSC3051",
+   "PSC4047",
+   "JCOMM1104",
+   "JCOMM2060",
+   "JCOMM3042",
+   "JCOMM3075",
+   "JCOMM3059",
+   "TRADE4051",
+   "TRADE4050",
+   "TRADE3051",
+   "TRADE3057",
+   "ECON3013",
+   "PA1001",
+   "SOC1001",
+   "PSC1001",
+   "PSC3034",
+   "SOC2017",
+   "ECON3054",
+   "ECON3061",
+   "PSC2003",
+   "PSC2016",
+   "JCOMM3074",
+   "PSC3047",
+   "PSC4046",
+   "PSC4042",
+   "PSC4049",
+   "PA3034",
+   "PA3036",
+   "PA3037",
+   "ECON4053",
+   "ECON3063",
+   "ECON3052",
+   "TRADE2049"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 사회과학융합전공 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": true,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "PA2005",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "JCOMM1101",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSS2002",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "SOC2006",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSS4001",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "JCOMM2059",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "JCOMM3039",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "JCOMM3040",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "JCOMM3070",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "JCOMM3076",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "JCOMM4047",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "JCOMM4208",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "SOC2010",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "SOC3037",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "SOC4037",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "SOC4034",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "PA3038",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "PA4036",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "ECON3001",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "ECON4055",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ECON4067",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "TRADE2055",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "TRADE2020",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "TRADE3052",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "JCOMM0004",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "JCOMM2061",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "PSC3052",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "PA4039",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "SOC4048",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "JCOMM3054",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "ECON3055",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "TRADE3037",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "PSC3066",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "PA4042",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "SOC4049",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "JCOMM3072",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "ECON3060",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "TRADE4049",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "ECON1004",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ECON1003",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSS2001",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "TRADE1016",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "PA2008",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SOC2005",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ECON2041",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "CSS1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "CSS311",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "CSS310",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "PA3039",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "SOC2007",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "SOC4046",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "ECON3043",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "ECON4062",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "PSC3051",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "PSC4047",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "JCOMM1104",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "JCOMM2060",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "JCOMM3042",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "JCOMM3075",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "JCOMM3059",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "TRADE4051",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "TRADE4050",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "TRADE3051",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "TRADE3057",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "ECON3013",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "PA1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SOC1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "PSC1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "PSC3034",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "SOC2017",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "ECON3054",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "ECON3061",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "PSC2003",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "PSC2016",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "JCOMM3074",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "PSC3047",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "PSC4046",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "PSC4042",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "PSC4049",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "PA3034",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "PA3036",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "PA3037",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "ECON4053",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "ECON3063",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "ECON3052",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "TRADE2049",
+     "year": 2,
+     "semester": 2
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-13UO128DXZ4ZAD114O109K16",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "지속가능미래학융합전공",
+  "kind": "MULTI_MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전필",
+    "minCredits": 6
+   },
+   {
+    "category": "전선",
+    "minCredits": 51
+   }
+  ],
+  "totalMin": 57,
+  "courses": [
+   "MGMT1003",
+   "GEOG2057",
+   "HIST2210",
+   "PA2032",
+   "SOC2017",
+   "ENGLI2009",
+   "MGMT2014",
+   "SOC2013",
+   "HIST3240",
+   "PA3036",
+   "PA3035",
+   "ENGLI4007",
+   "GEOG3047",
+   "SOC4042",
+   "GEOG4066"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 지속가능미래학융합전공 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": false,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "MGMT1003",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "GEOG2057",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "HIST2210",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "PA2032",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "SOC2017",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "ENGLI2009",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "MGMT2014",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "SOC2013",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "HIST3240",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "PA3036",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "PA3035",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "ENGLI4007",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "GEOG3047",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "SOC4042",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "GEOG4066",
+     "year": 4,
+     "semester": 1
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-14BS1260ZCWZRO12G4163010",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "차세대디스플레이소재융합전공",
+  "kind": "MULTI_MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 12
+   },
+   {
+    "category": "전선",
+    "minCredits": 24
+   }
+  ],
+  "totalMin": 36,
+  "courses": [
+   "NGDM1001",
+   "NGDM1002",
+   "NGDM1003",
+   "NGDM1004",
+   "NGDM1005",
+   "NGDM1006",
+   "NGDO1001",
+   "NGDO1002",
+   "NGDS1001",
+   "NGDS1002",
+   "NGDD1001",
+   "NGDD1002",
+   "NGED1001",
+   "NGED1002",
+   "NGDM4001",
+   "NGDO4002",
+   "NGDO4003",
+   "NGDO3001",
+   "NGDO3002",
+   "NGDS4002",
+   "NGDS4003",
+   "NGDM4010",
+   "NGDS3006",
+   "NGED3004",
+   "DISP1004",
+   "DISP2107",
+   "DISP2109",
+   "DISP2112",
+   "DISP3211",
+   "DISP4584",
+   "PHYS2309",
+   "PHYS4306",
+   "CHEM2201",
+   "CHEM2202",
+   "NGDM2001",
+   "NGDM2002",
+   "NGDM3001",
+   "NGDM3002",
+   "NGDM3003",
+   "NGDM3004",
+   "NGDM3005",
+   "NGDM4002",
+   "NGDM4003",
+   "NGDM4004",
+   "NGDM4005",
+   "NGDM4006",
+   "NGDM4007",
+   "NGDM4008",
+   "NGDM4009"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 차세대디스플레이소재융합전공 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": true,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "NGDM1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM1002",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM1003",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM1004",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM1005",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM1006",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDO1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDO1002",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDS1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDS1002",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDD1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDD1002",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED1001",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED1002",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM4001",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDO4002",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDO4003",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDO3001",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDO3002",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDS4002",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDS4003",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM4010",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDS3006",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED3004",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "DISP1004",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DISP2107",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DISP2109",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "DISP2112",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DISP3211",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "DISP4584",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "PHYS2309",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "PHYS4306",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "CHEM2201",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "CHEM2202",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NGDM2001",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM2002",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM3001",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM3002",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM3003",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM3004",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM3005",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM4002",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM4003",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM4004",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM4005",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM4006",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM4007",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM4008",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM4009",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
+  "programId": "SEOUL26-14BS1260ZCW132O14YCZRO12",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "차세대에코디스플레이융합전공",
+  "kind": "MULTI_MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 12
+   },
+   {
+    "category": "전선",
+    "minCredits": 24
+   }
+  ],
+  "totalMin": 36,
+  "courses": [
+   "NGDO4002",
+   "NGDO4003",
+   "NGDO3001",
+   "NGDO3002",
+   "NGDS4002",
+   "NGDS4003",
+   "NGDM1006",
+   "NGDO1001",
+   "NGDO1002",
+   "NGDS1001",
+   "DISP1004",
+   "NGDS1002",
+   "DISP2101",
+   "NGDD1001",
+   "DISP3219",
+   "DISP3202",
+   "NGDD1002",
+   "DISP4314",
+   "DISP4309",
+   "PHYS3310",
+   "PHYS4314",
+   "NGED1002",
+   "CHEM2305",
+   "CHEM2306",
+   "NGED2001",
+   "NGED2002",
+   "NGED2003",
+   "NGED4001",
+   "NGED3001",
+   "NGED3002",
+   "NGED3003",
+   "NGED4002",
+   "NGED4003",
+   "NGED4004",
+   "NGED4005",
+   "NGED4006",
+   "NGED4007"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 차세대에코디스플레이융합전공 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": true,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "NGDO4002",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDO4003",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDO3001",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDO3002",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDS4002",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDS4003",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDM1006",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDO1001",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDO1002",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGDS1001",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "DISP1004",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "NGDS1002",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "DISP2101",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "NGDD1001",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DISP3219",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "DISP3202",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "NGDD1002",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DISP4314",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "DISP4309",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "PHYS3310",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "PHYS4314",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "NGED1002",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "CHEM2305",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "CHEM2306",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "NGED2001",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED2002",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED2003",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED4001",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED3001",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED3002",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED3003",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED4002",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED4003",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED4004",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED4005",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED4006",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "NGED4007",
+     "year": 4,
+     "semester": 1,
+     "both": true
     }
    ],
    "edges": [],

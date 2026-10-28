@@ -14,6 +14,9 @@ def norm_cat(s):
     for k, v in [('Basic','전기'),('Required','전필'),('Elective','전선'),('전공기초','전기'),('전공필수','전필'),('산학필수','전선'),('전공선택','전선'),('교직','교직'),('전공심화','전선')]:
         if k in s: return v, k
     if s in ('전기', '전필', '전선'): return s, s
+    # '전선회계'·'전선경영'처럼 과목군이 붙은 약칭
+    for k in ('전기', '전필', '전선'):
+        if s.startswith(k) and len(s) <= 6: return k, k
     for k, v in [('필수교과', '교필'), ('배분이수', '배분'), ('자유이수', '자유')]:
         if k in s: return v, k
     return None, None
@@ -98,6 +101,9 @@ with pdfplumber.open(PDF) as pdf:
                 if re.match(r'^\d+/\d+$', w['text']): credit = None; break
             yr = [w for w in right if re.match(r'^\d(-\d)?$|^\d,\d$|^\d~\d$', w['text']) and w['x1'] < x1 - 4]
             year = yr[-1]['text'] if yr else ''
+            # 치과대학은 학년을 '치예1'(예과)·'치의3'(본과)처럼 적는다
+            dy = [w for w in right if re.match(r'^치(예|의)\d$', w['text'])]
+            if dy: year = dy[0]['text'][-1]
             marks = [w for w in right if re.search(r'[◯○●]', w['text']) or w['text'] in ('o', 'O')]
             near = lambda x: any(abs((m['x0'] + m['x1']) / 2 - x) < 9 for m in marks)
             rows.append(dict(page=pno + 1, seq=int(seq[0]['text']) if seq else None, code=c['text'], cat=(lcat[0] if lcat else cat_lab[0][0][0] if cat_lab else rcat[0] if rcat else None),

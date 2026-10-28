@@ -1,0 +1,6458 @@
+{
+"source": "학과 교육과정 시행세칙(서울캠퍼스, 2026-10-28 추가)",
+"departments": [
+{
+"book": "발레전공",
+"app": [
+"발레전공"
+],
+"courses": [
+{
+"code": "DAN1106",
+"name": "발레실기",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN1100",
+"name": "발레실기2",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN1104",
+"name": "한국무용실기",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN1075",
+"name": "현대무용실기2",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN1001",
+"name": "무용개론",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN2113",
+"name": "발레전공실기1",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2114",
+"name": "발레전공실기2",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN2115",
+"name": "한국무용기본실기1",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2116",
+"name": "현대무용기본실기2",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3117",
+"name": "발레중급전공실기1",
+"credit": 3,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3118",
+"name": "발레중급전공실기2",
+"credit": 3,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4121",
+"name": "발레고급전공실기1",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4122",
+"name": "발레고급전공실기2",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3119",
+"name": "발레창작실습1",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3120",
+"name": "발레창작실습2",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4123",
+"name": "발레작품실습1",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4124",
+"name": "발레작품실습2",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4125",
+"name": "졸업논문(발레)",
+"credit": 0,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "DAN1103",
+"name": "무용음악1",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2104",
+"name": "무용음악2",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2105",
+"name": "발레워크샵1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3108",
+"name": "한국무용부전공실기1",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3106",
+"name": "발레워크샵2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3107",
+"name": "발레워크샵3",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3109",
+"name": "현대무용부전공실기2",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4112",
+"name": "발레워크샵4",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4111",
+"name": "발레공연실습1",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4135",
+"name": "캡스톤디자인1(발레)",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3129",
+"name": "움직임디자인",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4130",
+"name": "안무법",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4131",
+"name": "무용레퍼토리",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN2119",
+"name": "무용사",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2010",
+"name": "분장실습",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2006",
+"name": "무용교육론",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2121",
+"name": "융복합무용창업과아이디어창출방법론",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2122",
+"name": "바디컨디셔닝",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2123",
+"name": "세계무용축제",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2120",
+"name": "무용읽기",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN2004",
+"name": "공연예술총론",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN2007",
+"name": "무용예술사조",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3022",
+"name": "무대연출론",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3023",
+"name": "무용교수학습방법",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3026",
+"name": "무용지도자양성워크샵2",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3130",
+"name": "무용과관객개발",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3126",
+"name": "특수무용교육의이해",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3021",
+"name": "동작기록법",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3025",
+"name": "무용정보론",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3024",
+"name": "무용미학",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4133",
+"name": "융복합무용창업과비즈니스모델",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4040",
+"name": "학술연구방법론1",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4132",
+"name": "무용론",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3127",
+"name": "무용교육산업현장의이해",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN0110",
+"name": "현장연수활동1(발레)",
+"credit": 3,
+"cat": "전선",
+"year": 6,
+"s1": true,
+"s2": true
+},
+{
+"code": "DAN2013",
+"name": "치료적움직임의재발견",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2015",
+"name": "한의학과무용움직임의소통론",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3032",
+"name": "한의학의이해",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3033",
+"name": "힐링건강춤",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4042",
+"name": "형신합일과무용치료",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4034",
+"name": "경락과움직임",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4035",
+"name": "기와움직임",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+8,
+9,
+10
+]
+},
+{
+"book": "현대무용전공",
+"app": [
+"현대무용전공"
+],
+"courses": [
+{
+"code": "DAN1105",
+"name": "현대무용실기",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN1075",
+"name": "현대무용실기2",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN1106",
+"name": "발레실기",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN1045",
+"name": "한국무용실기2",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN1001",
+"name": "무용개론",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN2088",
+"name": "현대무용전공실기1",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2089",
+"name": "현대무용전공실기2",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN2086",
+"name": "발레기본실기1",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2087",
+"name": "한국무용기본실기2",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3090",
+"name": "현대무용중급전공실기1",
+"credit": 3,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3091",
+"name": "현대무용중급전공실기2",
+"credit": 3,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4095",
+"name": "현대무용고급전공실기1",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4096",
+"name": "현대무용고급전공실기2",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3122",
+"name": "현대무용안무1",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3123",
+"name": "현대무용안무2",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4126",
+"name": "현대무용작품제작1",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4127",
+"name": "현대무용작품제작2",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4094",
+"name": "졸업논문(현대무용)",
+"credit": 0,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "DAN1103",
+"name": "무용음악1",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2104",
+"name": "무용음악2",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2118",
+"name": "컨템포러리댄스워크숍1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3079",
+"name": "발레부전공실기1",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3124",
+"name": "컨템포러리댄스워크숍2",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3080",
+"name": "한국무용부전공실기2",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3081",
+"name": "현대무용레퍼토리",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4128",
+"name": "현대무용공연제작1",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4129",
+"name": "현대무용공연제작2",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3131",
+"name": "캡스톤디자인1(현대무용)",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4134",
+"name": "캡스톤디자인2(현대무용)",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3129",
+"name": "움직임디자인",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4130",
+"name": "안무법",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4131",
+"name": "무용레퍼토리",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN2119",
+"name": "무용사",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2010",
+"name": "분장실습",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2006",
+"name": "무용교육론",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2121",
+"name": "융복합무용창업과아이디어창출방법론",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2122",
+"name": "바디컨디셔닝",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2123",
+"name": "세계무용축제",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2120",
+"name": "무용읽기",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN2004",
+"name": "공연예술총론",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN2007",
+"name": "무용예술사조",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3022",
+"name": "무대연출론",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3023",
+"name": "무용교수학습방법",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3026",
+"name": "무용지도자양성워크샵2",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3130",
+"name": "무용과관객개발",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3126",
+"name": "특수무용교육의이해",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3021",
+"name": "동작기록법",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3025",
+"name": "무용정보론",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3024",
+"name": "무용미학",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4133",
+"name": "융복합무용창업과비즈니스모델",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4040",
+"name": "학술연구방법론1",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4132",
+"name": "무용론",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3127",
+"name": "무용교육산업현장의이해",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN0083",
+"name": "현장연수활동1(현대무용)",
+"credit": 3,
+"cat": "전선",
+"year": 6,
+"s1": true,
+"s2": true
+},
+{
+"code": "DAN2013",
+"name": "치료적움직임의재발견",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN2015",
+"name": "한의학과무용움직임의소통론",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN3032",
+"name": "한의학의이해",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN3033",
+"name": "힐링건강춤",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4042",
+"name": "형신합일과무용치료",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DAN4034",
+"name": "경락과움직임",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DAN4035",
+"name": "기와움직임",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+33,
+34,
+35
+]
+},
+{
+"book": "KA(Korean-Anglophone)컨텐츠비평",
+"app": [
+"KA(Korean-Anglophone)컨텐츠비평"
+],
+"courses": [
+{
+"code": "KL2104",
+"name": "현대시와예술철학",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "KL2105",
+"name": "현대소설과문학치료",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "KL3105",
+"name": "소설창작실기",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "KL3106",
+"name": "시예술창작실기",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "KL4210",
+"name": "세계문학과문화의번역",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "KL2213",
+"name": "현대소설과여성",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "KL3214",
+"name": "출판과미디어플랫폼의진화",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "KL4212",
+"name": "현대문학과디지털인문학",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "KL2214",
+"name": "현대희곡과공연문화",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "KL4211",
+"name": "국어정보학",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "KL4101",
+"name": "한국어와한국문화",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "KL4102",
+"name": "고전문학활용과기획",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "KL4214",
+"name": "고전문학응용실습",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "KL4213",
+"name": "고전명작과현대",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "KL3225",
+"name": "한국문학과전통문화",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "KL3226",
+"name": "한국설화의세계",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "KL2204",
+"name": "문화콘텐츠의이해",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "KL4103",
+"name": "대중문화연구",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "KL3222",
+"name": "한류문화연구",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "KL3223",
+"name": "문화콘텐츠스토리텔링분석",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "ENGLI1003",
+"name": "영어산문",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "ENGLI2012",
+"name": "영어작문",
+"credit": 3,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "ENGLI1001",
+"name": "영문학개론",
+"credit": 3,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "ENGLI1004",
+"name": "영어학개론",
+"credit": 3,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "ENGLI3019",
+"name": "규범과기술영문법",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "ENGLI2002",
+"name": "영한대조분석",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "ENGLI2006",
+"name": "영미문화",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "ENGLI2003",
+"name": "비평입문",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "ENGLI4002",
+"name": "비평이론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "ENGLI4001",
+"name": "문화이론",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "ENGLI4003",
+"name": "젠더와문학",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "ENGLI2009",
+"name": "문학과환경",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "ENGLI3021",
+"name": "영미드라마와실습",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "ENGLI3007",
+"name": "영미대중문학",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "ENGLI2010",
+"name": "문학과영화",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "ENGLI3016",
+"name": "심리언어학의이해",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "ENGLI3017",
+"name": "현대문법과구문분석",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "ENGLI2007",
+"name": "빅데이터와영어학습",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "ENGLI4016",
+"name": "빅데이터와영어탐구졸업논문",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+53,
+54
+]
+},
+{
+"book": "사회과학융합전공",
+"app": [
+"사회과학융합전공"
+],
+"courses": [
+{
+"code": "PA2005",
+"name": "정책학개론",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "JCOMM1101",
+"name": "미디어윤리법제",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "CSS2002",
+"name": "미래사회세미나",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "SOC2006",
+"name": "질적연구방법론",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "CSS4001",
+"name": "졸업논문(사회과학융합전공)",
+"credit": 0,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "JCOMM2059",
+"name": "인공지능과미디어",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "JCOMM3039",
+"name": "미디어산업과정책",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "JCOMM3040",
+"name": "미디어테크놀로지와심리",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "JCOMM3070",
+"name": "미디어테크놀로지와사회세미나",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "JCOMM3076",
+"name": "인공지능미디어코딩",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "JCOMM4047",
+"name": "미디어경영",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "JCOMM4208",
+"name": "인공지능마스터클래스",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "SOC2010",
+"name": "사회트렌드연구",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "SOC3037",
+"name": "인공지능과사회",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "SOC4037",
+"name": "정책사회학",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "SOC4034",
+"name": "과학기술과사회",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "PA3038",
+"name": "인공지능과공공정책",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "PA4036",
+"name": "과학기술혁신정책",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "ECON3001",
+"name": "산업조직론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "ECON4055",
+"name": "금융실무특강",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "ECON4067",
+"name": "창업과자본시장",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "TRADE2055",
+"name": "지역특화전자상거래무역",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "TRADE2020",
+"name": "글로벌비즈니스정보시스템",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "TRADE3052",
+"name": "파생상품론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "JCOMM0004",
+"name": "헬스커뮤니케이션",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "JCOMM2061",
+"name": "AI와큐레이션",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "PSC3052",
+"name": "캡스톤디자인1(정치외교학)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "PA4039",
+"name": "캡스톤디자인1(행정학)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "SOC4048",
+"name": "캡스톤디자인1(사회학)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "JCOMM3054",
+"name": "캡스톤디자인1(미디어학)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "ECON3055",
+"name": "캡스톤디자인1(경제학)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "TRADE3037",
+"name": "캡스톤디자인1(무역학)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "PSC3066",
+"name": "캡스톤디자인2(정치외교학)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "PA4042",
+"name": "캡스톤디자인2(행정학)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "SOC4049",
+"name": "캡스톤디자인2(사회학)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "JCOMM3072",
+"name": "캡스톤디자인2(미디어학)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "ECON3060",
+"name": "캡스톤디자인2(경제학)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "TRADE4049",
+"name": "캡스톤디자인2(무역학)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "ECON1004",
+"name": "경제통계학",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "ECON1003",
+"name": "경제수학",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "CSS2001",
+"name": "R을활용한데이터분석",
+"credit": 3,
+"cat": "전기",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "TRADE1016",
+"name": "통계학",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "PA2008",
+"name": "행정통계",
+"credit": 3,
+"cat": "전기",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "SOC2005",
+"name": "사회통계학",
+"credit": 3,
+"cat": "전기",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "ECON2041",
+"name": "계량경제학",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "CSS1001",
+"name": "인공지능과윤리",
+"credit": 3,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "CSS311",
+"name": "사회과학을위한머신러닝입문",
+"credit": 3,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "CSS310",
+"name": "파이썬을활용한데이터사이언스",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "PA3039",
+"name": "공공빅데이터의이해와활용",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "SOC2007",
+"name": "중급사회통계학",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "SOC4046",
+"name": "사회학과기계학습분석",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "ECON3043",
+"name": "응용계량경제학",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "ECON4062",
+"name": "빅데이터통계학",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "PSC3051",
+"name": "데이터를통해본정치",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "PSC4047",
+"name": "AI정치분석",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "JCOMM1104",
+"name": "코딩과논리적사고",
+"credit": 3,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "JCOMM2060",
+"name": "소셜네트워크와소셜마이닝",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "JCOMM3042",
+"name": "데이터분석과코딩",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "JCOMM3075",
+"name": "소셜데이터프로그래밍",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "JCOMM3059",
+"name": "데이터저널리즘",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "TRADE4051",
+"name": "무역실증다변량분석",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "TRADE4050",
+"name": "무역실증패널분석",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "TRADE3051",
+"name": "무역빅데이터1",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "TRADE3057",
+"name": "무역빅데이터2",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "ECON3013",
+"name": "고급거시경제학",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "PA1001",
+"name": "행정학원론",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "SOC1001",
+"name": "사회학에의초대",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "PSC1001",
+"name": "정치학원론",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "PSC3034",
+"name": "정치학방법론",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "SOC2017",
+"name": "인류세의사회학",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "ECON3054",
+"name": "기후환경경제학",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "ECON3061",
+"name": "기후변화정책론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "PSC2003",
+"name": "국제기구의이해",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "PSC2016",
+"name": "사회적갈등과정치",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "JCOMM3074",
+"name": "기업과조직의사회적책임",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "PSC3047",
+"name": "환경과국제정치",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "PSC4046",
+"name": "국제협상과협력",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "PSC4042",
+"name": "세계화와글로벌거버넌스",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "PSC4049",
+"name": "시장과윤리",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "PA3034",
+"name": "국제행정과개발협력",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "PA3036",
+"name": "환경정책론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "PA3037",
+"name": "이민과난민정책",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "ECON4053",
+"name": "공공경제학",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "ECON3063",
+"name": "불평등과분배정의",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "ECON3052",
+"name": "노동경제학",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "TRADE2049",
+"name": "글로벌금융정책론",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+72,
+73,
+74
+]
+},
+{
+"book": "지속가능미래학융합전공",
+"app": [
+"지속가능미래학융합전공"
+],
+"courses": [
+{
+"code": "MGMT1003",
+"name": "책임경영",
+"credit": 3,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "HIST1106",
+"name": "세계과학기술문명사",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "GEOG2057",
+"name": "미래",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "HIST2210",
+"name": "세계도시문명사",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "PA2032",
+"name": "공공가치의이해",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "SOC2017",
+"name": "인류세의사회학",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "ENGLI2009",
+"name": "문학과환경",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "MGMT2014",
+"name": "ESG경영",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "SOC2013",
+"name": "인구와사회",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "HIST3240",
+"name": "질병과역사",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "PA3036",
+"name": "환경정책론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "PA3035",
+"name": "갈등관리와협력",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "ENGLI4007",
+"name": "문학과대안문명",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "GEOG3047",
+"name": "",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "SOC4042",
+"name": "도시사회학",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "GEOG4066",
+"name": "",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+}
+],
+"prereqs": [],
+"pages": [
+104
+]
+},
+{
+"book": "차세대디스플레이소재융합전공",
+"app": [
+"차세대디스플레이소재융합전공"
+],
+"courses": [
+{
+"code": "NGDM1001",
+"name": "디스플레이산업과진로설계",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM1002",
+"name": "이공계입문을위한기초화학",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM1003",
+"name": "차세대디스플레이용어1",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM1004",
+"name": "차세대디스플레이용어2",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM1005",
+"name": "차세대디스플레이용어3",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM1006",
+"name": "첨단분야융합세미나",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDO1001",
+"name": "이공계입문을위한기초물리",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDO1002",
+"name": "핵심이보이는디스플레이광학",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDS1001",
+"name": "이공계입문을위한기초수학",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDS1002",
+"name": "인공지능의기초와활용",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDD1001",
+"name": "생활속디스플레이",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDD1002",
+"name": "디스플레이제품구조이해",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED1001",
+"name": "일잘러의시작엑셀자동화",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED1002",
+"name": "디스플레이소자및첨단제조기술개론차세대디스플레이커리어디자인",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM4001",
+"name": "첨단기술과인간경험데이터분석과시각화기초졸업논문(차세대디스플레이",
+"credit": 0,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDO4002",
+"name": "차세대디스플레이종합실무",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDO4003",
+"name": "차세대디스플레이현장실무",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDO3001",
+"name": "디스플레이센터분석실습1",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDO3002",
+"name": "디스플레이센터분석실습2",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDS4002",
+"name": "디스플레이혁신공정센터실습1",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDS4003",
+"name": "디스플레이혁신공정센터실습2",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM4010",
+"name": "차세대디스플레이기업분석",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDS3006",
+"name": "디스플레이산업프로젝트탐구",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED3004",
+"name": "디스플레이특수가스안전관리실습머신러닝활용과실습",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "DISP1004",
+"name": "딥러닝기초정보디스플레이개론",
+"credit": 3,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DISP2107",
+"name": "기초양자물리학",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DISP2109",
+"name": "유기화학개론",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DISP2112",
+"name": "고분자재료",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DISP3211",
+"name": "양자전자공학",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DISP4584",
+"name": "정보전자소재",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "PHYS2309",
+"name": "현대물리학",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "PHYS4306",
+"name": "신소재물리학",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CHEM2201",
+"name": "유기화학1",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "CHEM2202",
+"name": "유기화학2",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "NGDM2001",
+"name": "디스플레이소재기초화학",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM2002",
+"name": "디스플레이기초재료공학",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM3001",
+"name": "진공및박막소재",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM3002",
+"name": "유기디스플레이소재",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM3003",
+"name": "디스플레이소재분석",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM3004",
+"name": "반도체물성",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM3005",
+"name": "디스플레이소재구조분석실습",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM4002",
+"name": "고분자디스플레이소재",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM4003",
+"name": "인공지능활용디스플레이소재설계",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM4004",
+"name": "차세대디스플레이소재산학프로젝트1",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM4005",
+"name": "차세대디스플레이소재산학프로젝트2",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM4006",
+"name": "디스플레이소재물성분석실습",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM4007",
+"name": "무기/QD디스플레이소재",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM4008",
+"name": "디스플레이소자계면특성",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM4009",
+"name": "디스플레이소재합성실습",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+118,
+119,
+120
+]
+},
+{
+"book": "차세대에코디스플레이융합전공",
+"app": [
+"차세대에코디스플레이융합전공"
+],
+"courses": [
+{
+"code": "NGDO4002",
+"name": "차세대디스플레이종합실무",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDO4003",
+"name": "차세대디스플레이현장실무",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDO3001",
+"name": "디스플레이센터분석실습1",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDO3002",
+"name": "디스플레이센터분석실습2",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDS4002",
+"name": "디스플레이혁신공정센터실습1",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDS4003",
+"name": "디스플레이혁신공정센터실습2",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDM1006",
+"name": "첨단분야융합세미나",
+"credit": 2,
+"cat": "전기",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDO1001",
+"name": "이공계입문을위한기초물리",
+"credit": 3,
+"cat": "전기",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDO1002",
+"name": "핵심이보이는디스플레이광학",
+"credit": 3,
+"cat": "전기",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGDS1001",
+"name": "이공계입문을위한기초수학",
+"credit": 3,
+"cat": "전기",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "DISP1004",
+"name": "딥러닝기초정보디스플레이개론",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "NGDS1002",
+"name": "인공지능의기초와활용",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DISP2101",
+"name": "디스플레이시스템",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "NGDD1001",
+"name": "생활속디스플레이",
+"credit": 3,
+"cat": "전기",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DISP3219",
+"name": "컴퓨터코딩및실습디자인융합전공",
+"credit": 3,
+"cat": "전기",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DISP3202",
+"name": "차세대디스플레이디스플레이기술",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "NGDD1002",
+"name": "디스플레이제품구조이해",
+"credit": 3,
+"cat": "전기",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DISP4314",
+"name": "디자인융합전공인텔리전스디바이스",
+"credit": 3,
+"cat": "전기",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DISP4309",
+"name": "차세대에코반도체공정기술",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "PHYS3310",
+"name": "디스플레이융합전공정보물리학",
+"credit": 3,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "PHYS4314",
+"name": "차세대에코빅데이터물리학",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "NGED1002",
+"name": "디스플레이소자및첨단제조기술개론차세대디스플레이커리어디자인",
+"credit": 3,
+"cat": "전기",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "CHEM2305",
+"name": "술개론디스플레이융합전공환경화학",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "CHEM2306",
+"name": "차세대디스플레이○○공업화학인소재융합전공",
+"credit": 3,
+"cat": "전기",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "NGED2001",
+"name": "차세대디스플레이디스플레이패널공정장비개론첨단기술과인간경험○○소재융합전공",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED2002",
+"name": "차세대디스플레이데이터분석과시각화기초○○소재융합전공",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED2003",
+"name": "디스플레이탄소중립과환경·",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED4001",
+"name": "졸업논문(차세대에코디스플레",
+"credit": 0,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED3001",
+"name": "자안전",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED3002",
+"name": "안전분석",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED3003",
+"name": "이해",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED4002",
+"name": "스마트기기와정보보호",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED4003",
+"name": "차세대에코디스플레이산학프로젝트1",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED4004",
+"name": "차세대에코디스플레이산학프로젝트2",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED4005",
+"name": "디스플레이제조공정스마트화",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED4006",
+"name": "장비정밀제어실습디스플레이산업과AI적용박막제조장비실습",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NGED4007",
+"name": "디스플레이와AI기술AI데이터기반공정분석패키지분해및시뮬레이션",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+147,
+148
+]
+},
+{
+"book": "치의예과",
+"app": [
+"치의예과"
+],
+"courses": [
+{
+"code": "DEN1001",
+"name": "일반생물학1",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DEN1002",
+"name": "치의학개론1",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DEN1003",
+"name": "소계일반생물학2",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DEN1004",
+"name": "일반화학",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DEN1005",
+"name": "치의학개론2",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DEN1006",
+"name": "치과의사의전문직업성소계",
+"credit": 1,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DEN2007",
+"name": "교과목명분자세포생물학",
+"credit": 3,
+"cat": "전기",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DEN2008",
+"name": "유기화학",
+"credit": 2,
+"cat": "전기",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DEN2009",
+"name": "생체공학",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DEN2010",
+"name": "발생학",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DEN2011",
+"name": "정보탐색과근거기반치의학",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DEN2012",
+"name": "소계생물정보학개론",
+"credit": 2,
+"cat": "전기",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DEN2013",
+"name": "생화학",
+"credit": 3,
+"cat": "전기",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DEN2014",
+"name": "미생물학",
+"credit": 2,
+"cat": "전기",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DEN2015",
+"name": "생리학1",
+"credit": 4,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DEN2016",
+"name": "치의학연구입문",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DEN2017",
+"name": "몸의생김새및실습",
+"credit": 7,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DEN2018",
+"name": "글로벌기초역량(치의예과)",
+"credit": 0,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DEN2019",
+"name": "리더십과사회적책무실천(치의예과)소계",
+"credit": 0,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+163
+]
+},
+{
+"book": "치의학과",
+"app": [
+"치의학과"
+],
+"courses": [
+{
+"code": "DENT1121",
+"name": "조직학",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT1002",
+"name": "치과재료학및실습",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT1003",
+"name": "머리목해부학및실습",
+"credit": 3,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT1004",
+"name": "구강미생물학",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT1005",
+"name": "기초약리학",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT1006",
+"name": "구강생화학",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT1007",
+"name": "구강병발생과예방",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT1008",
+"name": "치아형태학및실습",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT1009",
+"name": "조직학및실습",
+"credit": 4,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT1010",
+"name": "생리학2",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT1025",
+"name": "소계독립심화학습1(치의학과)",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1012",
+"name": "일반약리학",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1013",
+"name": "면역학",
+"credit": 1,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1014",
+"name": "치과재료학",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1015",
+"name": "일반병리학및실습",
+"credit": 4,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1016",
+"name": "사람해부실습",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1017",
+"name": "예방치과학",
+"credit": 1,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1018",
+"name": "치아우식론",
+"credit": 1,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1019",
+"name": "치과보존학개론",
+"credit": 1,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1020",
+"name": "기초치주과학",
+"credit": 1,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1021",
+"name": "두개악안면성장발육론",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1022",
+"name": "턱기능교합학및실습",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1023",
+"name": "방사선물리학",
+"credit": 1,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT1024",
+"name": "고정성보철학소계",
+"credit": 1,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2031",
+"name": "독립심화학습2(치의학과)",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2002",
+"name": "구강병리학및실습",
+"credit": 4,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2003",
+"name": "치과보존학및실습",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2004",
+"name": "기초근관치료학",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2005",
+"name": "치주질환의이해",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2006",
+"name": "치아형성론",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2007",
+"name": "주조수복학실습",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2008",
+"name": "구강외과학",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2009",
+"name": "구강진단학",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2010",
+"name": "소아치과학",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2033",
+"name": "총의치학1",
+"credit": 0.5,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2034",
+"name": "총의치학실습1",
+"credit": 0.5,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2012",
+"name": "가철성국소의치학및실습1",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2013",
+"name": "디지털방사선학및촬영술",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2014",
+"name": "일반내과학",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT2032",
+"name": "소계독립심화학습3(치의학과)",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2016",
+"name": "심미치과보존학및실습",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2017",
+"name": "근관치료학및실습",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2018",
+"name": "치주질환의치료",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2019",
+"name": "임상고정성보철학및실습",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2020",
+"name": "방사선해부학및악안면부영상진단",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2021",
+"name": "소아치과학및실습",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2022",
+"name": "구강안면통증학",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2023",
+"name": "구강종양학및재건학",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2024",
+"name": "치과교정진단학및실습",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2035",
+"name": "총의치학2",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2036",
+"name": "총의치학실습2",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2026",
+"name": "가철성국소의치학및실습2",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2027",
+"name": "심화소아치과학",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2028",
+"name": "치과마취학",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2029",
+"name": "임상구강내과학",
+"credit": 1,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT2030",
+"name": "환자안전(기본심폐소생술)소계",
+"credit": 0,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3032",
+"name": "독립심화학습4(치의학과)",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3001",
+"name": "치과보존학임상실습1",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3002",
+"name": "치과보철학임상실습1",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3003",
+"name": "치주과학임상실습1",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3004",
+"name": "소아치과학임상실습1",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3005",
+"name": "구강내과학임상실습1",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3006",
+"name": "구강외과학임상실습1",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3007",
+"name": "영상치의학임상실습1",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3008",
+"name": "치과교정학임상실습1",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3009",
+"name": "공중구강보건학",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3010",
+"name": "임상근관치료학",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3011",
+"name": "치주-임플란트학",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3012",
+"name": "질환별영상진단",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3013",
+"name": "임상소아치과학",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3014",
+"name": "치과교정치료학",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3015",
+"name": "악안면외과학",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3031",
+"name": "임상술기집중교육및평가1",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT3016",
+"name": "치과의료윤리",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3017",
+"name": "불안통증관리",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3018",
+"name": "환자중심면담과진료",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3019",
+"name": "장애인치과학",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3020",
+"name": "임상적사고훈련",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3021",
+"name": "악안면성형외과학",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3022",
+"name": "치과보존학임상실습2",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3023",
+"name": "치과보철학임상실습2",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3024",
+"name": "치주과학임상실습2",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3025",
+"name": "소아치과학임상실습2",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3026",
+"name": "구강내과학임상실습2",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3027",
+"name": "구강외과학임상실습2",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3028",
+"name": "영상치의학임상실습2",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3029",
+"name": "치과교정학임상실습2",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT3030",
+"name": "강동치과병원임상실습1소계",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4001",
+"name": "보험과의료전달체계",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4002",
+"name": "의원경영",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4003",
+"name": "임상구강병리학",
+"credit": 1.5,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4004",
+"name": "치과임플란트학",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4005",
+"name": "임상치과교정학및실습",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4006",
+"name": "노인치과학",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4007",
+"name": "임상가철성의치학",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4008",
+"name": "치과보존학임상실습3",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4009",
+"name": "치과보철학임상실습3",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4010",
+"name": "치주과학임상실습3",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4011",
+"name": "소아치과학임상실습3",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4012",
+"name": "구강내과학임상실습3",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4013",
+"name": "구강외과학임상실습3",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4014",
+"name": "영상치의학임상실습3",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4015",
+"name": "치과교정학임상실습3",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4016",
+"name": "강동치과병원임상실습2",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "DENT4017",
+"name": "자율선택실습",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4018",
+"name": "보건의료관련법규",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4019",
+"name": "임상술기집중교육및평가2",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4020",
+"name": "임상치과생리학",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4021",
+"name": "기초치의학특강1",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4022",
+"name": "기초치의학특강2",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4023",
+"name": "임상치과약리학",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4024",
+"name": "법치의학",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4025",
+"name": "디지털치의학",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4026",
+"name": "치과보존학임상실습4",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4027",
+"name": "치과보철학임상실습4",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4028",
+"name": "치주과학임상실습4",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4029",
+"name": "소아치과학임상실습4",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4030",
+"name": "구강내과학임상실습4",
+"credit": 0.5,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4031",
+"name": "구강외과학임상실습4",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4032",
+"name": "영상치의학임상실습4",
+"credit": 0.5,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4033",
+"name": "치과교정학임상실습4",
+"credit": 0.5,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4034",
+"name": "강동치과병원임상실습3",
+"credit": 0.5,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4035",
+"name": "졸업논문(치의학과)",
+"credit": 0,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "DENT4036",
+"name": "리더십과사회적책무실천(치의학과)소계",
+"credit": 0,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+164,
+165,
+166
+]
+},
+{
+"book": "회계･세무학과",
+"app": [
+"회계･세무학과"
+],
+"courses": [
+{
+"code": "MGMT1001",
+"name": "경영통계학",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "MGMT1003",
+"name": "책임경영",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "MGMT1007",
+"name": "경영학원론",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT1001",
+"name": "회계원리",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT1002",
+"name": "관리회계1",
+"credit": 3,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT2004",
+"name": "세무회계1",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT2005",
+"name": "재무회계1",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT2006",
+"name": "재무회계2",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "MGMT2001",
+"name": "경영정보시스템",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "MGMT2002",
+"name": "마케팅원론",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "MGMT2004",
+"name": "재무관리",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "MGMT2005",
+"name": "조직행동론",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT4007",
+"name": "졸업논문(회계학)",
+"credit": 3,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT2001",
+"name": "세법총론",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT2002",
+"name": "유가증권법",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT2003",
+"name": "회사법",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT2007",
+"name": "회계감사법",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT3001",
+"name": "가치평가론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT3005",
+"name": "재무제표분석",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT3002",
+"name": "고급회계",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT3003",
+"name": "관리회계2",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT3004",
+"name": "세무회계2",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT3007",
+"name": "회계감사",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT3008",
+"name": "회계이론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT3012",
+"name": "지방세개론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT3013",
+"name": "회계정보애널리틱스",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT4001",
+"name": "고급회계감사",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "ACCT4002",
+"name": "세무관리",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "ACCT4004",
+"name": "회계사례연구",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "ACCT4005",
+"name": "회계학특강1",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "ACCT4006",
+"name": "회계학특강2",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "ACCT4008",
+"name": "독립심화학습1 (회계학)",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT4009",
+"name": "정부회계",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "ACCT4010",
+"name": "ESG경영과재무보고",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+204
+]
+},
+{
+"book": "문화엔터테인먼트학과",
+"app": [
+"문화엔터테인먼트학과"
+],
+"courses": [
+{
+"code": "CUENT1004",
+"name": "문화관광영어",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "CUENT1001",
+"name": "문화관광일본어",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "TOURM1607",
+"name": "경영학원론",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "ECON1001",
+"name": "",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "CUENT1002",
+"name": "문화엔터테인먼트이해",
+"credit": 3,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "TOURM1602",
+"name": "관광학원론",
+"credit": 3,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "CUENT2003",
+"name": "콘텐츠기획입문",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "CUENT3008",
+"name": "기술엔터테인먼트마케팅",
+"credit": 3,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "CUENT4001",
+"name": "졸업논문(문화엔터테인먼트)",
+"credit": 0,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "CUENT2004",
+"name": "엔터테인먼트플랫폼연구",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT2008",
+"name": "현대사회와여가",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT2010",
+"name": "웹툰애니메이션산업",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT2011",
+"name": "엔터테인먼트마케팅",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT2001",
+"name": "문화간커뮤니케이션",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT2012",
+"name": "대중문화론",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT2013",
+"name": "스포츠산업과메가이벤트",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT2005",
+"name": "게임엔터테인먼트기획",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT2007",
+"name": "한류연구",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT2014",
+"name": "엔터테인먼트문화인류학",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT3017",
+"name": "엔터테인먼트와창의적놀이",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT3006",
+"name": "엔터테인먼트사회학",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT3012",
+"name": "지역문화콘텐츠기획",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT3013",
+"name": "실감형콘텐츠제작실습",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT3018",
+"name": "영상엔터테인먼트이론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT3004",
+"name": "엔터테인먼트기업전략과지속가능경영",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT3019",
+"name": "엔터테인먼트컴퓨팅",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT3015",
+"name": "여가사회심리학",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT3007",
+"name": "음악엔터테인먼트산업",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT3020",
+"name": "엔터테인먼트시장조사방법론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT3009",
+"name": "엔터테인먼트감상과비평",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT3016",
+"name": "영상콘텐츠기획",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT4015",
+"name": "게이미피케이션",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT4003",
+"name": "엔터테인먼트스토리텔링",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT4005",
+"name": "문화공연기획",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT4006",
+"name": "엔터테인먼트광고홍보론",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT4008",
+"name": "문화관광론",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT4016",
+"name": "뮤지움엔터테인먼트기획실습",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT4004",
+"name": "축제이벤트기획",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT4013",
+"name": "엔터테인먼트법제론",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT4011",
+"name": "엔터테인먼트가격연구",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT2006",
+"name": "이문화콘텐츠연구",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "CUENT2002",
+"name": "일본언어문화이해",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "CUENT4009",
+"name": "독립심화학습1(문화엔터테인먼트)",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT4010",
+"name": "독립심화학습2(문화엔터테인먼트)",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUENT4014",
+"name": "로컬코크리에이션랩1",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUENT4007",
+"name": "캡스톤디자인(문화엔터테인먼트)",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+223
+]
+},
+{
+"book": "빅데이터응용학과",
+"app": [
+"빅데이터응용학과"
+],
+"courses": [
+{
+"code": "MGMT1001",
+"name": "경영통계학",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "MGMT1003",
+"name": "책임경영",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "MGMT1007",
+"name": "경영학원론",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "ACCT1001",
+"name": "회계원리",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "BDAS1001",
+"name": "빅데이터수학",
+"credit": 3,
+"cat": "전기",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "BDAS1002",
+"name": "빅데이터프로그래밍",
+"credit": 3,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "BDAS1004",
+"name": "빅데이터프로그래밍",
+"credit": 3,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "BDAS2001",
+"name": "빅데이터통계학",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "BDAS4001",
+"name": "졸업논문(빅데이터응용학)",
+"credit": 0,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "MGMT2001",
+"name": "경영정보시스템",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "MGMT2002",
+"name": "마케팅원론",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "MGMT2004",
+"name": "재무관리",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "MGMT2005",
+"name": "조직행동론",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "BDAS1003",
+"name": "빅데이터세미나",
+"credit": 3,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "BDAS2004",
+"name": "빅데이터개론",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "BDAS2005",
+"name": "머신러닝기초및응용",
+"credit": 3,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "BDAS2006",
+"name": "DB기초및응용",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "BDAS2007",
+"name": "소셜네트워크과학",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "BDAS3001",
+"name": "딥러닝기초및응용",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "BDAS3003",
+"name": "플랫폼이해와응용",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "BDAS3005",
+"name": "빅데이터알고리즘",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "BDAS3007",
+"name": "빅데이터마케팅",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "BDAS3008",
+"name": "빅데이터애널리틱스",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "BDAS3009",
+"name": "ESG데이터분석",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "BDAS3011",
+"name": "빅데이터산업트렌드",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "BDAS3012",
+"name": "인과추론모델링",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "BDAS4002",
+"name": "AI빅데이터보안과윤리",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "BDAS4005",
+"name": "AI빅데이터경제학",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "BDAS4006",
+"name": "독립심화학습1 (빅데이터응용학)",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "BDAS4007",
+"name": "데이터사이언스연구프로젝트",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "BDAS4008",
+"name": "캡스톤디자인1 (빅데이터응용학)",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "BDAS4009",
+"name": "캡스톤디자인2 (빅데이터응용학)",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+255,
+256
+]
+},
+{
+"book": "조리산업학과",
+"app": [
+"조리산업학과"
+],
+"courses": [
+{
+"code": "CUIN1001",
+"name": "조리실무론",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN1002",
+"name": "외식경영론",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN1004",
+"name": "식음료관리론",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN1006",
+"name": "식생활과문화",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN2001",
+"name": "조리학개론",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN2002",
+"name": "제과제빵개론",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN1007",
+"name": "식품학개론",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN2004",
+"name": "외식서비스마케팅",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN4001",
+"name": "졸업논문(조리산업)",
+"credit": 0,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "CUIN2007",
+"name": "한국조리실습",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN2005",
+"name": "영양과건강",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN2008",
+"name": "서양조리실습",
+"credit": 3,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN3004",
+"name": "외식소비자행동론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN3010",
+"name": "제과제빵실습",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN3016",
+"name": "외식조직행동론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN3001",
+"name": "식품가공및저장관리",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN3014",
+"name": "식재료구매관리론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN3006",
+"name": "메뉴관리론",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN3017",
+"name": "외식인적자원관리",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN3008",
+"name": "식품위생관리",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN3015",
+"name": "병과음청실습",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN4002",
+"name": "창업요리실습",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN4017",
+"name": "음료학개론",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN4006",
+"name": "관능평가및품질관리",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN4007",
+"name": "외식조사방법론",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN4009",
+"name": "프랜차이즈창업론",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN4013",
+"name": "식품상품개발",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "CUIN4014",
+"name": "독립심화학습1(조리산업)",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "CUIN4015",
+"name": "독립심화학습2(조리산업)",
+"credit": 3,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+275
+]
+},
+{
+"book": "간호학과",
+"app": [
+"간호학과",
+"간호학과(야간)"
+],
+"courses": [
+{
+"code": "NURS109",
+"name": "스트레스와건강",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS1007",
+"name": "해부학",
+"credit": 3,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS2004",
+"name": "생리학",
+"credit": 3,
+"cat": "전기",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS2015",
+"name": "문화와글로벌헬스의이해",
+"credit": 2,
+"cat": "전기",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS2006",
+"name": "인간발달",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS1010",
+"name": "인간관계와의사소통",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS2014",
+"name": "약리학과간호",
+"credit": 2,
+"cat": "전기",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS2013",
+"name": "병태생리학과간호",
+"credit": 2,
+"cat": "전기",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS1001",
+"name": "간호학개론",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS1003",
+"name": "한방간호학개론",
+"credit": 1,
+"cat": "전필",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS2003",
+"name": "기본간호학및실습1",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS2001",
+"name": "간호윤리",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS2016",
+"name": "경혈과간호",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS2009",
+"name": "기본간호학및실습2",
+"credit": 3,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS2017",
+"name": "여성건강간호학총론",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS2012",
+"name": "정신간호학총론",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS2011",
+"name": "성인간호학개론",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS2008",
+"name": "건강사정및실습",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS3001",
+"name": "여성건강간호학각론1",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS3007",
+"name": "정신간호학각론1",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS3005",
+"name": "성인간호학(호흡기/혈액)",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS3002",
+"name": "성인간호학(소화기)",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS3003",
+"name": "성인간호학(신경)",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS3006",
+"name": "아동간호학총론",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS3004",
+"name": "성인간호학(심장/혈관)",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS3014",
+"name": "아동간호학각론1",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS3045",
+"name": "성인간호학(내분비/비뇨기)",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS3011",
+"name": "성인간호학(근골격)",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS3016",
+"name": "지역사회간호학총론",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS3010",
+"name": "여성건강간호학각론2",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS3015",
+"name": "정신간호학각론2",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS3048",
+"name": "여성건강간호학실습1",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS3019",
+"name": "성인간호학실습1",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS3020",
+"name": "성인간호학실습2",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS3021",
+"name": "성인간호학실습3",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS3046",
+"name": "한방간호학실습",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS3047",
+"name": "아동간호학실습1",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS3049",
+"name": "정신간호학실습1",
+"credit": 1,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS4004",
+"name": "학교보건",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS4046",
+"name": "간호관리학1",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS4012",
+"name": "노인간호학",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS4003",
+"name": "아동간호학각론2",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS4010",
+"name": "간호연구",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS4015",
+"name": "지역사회간호학각론",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS4047",
+"name": "간호관리학2",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS4009",
+"name": "보건의료관련법",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS4049",
+"name": "여성건강간호학실습2",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS4048",
+"name": "아동간호학실습2",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS4051",
+"name": "지역사회간호학실습1",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS4052",
+"name": "지역사회간호학실습2",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS4050",
+"name": "정신간호학실습2",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS4053",
+"name": "성인간호학실습4",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS4054",
+"name": "간호관리학실습",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "NURS4014",
+"name": "종합실습",
+"credit": 1,
+"cat": "전필",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS3009",
+"name": "응급간호학",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS3008",
+"name": "간호정보학",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS3017",
+"name": "통계학(간호)",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS4007",
+"name": "사상체질과간호",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS4005",
+"name": "간호와비평적사고",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS4018",
+"name": "호스피스간호",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS4017",
+"name": "보건교육",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "NURS4058",
+"name": "유전과간호",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS4059",
+"name": "현대사회와건강불평등",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS3027",
+"name": "감염관리",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "NURS4060",
+"name": "종양간호",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": []
+}
+]
+}

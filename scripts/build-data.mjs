@@ -212,10 +212,12 @@ const programs = [];
 
 // ── 2026학년도 학과 교육과정 원문 → 국제캠퍼스(책자) · 서울캠퍼스(학과별 시행세칙) ──────────
 // data-src/intl-2026.json, seoul-2026.json 은 scripts/book/ 의 파서로 [별표1] 교육과정 편성표·선수과목 지정표에서 뽑은 것
-const YEAR_OVERRIDE = { SEOUL: { 사학과: 2023, 아동가족학과: 2025, 한국무용전공: 2024, 의예과: 2025, 의학과: 2025 } };
+const YEAR_OVERRIDE = { SEOUL: { 사학과: 2023, 아동가족학과: 2025, 한국무용전공: 2024, 현대무용전공: 2024, 발레전공: 2024, 의예과: 2025, 의학과: 2025 } };
 for (const [file, campus, prefix, docName] of [
   ['data-src/intl-2026.json', 'INTL', 'INTL26', '2026학년도 교육과정(국제캠퍼스)'],
   ['data-src/seoul-2026.json', 'SEOUL', 'SEOUL26', '학과 교육과정 시행세칙(서울캠퍼스)'],
+  // 2026-10-28 추가: 무용(발레·현대무용)·치과대학·회계세무·빅데이터응용·문화엔터·조리산업·서울 융합전공 5개
+  ['data-src/seoul-extra-2026.json', 'SEOUL', 'SEOUL26', '학과 교육과정 시행세칙(서울캠퍼스)'],
 ]) {
   const book = JSON.parse(read(file));
   const rawStruct = JSON.parse(read('data-src/structure-2026.raw.json'));

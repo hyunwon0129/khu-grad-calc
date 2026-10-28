@@ -40,3 +40,13 @@ describe('체험용 가상 사정표', () => {
     expect(a).toBe(b);
   });
 });
+
+import { findDepartment as deptFromHeader } from './parseReport';
+describe('사정표 머리의 학과명', () => {
+  it('가운뎃점·&·(야간)이 있는 학과명도 그대로 읽는다', () => {
+    expect(deptFromHeader(['학번 2023000000 성명 체험학생 학과 회계･세무학과'])).toBe('회계･세무학과');
+    expect(deptFromHeader(['학과 조리&푸드디자인학과'])).toBe('조리&푸드디자인학과');
+    expect(deptFromHeader(['학과 간호학과(야간)'])).toBe('간호학과(야간)');
+    expect(deptFromHeader(['학과 산업경영공학과'])).toBe('산업경영공학과');
+  });
+});

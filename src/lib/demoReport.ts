@@ -119,10 +119,11 @@ export function makeDemoReport(program: Program, courseMap: Map<string, Course>,
     if (pool.length) { const c = pool[Math.floor(rand() * pool.length)]; add('15', c.code, c.name, c.credit, k); ai++; }
   }
   // 5) 학기당 15~18학점이 되게 일반선택(온라인 교양 등)으로 채운다
+  const perTerm = Math.round((dept?.grad ?? 130) / 8); // 8학기에 졸업학점을 채우는 속도
   const extra = lib.courses.filter((c) => c.kind === '자유' && c.credit >= 2 && !lib.requiredFree.codes.includes(c.code));
   for (let k = 1; k <= nth; k++) {
     let sum = rows.filter((r) => r.k === k).reduce((s, r) => s + r.credit, 0);
-    const target = 15 + Math.floor(rand() * 4);
+    const target = perTerm - 1 + Math.floor(rand() * 3);
     let guard = 0;
     while (sum < target && guard++ < 10) {
       const c = extra[Math.floor(rand() * extra.length)];
