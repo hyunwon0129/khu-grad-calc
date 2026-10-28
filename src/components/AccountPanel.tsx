@@ -16,6 +16,17 @@ interface Props {
   variant?: 'panel' | 'welcome'; // welcome: 첫 화면에 넣을 때 (닫기 없음)
 }
 
+/** 메일 주소 도메인으로 메일함 바로가기 (최근 1시간 메일, 스팸함 포함) */
+export function mailboxFor(email: string): { name: string; url: string } | null {
+  const d = email.split('@')[1]?.toLowerCase() ?? '';
+  if (d === 'gmail.com' || d === 'googlemail.com') return { name: 'Gmail', url: 'https://mail.google.com/mail/u/0/#search/in%3Aanywhere+newer_than%3A1h' };
+  if (d === 'naver.com') return { name: '네이버 메일', url: 'https://mail.naver.com/' };
+  if (d === 'daum.net' || d === 'hanmail.net' || d === 'kakao.com') return { name: '다음 메일', url: 'https://mail.daum.net/' };
+  if (/^(outlook|hotmail|live)\./.test(d)) return { name: 'Outlook', url: 'https://outlook.live.com/mail/' };
+  if (d === 'icloud.com' || d === 'me.com') return { name: 'iCloud 메일', url: 'https://www.icloud.com/mail' };
+  return null;
+}
+
 const PROVIDER_LABEL: Record<Provider, string> = { kakao: '카카오로 로그인', google: 'Google로 로그인' };
 const CONSENT_KEY = 'khu-grad-calc:consent';
 
@@ -31,6 +42,7 @@ export default function AccountPanel({ session, status, lastSynced, onClose, onC
   const [consent, setConsent] = useState(readConsent);
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [sentTo, setSentTo] = useState('');
   const [error, setError] = useState('');
   const [confirm, setConfirm] = useState<'none' | 'data' | 'account'>('none');
 
@@ -129,7 +141,9 @@ export default function AccountPanel({ session, status, lastSynced, onClose, onC
         ))}
         <form className="email-login" onSubmit={(e) => {
           e.preventDefault();
-          run(() => signInWithEmail(email.trim()), `${email.trim()}로 로그인 링크를 보냈습니다. 메일의 링크를 이 브라우저에서 열어 주세요.`);
+          const to = email.trim();
+          setSentTo('');
+          run(async () => { await signInWithEmail(to); setSentTo(to); }, `${to}로 로그인 링크를 보냈어요. 메일의 링크를 이 브라우저에서 눌러 주세요.`);
         }}>
           <label htmlFor="login-email" className="muted">이메일로 로그인 링크 받기</label>
           <div className="toolbar">
@@ -140,6 +154,13 @@ export default function AccountPanel({ session, status, lastSynced, onClose, onC
         </form>
       </div>
       {message && <p className={message === "처리 중…" ? "muted" : "ok"} role="status">{message}</p>}
+      {sentTo && mailboxFor(sentTo) && (
+        <a className="button-like mailbox-btn" href={mailboxFor(sentTo)!.url} target="_blank" rel="noopener noreferrer">
+          {mailboxFor(sentTo)!.name} 열기 ↗
+        </a>
+      )}
+      {sentTo && <p className="muted small">메일이 안 보이면 스팸함도 확인해 주세요. 링크는 1시간 동안 쓸 수 있어요.</p>}
+      
       {error && <p className="warn" role="alert">{error}</p>}
     </section>
   );

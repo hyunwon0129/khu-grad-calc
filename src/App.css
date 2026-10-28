@@ -321,7 +321,8 @@ section:has(.sticky-actions) { overflow: visible; }
 /* 공유 카드 */
 .share-card { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
 .share-preview { width: min(320px, 100%); height: auto; border: 1px solid var(--line); border-radius: 10px; }
-a.button-like { display: inline-block; padding: 6px 12px; border: 1px solid var(--line); border-radius: 4px; color: var(--fg); text-decoration: none; }
+a.button-like { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 8px 14px; border: 1px solid var(--accent); border-radius: 8px; color: var(--accent); text-decoration: none; font-weight: 500; }
+a.mailbox-btn { background: var(--accent); color: var(--on-accent); font-weight: 700; min-height: 48px; width: 100%; max-width: 320px; }
 a.button-like:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* 직접 입력: 학년별 묶음 */
