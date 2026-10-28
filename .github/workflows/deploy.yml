@@ -1,7 +1,7 @@
-# main 브랜치에 push하면 테스트 후 GitHub Pages에 배포
-# 저장소 Settings → Secrets and variables → Actions에 아래 값을 등록:
-#   VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY, VITE_AUTH_PROVIDERS (Variables 또는 Secrets)
-# 저장소 Settings → Pages → Source를 "GitHub Actions"로 설정
+# main 브랜치에 push하면 테스트 후 GitHub Pages에 배포 (무료, 배포 횟수 제한 없음)
+# 한 번만: 저장소 Settings → Pages → Source를 "GitHub Actions"로 설정
+# 주소: https://hyunwon0129.github.io/khu-grad-calc/
+# 로그인 서버 값은 브라우저에 공개되는 값이라 여기 적는다 (service_role·sb_secret_ 키는 절대 넣지 않는다)
 name: Deploy
 
 on:
@@ -30,14 +30,15 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run validate
-      - run: npm run build
+      # Netlify와 같은 단일 파일 배포본 (CSP 해시 포함)
+      - run: PREVIEW=1 npx vite build && NETLIFY=1 node scripts/make-deploy-zip.mjs
         env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-          VITE_AUTH_PROVIDERS: ${{ vars.VITE_AUTH_PROVIDERS }}
+          VITE_SUPABASE_URL: https://bqjfztnkaifsiutpygfy.supabase.co
+          VITE_SUPABASE_ANON_KEY: sb_publishable_FaEHoCL1J4GQ35h3DvEceQ_F4h-bikU
+          VITE_AUTH_PROVIDERS: ''
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: release/khu-grad-calc-site
 
   deploy:
     needs: build
