@@ -17,6 +17,7 @@ import { matchProgram } from './lib/dept';
 import ManualScreen from './components/ManualScreen';
 import ResultScreen from './components/ResultScreen';
 import AccountPanel from './components/AccountPanel';
+import WelcomeScreen from './components/WelcomeScreen';
 import AboutScreen, { APP_VERSION, DATA_BASIS } from './components/AboutScreen';
 import FeedbackLink from './components/FeedbackLink';
 import './App.css';
@@ -26,6 +27,10 @@ const programs = programsData as unknown as Program[];
 const majors = programs.filter((p) => p.kind === 'MAJOR');
 const departments = departmentsData.departments as unknown as DepartmentInfo[];
 const DEFAULT_MAX_CREDITS = 9;
+
+const GUEST_KEY = 'khu-grad-calc:guest';
+const readGuest = () => { try { return localStorage.getItem(GUEST_KEY) === '1'; } catch { return false; } };
+const writeGuest = (v: boolean) => { try { if (v) localStorage.setItem(GUEST_KEY, '1'); else localStorage.removeItem(GUEST_KEY); } catch { /* 무시 */ } };
 
 export type Step = 'start' | 'import' | 'manual' | 'result' | 'about';
 
@@ -54,6 +59,14 @@ export default function App() {
     setTaken(d.taken); setCustom(d.custom); setExcluded(d.excluded); setMaxCredits(d.maxCreditsPerSemester); setReport(d.report ?? null); setPlans(d.plans ?? []); setLibOptions(d.libOptions ?? DEFAULT_LIB_OPTIONS);
   }, []);
   const sync = useCloudSync(data, apply);
+  const [guest, setGuestState] = useState(readGuest);
+  const setGuest = (v: boolean) => { setGuestState(v); writeGuest(v); };
+  // 로그아웃하면 다시 첫 화면(로그인/게스트)으로
+  const [wasLoggedIn, setWasLoggedIn] = useState(false);
+  useEffect(() => {
+    if (sync.session) { setWasLoggedIn(true); writeGuest(false); }
+    else if (wasLoggedIn) { setWasLoggedIn(false); setGuestState(false); setStep('start'); }
+  }, [sync.session, wasLoggedIn]);
 
   useEffect(() => {
     if (noSave || isEmpty(data)) { clearState(); return; }
@@ -83,13 +96,15 @@ export default function App() {
   };
 
   const loggedIn = !!sync.session;
+  // 로그인 서버가 있으면 첫 화면에서 로그인/게스트를 고른다
+  const gate: 'app' | 'welcome' | 'loading' = !cloudEnabled || loggedIn || guest ? 'app' : sync.checked ? 'welcome' : 'loading';
 
   return (
     <main>
       <header>
         <div className="header-row">
           <h1>졸업요건 계산기</h1>
-          {cloudEnabled && (
+          {cloudEnabled && gate === 'app' && (
             <button type="button" className="account-btn" onClick={() => setAccountOpen((v) => !v)} aria-expanded={accountOpen}>
               {loggedIn ? (sync.session?.user.email?.split('@')[0] ?? '내 계정') : '로그인'}
             </button>
@@ -101,7 +116,7 @@ export default function App() {
         </p>
       </header>
 
-      {cloudEnabled && accountOpen && (
+      {cloudEnabled && gate === 'app' && accountOpen && (
         <AccountPanel session={sync.session} status={sync.status} lastSynced={sync.lastSynced} onClose={() => setAccountOpen(false)} onClearLocal={resetAll} />
       )}
 
@@ -129,14 +144,23 @@ export default function App() {
         </section>
       )}
 
-      {step !== 'start' && step !== 'about' && (
+      {gate === 'welcome' && step !== 'about' && (
+        <WelcomeScreen
+          hasLocal={!isEmpty(data)}
+          onGuest={() => setGuest(true)}
+          login={<AccountPanel variant="welcome" session={null} status={sync.status} lastSynced={null} onClose={() => {}} onClearLocal={resetAll} />}
+        />
+      )}
+      {gate === 'loading' && <p className="muted" role="status">불러오는 중…</p>}
+
+      {gate === 'app' && step !== 'start' && step !== 'about' && (
         <nav className="steps" aria-label="단계">
           <button type="button" className="link" onClick={() => setStep('start')}>← 처음으로</button>
           <span className="muted">{program.department} · {program.admissionYearRange[0]}학번 교육과정</span>
         </nav>
       )}
 
-      {step === 'start' && (
+      {gate === 'app' && step === 'start' && (
         <StartScreen
           majors={majors}
           programId={programId}
@@ -149,7 +173,7 @@ export default function App() {
           onClear={resetAll}
         />
       )}
-      {step === 'import' && (
+      {gate === 'app' && step === 'import' && (
         <ImportScreen
           key={sampleOnOpen ? 'sample' : 'file'}
           startWithSample={sampleOnOpen}
@@ -174,7 +198,7 @@ export default function App() {
           }}
         />
       )}
-      {step === 'manual' && (
+      {gate === 'app' && step === 'manual' && (
         <ManualScreen
           program={program}
           majors={majors}
@@ -186,7 +210,7 @@ export default function App() {
           onDone={() => setStep('result')}
         />
       )}
-      {step === 'result' && (
+      {gate === 'app' && step === 'result' && (
         <ResultScreen
           program={program}
           programs={programs}

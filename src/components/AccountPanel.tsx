@@ -13,6 +13,7 @@ interface Props {
   lastSynced: Date | null;
   onClose: () => void;
   onClearLocal: () => void;   // 이 기기 기록 지우기 (공용 PC에서 로그아웃할 때)
+  variant?: 'panel' | 'welcome'; // welcome: 첫 화면에 넣을 때 (닫기 없음)
 }
 
 const PROVIDER_LABEL: Record<Provider, string> = { kakao: '카카오로 로그인', google: 'Google로 로그인' };
@@ -25,7 +26,7 @@ function writeConsent(v: boolean) {
   try { if (v) localStorage.setItem(CONSENT_KEY, '1'); else localStorage.removeItem(CONSENT_KEY); } catch { /* 무시 */ }
 }
 
-export default function AccountPanel({ session, status, lastSynced, onClose, onClearLocal }: Props) {
+export default function AccountPanel({ session, status, lastSynced, onClose, onClearLocal, variant = 'panel' }: Props) {
   const [clearOnLogout, setClearOnLogout] = useState(false);
   const [consent, setConsent] = useState(readConsent);
   const [email, setEmail] = useState('');
@@ -100,14 +101,16 @@ export default function AccountPanel({ session, status, lastSynced, onClose, onC
   }
 
   return (
-    <section className="account" aria-label="로그인">
-      <div className="account-row">
-        <div>
-          <strong>로그인하고 다른 기기에서 이어보기</strong>
-          <div className="muted">로그인하지 않아도 모든 기능을 쓸 수 있습니다.</div>
+    <section className={variant === 'welcome' ? 'account account-welcome' : 'account'} aria-label="로그인">
+      {variant === 'panel' && (
+        <div className="account-row">
+          <div>
+            <strong>로그인하고 다른 기기에서 이어보기</strong>
+            <div className="muted">로그인하지 않아도 모든 기능을 쓸 수 있습니다.</div>
+          </div>
+          <button type="button" className="link" onClick={onClose}>닫기</button>
         </div>
-        <button type="button" className="link" onClick={onClose}>닫기</button>
-      </div>
+      )}
 
       <label className="consent" htmlFor="consent">
         <input id="consent" type="checkbox" checked={consent} onChange={(e) => { setConsent(e.target.checked); writeConsent(e.target.checked); }} />

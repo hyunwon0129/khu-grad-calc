@@ -10,6 +10,7 @@ import type { SyncStatus } from '../components/AccountPanel';
 
 export function useCloudSync(current: UserData, apply: (d: UserData) => void) {
   const [session, setSession] = useState<Session | null>(null);
+  const [checked, setChecked] = useState(false); // 저장된 로그인 확인이 끝났는가 (첫 화면 깜빡임 방지)
   const [status, setStatus] = useState<SyncStatus>('idle');
   const [conflict, setConflict] = useState<UserData | null>(null);
   const [askUpload, setAskUpload] = useState<'unowned' | 'other' | null>(null);
@@ -21,7 +22,7 @@ export function useCloudSync(current: UserData, apply: (d: UserData) => void) {
   const applyRef = useRef(apply);
   applyRef.current = apply;
 
-  useEffect(() => onSession(setSession), []);
+  useEffect(() => onSession((s) => { setSession(s); setChecked(true); }), []);
   const userId = session?.user.id;
 
   // 로그인 직후 서버 기록 불러오기
@@ -82,5 +83,5 @@ export function useCloudSync(current: UserData, apply: (d: UserData) => void) {
     setReady(true);
   };
 
-  return { session, status, conflict, resolveConflict, askUpload, resolveUpload, lastSynced };
+  return { session, checked, status, conflict, resolveConflict, askUpload, resolveUpload, lastSynced };
 }

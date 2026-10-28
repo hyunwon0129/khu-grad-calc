@@ -385,3 +385,16 @@ a.button-like:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 .must-more summary, .lib-detail summary { cursor: pointer; color: var(--accent); font-size: 0.92rem; }
 .must-more, .lib-detail { margin: 4px 0; }
 .bar-legend { margin: 4px 0 0; font-size: 0.75rem; gap: 4px 12px; }
+
+/* 첫 화면: 로그인 / 게스트 */
+.welcome { display: flex; flex-direction: column; gap: 20px; }
+.welcome-intro h2 { font-size: 1.35rem; margin: 0 0 6px; text-wrap: balance; }
+.welcome-intro p { margin: 0; }
+.welcome-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 16px; align-items: stretch; }
+@media (max-width: 720px) { .welcome-grid { grid-template-columns: 1fr; } }
+.welcome-card { display: flex; flex-direction: column; gap: 10px; padding: 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface, var(--bg)); }
+.welcome-card h3 { margin: 0; font-size: 1.05rem; }
+.welcome-card p { margin: 0; }
+.account-welcome { border: 0; padding: 0; }
+.welcome-guest { justify-content: flex-start; }
+.guest-btn { margin-top: auto; width: 100%; padding: 11px 12px; font-weight: 600; }
