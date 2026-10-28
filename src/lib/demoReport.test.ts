@@ -50,3 +50,10 @@ describe('사정표 머리의 학과명', () => {
     expect(deptFromHeader(['학과 산업경영공학과'])).toBe('산업경영공학과');
   });
 });
+
+describe('학과명이 …과로 끝나는 경우', () => {
+  it('작곡과·성악과·기악과도 읽는다', () => {
+    expect(deptFromHeader(['학번 2024000000 성명 체험학생 학과 작곡과'])).toBe('작곡과');
+    expect(deptFromHeader(['학과: 기악과'])).toBe('기악과');
+  });
+});

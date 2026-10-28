@@ -37282,6 +37282,432 @@
   }
  },
  {
+  "programId": "SEOUL26-13F5Y5DY64",
+  "campus": "SEOUL",
+  "college": "",
+  "department": "작곡과",
+  "kind": "MAJOR",
+  "admissionYearRange": [
+   2026,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "전기",
+    "minCredits": 8
+   },
+   {
+    "category": "전필",
+    "minCredits": 16
+   },
+   {
+    "category": "전선",
+    "minCredits": 40
+   }
+  ],
+  "totalMin": 64,
+  "courses": [
+   "COMPO1001",
+   "COMPO1002",
+   "COMPO2011",
+   "COMPO2012",
+   "COMPO1007",
+   "COMPO1008",
+   "COMPO2007",
+   "COMPO2008",
+   "COMPO3007",
+   "COMPO3008",
+   "COMPO4005",
+   "COMPO4006",
+   "COMPO4009",
+   "COMPO1009",
+   "COMPO1010",
+   "COMPO1011",
+   "COMPO1012",
+   "COMPO2009",
+   "COMPO2010",
+   "COMPO2013",
+   "COMPO2014",
+   "COMPO2015",
+   "COMPO2016",
+   "COMPO1005",
+   "COMPO1006",
+   "COMPO2003",
+   "COMPO2004",
+   "MUSIC2011",
+   "MUSIC2012",
+   "MUSIC3012",
+   "MUSIC3013",
+   "COMPO3003",
+   "COMPO3004",
+   "COMPO4003",
+   "COMPO4004",
+   "MUSIC4002",
+   "MUSIC4003",
+   "COMPO3009",
+   "COMPO3010",
+   "COMPO4007",
+   "COMPO4008",
+   "COMPO2005",
+   "COMPO2006",
+   "COMPO3005",
+   "COMPO3006",
+   "MUSIC1001",
+   "MUSIC1002",
+   "MUSIC2003",
+   "MUSIC2004",
+   "MUSIC3005",
+   "MUSIC3006",
+   "MUSIC1006",
+   "MUSIC1007",
+   "MUSIC2013",
+   "MUSIC2014",
+   "COMPO4010",
+   "COMPO4011",
+   "COMPO4012",
+   "COMPO4013",
+   "MUSIC404",
+   "EDU3150",
+   "EDU3151",
+   "EDU3355"
+  ],
+  "source": {
+   "doc": "2026학년도 학과 교육과정 시행세칙(서울캠퍼스) 작곡과 [별표1] 교육과정 편성표",
+   "year": 2026
+  },
+  "verified": true,
+  "diagram": {
+   "nodes": [
+    {
+     "code": "COMPO1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "COMPO1002",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "COMPO2011",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "COMPO2012",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "COMPO1007",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "COMPO1008",
+     "year": 1,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "COMPO2007",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "COMPO2008",
+     "year": 2,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "COMPO3007",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "COMPO3008",
+     "year": 3,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "COMPO4005",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "COMPO4006",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "COMPO4009",
+     "year": 4,
+     "semester": 1,
+     "both": true
+    },
+    {
+     "code": "COMPO1009",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "COMPO1010",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "COMPO1011",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "COMPO1012",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "COMPO2009",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "COMPO2010",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "COMPO2013",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "COMPO2014",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "COMPO2015",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "COMPO2016",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "COMPO1005",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "COMPO1006",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "COMPO2003",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "COMPO2004",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2011",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2012",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC3012",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC3013",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "COMPO3003",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "COMPO3004",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "COMPO4003",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "COMPO4004",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC4002",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC4003",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "COMPO3009",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "COMPO3010",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "COMPO4007",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "COMPO4008",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "COMPO2005",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "COMPO2006",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "COMPO3005",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "COMPO3006",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC1001",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC1002",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2003",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2004",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC3005",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC3006",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC1006",
+     "year": 1,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC1007",
+     "year": 1,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC2013",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "MUSIC2014",
+     "year": 2,
+     "semester": 2
+    },
+    {
+     "code": "COMPO4010",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "COMPO4011",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "COMPO4012",
+     "year": 4,
+     "semester": 1
+    },
+    {
+     "code": "COMPO4013",
+     "year": 4,
+     "semester": 2
+    },
+    {
+     "code": "MUSIC404",
+     "year": 2,
+     "semester": 1
+    },
+    {
+     "code": "EDU3150",
+     "year": 3,
+     "semester": 1
+    },
+    {
+     "code": "EDU3151",
+     "year": 3,
+     "semester": 2
+    },
+    {
+     "code": "EDU3355",
+     "year": 3,
+     "semester": 2
+    }
+   ],
+   "edges": [],
+   "tracks": []
+  }
+ },
+ {
   "programId": "CE-2024-MULTI",
   "campus": "INTL",
   "college": "소프트웨어융합대학",

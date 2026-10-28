@@ -3,7 +3,7 @@ import { cloudEnabled } from '../lib/cloud';
 import Glossary from './Glossary';
 import FeedbackLink from './FeedbackLink';
 
-export const APP_VERSION = '0.22.2';
+export const APP_VERSION = '0.22.3';
 export const DATA_BASIS = '2026학년도 학사제도안내';
 
 export default function AboutScreen({ onBack }: { onBack: () => void }) {
@@ -39,7 +39,7 @@ export default function AboutScreen({ onBack }: { onBack: () => void }) {
             <thead><tr><th>캠퍼스</th><th>범위</th><th>기준 연도</th></tr></thead>
             <tbody>
               <tr><td>국제</td><td>전 학과·융합전공</td><td>2026 교육과정 책자</td></tr>
-              <tr><td>서울</td><td>55개 학과·전공 (음악대학·무역·국제통상 제외)</td><td>2026 시행세칙 (일부 2023~2025)</td></tr>
+              <tr><td>서울</td><td>56개 학과·전공 (성악·기악·무역·국제통상 제외)</td><td>2026 시행세칙 (일부 2023~2025)</td></tr>
               <tr><td>공통</td><td>다전공 학점·수강허용학점</td><td>{DATA_BASIS} 기본구조표·64쪽</td></tr>
               <tr><td>공통</td><td>교양 (후마니타스칼리지)</td><td>2026 교양교육과정 · 485과목</td></tr>
             </tbody>
@@ -49,7 +49,7 @@ export default function AboutScreen({ onBack }: { onBack: () => void }) {
           <summary>계산 근거 보기</summary>
           <ul>
             <li>이수구분 코드, 졸업요건, 다전공·마이크로디그리 규정은 {DATA_BASIS}를 따릅니다.</li>
-            <li>무역학과·국제통상·금융투자학부·음악대학(작곡·성악·기악)은 원문을 받는 대로 추가합니다.</li>
+            <li>무역학과·국제통상·금융투자학부·성악과·기악과는 원문을 받는 대로 추가합니다.</li>
             <li>원문이 이미지로만 올라온 해(예: 산업경영공학과 2026)는 가장 가까운 연도 표를 쓰고 화면에 알립니다.</li>
             <li>다음 학기 추천은 전공필수·남은 영역 학점·선수과목·권장 학년·개설 학기·관심 다전공을 점수로 매겨 고릅니다.</li>
           </ul>

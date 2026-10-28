@@ -6453,6 +6453,586 @@
 ],
 "prereqs": [],
 "pages": []
+},
+{
+"book": "작곡과",
+"app": [
+"작곡과"
+],
+"courses": [
+{
+"code": "COMPO1001",
+"name": "16세기 대위법 1",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO1002",
+"name": "16세기 대위법 2",
+"credit": 2,
+"cat": "전기",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO2011",
+"name": "현대화성학 1",
+"credit": 2,
+"cat": "전기",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO2012",
+"name": "현대화성학 2",
+"credit": 2,
+"cat": "전기",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO1007",
+"name": "작곡실기 1",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "COMPO1008",
+"name": "작곡실기 2",
+"credit": 2,
+"cat": "전필",
+"year": 1,
+"s1": true,
+"s2": true
+},
+{
+"code": "COMPO2007",
+"name": "작곡실기 3",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "COMPO2008",
+"name": "작곡실기 4",
+"credit": 2,
+"cat": "전필",
+"year": 2,
+"s1": true,
+"s2": true
+},
+{
+"code": "COMPO3007",
+"name": "작곡실기 5",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "COMPO3008",
+"name": "작곡실기 6",
+"credit": 2,
+"cat": "전필",
+"year": 3,
+"s1": true,
+"s2": true
+},
+{
+"code": "COMPO4005",
+"name": "작곡실기 7",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "COMPO4006",
+"name": "작곡실기 8",
+"credit": 2,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "COMPO4009",
+"name": "졸업논문(작곡)",
+"credit": 4,
+"cat": "전필",
+"year": 4,
+"s1": true,
+"s2": true
+},
+{
+"code": "COMPO1009",
+"name": "전통화성학 1",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO1010",
+"name": "전통화성학 2",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO1011",
+"name": "청음 1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO1012",
+"name": "청음 2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO2009",
+"name": "작품분석 1",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO2010",
+"name": "작품분석 2",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO2013",
+"name": "18C대위법및푸가",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO2014",
+"name": "18C대위법및푸가",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO2015",
+"name": "전자음악입문 1",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO2016",
+"name": "전자음악입문 2",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO1005",
+"name": "악기론 1",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO1006",
+"name": "악기론 2",
+"credit": 2,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO2003",
+"name": "관현악기법 1",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO2004",
+"name": "관현악기법 2",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2011",
+"name": "음악사 1",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2012",
+"name": "음악사 2",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC3012",
+"name": "음악사 3",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC3013",
+"name": "음악사 4",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO3003",
+"name": "국악기법 1",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO3004",
+"name": "국악기법 2",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO4003",
+"name": "작곡세미나 1",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO4004",
+"name": "작곡세미나 2",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC4002",
+"name": "지휘법 1",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC4003",
+"name": "지휘법 2",
+"credit": 2,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO3009",
+"name": "전자음악 1",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO3010",
+"name": "전자음악 2",
+"credit": 2,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO4007",
+"name": "전자음악 3",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO4008",
+"name": "전자음악 4",
+"credit": 2,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO2005",
+"name": "작곡발표 1",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO2006",
+"name": "작곡발표 2",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO3005",
+"name": "작곡발표 3",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO3006",
+"name": "작곡발표 4",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC1001",
+"name": "부전공 1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC1002",
+"name": "부전공 2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2003",
+"name": "부전공 3",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2004",
+"name": "부전공 4",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC3005",
+"name": "부전공 5",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC3006",
+"name": "부전공 6",
+"credit": 1,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC1006",
+"name": "합창 1",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC1007",
+"name": "합창 2",
+"credit": 1,
+"cat": "전선",
+"year": 1,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC2013",
+"name": "합창 3",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "MUSIC2014",
+"name": "합창 4",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO4010",
+"name": "캡스톤디자인2(작곡)독립심화학습1 (작곡과)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO4011",
+"name": "독립심화학습2 (작곡과)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "COMPO4012",
+"name": "전자음악실습1",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": true,
+"s2": false
+},
+{
+"code": "COMPO4013",
+"name": "전자음악실습2",
+"credit": 1,
+"cat": "전선",
+"year": 4,
+"s1": false,
+"s2": true
+},
+{
+"code": "MUSIC404",
+"name": "음악진로와탐색",
+"credit": 1,
+"cat": "전선",
+"year": 2,
+"s1": true,
+"s2": false
+},
+{
+"code": "EDU3150",
+"name": "65 교과교육론(음악)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": true,
+"s2": false
+},
+{
+"code": "EDU3151",
+"name": "교과교재연구및지도법(음악)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+},
+{
+"code": "EDU3355",
+"name": "67 교과교수법(음악)",
+"credit": 3,
+"cat": "전선",
+"year": 3,
+"s1": false,
+"s2": true
+}
+],
+"prereqs": [],
+"pages": [
+7,
+8
+]
 }
 ]
 }

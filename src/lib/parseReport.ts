@@ -39,6 +39,11 @@ const DEPT = /[가-힣A-Za-z](?:[가-힣A-Za-z·･ㆍ‧&]){1,24}(?:학과|학�
 const DEPT_LABELS = new Set(['주전공', '다전공', '부전공', '복수전공', '연계전공', '융합전공', '소속학과', '학과', '학부', '전공', '제1전공', '제2전공']);
 
 export function findDepartment(headerLines: string[]): string | null {
+  // '학과 작곡과'처럼 '학과' 칸 바로 뒤의 값을 먼저 본다 (작곡과·성악과·기악과는 '…학과'로 끝나지 않음)
+  for (const l of headerLines) {
+    const m = l.match(/(?:학과|소속|학부\(과\))\s*[:：]?\s+([가-힣A-Za-z][가-힣A-Za-z·･ㆍ‧&]{0,24}(?:과|학부|전공)(?:\(야간\))?)(?![가-힣])/);
+    if (m && !DEPT_LABELS.has(m[1])) return m[1];
+  }
   const found = headerLines.flatMap((l) => [...l.matchAll(DEPT)].map((m) => m[0])).filter((w) => !DEPT_LABELS.has(w));
   return found.find((w) => w.endsWith('학과')) ?? found.find((w) => w.endsWith('학부')) ?? found[0] ?? null;
 }

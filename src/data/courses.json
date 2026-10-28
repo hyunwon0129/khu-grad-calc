@@ -36084,6 +36084,510 @@
   }
  },
  {
+  "code": "COMPO1001",
+  "name": "16세기 대위법 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전기"
+  }
+ },
+ {
+  "code": "COMPO1002",
+  "name": "16세기 대위법 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전기"
+  }
+ },
+ {
+  "code": "COMPO2011",
+  "name": "현대화성학 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전기"
+  }
+ },
+ {
+  "code": "COMPO2012",
+  "name": "현대화성학 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전기"
+  }
+ },
+ {
+  "code": "COMPO1007",
+  "name": "작곡실기 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전필"
+  }
+ },
+ {
+  "code": "COMPO1008",
+  "name": "작곡실기 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전필"
+  }
+ },
+ {
+  "code": "COMPO2007",
+  "name": "작곡실기 3",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전필"
+  }
+ },
+ {
+  "code": "COMPO2008",
+  "name": "작곡실기 4",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전필"
+  }
+ },
+ {
+  "code": "COMPO3007",
+  "name": "작곡실기 5",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전필"
+  }
+ },
+ {
+  "code": "COMPO3008",
+  "name": "작곡실기 6",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전필"
+  }
+ },
+ {
+  "code": "COMPO4005",
+  "name": "작곡실기 7",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전필"
+  }
+ },
+ {
+  "code": "COMPO4006",
+  "name": "작곡실기 8",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전필"
+  }
+ },
+ {
+  "code": "COMPO4009",
+  "name": "졸업논문(작곡)",
+  "credit": 4,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전필"
+  }
+ },
+ {
+  "code": "COMPO1009",
+  "name": "전통화성학 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO1010",
+  "name": "전통화성학 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO1011",
+  "name": "청음 1",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO1012",
+  "name": "청음 2",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO2009",
+  "name": "작품분석 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO2010",
+  "name": "작품분석 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO2013",
+  "name": "18C대위법및푸가",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO2014",
+  "name": "18C대위법및푸가",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO2015",
+  "name": "전자음악입문 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO2016",
+  "name": "전자음악입문 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO1005",
+  "name": "악기론 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO1006",
+  "name": "악기론 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO2003",
+  "name": "관현악기법 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO2004",
+  "name": "관현악기법 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC2011",
+  "name": "음악사 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC2012",
+  "name": "음악사 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC3012",
+  "name": "음악사 3",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC3013",
+  "name": "음악사 4",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO3003",
+  "name": "국악기법 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO3004",
+  "name": "국악기법 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO4003",
+  "name": "작곡세미나 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO4004",
+  "name": "작곡세미나 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC4002",
+  "name": "지휘법 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC4003",
+  "name": "지휘법 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO3009",
+  "name": "전자음악 1",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO3010",
+  "name": "전자음악 2",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO4007",
+  "name": "전자음악 3",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO4008",
+  "name": "전자음악 4",
+  "credit": 2,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO2005",
+  "name": "작곡발표 1",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO2006",
+  "name": "작곡발표 2",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO3005",
+  "name": "작곡발표 3",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO3006",
+  "name": "작곡발표 4",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC1001",
+  "name": "부전공 1",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC1002",
+  "name": "부전공 2",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC2003",
+  "name": "부전공 3",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC2004",
+  "name": "부전공 4",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC3005",
+  "name": "부전공 5",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC3006",
+  "name": "부전공 6",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC1006",
+  "name": "합창 1",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC1007",
+  "name": "합창 2",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC2013",
+  "name": "합창 3",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC2014",
+  "name": "합창 4",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO4010",
+  "name": "캡스톤디자인2(작곡)독립심화학습1 (작곡과)",
+  "credit": 3,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO4011",
+  "name": "독립심화학습2 (작곡과)",
+  "credit": 3,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO4012",
+  "name": "전자음악실습1",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "COMPO4013",
+  "name": "전자음악실습2",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "MUSIC404",
+  "name": "음악진로와탐색",
+  "credit": 1,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "EDU3150",
+  "name": "65 교과교육론(음악)",
+  "credit": 3,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "EDU3151",
+  "name": "교과교재연구및지도법(음악)",
+  "credit": 3,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
+  "code": "EDU3355",
+  "name": "67 교과교수법(음악)",
+  "credit": 3,
+  "typeByProgram": {
+   "SEOUL26-13F5Y5DY64": "전선"
+  }
+ },
+ {
   "code": "SAMP1001",
   "name": "[샘플] 공학수학",
   "credit": 3,
