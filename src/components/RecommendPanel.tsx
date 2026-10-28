@@ -73,10 +73,9 @@ export default function RecommendPanel(p: Props) {
 
   return (
     <section className="recommend">
-      <h2>다음 학기 추천 과목</h2>
+      <h2>추천 과목 <span className="h2-sub">· {termLabel(rec.term)}</span></h2>
       <p className="muted">
-        {termLabel(rec.term)}{rec.studentYear ? ` · ${rec.studentYear}학년 기준` : ''} · {p.program.department} {p.program.admissionYearRange[0]} 교육과정에서
-        점수가 높은 순서입니다. 실제 개설 여부와 시간표는 수강편람에서 확인하세요.
+        {rec.studentYear ? `${rec.studentYear}학년 기준 · ` : ''}{p.program.department} {p.program.admissionYearRange[0]} 교육과정 · 점수 높은 순. 개설 여부는 수강편람에서 확인하세요
       </p>
 
       <div className="toolbar">
@@ -87,7 +86,7 @@ export default function RecommendPanel(p: Props) {
             <option key={x.programId} value={x.programId}>{x.department} ({x.campus === 'SEOUL' ? '서울' : '국제'})</option>
           ))}
         </select>
-        <span className="muted small">고르면 그 전공에서도 인정되는 과목을 위로 올립니다</span>
+        <span className="muted small">그 전공에서도 인정되는 과목을 올려요</span>
       </div>
 
       {rec.bundle.length > 0 ? (
@@ -96,21 +95,21 @@ export default function RecommendPanel(p: Props) {
           {multiProgram && (
             <p className={rec.multiCount ? 'ok small' : 'muted small'}>
               {rec.multiCount
-                ? `${multiProgram.department}에서도 인정되는 과목 ${rec.multiCount}개를 넣었습니다.`
-                : `${multiProgram.department}과 겹치면서 다음 학기에 들을 수 있는 전공 과목이 없어 묶음은 그대로입니다. 아래 다전공 준비 과목을 함께 보세요.`}
+                ? `${multiProgram.department}에서도 인정되는 과목 ${rec.multiCount}개를 넣었어요`
+                : `${multiProgram.department}과 겹치는 과목이 없어 묶음은 그대로예요. 아래 준비 과목을 보세요`}
             </p>
           )}
           <ul className="rec-list">{rec.bundle.map((c) => row(c, { inBundle: true }))}</ul>
         </>
       ) : (
-        <p className="ok">다음 학기에 꼭 채워야 할 전공 영역이 없습니다.</p>
+        <p className="ok">다음 학기에 꼭 채울 전공 영역이 없어요</p>
       )}
 
       {multiRec.length > 0 && (
         <>
           <h3>{multiProgram!.department} 다전공 준비 과목 <span className="muted small">다음 학기에 들을 수 있는 기초·필수 과목</span></h3>
           <ul className="rec-list">{multiRec.map((c) => row(c))}</ul>
-          <p className="muted small">다전공은 2학기 이상 등록 후 신청·선발되어야 수강신청이 가능합니다. 선발 전에 들은 과목도 다전공 학점으로 인정되는지 학과에 확인하세요.</p>
+          <p className="muted small">다전공은 2학기 이상 등록 후 신청·선발돼야 해요. 선발 전 과목 인정 여부는 학과에 확인하세요</p>
         </>
       )}
 

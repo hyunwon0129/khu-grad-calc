@@ -409,7 +409,7 @@ export default function ResultScreen(p: Props) {
           <ul className="must">
             {missingRequired.map((c) => (
               <li key={c.code}>
-                <span className="chip warn-chip">{typeOf(c)}</span>
+                <span className="chip must-chip">{typeOf(c)}</span>
                 {choiceGroupOf(program, c.code)
                   ? <>{choiceGroupOf(program, c.code)!.map((x) => courseMap.get(x)?.name ?? x).join(' 또는 ')} <span className="muted">· 택1</span></>
                   : <>{c.name} <span className="muted code">{c.code} · {c.credit}학점</span></>}
@@ -434,7 +434,7 @@ export default function ResultScreen(p: Props) {
           <label htmlFor="max-credits">학기당 전공 학점</label>
           <input id="max-credits" type="number" min={3} max={21} step={3} value={maxCredits} className="num"
             onChange={(e) => p.onMaxCredits(Math.max(3, Number(e.target.value)))} />
-          <span className="muted">교양·일반선택을 뺀 전공 과목 기준</span>
+          <span className="muted">전공 과목만</span>
         </div>
 
         {plan.semesters.length === 0 && plan.graduationTerm === '충족' && <p className="ok">더 들어야 할 전공 과목이 없습니다.</p>}
@@ -444,7 +444,7 @@ export default function ResultScreen(p: Props) {
             <li key={s.term} className="sem">
               <div className="sem-head">
                 <strong>{termLabel(s.term)}</strong>
-                {i === 0 && <span className="chip ok-chip">다음 학기</span>}
+                {i === 0 && <span className="chip info-chip">다음 학기</span>}
                 <span className="muted">{s.credits}학점</span>
               </div>
               <ul>
@@ -479,7 +479,7 @@ export default function ResultScreen(p: Props) {
             ))}
           </p>
         )}
-        <p className="muted">선수과목과 권장 학기를 기준으로 짠 예시입니다. 실제 개설 여부는 수강편람에서 확인하세요.</p>
+        <p className="muted">선수과목·권장 학기로 짠 예시예요. 개설 여부는 수강편람에서 확인하세요</p>
       </section>
 
       {tracks.length > 0 && (
@@ -523,8 +523,8 @@ export default function ResultScreen(p: Props) {
 
       {(showCurriculum || report) && activeTab === 'share' && (
       <section>
-        <h2>요약·공유</h2>
-        <p className="muted">지도교수 상담이나 학과 사무실 문의 때 붙여넣기 좋은 요약입니다. 이름·학번은 들어가지 않습니다.</p>
+        <h2>요약</h2>
+        <p className="muted">상담·문의 때 붙여넣기 좋아요. 이름·학번은 들어가지 않아요</p>
         <textarea id="summary" className="summary" readOnly value={summary} rows={summary.split('\n').length}
           onFocus={(e) => e.currentTarget.select()} />
         <div className="actions">

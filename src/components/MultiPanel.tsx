@@ -51,7 +51,7 @@ export default function MultiPanel(p: Props) {
           </span>
         </p>
       )}
-      <p className="muted small">{p.capNote} · 남은 학기 최대 {cap}학점 (학점 계획 탭에서 바꿀 수 있어요)</p>
+      <p className="muted small">{p.capNote} · 남은 학기 최대 {cap}학점 (학점 계획에서 바꿔요)</p>
 
       <ul className="facts">
         <li>꼭 채울 영역 학점 <strong>{p.mustRemaining}</strong></li>
@@ -61,8 +61,7 @@ export default function MultiPanel(p: Props) {
       {shift && shift.multi < shift.single && (
         <p className="notice">
           <span>
-            <strong>다전공을 하면 내 전공 기준이 줄어듭니다</strong> · 단일전공 {shift.single}학점 → 다전공 {shift.multi}학점 (2026 기본구조표).
-            줄어든 만큼을 두 번째 전공에 쓸 수 있어요.
+            <strong>다전공을 하면 내 전공 기준이 줄어요</strong> · 단일전공 {shift.single}학점 → 다전공 {shift.multi}학점. 줄어든 만큼 두 번째 전공에 쓸 수 있어요
           </span>
         </p>
       )}
@@ -78,8 +77,7 @@ export default function MultiPanel(p: Props) {
       </div>
 
       <p className="muted small">
-        겹치는 과목은 과목 목록이 있는 학과({new Set(p.programs.filter((x) => x.kind !== 'MICRO_DEGREE' && !x.programId.startsWith('SAMPLE')).map((x) => x.department)).size}개, 서울·국제캠퍼스)만 계산합니다.
-        나머지는 다전공 기준 학점만 보여 줍니다.
+        겹치는 과목은 과목 목록이 있는 {new Set(p.programs.filter((x) => x.kind !== 'MICRO_DEGREE' && !x.programId.startsWith('SAMPLE')).map((x) => x.department)).size}개 학과만 계산해요. 나머지는 기준 학점만 보여 줘요
       </p>
       <ul className="multi-list">
         {visible.map((c) => (
@@ -135,7 +133,7 @@ export default function MultiPanel(p: Props) {
         ))}
         {mds.length === 0 && <li className="muted">마이크로디그리 데이터가 아직 없습니다.</li>}
       </ul>
-      <p className="muted small">마이크로디그리는 학과 시행세칙에 공개된 과정만 넣었습니다(현재 경영학과 3개). 신청은 2학기 이상 이수한 재학생부터 가능합니다.</p>
+      <p className="muted small">공개된 과정만 넣었어요(현재 경영학과 3개). 2학기 이상 이수하면 신청할 수 있어요</p>
     </section>
   );
 }

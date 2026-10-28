@@ -46,7 +46,7 @@ export default function LiberalPanel({ taken, courseMap, report, views, nowTerm,
 
   return (
     <section className="liberal">
-      <h2>교양 (후마니타스칼리지)</h2>
+      <h2>교양 <span className="h2-sub">· 후마니타스칼리지</span></h2>
       <p className="muted">
         필수교과 {st.rules.필수}학점 · 배분이수 {st.areaRule ? `5개 영역 중 ${st.rules.배분영역}개 영역 ` : '영역 구분 없이 '}{st.rules.배분}학점 이상 · 자유이수 {st.rules.자유}학점 이상, 합계 {st.rules.총}학점 이상
         {pre2019 && <strong className="warn"> · {admissionYear}학번은 입학연도 교양교육과정을 따르므로 학교 사정표 값을 우선하세요</strong>}
@@ -61,7 +61,7 @@ export default function LiberalPanel({ taken, courseMap, report, views, nowTerm,
         </select>
         <label className="consent" htmlFor="lib-eng">
           <input id="lib-eng" type="checkbox" checked={options.englishExempt} onChange={(e) => set({ englishExempt: e.target.checked })} />
-          <span>대학영어 이수면제 대상이에요</span>
+          <span>대학영어 면제 대상이에요</span>
         </label>
       </div>
       <details className="lib-exempt">
@@ -129,22 +129,23 @@ export default function LiberalPanel({ taken, courseMap, report, views, nowTerm,
       {st.suggestions.some((s) => s.courses.length > 0) && (needArea > 0 || needBaebunCredits > 0) && (
         <>
           <h3>배분이수 추천 과목 <span className="muted small">{st.areaRule ? '아직 안 들은 영역' : '아무 영역'} · {sem}학기 개설</span></h3>
+          <div className="lib-areas">
           {st.suggestions.filter((s) => s.courses.length).map((s) => (
-            <div key={s.area} className="lib-area">
+            <div key={s.area} className="lib-area card-lite">
               <strong>{s.area}. {s.name}</strong>
               <ul>
                 {s.courses.map((c) => <li key={c.code}>{c.name} <span className="muted code">{c.code} · {c.credit}학점</span></li>)}
               </ul>
             </div>
           ))}
+          </div>
         </>
       )}
       {st.freeSuggestions.length > 0 && (
         <p className="muted small">자유이수 필수 과목 학수번호: {st.freeSuggestions.map((c) => `${c.name} ${c.code}`).join(', ')}</p>
       )}
       <p className="muted small">
-        출처: 2026학년도 교육과정 Ⅲ. 교양교육과정(기본구조표·교양 편성표·[별표4] 이수대체·[별표5] 영어 면제·[별표6] 경과조치).
-        서울캠퍼스도 같은 기본구조이며, 실제 개설 과목은 수강편람에서 확인하세요. 면제·대체는 학교 신청·승인이 있어야 사정표에 반영됩니다.
+        출처: 2026학년도 교양교육과정(기본구조표·편성표·별표4~6). 개설 과목은 수강편람에서, 면제·대체는 학교 신청 후 사정표에 반영돼요
       </p>
     </section>
   );
