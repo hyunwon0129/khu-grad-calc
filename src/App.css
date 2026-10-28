@@ -494,3 +494,5 @@ button.stat-left:hover { border-color: var(--warn); }
 .fields { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px 12px; align-items: end; }
 .field { display: flex; flex-direction: column; gap: 4px; font-size: 0.875rem; color: var(--muted); font-weight: 600; }
 .field input, .field select { width: 100%; }
+.demo-box { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.demo-box .fields { width: 100%; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }

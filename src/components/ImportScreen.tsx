@@ -2,7 +2,11 @@
 // 이수구분은 학교가 사정표에 판정해 둔 값(학사제도 이수구분 코드)을 그대로 쓴다. 학과 교육과정 데이터가 없어도 된다.
 import { useEffect, useState } from 'react';
 import type { Course, Program, TakenCourse, CourseStatus } from '../lib/types';
-import { analyzeReport, SAMPLE_REPORT_LINES, type ParseResult } from '../lib/parseReport';
+import { analyzeReport, currentTerm, type ParseResult } from '../lib/parseReport';
+import { DEMO_STAGES, demoAdmissionYear, demoPrograms, makeDemoReport } from '../lib/demoReport';
+import departmentsData from '../data/departments.json';
+import type { DepartmentInfo } from '../lib/types';
+import { findDepartment } from '../lib/multi';
 import { extractPdfText, type TextItem } from '../lib/pdfText';
 import { SCHOOL_CATEGORIES, SHORT_NAME, matchWithSchool, type ReportData, type SchoolCategory } from '../lib/reportLayout';
 import MatchBadge from './MatchBadge';
@@ -47,6 +51,11 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
   const [source, setSource] = useState<'PDF' | 'SAMPLE'>('PDF');
   const [diag, setDiag] = useState<Diagnosis | null>(null);
   const [diagCopied, setDiagCopied] = useState<'idle' | 'ok' | 'manual'>('idle');
+  // 체험용 가상 사정표: 학과·학년을 골라 그럴듯한 이수 기록을 만든다
+  const demoList = demoPrograms(majors.length ? majors : [current]);
+  const defaultDemo = demoList.find((p) => p.department === current.department) ?? demoList.find((p) => p.department === '산업경영공학과') ?? demoList[0];
+  const [demoId, setDemoId] = useState(defaultDemo?.programId ?? '');
+  const [demoStage, setDemoStage] = useState('y3');
 
   // 직전에 불러온 사정표의 과목은 '알려진 과목'으로 취급하지 않는다 (새 파일에 이전 파일 정보가 섞이지 않게)
   const knownCourses = [...courseMap.values()].filter((c) => c.source !== 'import');
@@ -80,8 +89,19 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
     );
   };
 
+  const loadDemo = (programId = demoId, stageId = demoStage) => {
+    const picked = demoList.find((p) => p.programId === programId) ?? defaultDemo;
+    if (!picked) return;
+    const now = currentTerm();
+    const year = demoAdmissionYear(stageId, now);
+    // 입학연도에 맞는 교육과정이 있으면 그것으로 (사정표를 올렸을 때와 같은 방식)
+    const prog = matchProgram(majors.filter((p) => p.department === picked.department && p.campus === picked.campus), picked.department, year) ?? picked;
+    const dept = findDepartment(departmentsData.departments as unknown as DepartmentInfo[], prog.department, prog.campus) ?? null;
+    load(makeDemoReport(prog, courseMap, dept, stageId, now).lines, null, 'SAMPLE');
+  };
+
   useEffect(() => {
-    if (startWithSample) load([...SAMPLE_REPORT_LINES], null, 'SAMPLE');
+    if (startWithSample) loadDemo();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -206,11 +226,25 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
               <input id="report-file" type="file" accept="application/pdf,.pdf" onChange={onFile} />
             </label>
           )}
-          <p>
-            <button type="button" className="link" onClick={() => load([...SAMPLE_REPORT_LINES], null, 'SAMPLE')}>
-              예시 사정표로 체험하기
-            </button>
-          </p>
+          {demoList.length > 0 && (
+            <div className="demo-box card-lite">
+              <strong>체험용 가상 사정표</strong>
+              <span className="muted small">사정표가 없어도 학과·학년을 골라 그럴듯한 예시로 써 볼 수 있어요. 실제 학생 기록이 아니에요</span>
+              <div className="fields">
+                <label className="field" htmlFor="demo-dept">학과
+                  <select id="demo-dept" value={demoId} onChange={(e) => setDemoId(e.target.value)}>
+                    {demoList.map((p) => <option key={p.programId} value={p.programId}>{p.department} ({p.campus === 'SEOUL' ? '서울' : '국제'})</option>)}
+                  </select>
+                </label>
+                <label className="field" htmlFor="demo-stage">학년
+                  <select id="demo-stage" value={demoStage} onChange={(e) => setDemoStage(e.target.value)}>
+                    {DEMO_STAGES.map((st) => <option key={st.id} value={st.id}>{st.label}</option>)}
+                  </select>
+                </label>
+              </div>
+              <button type="button" onClick={() => loadDemo()}>가상 사정표 만들기</button>
+            </div>
+          )}
           {error && <p className="warn" role="alert">{error}</p>}
           {error && diagBox}
         </div>
@@ -219,7 +253,7 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
       {result && (
         <div className="stack">
           <ul className="facts facts-grid">
-            <li>읽은 과목 <strong>{rows.length}</strong>개{source === 'SAMPLE' && ' (가상 사정표)'}</li>
+            <li>읽은 과목 <strong>{rows.length}</strong>개{source === 'SAMPLE' && ' (체험용 가상)'}</li>
             {result.departmentHint && <li>학과 <strong>{result.departmentHint}</strong></li>}
             {result.admissionYearHint && <li>{result.admissionYearHint}학번</li>}
             <li>영역별 학점 {areaCount}개 영역</li>

@@ -19,6 +19,8 @@ export function buildVerdict(views: AreaView[], checks: RequirementCheck[]): Ver
 
   const parts: string[] = [];
   if (remainingCredits > 0) parts.push(`${remainingCredits}학점`);
+  // 졸업학점은 채웠어도 영역 기준이 모자라면 그 영역 이름을 먼저 말한다
+  if (remainingCredits === 0 && lackingAreas.length) parts.push(lackingAreas.map((a) => a.name).join('·'));
   if (unmetChecks.length) parts.push(unmetChecks.join('·'));
   const headline = allDone
     ? '이번 학기까지 마치면 사정표의 학점·요건을 모두 채웁니다'
