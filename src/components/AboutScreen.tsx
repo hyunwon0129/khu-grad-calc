@@ -3,7 +3,7 @@ import { cloudEnabled } from '../lib/cloud';
 import Glossary from './Glossary';
 import FeedbackLink from './FeedbackLink';
 
-export const APP_VERSION = '0.19.3';
+export const APP_VERSION = '0.20.0';
 export const DATA_BASIS = '2026학년도 학사제도안내';
 
 export default function AboutScreen({ onBack }: { onBack: () => void }) {

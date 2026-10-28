@@ -13,6 +13,20 @@ export const providers: Provider[] = String(import.meta.env.VITE_AUTH_PROVIDERS 
   .map((s) => s.trim())
   .filter((s): s is Provider => s === 'kakao' || s === 'google');
 
+/** 서버에 실제로 켜진 소셜 로그인 (Supabase 설정을 읽어 확인). 환경변수에 적은 것과 합친다 */
+export async function enabledProviders(): Promise<Provider[]> {
+  if (!url || !anonKey) return providers;
+  try {
+    const r = await fetch(`${url}/auth/v1/settings`, { headers: { apikey: anonKey } });
+    if (!r.ok) return providers;
+    const j = await r.json() as { external?: Record<string, boolean> };
+    const on = (['google', 'kakao'] as Provider[]).filter((p) => j.external?.[p]);
+    return [...new Set([...on])];
+  } catch {
+    return providers;
+  }
+}
+
 export const supabase: SupabaseClient | null =
   url && anonKey
     ? createClient(url, anonKey, {

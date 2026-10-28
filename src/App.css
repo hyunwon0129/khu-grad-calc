@@ -173,7 +173,11 @@ button.small { font-size: 0.8125rem; margin-right: 8px; }
 .consent input { margin-top: 4px; }
 .login-methods { display: flex; flex-direction: column; gap: 10px; }
 .login-methods[aria-disabled="true"] { opacity: 0.6; }
-.provider { width: 100%; max-width: 320px; font-weight: 600; padding: 9px 12px; }
+.provider { display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%; max-width: 360px; min-height: 48px; font-weight: 600; padding: 10px 14px; }
+.provider-google { background: #FFFFFF; color: #1F1F1F; border: 1px solid #747775; }
+.provider-google:hover:not(:disabled) { background: #F8F8F8; }
+.or-line { display: flex; align-items: center; gap: 10px; max-width: 360px; margin: 2px 0; }
+.or-line::before, .or-line::after { content: ''; flex: 1; height: 1px; background: var(--line); }
 .provider-kakao { background: #fee500; color: #191919; border-color: #fee500; }
 .email-login { display: flex; flex-direction: column; gap: 2px; }
 .email-login input[type="email"] { flex: 1 1 200px; min-width: 0; }
