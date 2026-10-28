@@ -104,12 +104,17 @@ export default function App() {
     <main>
       <header>
         <div className="header-row">
-          <div className="brand">
-            <img className="brand-emblem" src={emblemUrl} alt="경희대학교 휘장" width={60} height={40} />
-            <div className="brand-text">
+          {/* 휘장·서비스명 = 홈: 어느 화면에서든 시작 화면으로 (입력한 기록은 그대로) */}
+          <div className="brand-row">
+          <h1 className="brand-h1"><a className="brand" href="./" aria-label="졸업요건 계산기 처음 화면으로"
+            onClick={(e) => { e.preventDefault(); setAccountOpen(false); setStep('start'); window.scrollTo({ top: 0 }); }}>
+            <img className="brand-emblem" src={emblemUrl} alt="" width={60} height={40} />
+            <span className="brand-text">
               <span className="brand-univ">경희대학교</span>
-              <h1>졸업요건 계산기 <span className="chip unofficial">비공식 참고용</span></h1>
-            </div>
+              <span className="brand-title">졸업요건 계산기</span>
+            </span>
+          </a></h1>
+          <span className="chip unofficial">비공식 참고용</span>
           </div>
           {cloudEnabled && gate === 'app' && (loggedIn ? (
             <div className="account-actions">
