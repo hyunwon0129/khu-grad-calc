@@ -49,6 +49,7 @@ export default function App() {
   const [savedAt, setSavedAt] = useState(validSaved?.savedAt ?? null);
   const [accountOpen, setAccountOpen] = useState(false);
   const [sampleOnOpen, setSampleOnOpen] = useState(false);
+  const [demoReq, setDemoReq] = useState<{ programId: string; stageId: string } | null>(null);
   const [report, setReport] = useState<ReportData | null>(validSaved?.report ?? null); // 졸업사정표 분석 결과
   const [plans, setPlans] = useState<PlannedItem[]>(validSaved?.plans ?? []); // 만약에 계획
   const [libOptions, setLibOptions] = useState<LiberalOptions>(validSaved?.libOptions ?? DEFAULT_LIB_OPTIONS); // 교양 면제·학생 구분
@@ -201,14 +202,16 @@ export default function App() {
           savedAt={savedAt}
           synced={loggedIn}
           onProgram={(id) => { setProgramId(id); setTaken([]); setCustom([]); setExcluded([]); setReport(null); }}
-          onChoose={(st) => { setSampleOnOpen(false); setStep(st); }}
-          onSample={() => { setSampleOnOpen(true); setStep('import'); }}
+          onChoose={(st) => { setSampleOnOpen(false); setDemoReq(null); setStep(st); }}
+          onSample={() => { setDemoReq(null); setSampleOnOpen(true); setStep('import'); }}
+          onDemo={(id, stageId) => { setSampleOnOpen(false); setDemoReq({ programId: id, stageId }); setStep('import'); }}
           onClear={resetAll}
         />
       )}
       {gate === 'app' && step === 'import' && (
         <ImportScreen
-          key={sampleOnOpen ? 'sample' : 'file'}
+          key={demoReq ? `demo-${demoReq.programId}-${demoReq.stageId}` : sampleOnOpen ? 'sample' : 'file'}
+          demoRequest={demoReq}
           startWithSample={sampleOnOpen}
           noSave={noSave}
           onNoSave={(v) => { setNoSave(v); setNoSaveState(v); }}

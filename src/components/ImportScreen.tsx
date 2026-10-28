@@ -17,6 +17,7 @@ import { FEEDBACK_URL } from './FeedbackLink';
 
 interface Props {
   startWithSample?: boolean;
+  demoRequest?: { programId: string; stageId: string } | null; // 시작 화면에서 학과·학년을 골라 체험: 만들어서 바로 결과로
   noSave?: boolean;
   onNoSave?: (v: boolean) => void;
   program: Program;
@@ -43,7 +44,7 @@ export function toProgramCategory(program: Program, cat: SchoolCategory | ''): s
   return program.requirements.some((r) => r.category === short) ? short : '';
 }
 
-export default function ImportScreen({ startWithSample = false, noSave = false, onNoSave, program: current, majors = [], courseMap, onApply }: Props) {
+export default function ImportScreen({ demoRequest = null, startWithSample = false, noSave = false, onNoSave, program: current, majors = [], courseMap, onApply }: Props) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const [result, setResult] = useState<ParseResult | null>(null);
@@ -100,7 +101,9 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
     load(makeDemoReport(prog, courseMap, dept, stageId, now).lines, null, 'SAMPLE');
   };
 
+  const [autoApply, setAutoApply] = useState(false);
   useEffect(() => {
+    if (demoRequest) { setAutoApply(true); loadDemo(demoRequest.programId, demoRequest.stageId); return; }
     if (startWithSample) loadDemo();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -160,6 +163,12 @@ export default function ImportScreen({ startWithSample = false, noSave = false, 
     };
     onApply(picked.map((r) => ({ code: r.code, term: r.term || '-', status: r.status })), custom, report);
   };
+
+  // 시작 화면 체험: 확인 화면을 건너뛰고 실제 사정표와 같은 방식으로 바로 적용
+  useEffect(() => {
+    if (autoApply && result && rows.length) { setAutoApply(false); apply(); }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoApply, result, rows]);
 
   const copyDiag = async () => {
     if (!diag) return;

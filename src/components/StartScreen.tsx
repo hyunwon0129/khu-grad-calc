@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { Program } from '../lib/types';
 import type { Step } from '../App';
+import { DEMO_STAGES, demoPrograms } from '../lib/demoReport';
 
 interface Props {
   majors: Program[];
@@ -11,14 +12,17 @@ interface Props {
   onProgram: (id: string) => void;
   onChoose: (step: Step) => void;
   onSample: () => void;
+  onDemo: (programId: string, stageId: string) => void;
   onClear: () => void;
 }
 
-export default function StartScreen({ majors, programId, savedCount, savedAt, synced = false, onProgram, onChoose, onSample, onClear }: Props) {
+export default function StartScreen({ majors, programId, savedCount, savedAt, synced = false, onChoose, onSample, onDemo, onClear }: Props) {
   const [confirming, setConfirming] = useState(false);
   // 실제 학과를 먼저, 시험용 샘플은 맨 뒤
-  const sortedMajors = [...majors].sort((a, b) => Number(a.programId.startsWith('SAMPLE')) - Number(b.programId.startsWith('SAMPLE')) || a.department.localeCompare(b.department, 'ko') || a.admissionYearRange[0] - b.admissionYearRange[0]);
-  const [pick, setPick] = useState(programId);
+  const demoList = demoPrograms(majors);
+  const current = majors.find((p) => p.programId === programId);
+  const [pick, setPick] = useState(() => (demoList.find((p) => p.department === current?.department) ?? demoList.find((p) => p.department === '산업경영공학과') ?? demoList[0])?.programId ?? '');
+  const [stage, setStage] = useState('y3');
 
   return (
     <>
@@ -57,26 +61,25 @@ export default function StartScreen({ majors, programId, savedCount, savedAt, sy
       </section>
 
       <section className="program-quick card-lite" aria-labelledby="program-quick-title">
-        <h2 id="program-quick-title">학과 교육과정 바로 보기</h2>
-        <p className="muted small">사정표 없이 내 학과의 필수 과목·추천 과목·로드맵을 볼 수 있어요</p>
-        <form className="program-quick-row" onSubmit={(e) => {
-          e.preventDefault();
-          if (pick !== programId) onProgram(pick);
-          onChoose('result');
-        }}>
-          <label className="field" htmlFor="program">학과·학번
+        <h2 id="program-quick-title">학과 골라 체험하기</h2>
+        <p className="muted small">사정표가 없어도 학과·학년을 고르면, 실제 사정표를 올렸을 때와 같은 결과 화면을 가상 기록으로 보여 줘요</p>
+        <form className="program-quick-row" onSubmit={(e) => { e.preventDefault(); onDemo(pick, stage); }}>
+          <label className="field" htmlFor="program">학과
             <select id="program" value={pick} onChange={(e) => setPick(e.target.value)}>
-              {sortedMajors.map((p) => (
-                <option key={p.programId} value={p.programId}>
-                  {p.department} ({p.admissionYearRange[0] === p.admissionYearRange[1] ? p.admissionYearRange[0] : `${p.admissionYearRange[0]}~${p.admissionYearRange[1]}`}학번){p.programId.startsWith('SAMPLE') ? ' · 시험용 샘플' : p.verified ? '' : ' · 일부 과목 확인 중'}
-                </option>
+              {demoList.map((p) => (
+                <option key={p.programId} value={p.programId}>{p.department} ({p.campus === 'SEOUL' ? '서울' : '국제'}){p.verified ? '' : ' · 일부 과목 확인 중'}</option>
               ))}
+            </select>
+          </label>
+          <label className="field field-narrow" htmlFor="program-stage">학년
+            <select id="program-stage" value={stage} onChange={(e) => setStage(e.target.value)}>
+              {DEMO_STAGES.map((st) => <option key={st.id} value={st.id}>{st.label}</option>)}
             </select>
           </label>
           <button type="submit" className="primary">확인</button>
         </form>
-        {savedCount > 0 && pick !== programId && <p className="warn small">다른 학과로 바꾸면 이 기기에 입력한 과목이 지워져요</p>}
-        <p className="muted small">과목 목록이 있는 학과는 {new Set(majors.filter((p) => p.verified).map((p) => p.department)).size}개예요. 사정표를 올리면 학과가 자동으로 골라져요.</p>
+        {savedCount > 0 && <p className="warn small">체험하면 이 기기에 입력한 과목이 체험용 기록으로 바뀌어요</p>}
+        <p className="muted small">과목 목록이 있는 {demoList.length}개 학과 · 실제 학생 기록이 아닌 예시예요</p>
       </section>
 
       <section>
