@@ -60,6 +60,19 @@ export default function App() {
     setTaken(d.taken); setCustom(d.custom); setExcluded(d.excluded); setMaxCredits(d.maxCreditsPerSemester); setReport(d.report ?? null); setPlans(d.plans ?? []); setLibOptions(d.libOptions ?? DEFAULT_LIB_OPTIONS);
   }, []);
   const sync = useCloudSync(data, apply);
+  // 소셜 로그인에서 돌아왔는데 실패한 경우: 주소의 오류를 읽어 안내하고 주소는 깨끗이
+  const [authError] = useState(() => {
+    try {
+      const q = new URLSearchParams(window.location.search);
+      const h = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+      const e = q.get('error_description') || h.get('error_description') || q.get('error') || h.get('error');
+      if (!e) return '';
+      window.history.replaceState(null, '', window.location.pathname);
+      return /exchange external code/i.test(e) ? 'Google 로그인을 마치지 못했어요. 잠시 후 다시 시도해 주세요. (서버 설정 확인 필요)'
+        : /access_denied|denied/i.test(e) ? '로그인을 취소했어요.'
+        : '로그인을 마치지 못했어요. 다시 시도해 주세요.';
+    } catch { return ''; }
+  });
   const [guest, setGuestState] = useState(readGuest);
   const setGuest = (v: boolean) => { setGuestState(v); writeGuest(v); };
   // 로그아웃하면 다시 첫 화면(로그인/게스트)으로
@@ -161,6 +174,8 @@ export default function App() {
           </div>
         </section>
       )}
+
+      {authError && !loggedIn && <p className="notice notice-warn" role="alert"><span>{authError}</span></p>}
 
       {gate === 'welcome' && step !== 'about' && (
         <WelcomeScreen
