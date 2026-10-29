@@ -17187,7 +17187,6 @@
    "FT3039",
    "FT3081",
    "FT3055",
-   "FT3072",
    "FT4079",
    "FD121",
    "FD122",
@@ -17492,11 +17491,6 @@
     },
     {
      "code": "FT3055",
-     "year": 3,
-     "semester": 2
-    },
-    {
-     "code": "FT3072",
      "year": 3,
      "semester": 2
     },
@@ -43985,6 +43979,2322 @@
   },
   "verified": true,
   "note": "A(의학통계학)·B(인공지능개론)·C(멀티모달머신러닝개론)·D(의료AI프로젝트) 영역별 1과목 이상, 12학점 (AI Dentist 트랙 11학점). 2학기 이상 재학 후 서류·면접 선발"
+ },
+ {
+  "programId": "MD-I-1T21W15PK126W15CC156",
+  "campus": "INTL",
+  "college": "의류디자인·웨어러블디자인테크놀로지",
+  "department": "AI 패션테크 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "TC313",
+   "TC321",
+   "WDT3001"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 의류디자인학과 ‘패션스튜디오Ⅰ(3)’, ‘웨어러블테크놀로지(3)’, 웨어러블디자인테크놀로지 전공 ‘버츄얼피팅스튜디오(3)’ 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-1T2112ZKZBC10T013EC1",
+  "campus": "INTL",
+  "college": "어드밴스드모션그래픽스·어드밴스드애니메이션·디지털편집실습",
+  "department": "AI애니메이션 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "DC331",
+   "DC334",
+   "FT2023",
+   "FT3072"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 디지털콘텐츠학과 ‘어드밴스드모션그래픽스(3)’, ‘어드밴스드애니메이션(3)’, 연극영화학과 ‘디지털편집실습(3)’, ‘초급영화이론(3)’ 중 총 9학점을 이수하여야 한다. 디지털콘텐츠학과 + 연극영화학과"
+ },
+ {
+  "programId": "MD-I-2E2A1B1T2AWY5CXZXY4D",
+  "campus": "INTL",
+  "college": "소프트웨어융합학과·국제학과·컴퓨터공학부",
+  "department": "VR/AR 고객경험리서치 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 15
+   }
+  ],
+  "totalMin": 15,
+  "courses": [
+   "SWCON104",
+   "IS3528",
+   "CSE104",
+   "IM4103",
+   "IM4101"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 15학점 이상"
+ },
+ {
+  "programId": "MD-I-2G2A13ET14M410DHYEO1",
+  "campus": "INTL",
+  "college": "소프트웨어융합학과·융합전공·컴퓨터공학과",
+  "department": "XR입출력기술 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 24
+   }
+  ],
+  "totalMin": 24,
+  "courses": [
+   "SWCON313",
+   "SWCON492",
+   "IM4103",
+   "IM4101",
+   "CSE426",
+   "CSE441",
+   "IM4205",
+   "IM3203"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 24학점 이상"
+ },
+ {
+  "programId": "MD-I-Y3013ESY5X1655",
+  "campus": "INTL",
+  "college": "소프트웨어융합학과·컴퓨터공학과·건국대학교",
+  "department": "게임공학 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 24
+   }
+  ],
+  "totalMin": 24,
+  "courses": [
+   "SWCON211",
+   "SWCON212",
+   "SWCON314",
+   "CSE428",
+   "IM3203",
+   "IM3303",
+   "IM4301",
+   "IM3603"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 24학점 이상"
+ },
+ {
+  "programId": "MD-I-YD410OG115G13EC13501",
+  "campus": "INTL",
+  "college": "식물환경신소재공학과·한방생명공학과·식품생명공학과",
+  "department": "그린바이오소재 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "PAM421",
+   "PAM337",
+   "OMB301",
+   "FSB361"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 식물환경신소재공학과 ‘기능성바이오소재(3학점)’, ‘지속가능한바이오플라스틱소재및응용(3학점)’, 한방생명공학과 ‘약용소재학(3학점)’, 식품생명공학과 ‘바이오기능성식품소재(3학점)’ 중 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-YDC10F0118S114OZRO13",
+  "campus": "INTL",
+  "college": "프랑스어학과·글로벌커뮤니케이션학부·연극영화학과",
+  "department": "글로벌미디어컬처 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "FR3044",
+   "FR4041",
+   "ELC255",
+   "ELC342",
+   "FT2076"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 프랑스어학과 ‘프랑스어권미디어문화(3학점)’, 프랑스어학과 ‘프랑스문화콘텐츠’(3학점)’, 글로벌커뮤니케이션학부 ‘영화와미국문화 (3학점)’, 글로벌커뮤니케이션학부 ‘미디어연구(3학점)’, 연극영화학과 ‘초급영화이론(3학점)’ 중 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-YDC10F0118S16A910DH",
+  "campus": "INTL",
+  "college": "프랑스어학과·러시아어학과·스페인어학과",
+  "department": "글로벌협력 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "FR3043",
+   "RU4301",
+   "ESP329",
+   "KO1201"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 프랑스어학과 ‘현대아프리카의이해(3학점)’, 러시아어학과 ‘유라시아의이해(3학점)’, 스페인어학과 ‘라틴아메리카지역연구(3학점)’, 한국어학과 ‘문화의이해(3학점)’ 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-ZIX12YS12HO12YS13411",
+  "campus": "INTL",
+  "college": "일본어학과·한국어학과·중국어학과",
+  "department": "동아시아영상문화산업 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "JP116",
+   "KO3204",
+   "CHI416",
+   "FT2033"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 일본어학과(전공)의 ｢일본영화감상과비평｣(3학점), 한국어학과(전공)의 ｢한국소설과영상｣(3학점), 중국어학과(전공)의 ｢중국 영화와비평｣(3학점), 연극영화과(전공)의 ｢현대영화연구｣(3학점) 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-ZRO13F413EGW128C162S",
+  "campus": "INTL",
+  "college": "소프트웨어융합학과",
+  "department": "디자인 소프트웨어 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "SWCON103",
+   "SWCON370",
+   "SWCON492",
+   "SWCON371"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 12학점 이상"
+ },
+ {
+  "programId": "MD-I-ZRO13UO15BS12G410P41",
+  "campus": "INTL",
+  "college": "스마트팜과학과·융합바이오·신소재공학과·식품생명공학과",
+  "department": "디지털스마트팜 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "SFS211",
+   "SFS214",
+   "CBM307",
+   "FSB271"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 스마트팜과학과 ‘사물인터넷(IoT)기초(3학점)’, ‘스마트농업프로그래밍(3학점)’, 융합바이오·신소재공학과 ‘그린바이오소재생명 공학(3학점)’, 식품생명공학과 ‘식품나노과학개론(3학점)’ 중 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-ZRO13UO15BS13LX13F41",
+  "campus": "INTL",
+  "college": "유전생명공학과·스마트팜과학과·융합바이오·신소재공학과",
+  "department": "디지털종자생명 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "GEN208",
+   "GEN312",
+   "SFS301",
+   "CBM212"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 유전생명공학과 ‘작물생명공학(3학점)’, ‘유전공학(3학점)’, 스마트팜과학과 ‘식물육종학(3학점)’, 융합바이오·신소재공학과 ‘바이오빅데이터분석및실험(3학점)’ 중 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-108S15O412YS10T010OC",
+  "campus": "INTL",
+  "college": "스페인어학과·국제학과",
+  "department": "라틴아메리카 국제개발협력 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "ESP117",
+   "ESP346",
+   "IS2507",
+   "IS3529"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 스페인어학과 ‘라틴아메리카역사와문화(3학점)’, ‘기후변화와라틴아메리카(3학점)’, 국제학과 ‘Understanding International Development Cooperation (3학점)’, ‘Topics in international development cooperation (3학점)’ 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-10F011C7W128C162S15M",
+  "campus": "INTL",
+  "college": "소프트웨어융합학과/컴퓨터공학과·소프트웨어융합학과",
+  "department": "로봇 소프트웨어 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "SWCON331",
+   "SWCON366",
+   "SWCON494"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 9학점 이상"
+ },
+ {
+  "programId": "MD-I-10F014VG11JG109OZQ41",
+  "campus": "INTL",
+  "college": "시각디자인학과·문화엔터테인먼트",
+  "department": "로컬브랜드매니지먼트 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "VID3038",
+   "VID3032",
+   "VID2026",
+   "CUENT4014"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 시각디자인학과 ‘아이덴티티디자인(3)’, ‘브랜드패키지디자인(3)’, ‘소비자행태와브랜드전략(3)’, 문화엔터테인먼트학과 ‘로컬코 크리에이션랩1(3)’ 중 총 9학점 이상을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-10F014VG14YG15CG14PS",
+  "campus": "INTL",
+  "college": "문화엔터테인먼트학과·시각디자인학과",
+  "department": "로컬콘텐츠마케팅 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "CUENT2011",
+   "CUENT4004",
+   "CUENT3012",
+   "VID3039"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 문화엔터테인먼트학과 ‘엔터테인먼트마케팅(3)’, ‘축제이벤트기획(3)’, ‘지역문화콘텐츠기획(3)’, 시각디자인학과 ‘로컬코크리 에이션랩2(3)’ 중 총 9학점 이상을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-10T0158G118K12G4",
+  "campus": "INTL",
+  "college": "컴퓨터공학부·컴퓨터공학부/소프트웨어융합학과·소프트웨어융합과",
+  "department": "메타버스 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "CSE324",
+   "CSE430",
+   "SWCON311"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 9학점 이상"
+ },
+ {
+  "programId": "MD-I-114OZRO131W135SW1341",
+  "campus": "INTL",
+  "college": "한국어학과·중국어학과·글로벌커뮤니케이션학부",
+  "department": "미디어와 영상문화콘텐츠 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "KO4201",
+   "KO3204",
+   "CHI416",
+   "ELC359"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 한국어학과(전공)의 ｢한국대중문화｣(3학점)와 ｢한국소설과영상｣(3학점), 중국어학과(전공)의 ｢중국영화와비평｣(3학점), 글로벌 커뮤니케이션학부(전공)의 ｢영상문화와기술｣(3학점) 총 12학점을 이수하여야 한다. 나. 이수 시, 본 전공 과목은 ‘전공선택’으로, 그 외 전공 과목은 ‘일반선택’으로 인정된다."
+ },
+ {
+  "programId": "MD-I-115G13EC1350169812G4",
+  "campus": "INTL",
+  "college": "식품생명공학과·유전생명공학과·융합바이오·신소재공학과",
+  "department": "바이오헬스 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "FSB482",
+   "FSB441",
+   "GEN328",
+   "CBM302"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 식품생명공학과 ‘식품분자생물학(3학점)’, ‘식품생명공학(3학점)’, 유전생명공학과 ‘바이오의약품개론(3학점)’, 융합바이오·신 소재공학과 ‘바이오약리학(3학점)’ 중 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-11L1ZG013EC15BKW11FO",
+  "campus": "INTL",
+  "college": "컴퓨터공학부/소프트웨어융합학과·컴퓨터공학부·소프트웨어융합학과",
+  "department": "빅데이터 분석 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "CSE434",
+   "AI3004",
+   "SWCON425"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 9학점 이상"
+ },
+ {
+  "programId": "MD-I-12HWXZK114OZRO131WYE",
+  "campus": "INTL",
+  "college": "컴퓨터공학과·건국대학교·융합전공",
+  "department": "실감미디어기술 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 18
+   }
+  ],
+  "totalMin": 18,
+  "courses": [
+   "CSE103",
+   "CSE224",
+   "CSE428",
+   "IM3202",
+   "IM4101",
+   "IM4013"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 18학점 이상"
+ },
+ {
+  "programId": "MD-I-12HWXZK114OZRO131W15",
+  "campus": "INTL",
+  "college": "컴퓨터공학과·배재대학교·전주대학교",
+  "department": "실감미디어펀더멘털 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 18
+   }
+  ],
+  "totalMin": 18,
+  "courses": [
+   "CSE104",
+   "IM1501",
+   "IM1601",
+   "IM1101",
+   "IM1701",
+   "IM1702"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 18학점 이상"
+ },
+ {
+  "programId": "MD-I-12YS10T010OC14S4W10Z",
+  "campus": "INTL",
+  "college": "글로벌커뮤니케이션학부·스페인어학과",
+  "department": "아메리카 문화융합 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "ELC106",
+   "ELC255",
+   "ESP334",
+   "ESP346"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 글로벌커뮤니케이션학부의 ‘미국역사와문화’(3학점)와 ‘영화와미국문화(3학점),’ 스페인어학과의 ‘미국히스패닉의세계(3학점)’와 ‘기후변화와라틴아메리카(3학점)’ 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-12YS15MG1213EG12G415",
+  "campus": "INTL",
+  "college": "도예학과·4D아트융합전공",
+  "department": "아트&인스톨레이션 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "CA2020",
+   "FDA201",
+   "FDA301"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 도예학과(전공): ‘인체조형(3학점)’, 4D아트융합전공: ‘아트미디어탐구(3학점)’, ‘4D아트설치(3학점)’ 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-130X13F4115KZIC14FO",
+  "campus": "INTL",
+  "college": "응용물리학과·반도체공학과",
+  "department": "양자반도체 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "APHY3612",
+   "APHY4609",
+   "SE3002",
+   "EE325"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 응용물리학과 ‘양자정보하드웨어(3)’, ‘양자컴퓨팅(3)’, 반도체공학과 ‘반도체현대물리학(3)’의 9학점, 전자공학과 ‘반도체집적 회로(3)’와 ‘초고주파공학(3)’ 중 택1하여 3학점, 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-1341122P13D812YT",
+  "campus": "INTL",
+  "college": "사운드테크놀로지1·영화음악·기초영상디자인",
+  "department": "영상음악 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "PM3034",
+   "PM4028",
+   "DC204",
+   "DC214"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 포스트모던음악학과 ‘사운드테크놀로지1(3)’, ‘영화음악(3)’, 디지털콘텐츠학과 ‘기초영상디자인(3)’, ‘디지털영상(3)’ 중 총 9 학점을 이수하여야 한다. 포스트모던음악학과 + 디지털콘텐츠학과"
+ },
+ {
+  "programId": "MD-I-138W13P8Y4D1341",
+  "campus": "INTL",
+  "college": "우주과학과·경영학과",
+  "department": "우주경영 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 3
+   }
+  ],
+  "totalMin": 3,
+  "courses": [
+   "SPACE101",
+   "SPACE234",
+   "MGMT4030"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 우주과학과 ‘기초천문학(3학점)’, ‘우주관측및실습(3학점)’, 경영학과 ‘캡스톤디자인(경영학) (3학점)’ 총 3학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-13EGY5X13UOZADWZRO13",
+  "campus": "INTL",
+  "college": "소프트웨어융합학과",
+  "department": "인공지능 디자인설계 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "ID3012",
+   "ID3020",
+   "SWCON104"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 산업디자인학과 ‘UX디자인(3학점)’, ‘이노베이티브디자인2(3학점)’, 소프트웨어 융합학과 ‘웹파이선프로그래밍(3학점)’ 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-13EGY5X13UOZADW12HW1",
+  "campus": "INTL",
+  "college": "컴퓨터공학부",
+  "department": "인공지능 실전 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "CSE340",
+   "AI3001",
+   "SWCON493"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 9학점 이상"
+ },
+ {
+  "programId": "MD-I-13EGY5X13UOZADW13EC1",
+  "campus": "INTL",
+  "college": "컴퓨터공학부",
+  "department": "인공지능 이론 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "AI1002",
+   "SWCON253",
+   "CSE331"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 9학점 이상"
+ },
+ {
+  "programId": "MD-I-13PTY99ZRO13UO15BS10",
+  "campus": "INTL",
+  "college": "중국어학과·후마니타스칼리지",
+  "department": "중국디지털리터러시 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "CHI108",
+   "CHI321",
+   "GEE1345",
+   "GEE1954"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 중국어학과(전공)의 ｢중국디지털인문정보｣(3학점), ｢중국어디지털리터러시｣(3학점)을 이수하고 후마니타스칼리지(자유이수) 에서 개설된 ｢파이썬으로배우는소프트웨어코딩｣(3학점) 또는 ｢소프트웨어적사유｣(3학점) 중 택 1하여 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-13UO133HY5XXZ8ZRO13F",
+  "campus": "INTL",
+  "college": "환경조경디자인학과·시각디자인학과",
+  "department": "지역공간디자인매니지먼트 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "LA337",
+   "LA313",
+   "LA341",
+   "VID3040"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 환경조경디자인학과 ‘경관의해석및재현(3)’, ‘도시공간디자인론(3)’, ‘로컬코크리에이션랩3(3)’, 시각디자인학과 ‘스몰브랜드 창업과운영(3)’ 중 총 9학점 이상을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-14FCZC815PK157O13V9",
+  "campus": "INTL",
+  "college": "기계공학과·반도체공학과·전자공학과",
+  "department": "첨단패키징 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "MEC321",
+   "MEC312",
+   "SE4005",
+   "EE204"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 기계공학과 ‘열전달(3)’, ‘반도체소재및멤스(3)’, 반도체공학과 ‘패키징분석및설계(3)’, 전자공학과 ‘전자기학2(3)’ 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-14FOXZKYEO12CG",
+  "campus": "INTL",
+  "college": "소프트웨어융합학과·융합전공·건국대학교",
+  "department": "체감기술 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 27
+   }
+  ],
+  "totalMin": 27,
+  "courses": [
+   "SWCON312",
+   "IM4102",
+   "IM2102",
+   "IM4202",
+   "IM4203",
+   "IM4204",
+   "IM3202",
+   "IM4101",
+   "IM4302"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 27학점 이상"
+ },
+ {
+  "programId": "MD-I-156410OC132O13EC15O0",
+  "campus": "INTL",
+  "college": "퍼포밍아츠연구·보컬앙상블&퍼포먼스·대중음악사",
+  "department": "크리에이티브 퍼포먼스 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "FT2030",
+   "PM1023",
+   "PM3034",
+   "KPA303"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 연극영화학과 ‘퍼포밍아츠연구(3)’, 포스트모던음악학과 ‘보컬앙상블&퍼포먼스(3)’, ‘대중음악사(3)’, K-퍼포밍아트융합전공 ‘K-Pop Dacnce(3)’ 중 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-I-15CC1564Z2810F013UO1",
+  "campus": "INTL",
+  "college": "컴퓨터공학과·융합전공·소프트웨어융합학과",
+  "department": "테크놀로지&디자인융합콘텐츠제작 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "CSE104",
+   "IM4101",
+   "IM4013",
+   "SWCON311"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "지정 과목 12학점 이상"
+ },
+ {
+  "programId": "MD-I-1658Y99131WZG013EC15",
+  "campus": "INTL",
+  "college": "한국어학과·(자유이수)",
+  "department": "한국어데이터사이언스 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "KO2503",
+   "KO3206",
+   "KO2504",
+   "GEE1954",
+   "GEE1345"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 한국어학과(전공)의 ｢한국어정보학의이해｣(3학점), ｢언어빅데이터처리와활용｣(3학점), ｢한국어에듀테크｣(3학점)의 3과목 중 2과목 이상과 후마니타스칼리지(대학)의 ｢소프트웨어적사유｣(3학점), ｢파이썬으로배우는소프트웨어코딩｣(3학점)의 2과목 중 1과목 이상으로 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-Y5XY5X137CY8G",
+  "campus": "SEOUL",
+  "college": "정치외교학과·미디어학과",
+  "department": "공공외교 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "PSC3057",
+   "PSC3060",
+   "JCOMM0021",
+   "JCOMM2052"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "공공외교 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 중 4과목 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-Y5X133K12HW12GLY6413",
+  "campus": "SEOUL",
+  "college": "공통·성악과·기악과(피아노전공)",
+  "department": "공연실습과이해 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "MUSIC404",
+   "VOICE2002",
+   "VOICE2003",
+   "VOICE4016",
+   "VOICE4017",
+   "INSTR3021",
+   "INSTR2021"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 교과목 편성 음악대학 공통교과 음악진로와탐색, 성악과 무대자세및연기1, 2, 연주자과정 1, 2, 기악과 알렉산더테크닉, 음악감상및해석 나. 편성된 7개의 교과목 모두 이수 필요 (총 9학점)"
+ },
+ {
+  "programId": "MD-S-YDC10F0118SW125811L0",
+  "campus": "SEOUL",
+  "college": "호텔관광대학·Hospitality경영학과",
+  "department": "글로벌 서비스 경험 디자인 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "GHT3003",
+   "GHT4003",
+   "HSPMT4004"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "글로벌Hospitality·관광학과 ‘Consumer Behavior in H&T(3)’, ‘Service Design in H&T(3)’, Hospitality경 영학과 ‘국제매너와비교문화론(3)’ 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-YEO12CG169T12HSY64W1",
+  "campus": "SEOUL",
+  "college": "행정학과·미디어학과·사회학과",
+  "department": "기술혁신과 사회과학 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "PA4036",
+   "JCOMM3070",
+   "JCOMM3040",
+   "SOC4034",
+   "SOC3037",
+   "CSS2022"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "① 기술혁신과 사회과학 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 중 3개 이상 학과에서 개설된 과목으로 3과목 총 9학점 이상을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-10ZC16C4Y68Y6PWZG013",
+  "campus": "SEOUL",
+  "college": "문화관광산업학과·조리산업학과",
+  "department": "문화관광 데이터사이언스 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "CULT3017",
+   "CULT3005",
+   "CUIN4007"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "문화관광산업학과 ‘관광데이터분석(3)’, / ‘문화관광시장조사론(3)’, 조리산업학과 ‘외식조사방법론(3)’ 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-114OZRO131WW12ZKYZ41",
+  "campus": "SEOUL",
+  "college": "미디어학과",
+  "department": "미디어 애널리틱스 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "JCOMM3042",
+   "JCOMM3076",
+   "JCOMM3075",
+   "JCOMM2061"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "① 미디어 애널리틱스를 이수하고자 할 경우 아래 지정 교과목 중 4과목 12학점 이상을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-114O109K122416DO13DK",
+  "campus": "SEOUL",
+  "college": "행정학과·자율전공학과",
+  "department": "미래사회의 정부와 법 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "PA2032",
+   "PA3038",
+   "GLEE1003",
+   "GLEE1010"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "① 미래사회의 정부와 법 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 중 4과목 12학점 이상을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-11L0ZRO135012YS15MG",
+  "campus": "SEOUL",
+  "college": "한국화,회화,조소전공",
+  "department": "비디오아트 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 10
+   }
+  ],
+  "totalMin": 10,
+  "courses": [
+   "ART1604",
+   "ART1605",
+   "ART2604",
+   "ART2605",
+   "ART3100"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 아트큐레이팅트랙 중 미디어아트론(3학점)과 뉴미디어아트택과정 디지털그래픽1(1학점), 디지털그래픽2(1학점), 영상 미디어1(2학점), 영상미디어2(3학점) 5과목 총 10학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-11L013T4ZBC12G412ZKY",
+  "campus": "SEOUL",
+  "college": "Hospitality경영학과·관광학과",
+  "department": "비즈니스애널리틱스 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "HSPMT3017",
+   "HSPMT4003",
+   "HSPMT1002",
+   "TOURS3025"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. Hospitality경영학과 비즈니스애널리틱스(3), Hospitality수익경영(3), Hospitality데이터의이해(3), 관광학과 시공간관광빅데이터분석(3), 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-11L1ZG013EC15BKWYEO1",
+  "campus": "SEOUL",
+  "college": "회계학과·빅데이터응용학과",
+  "department": "빅데이터 기반 회계 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "ACCT1001",
+   "ACCT3013",
+   "BDAS1004",
+   "BDAS2006"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 회계학과 회계원리(3학점), 회계정보애널리틱스(3학점), 빅데이터응용학과 빅데이터프로그래밍2(3학점), DB기초및응용 (3학점), 총 12학점을 이수하여야 한다. 나. 학생은 편성된 학점을 모두 이수해야 한다."
+ },
+ {
+  "programId": "MD-S-122416DOY641655WZG01",
+  "campus": "SEOUL",
+  "college": "정치외교학과·행정학과·경제학과",
+  "department": "사회과학 데이터분석 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "PSC3051",
+   "PA3039",
+   "ECON2041",
+   "JCOMM2060"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "① 사회과학 데이터분석을 이수하고자 할 경우 아래 지정 교과목 중 3과목 9학점 이상을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-122416DOY64165511611",
+  "campus": "SEOUL",
+  "college": "사회학과",
+  "department": "사회과학방법론 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "SOC1001",
+   "SOC1003",
+   "SOC2005",
+   "SOC2006",
+   "SOC2007"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "① 사회과학방법론 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 중 4과목 총 12학점 이상을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-12G410P415MGY68Y6P16",
+  "campus": "SEOUL",
+  "college": "Hospitality경영학과·지리학과",
+  "department": "스마트관광학 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "HSPMT3018",
+   "HSPMT4005",
+   "GEOG1042",
+   "GEOG1043"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. Hospitality경영학과 스마트관광론(3), 스마트관광디자인(3), 지리학과 시공간정보의이해(3), 시공간자료와통 계(3) 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-12HOY5XXZ8WY68Y6PWZG",
+  "campus": "SEOUL",
+  "college": "관광학과·지리학과",
+  "department": "시공간 관광 데이터 사이언스 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "TOURS2020",
+   "TOURS3025",
+   "GEOG1007"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "관광학과 ‘시공간관광정보의이해(3학점)’, ‘시공간관광빅데이터분석(3학점)’, 지리학과 ‘지도학(3학점)’ 총 9 학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-130X13F4115KZIC14FO",
+  "campus": "SEOUL",
+  "college": "응용물리학과·반도체공학과",
+  "department": "양자반도체 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "APHY3612",
+   "APHY4609",
+   "SE3002",
+   "EE325"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 응용물리학과 ‘양자정보하드웨어(3)’, ‘양자컴퓨팅(3)’, 반도체공학과 ‘반도체현대물리학(3)’의 9학점, 전자공학과 ‘반도체집적 회로(3)’와 ‘초고주파공학(3)’ 중 택일하여 3학점, 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-134812CGY64WYEO12CG",
+  "campus": "SEOUL",
+  "college": "한국화,회화,조소전공",
+  "department": "예술과 기술 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "ART2612",
+   "ART2613",
+   "ART31002"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 신규 개설될 사운드프로세싱(3학점), 이미지프로세싱(3학점), 피지컬컴퓨팅(3학점) 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-13D812YT1655",
+  "campus": "SEOUL",
+  "college": "공통·성악과·기악과(피아노)",
+  "department": "음악학 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "MUSIC2011",
+   "MUSIC2012",
+   "VOICE0002",
+   "MUSIC3016",
+   "INSTR4007",
+   "INSTR3026"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 교과목 편성 음악대학 공통교과 음악사1, 2, 성악과 오페라사, 기악과 20세기음악, 기악문헌1, 건반악기사 18 -"
+ },
+ {
+  "programId": "MD-S-13EGY5X13UOZADW13481",
+  "campus": "SEOUL",
+  "college": "한국화,회화,조소전공",
+  "department": "인공지능 예술 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "ART1604",
+   "ART2604",
+   "ART31003",
+   "GEE1954",
+   "GEE1986"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 뉴미디어아트택 중 디지털그래픽1(1학점), 영상미디어1(2학점)과 신규 개설될 인공지능예술(3학점), 후마니타스칼리지 SW 교양과목의 소프트웨어적사유(3학점), 디지털세계의신인류:인공지능과머신러닝(3학점) 총 12학점을 이수하여야 한 다."
+ },
+ {
+  "programId": "MD-S-13EGY9811A816C4135SW",
+  "campus": "SEOUL",
+  "college": "사회학과",
+  "department": "인구변화와 미래전략 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "SOC2013",
+   "SOC4042",
+   "SOC2009",
+   "SOC3040"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "① 인구변화와 미래전략 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 4과목 총 12학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-13EG10ZC134812CG",
+  "campus": "SEOUL",
+  "college": "국어국문학과·영어영문학과·철학과",
+  "department": "인문예술 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "KL3108",
+   "KL2105",
+   "ENGLI2010",
+   "PHIL3047"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 인문예술 마이크로디그리 이수 기준 인문예술 마이크로디그리를 이수하기 위해서는 국어국문학과 ‘현대비평과사회(3학점)’, ‘현대소설과 문학치료(3 학점)’, 영어영문학과 ‘문학과영화(3학점)’, 철학과 ‘독일미학과낭만주의(3학점)’ 등 3개 학과 4개 교과목 가운 데 총 3개 이상의 교과목을 수강하고 9학점을 이상을 취득해야 한다. (단, 각 학과 별 1개 이상 과목 이수해 야 함)"
+ },
+ {
+  "programId": "MD-S-13IC13F413D812YTW13F",
+  "campus": "SEOUL",
+  "college": "작곡과·기악과",
+  "department": "전자음악 작곡 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 10
+   }
+  ],
+  "totalMin": 10,
+  "courses": [
+   "COMPO3009",
+   "COMPO3010",
+   "COMPO4007",
+   "COMPO4008",
+   "MUSIC3016",
+   "INSTR2021"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 교과목 편성 작곡과 전자음악 1, 2, 3, 4 (DAW 프로그램과 MAX/MSP를 통한 작곡), 기악과 20세기음악, 음악감상및해설 나. 편성된 6개의 교과목 중 5개 교과목 이수 필요 (총 10학점)"
+ },
+ {
+  "programId": "MD-S-13J4ZF8135SW10ZC16C4",
+  "campus": "SEOUL",
+  "college": "사회학과·미디어학과",
+  "department": "젠더와 문화 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "SOC4039",
+   "SOC3022",
+   "SOC2012",
+   "SOC2009",
+   "JCOMM3067"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "① 젠더와 문화 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 4과목 12학점 이상을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-13UO128DXZ4ZADW114O1",
+  "campus": "SEOUL",
+  "college": "사학과·행정학과·지리학과",
+  "department": "지속가능 미래학 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "HIST1106",
+   "PA3036",
+   "GEOG4066"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 지속가능 미래학 융합전공 과정 가운데 “너와나의미래로의초대(1학점)”, “미래학세미나(1학점)”, “PeaceBar 프로젝트(1학점)”를 필수로 수강하고, 사학과의 “세계과학기술문명사(3학점)”, 행정학과의 “환경정책론(3학 점)”, 지리학과의 “글로벌위기와지리적상상력(3학점)” 가운데에 두 과목 이상을 선택 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-14FCZC813DK130D15ZCW",
+  "campus": "SEOUL",
+  "college": "약과학",
+  "department": "첨단의약품 규제과학 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 10
+   }
+  ],
+  "totalMin": 10,
+  "courses": [
+   "PHS3224",
+   "PHS3232",
+   "PHS4221",
+   "PHS4122"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "최저이수학점 : 11학점(기초 9학점, 선택 2학점)"
+ },
+ {
+  "programId": "MD-S-15YWZQ4W11L013T4ZBC1",
+  "campus": "SEOUL",
+  "college": "조리&푸드디자인학과·Hospitality경영학과",
+  "department": "푸드 비즈니스 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "CNFDM2007",
+   "CNFDM4010",
+   "HSPMT3007"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "조리&푸드디자인학과 ‘외식마케팅(3)’, ‘푸드디자인(3)’ / Hospitality경영학과 ‘Hospitality브랜드경영론(3)’, 총 9학점을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-S-166H13ITY64W16DOY4K1",
+  "campus": "SEOUL",
+  "college": "회계학과·행정학과",
+  "department": "행정과 회계정보 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "ACCT1001",
+   "ACCT4009",
+   "PA1001",
+   "PA2004"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "가. 회계학과 회계원리(3학점), 정부회계(3학점), 행정학과 행정학원론(3학점), 재무행정론(3학점), 총 12학점을 이수하여야 한다. 나. 학생은 편성된 학점을 모두 이수해야 한다."
+ },
+ {
+  "programId": "MD-S-16C8Y4D13B8YEO135SWY",
+  "campus": "SEOUL",
+  "college": "정치외교학과·행정학과·경제학과",
+  "department": "환경위기와 기후변화 거버넌스 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "PSC3047",
+   "PA3036",
+   "ECON3054",
+   "ECON3061",
+   "SOC2017"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "① 환경위기와 기후변화 거버넌스 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 중 3개 이상 학과에서 개설된 과목으로 3과목 총 9학점 이상을 이수하여야 한다."
+ },
+ {
+  "programId": "MD-B-16F810P4ZBC158G12G4W",
+  "campus": "SEOUL",
+  "anyCampus": true,
+  "college": "후마니타스칼리지",
+  "department": "후마니타스 AI/SW MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "GEE1954",
+   "GEE1984",
+   "GEE1985",
+   "GEE1193",
+   "GED1711",
+   "GED1999"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "후마니타스칼리지 2026 교양교육과정 [별표2]",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "편성된 9과목 중 3과목(9학점) · 교양학점과 중복 인정"
+ },
+ {
+  "programId": "MD-B-16F810P4ZBC158G12G4W2",
+  "campus": "SEOUL",
+  "anyCampus": true,
+  "college": "후마니타스칼리지",
+  "department": "후마니타스 인공지능 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "GEE1345",
+   "GEE1343",
+   "GED1244",
+   "GEE1953",
+   "GEE1983",
+   "GEE1986",
+   "GEE1975",
+   "GEE1976",
+   "GEE1987"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "후마니타스칼리지 2026 교양교육과정 [별표2]",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "편성된 12과목 중 3과목(9학점) · 교양학점과 중복 인정"
+ },
+ {
+  "programId": "MD-B-16F810P4ZBC158G12G4W3",
+  "campus": "SEOUL",
+  "anyCampus": true,
+  "college": "후마니타스칼리지",
+  "department": "후마니타스 소프트웨어 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 9
+   }
+  ],
+  "totalMin": 9,
+  "courses": [
+   "GEE1988",
+   "GEE1344",
+   "GEE1980",
+   "GEE1989",
+   "GEE1979",
+   "GED1245",
+   "GEE1990",
+   "GEE1991",
+   "GEE1978",
+   "GEE1127"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "후마니타스칼리지 2026 교양교육과정 [별표2]",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "편성된 12과목 중 3과목(9학점) · 교양학점과 중복 인정"
+ },
+ {
+  "programId": "MD-B-134812CG14FO168O12I4",
+  "campus": "SEOUL",
+  "anyCampus": true,
+  "college": "후마니타스칼리지",
+  "department": "예술체험심화 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 11
+   }
+  ],
+  "totalMin": 11,
+  "courses": [
+   "GEE11038",
+   "GEE11029",
+   "GEE11027",
+   "GEE11028",
+   "GEE11011"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "후마니타스칼리지 2026 교양교육과정 [별표2]",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "편성된 5과목 중 4과목(11~12학점) · 교양학점과 중복 인정"
+ },
+ {
+  "programId": "MD-B-10OC15BK10BW12HO5310",
+  "campus": "SEOUL",
+  "anyCampus": true,
+  "college": "후마니타스칼리지",
+  "department": "리터러시·라이팅 MD",
+  "kind": "MICRO_DEGREE",
+  "admissionYearRange": [
+   2020,
+   2026
+  ],
+  "requirements": [
+   {
+    "category": "MD",
+    "minCredits": 12
+   }
+  ],
+  "totalMin": 12,
+  "courses": [
+   "GEE1187",
+   "GEE1180",
+   "GEE11008",
+   "GEE11040",
+   "GEE11009"
+  ],
+  "overlapPolicy": {
+   "withMajor": "FULL"
+  },
+  "source": {
+   "doc": "후마니타스칼리지 2026 교양교육과정 [별표2]",
+   "year": 2026
+  },
+  "verified": true,
+  "note": "편성된 5과목 중 4과목(12학점) · 교양학점과 중복 인정"
  },
  {
   "programId": "SAMPLE-2025-MAJOR",

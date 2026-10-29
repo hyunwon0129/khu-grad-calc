@@ -195,11 +195,28 @@ const programs = [];
       rule: 'A(의학통계학)·B(인공지능개론)·C(멀티모달머신러닝개론)·D(의료AI프로젝트) 영역별 1과목 이상, 12학점 (AI Dentist 트랙 11학점). 2학기 이상 재학 후 서류·면접 선발',
     },
   ];
+  // 학과 교육과정 원문의 [별표] 마이크로디그리 이수체계도에서 뽑은 과정 (scratchpad parse_md.py → data-src/md-2026.json)
+  const slugMd = (name) => [...name].map((ch) => ch.charCodeAt(0).toString(36)).join('').slice(0, 20).toUpperCase();
+  const usedMd = new Set();
+  for (const m of JSON.parse(read('data-src/md-2026.json'))) {
+    let mid = `MD-${m.campus[0]}-${slugMd(m.name)}`;
+    for (let k = 2; usedMd.has(mid); k++) mid = `MD-${m.campus[0]}-${slugMd(m.name)}${k}`;
+    usedMd.add(mid);
+    const depts = [...new Set(m.courses.map((c) => c.dept).filter((d) => d && /[가-힣]/.test(d)))];
+    mds.push({
+      id: mid, name: `${m.name} MD`, min: m.total,
+      campus: m.campus === 'BOTH' ? 'BOTH' : m.campus,
+      college: depts.slice(0, 3).join('·') || m.src,
+      list: m.courses.map((c) => [c.code, c.name, c.credit]),
+      rule: m.rule || `지정 과목 ${m.total}학점 이상`,
+      doc: m.src === 'book' ? '2026학년도 교육과정(국제캠퍼스) 마이크로디그리 이수체계도' : m.src.includes('후마니타스') ? m.src : '학과 교육과정 시행세칙(2026) 마이크로디그리 이수체계도',
+    });
+  }
   for (const md of mds) {
     md.list.forEach(([code, name, credit]) => addCourse(code, courses.get(code)?.name ?? name, credit, md.id, 'MD'));
     programs.push({
       programId: md.id,
-      campus: md.campus === 'BOTH' ? 'SEOUL' : 'SEOUL',
+      campus: md.campus === 'INTL' ? 'INTL' : 'SEOUL',
       ...(md.campus === 'BOTH' ? { anyCampus: true } : {}),
       college: md.college ?? '경영대학',
       department: md.name,
@@ -209,7 +226,7 @@ const programs = [];
       totalMin: md.min,
       courses: md.list.map(([c]) => c),
       overlapPolicy: { withMajor: 'FULL' },
-      source: md.id === 'MD-MEDAI' ? { doc: '의료인공지능 특화인재 양성사업단 학부과정 마이크로디그리 선발 세칙(2026.03.01 수정)', year: 2026 } : mdSource,
+      source: md.id === 'MD-MEDAI' ? { doc: '의료인공지능 특화인재 양성사업단 학부과정 마이크로디그리 선발 세칙(2026.03.01 수정)', year: 2026 } : md.doc ? { doc: md.doc, year: 2026 } : mdSource,
       verified: true,
       note: md.rule,
     });
@@ -358,6 +375,18 @@ const departments = raw.map((r) => {
 
 const order = { MAJOR: 0, MULTI_MAJOR: 1, MICRO_DEGREE: 2, MINOR: 3 };
 programs.sort((a, b) => Number(a.programId.startsWith('SAMPLE')) - Number(b.programId.startsWith('SAMPLE')) || order[a.kind] - order[b.kind]);
+
+// ── 과목명 정리: 원문 편성표의 오타(교과목 해설·다른 표와 대조해 확인)와 각주 표시 제거 ──
+const NAME_FIX = {
+  GEOG1042: '시공간정보의이해', PM2025: '사운드테크놀로지2', CT1005: '패션비즈니스의이해', ENGLI3002: '셰익스피어',
+  GEOG4041: '졸업논문(지리학)', BDAS1002: '빅데이터프로그래밍1', BDAS1004: '빅데이터프로그래밍2',
+  IS2507: 'Understanding International Development', AS3024: 'Independent Learning and Research(Asian Studies)',
+};
+for (const c of courses.values()) {
+  let n = NAME_FIX[c.code] ?? c.name;
+  n = n.replace(/\s*※\d\)/g, '').replace(/\*+$/, '').replace(/\s{2,}/g, ' ').trim();
+  c.name = n;
+}
 
 writeFileSync(new URL('src/data/courses.json', root), JSON.stringify([...courses.values()], null, 1) + '\n');
 writeFileSync(new URL('src/data/programs.json', root), JSON.stringify(programs, null, 1) + '\n');

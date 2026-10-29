@@ -1,0 +1,2552 @@
+[
+ {
+  "name": "AI 패션테크",
+  "eng": "AI Fashion Tech",
+  "campus": "INTL",
+  "rule": "가. 의류디자인학과 ‘패션스튜디오Ⅰ(3)’, ‘웨어러블테크놀로지(3)’, 웨어러블디자인테크놀로지 전공 ‘버츄얼피팅스튜디오(3)’ 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "TC313",
+    "name": "패션스튜디오Ⅰ",
+    "credit": 3,
+    "dept": "의류디자인"
+   },
+   {
+    "code": "TC321",
+    "name": "웨어러블테크놀로지",
+    "credit": 3,
+    "dept": "의류디자인"
+   },
+   {
+    "code": "WDT3001",
+    "name": "버츄얼피팅스튜디오",
+    "credit": 3,
+    "dept": "웨어러블디자인테크놀로지"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "AI애니메이션",
+  "eng": "AI Animation",
+  "campus": "INTL",
+  "rule": "가. 디지털콘텐츠학과 ‘어드밴스드모션그래픽스(3)’, ‘어드밴스드애니메이션(3)’, 연극영화학과 ‘디지털편집실습(3)’, ‘초급영화이론(3)’ 중 총 9학점을 이수하여야 한다. 디지털콘텐츠학과 + 연극영화학과",
+  "total": 9,
+  "courses": [
+   {
+    "code": "DC331",
+    "name": "",
+    "credit": 3,
+    "dept": "어드밴스드모션그래픽스"
+   },
+   {
+    "code": "DC334",
+    "name": "",
+    "credit": 3,
+    "dept": "어드밴스드애니메이션"
+   },
+   {
+    "code": "FT2023",
+    "name": "",
+    "credit": 3,
+    "dept": "디지털편집실습"
+   },
+   {
+    "code": "FT3072",
+    "name": "",
+    "credit": 3,
+    "dept": "초급영화이론"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "VR/AR 고객경험리서치",
+  "eng": "VR/AR User Experience Research",
+  "campus": "INTL",
+  "rule": "",
+  "total": 15,
+  "courses": [
+   {
+    "code": "SWCON104",
+    "name": "전공선택 웹파이선프로그래밍",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   },
+   {
+    "code": "IS3528",
+    "name": "전공선택 Topics in Marketing (H)",
+    "credit": 3,
+    "dept": "국제학과"
+   },
+   {
+    "code": "CSE104",
+    "name": "전공선택 실감미디어 컴퓨팅기초",
+    "credit": 3,
+    "dept": "컴퓨터공학부"
+   },
+   {
+    "code": "IM4103",
+    "name": "전공선택 XR기술 PBL",
+    "credit": 3,
+    "dept": "실감미디어융합전공"
+   },
+   {
+    "code": "IM4101",
+    "name": "전공선택 실감미디어 프로젝트",
+    "credit": 3,
+    "dept": "실감미디어융합전공"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "XR입출력기술",
+  "eng": "XR Input/Output Technology",
+  "campus": "INTL",
+  "rule": "",
+  "total": 24,
+  "courses": [
+   {
+    "code": "SWCON313",
+    "name": "전공선택 가상현실",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   },
+   {
+    "code": "SWCON492",
+    "name": "전공선택 풀스택서비스네트워킹",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   },
+   {
+    "code": "IM4103",
+    "name": "전공선택 XR기술PBL",
+    "credit": 3,
+    "dept": "융합전공"
+   },
+   {
+    "code": "IM4101",
+    "name": "전공선택 실감미디어프로젝트",
+    "credit": 3,
+    "dept": "융합전공"
+   },
+   {
+    "code": "CSE426",
+    "name": "전공선택 영상처리",
+    "credit": 3,
+    "dept": "컴퓨터공학과"
+   },
+   {
+    "code": "CSE441",
+    "name": "전공선택 컴퓨터비젼 택1",
+    "credit": 3,
+    "dept": "컴퓨터공학과"
+   },
+   {
+    "code": "IM4205",
+    "name": "전공선택 고급컴퓨터비전",
+    "credit": 3,
+    "dept": "건국대학교"
+   },
+   {
+    "code": "IM3203",
+    "name": "전공선택 고급컴퓨터그래픽스",
+    "credit": 3,
+    "dept": "건국대학교"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "게임공학",
+  "eng": "Game Engineering",
+  "campus": "INTL",
+  "rule": "",
+  "total": 24,
+  "courses": [
+   {
+    "code": "SWCON211",
+    "name": "전공선택 게임프로그래밍(입문)",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   },
+   {
+    "code": "SWCON212",
+    "name": "전공선택 게임엔진기초",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   },
+   {
+    "code": "SWCON314",
+    "name": "전공선택 게임공학",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   },
+   {
+    "code": "CSE428",
+    "name": "전공선택 컴퓨터그래픽스 택1",
+    "credit": 3,
+    "dept": "컴퓨터공학과"
+   },
+   {
+    "code": "IM3203",
+    "name": "전공선택 고급컴퓨터그래픽스",
+    "credit": 3,
+    "dept": "건국대학교"
+   },
+   {
+    "code": "IM3303",
+    "name": "전공선택 게임알고리즘",
+    "credit": 3,
+    "dept": "계명대학교"
+   },
+   {
+    "code": "IM4301",
+    "name": "전공선택 게임캡스톤디자인",
+    "credit": 3,
+    "dept": "계명대학교"
+   },
+   {
+    "code": "IM3603",
+    "name": "전공선택 게임프로젝트",
+    "credit": 3,
+    "dept": "전주대학교"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "그린바이오소재",
+  "eng": "Green Bio Resources",
+  "campus": "INTL",
+  "rule": "가. 식물환경신소재공학과 ‘기능성바이오소재(3학점)’, ‘지속가능한바이오플라스틱소재및응용(3학점)’, 한방생명공학과 ‘약용소재학(3학점)’, 식품생명공학과 ‘바이오기능성식품소재(3학점)’ 중 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "PAM421",
+    "name": "기능성바이오소재",
+    "credit": 3,
+    "dept": "식물환경신소재공학과"
+   },
+   {
+    "code": "PAM337",
+    "name": "지속가능한바이오플라스틱소재및응용",
+    "credit": 3,
+    "dept": "식물환경신소재공학과"
+   },
+   {
+    "code": "OMB301",
+    "name": "약용소재학",
+    "credit": 3,
+    "dept": "한방생명공학과"
+   },
+   {
+    "code": "FSB361",
+    "name": "바이오기능성식품소재",
+    "credit": 3,
+    "dept": "식품생명공학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "글로벌미디어컬처",
+  "eng": "Global Media Culture",
+  "campus": "INTL",
+  "rule": "가. 프랑스어학과 ‘프랑스어권미디어문화(3학점)’, 프랑스어학과 ‘프랑스문화콘텐츠’(3학점)’, 글로벌커뮤니케이션학부 ‘영화와미국문화 (3학점)’, 글로벌커뮤니케이션학부 ‘미디어연구(3학점)’, 연극영화학과 ‘초급영화이론(3학점)’ 중 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "FR3044",
+    "name": "프랑스어권미디어문화",
+    "credit": 3,
+    "dept": "프랑스어학과"
+   },
+   {
+    "code": "FR4041",
+    "name": "프랑스문화콘텐츠",
+    "credit": 3,
+    "dept": "프랑스어학과"
+   },
+   {
+    "code": "ELC255",
+    "name": "영화와미국문화",
+    "credit": 3,
+    "dept": "글로벌커뮤니케이션학부"
+   },
+   {
+    "code": "ELC342",
+    "name": "미디어연구",
+    "credit": 3,
+    "dept": "글로벌커뮤니케이션학부"
+   },
+   {
+    "code": "FT2076",
+    "name": "초급영화이론",
+    "credit": 3,
+    "dept": "연극영화학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "글로벌협력",
+  "eng": "Global Cooperation",
+  "campus": "INTL",
+  "rule": "가. 프랑스어학과 ‘현대아프리카의이해(3학점)’, 러시아어학과 ‘유라시아의이해(3학점)’, 스페인어학과 ‘라틴아메리카지역연구(3학점)’, 한국어학과 ‘문화의이해(3학점)’ 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "FR3043",
+    "name": "현대아프리카의이해",
+    "credit": 3,
+    "dept": "프랑스어학과"
+   },
+   {
+    "code": "RU4301",
+    "name": "유라시아의이해",
+    "credit": 3,
+    "dept": "러시아어학과"
+   },
+   {
+    "code": "ESP329",
+    "name": "라틴아메리카지역연구",
+    "credit": 3,
+    "dept": "스페인어학과"
+   },
+   {
+    "code": "KO1201",
+    "name": "문화의이해",
+    "credit": 3,
+    "dept": "한국어학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "동아시아영상문화산업",
+  "eng": "East Asian Media & Contents Industry",
+  "campus": "INTL",
+  "rule": "가. 일본어학과(전공)의 ｢일본영화감상과비평｣(3학점), 한국어학과(전공)의 ｢한국소설과영상｣(3학점), 중국어학과(전공)의 ｢중국 영화와비평｣(3학점), 연극영화과(전공)의 ｢현대영화연구｣(3학점) 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "JP116",
+    "name": "일본영화감상과비평",
+    "credit": 3,
+    "dept": "일본어학과"
+   },
+   {
+    "code": "KO3204",
+    "name": "한국소설과영상",
+    "credit": 3,
+    "dept": "한국어학과"
+   },
+   {
+    "code": "CHI416",
+    "name": "중국영화와비평",
+    "credit": 3,
+    "dept": "중국어학과"
+   },
+   {
+    "code": "FT2033",
+    "name": "현대영화연구",
+    "credit": 3,
+    "dept": "연극영화과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "디자인 소프트웨어",
+  "eng": "Design Software",
+  "campus": "INTL",
+  "rule": "",
+  "total": 12,
+  "courses": [
+   {
+    "code": "SWCON103",
+    "name": "전공필수 디자인적사고",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   },
+   {
+    "code": "SWCON370",
+    "name": "전공선택 풀스택서비스프로그래밍",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   },
+   {
+    "code": "SWCON492",
+    "name": "전공선택 풀스택서비스네트워킹",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   },
+   {
+    "code": "SWCON371",
+    "name": "전공선택 디자인프로그래밍",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "디지털스마트팜",
+  "eng": "Digital Smart Farming",
+  "campus": "INTL",
+  "rule": "가. 스마트팜과학과 ‘사물인터넷(IoT)기초(3학점)’, ‘스마트농업프로그래밍(3학점)’, 융합바이오·신소재공학과 ‘그린바이오소재생명 공학(3학점)’, 식품생명공학과 ‘식품나노과학개론(3학점)’ 중 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "SFS211",
+    "name": "사물인터넷(IoT)기초",
+    "credit": 3,
+    "dept": "스마트팜과학과"
+   },
+   {
+    "code": "SFS214",
+    "name": "스마트농업프로그래밍",
+    "credit": 3,
+    "dept": "스마트팜과학과"
+   },
+   {
+    "code": "CBM307",
+    "name": "그린바이오소재생명공학",
+    "credit": 3,
+    "dept": "융합바이오·신소재공학과"
+   },
+   {
+    "code": "FSB271",
+    "name": "식품나노과학개론",
+    "credit": 3,
+    "dept": "식품생명공학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "디지털종자생명",
+  "eng": "Digital Seed and Life Sciences",
+  "campus": "INTL",
+  "rule": "가. 유전생명공학과 ‘작물생명공학(3학점)’, ‘유전공학(3학점)’, 스마트팜과학과 ‘식물육종학(3학점)’, 융합바이오·신소재공학과 ‘바이오빅데이터분석및실험(3학점)’ 중 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "GEN208",
+    "name": "작물생명공학",
+    "credit": 3,
+    "dept": "유전생명공학과"
+   },
+   {
+    "code": "GEN312",
+    "name": "유전공학",
+    "credit": 3,
+    "dept": "유전생명공학과"
+   },
+   {
+    "code": "SFS301",
+    "name": "식물육종학",
+    "credit": 3,
+    "dept": "스마트팜과학과"
+   },
+   {
+    "code": "CBM212",
+    "name": "바이오빅데이터분석및실험",
+    "credit": 3,
+    "dept": "융합바이오·신소재공학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "라틴아메리카 국제개발협력",
+  "eng": "International Development and Cooperation with Latin America",
+  "campus": "INTL",
+  "rule": "가. 스페인어학과 ‘라틴아메리카역사와문화(3학점)’, ‘기후변화와라틴아메리카(3학점)’, 국제학과 ‘Understanding International Development Cooperation (3학점)’, ‘Topics in international development cooperation (3학점)’ 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "ESP117",
+    "name": "라틴아메리카역사와문화",
+    "credit": 3,
+    "dept": "스페인어학과"
+   },
+   {
+    "code": "ESP346",
+    "name": "기후변화와라틴아메리카",
+    "credit": 3,
+    "dept": "스페인어학과"
+   },
+   {
+    "code": "IS2507",
+    "name": "Understanding International Development ",
+    "credit": 3,
+    "dept": "국제학과"
+   },
+   {
+    "code": "IS3529",
+    "name": "Topics in International Development Coop",
+    "credit": 3,
+    "dept": "국제학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "로봇 소프트웨어",
+  "eng": "Robot Software",
+  "campus": "INTL",
+  "rule": "",
+  "total": 9,
+  "courses": [
+   {
+    "code": "SWCON331",
+    "name": "전공선택 로봇프로그래밍",
+    "credit": 3,
+    "dept": "소프트웨어융합학과/컴퓨터공학과"
+   },
+   {
+    "code": "SWCON366",
+    "name": "전공선택 3D데이터처리",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   },
+   {
+    "code": "SWCON494",
+    "name": "전공선택 영상분석과패턴인식",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "로컬브랜드매니지먼트",
+  "eng": "Local Brand Management",
+  "campus": "INTL",
+  "rule": "가. 시각디자인학과 ‘아이덴티티디자인(3)’, ‘브랜드패키지디자인(3)’, ‘소비자행태와브랜드전략(3)’, 문화엔터테인먼트학과 ‘로컬코 크리에이션랩1(3)’ 중 총 9학점 이상을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "VID3038",
+    "name": "아이덴티티디자인",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "VID3032",
+    "name": "브랜드패키지디자인",
+    "credit": 3,
+    "dept": "시각디자인학과"
+   },
+   {
+    "code": "VID2026",
+    "name": "소비자행태와브랜드전략",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "CUENT4014",
+    "name": "로컬코크리에이션랩1",
+    "credit": 3,
+    "dept": "문화엔터테인먼트"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "로컬콘텐츠마케팅",
+  "eng": "Local Contents Marketing",
+  "campus": "INTL",
+  "rule": "가. 문화엔터테인먼트학과 ‘엔터테인먼트마케팅(3)’, ‘축제이벤트기획(3)’, ‘지역문화콘텐츠기획(3)’, 시각디자인학과 ‘로컬코크리 에이션랩2(3)’ 중 총 9학점 이상을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "CUENT2011",
+    "name": "엔터테인먼트마케팅",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "CUENT4004",
+    "name": "축제이벤트기획",
+    "credit": 3,
+    "dept": "문화엔터테인먼트학과"
+   },
+   {
+    "code": "CUENT3012",
+    "name": "지역문화콘텐츠기획",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "VID3039",
+    "name": "로컬코크리에이션랩2",
+    "credit": 3,
+    "dept": "시각디자인학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "메타버스",
+  "eng": "Metaverse",
+  "campus": "INTL",
+  "rule": "",
+  "total": 9,
+  "courses": [
+   {
+    "code": "CSE324",
+    "name": "전공선택 메타버스시스템",
+    "credit": 3,
+    "dept": "컴퓨터공학부"
+   },
+   {
+    "code": "CSE430",
+    "name": "전공선택 메타버스데이터처리",
+    "credit": 3,
+    "dept": "컴퓨터공학부/소프트웨어융합학과"
+   },
+   {
+    "code": "SWCON311",
+    "name": "전공선택 게임그래픽프로그래밍",
+    "credit": 3,
+    "dept": "소프트웨어융합과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "미디어와 영상문화콘텐츠",
+  "eng": "Media & Video Contents",
+  "campus": "INTL",
+  "rule": "가. 한국어학과(전공)의 ｢한국대중문화｣(3학점)와 ｢한국소설과영상｣(3학점), 중국어학과(전공)의 ｢중국영화와비평｣(3학점), 글로벌 커뮤니케이션학부(전공)의 ｢영상문화와기술｣(3학점) 총 12학점을 이수하여야 한다. 나. 이수 시, 본 전공 과목은 ‘전공선택’으로, 그 외 전공 과목은 ‘일반선택’으로 인정된다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "KO4201",
+    "name": "한국대중문화",
+    "credit": 3,
+    "dept": "한국어학과"
+   },
+   {
+    "code": "KO3204",
+    "name": "한국소설과영상",
+    "credit": 3,
+    "dept": "한국어학과"
+   },
+   {
+    "code": "CHI416",
+    "name": "중국영화와비평",
+    "credit": 3,
+    "dept": "중국어학과"
+   },
+   {
+    "code": "ELC359",
+    "name": "영상문화와기술",
+    "credit": 3,
+    "dept": "글로벌커뮤니케이션학부"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "바이오헬스",
+  "eng": "Bio-Health",
+  "campus": "INTL",
+  "rule": "가. 식품생명공학과 ‘식품분자생물학(3학점)’, ‘식품생명공학(3학점)’, 유전생명공학과 ‘바이오의약품개론(3학점)’, 융합바이오·신 소재공학과 ‘바이오약리학(3학점)’ 중 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "FSB482",
+    "name": "식품분자생물학",
+    "credit": 3,
+    "dept": "식품생명공학과"
+   },
+   {
+    "code": "FSB441",
+    "name": "식품생명공학",
+    "credit": 3,
+    "dept": "식품생명공학과"
+   },
+   {
+    "code": "GEN328",
+    "name": "바이오의약품개론",
+    "credit": 3,
+    "dept": "유전생명공학과"
+   },
+   {
+    "code": "CBM302",
+    "name": "바이오약리학",
+    "credit": 3,
+    "dept": "융합바이오·신소재공학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "빅데이터 분석",
+  "eng": "Bigdata Analysis",
+  "campus": "INTL",
+  "rule": "",
+  "total": 9,
+  "courses": [
+   {
+    "code": "CSE434",
+    "name": "전공선택 빅데이터프로그래밍",
+    "credit": 3,
+    "dept": "컴퓨터공학부/소프트웨어융합학과"
+   },
+   {
+    "code": "AI3004",
+    "name": "전공선택 빅데이터마이닝",
+    "credit": 3,
+    "dept": "컴퓨터공학부"
+   },
+   {
+    "code": "SWCON425",
+    "name": "전공선택 데이터사이언스및시각화",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "실감미디어기술",
+  "eng": "Immersive Media Technology",
+  "campus": "INTL",
+  "rule": "",
+  "total": 18,
+  "courses": [
+   {
+    "code": "CSE103",
+    "name": "전공선택 객체지향프로그래밍",
+    "credit": 3,
+    "dept": "컴퓨터공학과"
+   },
+   {
+    "code": "CSE224",
+    "name": "전공선택 UI/UX프로그래밍",
+    "credit": 3,
+    "dept": "컴퓨터공학과"
+   },
+   {
+    "code": "CSE428",
+    "name": "전공선택 컴퓨터그래픽스",
+    "credit": 3,
+    "dept": "컴퓨터공학과"
+   },
+   {
+    "code": "IM3202",
+    "name": "전공선택 고급컴퓨터그래픽스",
+    "credit": 3,
+    "dept": "건국대학교"
+   },
+   {
+    "code": "IM4101",
+    "name": "전공선택 실감미디어프로젝트",
+    "credit": 3,
+    "dept": "융합전공"
+   },
+   {
+    "code": "IM4013",
+    "name": "전공선택 XR기술PBL",
+    "credit": 3,
+    "dept": "융합전공"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "실감미디어펀더멘털",
+  "eng": "Immersive Media Fundamentals",
+  "campus": "INTL",
+  "rule": "",
+  "total": 18,
+  "courses": [
+   {
+    "code": "CSE104",
+    "name": "전공선택 실감미디어컴퓨팅기초",
+    "credit": 3,
+    "dept": "컴퓨터공학과"
+   },
+   {
+    "code": "IM1501",
+    "name": "전공선택 실감디자인씽킹(XR)",
+    "credit": 3,
+    "dept": "배재대학교"
+   },
+   {
+    "code": "IM1601",
+    "name": "전공선택 실감미디어의이해",
+    "credit": 3,
+    "dept": "전주대학교"
+   },
+   {
+    "code": "IM1101",
+    "name": "전공선택 XR비즈니스입문",
+    "credit": 3,
+    "dept": "실감미디어융합전공"
+   },
+   {
+    "code": "IM1701",
+    "name": "전공선택 XR창업비즈니스모델 택1",
+    "credit": 3,
+    "dept": "중앙대학교"
+   },
+   {
+    "code": "IM1702",
+    "name": "전공선택 XR마케팅",
+    "credit": 3,
+    "dept": "중앙대학교"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "아메리카 문화융합",
+  "eng": "Trans-American Cultural Convergence",
+  "campus": "INTL",
+  "rule": "가. 글로벌커뮤니케이션학부의 ‘미국역사와문화’(3학점)와 ‘영화와미국문화(3학점),’ 스페인어학과의 ‘미국히스패닉의세계(3학점)’와 ‘기후변화와라틴아메리카(3학점)’ 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "ELC106",
+    "name": "미국역사와문화",
+    "credit": 3,
+    "dept": "글로벌커뮤니케이션학부"
+   },
+   {
+    "code": "ELC255",
+    "name": "영화와미국문화",
+    "credit": 3,
+    "dept": "글로벌커뮤니케이션학부"
+   },
+   {
+    "code": "ESP334",
+    "name": "미국히스패닉의세계",
+    "credit": 3,
+    "dept": "스페인어학과"
+   },
+   {
+    "code": "ESP346",
+    "name": "기후변화와라틴아메리카",
+    "credit": 3,
+    "dept": "스페인어학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "아트&인스톨레이션",
+  "eng": "Art & Installation",
+  "campus": "INTL",
+  "rule": "가. 도예학과(전공): ‘인체조형(3학점)’, 4D아트융합전공: ‘아트미디어탐구(3학점)’, ‘4D아트설치(3학점)’ 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "CA2020",
+    "name": "인체조형",
+    "credit": 3,
+    "dept": "도예학과"
+   },
+   {
+    "code": "FDA201",
+    "name": "아트미디어탐구",
+    "credit": 3,
+    "dept": "4D아트융합전공"
+   },
+   {
+    "code": "FDA301",
+    "name": "4D아트설치",
+    "credit": 3,
+    "dept": "4D아트융합전공"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "양자반도체",
+  "eng": "Quantum Semiconductor",
+  "campus": "INTL",
+  "rule": "가. 응용물리학과 ‘양자정보하드웨어(3)’, ‘양자컴퓨팅(3)’, 반도체공학과 ‘반도체현대물리학(3)’의 9학점, 전자공학과 ‘반도체집적 회로(3)’와 ‘초고주파공학(3)’ 중 택1하여 3학점, 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "APHY3612",
+    "name": "양자컴퓨팅",
+    "credit": 3,
+    "dept": "응용물리학과"
+   },
+   {
+    "code": "APHY4609",
+    "name": "양자정보하드웨어",
+    "credit": 3,
+    "dept": "응용물리학과"
+   },
+   {
+    "code": "SE3002",
+    "name": "반도체현대물리학",
+    "credit": 3,
+    "dept": "반도체공학과"
+   },
+   {
+    "code": "EE325",
+    "name": "반도체집적회로, 초고주파공학 중 택1",
+    "credit": 3,
+    "dept": "EE496,"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "영상음악",
+  "eng": "Screen Scoring",
+  "campus": "INTL",
+  "rule": "가. 포스트모던음악학과 ‘사운드테크놀로지1(3)’, ‘영화음악(3)’, 디지털콘텐츠학과 ‘기초영상디자인(3)’, ‘디지털영상(3)’ 중 총 9 학점을 이수하여야 한다. 포스트모던음악학과 + 디지털콘텐츠학과",
+  "total": 9,
+  "courses": [
+   {
+    "code": "PM3034",
+    "name": "",
+    "credit": 3,
+    "dept": "사운드테크놀로지1"
+   },
+   {
+    "code": "PM4028",
+    "name": "",
+    "credit": 3,
+    "dept": "영화음악"
+   },
+   {
+    "code": "DC204",
+    "name": "",
+    "credit": 3,
+    "dept": "기초영상디자인"
+   },
+   {
+    "code": "DC214",
+    "name": "",
+    "credit": 3,
+    "dept": "디지털영상"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "우주경영",
+  "eng": "Space Business",
+  "campus": "INTL",
+  "rule": "가. 우주과학과 ‘기초천문학(3학점)’, ‘우주관측및실습(3학점)’, 경영학과 ‘캡스톤디자인(경영학) (3학점)’ 총 3학점을 이수하여야 한다.",
+  "total": 3,
+  "courses": [
+   {
+    "code": "SPACE101",
+    "name": "기초천문학",
+    "credit": 3,
+    "dept": "우주과학과"
+   },
+   {
+    "code": "SPACE234",
+    "name": "우주관측및실습",
+    "credit": 3,
+    "dept": "우주과학과"
+   },
+   {
+    "code": "MGMT4030",
+    "name": "캡스톤디자인(경영학)",
+    "credit": 3,
+    "dept": "경영학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "인공지능 디자인설계",
+  "eng": "AI Design Engineering",
+  "campus": "INTL",
+  "rule": "가. 산업디자인학과 ‘UX디자인(3학점)’, ‘이노베이티브디자인2(3학점)’, 소프트웨어 융합학과 ‘웹파이선프로그래밍(3학점)’ 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "ID3012",
+    "name": "UX디자인",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "ID3020",
+    "name": "이노베이티브디자인2",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "SWCON104",
+    "name": "웹파이선프로그래밍",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "인공지능 실전",
+  "eng": "Artificial Intelligence Practical",
+  "campus": "INTL",
+  "rule": "",
+  "total": 9,
+  "courses": [
+   {
+    "code": "CSE340",
+    "name": "전공필수 실전기계학습",
+    "credit": 3,
+    "dept": "컴퓨터공학부"
+   },
+   {
+    "code": "AI3001",
+    "name": "전공필수 고급딥러닝",
+    "credit": 3,
+    "dept": "컴퓨터공학부"
+   },
+   {
+    "code": "SWCON493",
+    "name": "전공선택 자연언어처리",
+    "credit": 3,
+    "dept": ""
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "인공지능 이론",
+  "eng": "Artificial Intelligence Theory",
+  "campus": "INTL",
+  "rule": "",
+  "total": 9,
+  "courses": [
+   {
+    "code": "AI1002",
+    "name": "전공필수 인공지능프로그래밍",
+    "credit": 3,
+    "dept": "컴퓨터공학부"
+   },
+   {
+    "code": "SWCON253",
+    "name": "전공필수 기계학습",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "CSE331",
+    "name": "전공필수 딥러닝",
+    "credit": 3,
+    "dept": "컴퓨터공학부"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "중국디지털리터러시",
+  "eng": "Digital Literacy of China",
+  "campus": "INTL",
+  "rule": "가. 중국어학과(전공)의 ｢중국디지털인문정보｣(3학점), ｢중국어디지털리터러시｣(3학점)을 이수하고 후마니타스칼리지(자유이수) 에서 개설된 ｢파이썬으로배우는소프트웨어코딩｣(3학점) 또는 ｢소프트웨어적사유｣(3학점) 중 택 1하여 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "CHI108",
+    "name": "중국디지털인문정보",
+    "credit": 3,
+    "dept": "중국어학과"
+   },
+   {
+    "code": "CHI321",
+    "name": "중국어디지털리터러시",
+    "credit": 3,
+    "dept": "중국어학과"
+   },
+   {
+    "code": "GEE1345",
+    "name": "파이썬으로배우는소프트웨어코딩",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1954",
+    "name": "소프트웨어적사유",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "지역공간디자인매니지먼트",
+  "eng": "Local Space Design Management",
+  "campus": "INTL",
+  "rule": "가. 환경조경디자인학과 ‘경관의해석및재현(3)’, ‘도시공간디자인론(3)’, ‘로컬코크리에이션랩3(3)’, 시각디자인학과 ‘스몰브랜드 창업과운영(3)’ 중 총 9학점 이상을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "LA337",
+    "name": "경관의해석및재현",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "LA313",
+    "name": "도시공간디자인론",
+    "credit": 3,
+    "dept": "환경조경디자인학과"
+   },
+   {
+    "code": "LA341",
+    "name": "로컬코크리에이션랩3",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "VID3040",
+    "name": "스몰브랜드창업과운영",
+    "credit": 3,
+    "dept": "시각디자인학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "첨단패키징",
+  "eng": "Advanced Packaging",
+  "campus": "INTL",
+  "rule": "가. 기계공학과 ‘열전달(3)’, ‘반도체소재및멤스(3)’, 반도체공학과 ‘패키징분석및설계(3)’, 전자공학과 ‘전자기학2(3)’ 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "MEC321",
+    "name": "열전달",
+    "credit": 3,
+    "dept": "기계공학과"
+   },
+   {
+    "code": "MEC312",
+    "name": "반도체소재및멤스",
+    "credit": 3,
+    "dept": "기계공학과"
+   },
+   {
+    "code": "SE4005",
+    "name": "패키징분석및설계",
+    "credit": 3,
+    "dept": "반도체공학과"
+   },
+   {
+    "code": "EE204",
+    "name": "전자기학2",
+    "credit": 3,
+    "dept": "전자공학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "체감기술",
+  "eng": "Digital Experience Technology",
+  "campus": "INTL",
+  "rule": "",
+  "total": 27,
+  "courses": [
+   {
+    "code": "SWCON312",
+    "name": "전공선택 게임인터랙티브테크놀로지",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   },
+   {
+    "code": "IM4102",
+    "name": "전공선택 실감디바이스기술",
+    "credit": 3,
+    "dept": "융합전공"
+   },
+   {
+    "code": "IM2102",
+    "name": "전공선택 실감피지컬컴퓨팅",
+    "credit": 3,
+    "dept": "융합전공"
+   },
+   {
+    "code": "IM4202",
+    "name": "전공선택 HCI",
+    "credit": 3,
+    "dept": "건국대학교"
+   },
+   {
+    "code": "IM4203",
+    "name": "전공선택 HCI특론",
+    "credit": 3,
+    "dept": "건국대학교"
+   },
+   {
+    "code": "IM4204",
+    "name": "전공선택 혼합현실특론",
+    "credit": 3,
+    "dept": "건국대학교"
+   },
+   {
+    "code": "IM3202",
+    "name": "전공선택 실감콘텐츠경험분석",
+    "credit": 3,
+    "dept": "건국대학교"
+   },
+   {
+    "code": "IM4101",
+    "name": "전공선택 실감미디어프로젝트 택1",
+    "credit": 3,
+    "dept": "융합전공"
+   },
+   {
+    "code": "IM4302",
+    "name": "전공선택 VR/AR게임프로그래밍",
+    "credit": 3,
+    "dept": "계명대학교"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "크리에이티브 퍼포먼스",
+  "eng": "Creative Performance",
+  "campus": "INTL",
+  "rule": "가. 연극영화학과 ‘퍼포밍아츠연구(3)’, 포스트모던음악학과 ‘보컬앙상블&퍼포먼스(3)’, ‘대중음악사(3)’, K-퍼포밍아트융합전공 ‘K-Pop Dacnce(3)’ 중 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "FT2030",
+    "name": "",
+    "credit": 3,
+    "dept": "퍼포밍아츠연구"
+   },
+   {
+    "code": "PM1023",
+    "name": "",
+    "credit": 3,
+    "dept": "보컬앙상블&퍼포먼스"
+   },
+   {
+    "code": "PM3034",
+    "name": "",
+    "credit": 3,
+    "dept": "대중음악사"
+   },
+   {
+    "code": "KPA303",
+    "name": "",
+    "credit": 3,
+    "dept": "Dance"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "테크놀로지&디자인융합콘텐츠제작",
+  "eng": "Technology & Design Convergence",
+  "campus": "INTL",
+  "rule": "",
+  "total": 12,
+  "courses": [
+   {
+    "code": "CSE104",
+    "name": "전공선택 실감미디어컴퓨팅기초",
+    "credit": 3,
+    "dept": "컴퓨터공학과"
+   },
+   {
+    "code": "IM4101",
+    "name": "전공선택 실감미디어프로젝트 택3",
+    "credit": 3,
+    "dept": "융합전공"
+   },
+   {
+    "code": "IM4013",
+    "name": "전공선택 XR기술PBL 중 1과목",
+    "credit": 3,
+    "dept": "융합전공"
+   },
+   {
+    "code": "SWCON311",
+    "name": "전공선택 게임그래픽프로그래밍 이상은",
+    "credit": 3,
+    "dept": "소프트웨어융합학과"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "한국어데이터사이언스",
+  "eng": "Korean Data Science",
+  "campus": "INTL",
+  "rule": "가. 한국어학과(전공)의 ｢한국어정보학의이해｣(3학점), ｢언어빅데이터처리와활용｣(3학점), ｢한국어에듀테크｣(3학점)의 3과목 중 2과목 이상과 후마니타스칼리지(대학)의 ｢소프트웨어적사유｣(3학점), ｢파이썬으로배우는소프트웨어코딩｣(3학점)의 2과목 중 1과목 이상으로 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "KO2503",
+    "name": "한국어정보학의이해",
+    "credit": 3,
+    "dept": "한국어학과"
+   },
+   {
+    "code": "KO3206",
+    "name": "언어빅데이터처리와활용",
+    "credit": 3,
+    "dept": "한국어학과"
+   },
+   {
+    "code": "KO2504",
+    "name": "한국어에듀테크",
+    "credit": 3,
+    "dept": "한국어학과"
+   },
+   {
+    "code": "GEE1954",
+    "name": "소프트웨어적사유",
+    "credit": 3,
+    "dept": "(자유이수)"
+   },
+   {
+    "code": "GEE1345",
+    "name": "파이썬으로배우는소프트웨어코딩",
+    "credit": 3,
+    "dept": "(자유이수)"
+   }
+  ],
+  "src": "scratchpad"
+ },
+ {
+  "name": "공공외교",
+  "eng": "Public Diplomacy Micro Degree",
+  "campus": "SEOUL",
+  "rule": "공공외교 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 중 4과목 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "PSC3057",
+    "name": "외교론",
+    "credit": 3,
+    "dept": "정치외교학과"
+   },
+   {
+    "code": "PSC3060",
+    "name": "공공외교의 이해",
+    "credit": 3,
+    "dept": "정치외교학과"
+   },
+   {
+    "code": "JCOMM0021",
+    "name": "PR론",
+    "credit": 3,
+    "dept": "미디어학과"
+   },
+   {
+    "code": "JCOMM2052",
+    "name": "문화간커뮤니케이션",
+    "credit": 3,
+    "dept": "미디어학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "공연실습과이해",
+  "eng": " ",
+  "campus": "SEOUL",
+  "rule": "가. 교과목 편성 음악대학 공통교과 음악진로와탐색, 성악과 무대자세및연기1, 2, 연주자과정 1, 2, 기악과 알렉산더테크닉, 음악감상및해석 나. 편성된 7개의 교과목 모두 이수 필요 (총 9학점)",
+  "total": 9,
+  "courses": [
+   {
+    "code": "MUSIC404",
+    "name": "음악진로와탐색",
+    "credit": 1,
+    "dept": "공통"
+   },
+   {
+    "code": "VOICE2002",
+    "name": "무대자세및연기1",
+    "credit": 1,
+    "dept": "성악과"
+   },
+   {
+    "code": "VOICE2003",
+    "name": "무대자세및연기2",
+    "credit": 1,
+    "dept": "성악과"
+   },
+   {
+    "code": "VOICE4016",
+    "name": "연주자과정1",
+    "credit": 1,
+    "dept": "성악과"
+   },
+   {
+    "code": "VOICE4017",
+    "name": "연주자과정2",
+    "credit": 1,
+    "dept": "성악과"
+   },
+   {
+    "code": "INSTR3021",
+    "name": "알렉산더테크닉",
+    "credit": 2,
+    "dept": "기악과(피아노전공)"
+   },
+   {
+    "code": "INSTR2021",
+    "name": "음악감상및해석",
+    "credit": 2,
+    "dept": "기악과(관현전공)"
+   }
+  ],
+  "src": "music2"
+ },
+ {
+  "name": "글로벌 서비스 경험 디자인",
+  "eng": "Global Service Experience Design",
+  "campus": "SEOUL",
+  "rule": "글로벌Hospitality·관광학과 ‘Consumer Behavior in H&T(3)’, ‘Service Design in H&T(3)’, Hospitality경 영학과 ‘국제매너와비교문화론(3)’ 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "GHT3003",
+    "name": "",
+    "credit": 3,
+    "dept": "호텔관광대학"
+   },
+   {
+    "code": "GHT4003",
+    "name": "Service Design in H&T",
+    "credit": 3,
+    "dept": "호텔관광대학"
+   },
+   {
+    "code": "HSPMT4004",
+    "name": "국제매너와비교문화론",
+    "credit": 3,
+    "dept": "Hospitality경영학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "기술혁신과 사회과학",
+  "eng": "Technological innovation and social sciences",
+  "campus": "SEOUL",
+  "rule": "① 기술혁신과 사회과학 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 중 3개 이상 학과에서 개설된 과목으로 3과목 총 9학점 이상을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "PA4036",
+    "name": "전공선택 과학기술혁신정책",
+    "credit": 3,
+    "dept": "행정학과"
+   },
+   {
+    "code": "JCOMM3070",
+    "name": "전공선택 미디어테크놀로지와사회세미나",
+    "credit": 3,
+    "dept": "미디어학과"
+   },
+   {
+    "code": "JCOMM3040",
+    "name": "전공선택 미디어테크놀로지와심리",
+    "credit": 3,
+    "dept": "미디어학과"
+   },
+   {
+    "code": "SOC4034",
+    "name": "전공선택 과학기술과사회",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "SOC3037",
+    "name": "전공선택 인공지능과사회",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "CSS2022",
+    "name": "전공필수 미래사회세미나",
+    "credit": 3,
+    "dept": "사회과학융합전공"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "문화관광 데이터사이언스",
+  "eng": "Culture & Tourism Data Science",
+  "campus": "SEOUL",
+  "rule": "문화관광산업학과 ‘관광데이터분석(3)’, / ‘문화관광시장조사론(3)’, 조리산업학과 ‘외식조사방법론(3)’ 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "CULT3017",
+    "name": "관광데이터분석",
+    "credit": 3,
+    "dept": "문화관광산업학과"
+   },
+   {
+    "code": "CULT3005",
+    "name": "문화관광시장조사론",
+    "credit": 3,
+    "dept": "문화관광산업학과"
+   },
+   {
+    "code": "CUIN4007",
+    "name": "외식조사방법론",
+    "credit": 3,
+    "dept": "조리산업학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "미디어 애널리틱스",
+  "eng": "Media Analytics",
+  "campus": "SEOUL",
+  "rule": "① 미디어 애널리틱스를 이수하고자 할 경우 아래 지정 교과목 중 4과목 12학점 이상을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "JCOMM3042",
+    "name": "전공선택 데이터분석과코딩",
+    "credit": 3,
+    "dept": "미디어학과"
+   },
+   {
+    "code": "JCOMM3076",
+    "name": "전공선택 인공지능미디어코딩",
+    "credit": 3,
+    "dept": "미디어학과"
+   },
+   {
+    "code": "JCOMM3075",
+    "name": "전공선택 소셜데이터프로그래밍",
+    "credit": 3,
+    "dept": "미디어학과"
+   },
+   {
+    "code": "JCOMM2061",
+    "name": "전공선택 AI와큐레이션",
+    "credit": 3,
+    "dept": "미디어학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "미래사회의 정부와 법",
+  "eng": "Government and Law in the Future Society",
+  "campus": "SEOUL",
+  "rule": "① 미래사회의 정부와 법 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 중 4과목 12학점 이상을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "PA2032",
+    "name": "전공선택 공공가치의 이해",
+    "credit": 3,
+    "dept": "행정학과"
+   },
+   {
+    "code": "PA3038",
+    "name": "전공선택 인공지능과공공정책",
+    "credit": 3,
+    "dept": "행정학과"
+   },
+   {
+    "code": "GLEE1003",
+    "name": "전공선택 민법총칙",
+    "credit": 3,
+    "dept": "자율전공학과"
+   },
+   {
+    "code": "GLEE1010",
+    "name": "전공선택 형법총론",
+    "credit": 3,
+    "dept": "자율전공학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "비디오아트",
+  "eng": "Video Art Micro Degree",
+  "campus": "SEOUL",
+  "rule": "가. 아트큐레이팅트랙 중 미디어아트론(3학점)과 뉴미디어아트택과정 디지털그래픽1(1학점), 디지털그래픽2(1학점), 영상 미디어1(2학점), 영상미디어2(3학점) 5과목 총 10학점을 이수하여야 한다.",
+  "total": 10,
+  "courses": [
+   {
+    "code": "ART1604",
+    "name": "디지털그래픽1",
+    "credit": 1,
+    "dept": ""
+   },
+   {
+    "code": "ART1605",
+    "name": "디지털그래픽2",
+    "credit": 1,
+    "dept": ""
+   },
+   {
+    "code": "ART2604",
+    "name": "영상미디어1",
+    "credit": 2,
+    "dept": "한국화,회화,조소전공"
+   },
+   {
+    "code": "ART2605",
+    "name": "영상미디어2",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "ART3100",
+    "name": "미디어아트론",
+    "credit": 3,
+    "dept": ""
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "비즈니스애널리틱스",
+  "eng": "Business Analytics",
+  "campus": "SEOUL",
+  "rule": "가. Hospitality경영학과 비즈니스애널리틱스(3), Hospitality수익경영(3), Hospitality데이터의이해(3), 관광학과 시공간관광빅데이터분석(3), 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "HSPMT3017",
+    "name": "비즈니스애널리틱스",
+    "credit": 3,
+    "dept": "Hospitality경영학과"
+   },
+   {
+    "code": "HSPMT4003",
+    "name": "Hospitality수익경영",
+    "credit": 3,
+    "dept": "Hospitality경영학과"
+   },
+   {
+    "code": "HSPMT1002",
+    "name": "Hospitality데이터의이해",
+    "credit": 3,
+    "dept": "Hospitality경영학과"
+   },
+   {
+    "code": "TOURS3025",
+    "name": "시공간관광빅데이터분석",
+    "credit": 3,
+    "dept": "관광학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "빅데이터 기반 회계",
+  "eng": "Big Data Based Accounting",
+  "campus": "SEOUL",
+  "rule": "가. 회계학과 회계원리(3학점), 회계정보애널리틱스(3학점), 빅데이터응용학과 빅데이터프로그래밍2(3학점), DB기초및응용 (3학점), 총 12학점을 이수하여야 한다. 나. 학생은 편성된 학점을 모두 이수해야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "ACCT1001",
+    "name": "회계원리",
+    "credit": 3,
+    "dept": "회계학과"
+   },
+   {
+    "code": "ACCT3013",
+    "name": "회계정보애널리틱스",
+    "credit": 3,
+    "dept": "회계학과"
+   },
+   {
+    "code": "BDAS1004",
+    "name": "빅데이터프로그래밍2",
+    "credit": 3,
+    "dept": "빅데이터응용학과"
+   },
+   {
+    "code": "BDAS2006",
+    "name": "DB기초및응용",
+    "credit": 3,
+    "dept": "빅데이터응용학과"
+   }
+  ],
+  "src": "newsrc"
+ },
+ {
+  "name": "사회과학 데이터분석",
+  "eng": "Social Science Data Analysis",
+  "campus": "SEOUL",
+  "rule": "① 사회과학 데이터분석을 이수하고자 할 경우 아래 지정 교과목 중 3과목 9학점 이상을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "PSC3051",
+    "name": "전공선택 데이터를통해본정치",
+    "credit": 3,
+    "dept": "정치외교학과"
+   },
+   {
+    "code": "PA3039",
+    "name": "전공선택 공공빅데이터의이해와활용",
+    "credit": 3,
+    "dept": "행정학과"
+   },
+   {
+    "code": "ECON2041",
+    "name": "전공필수 계량경제학",
+    "credit": 3,
+    "dept": "경제학과"
+   },
+   {
+    "code": "JCOMM2060",
+    "name": "전공선택 소셜네트워크와소셜마이닝",
+    "credit": 3,
+    "dept": "미디어학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "사회과학방법론",
+  "eng": "Methodology of Social Sciences",
+  "campus": "SEOUL",
+  "rule": "① 사회과학방법론 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 중 4과목 총 12학점 이상을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "SOC1001",
+    "name": "전공기초 사회학으로의초대(구 사회학원론)",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "SOC1003",
+    "name": "전공기초 사회연구입문",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "SOC2005",
+    "name": "전공필수 사회통계학",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "SOC2006",
+    "name": "전공필수 질적연구방법론",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "SOC2007",
+    "name": "전공선택 중급사회통계학(구 양적연구방법론)",
+    "credit": 3,
+    "dept": "사회학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "스마트관광학",
+  "eng": "Smart Tourism",
+  "campus": "SEOUL",
+  "rule": "가. Hospitality경영학과 스마트관광론(3), 스마트관광디자인(3), 지리학과 시공간정보의이해(3), 시공간자료와통 계(3) 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "HSPMT3018",
+    "name": "스마트관광론",
+    "credit": 3,
+    "dept": "Hospitality경영학과"
+   },
+   {
+    "code": "HSPMT4005",
+    "name": "스마트관광디자인",
+    "credit": 3,
+    "dept": "Hospitality경영학과"
+   },
+   {
+    "code": "GEOG1042",
+    "name": "시공간정보의이해",
+    "credit": 3,
+    "dept": "지리학과"
+   },
+   {
+    "code": "GEOG1043",
+    "name": "시공간자료와통계",
+    "credit": 3,
+    "dept": "지리학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "시공간 관광 데이터 사이언스",
+  "eng": "Spatiotemporal Tourism Data Science",
+  "campus": "SEOUL",
+  "rule": "관광학과 ‘시공간관광정보의이해(3학점)’, ‘시공간관광빅데이터분석(3학점)’, 지리학과 ‘지도학(3학점)’ 총 9 학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "TOURS2020",
+    "name": "시공간관광정보의이해",
+    "credit": 3,
+    "dept": "관광학과"
+   },
+   {
+    "code": "TOURS3025",
+    "name": "시공간관광빅데이터분석",
+    "credit": 3,
+    "dept": "관광학과"
+   },
+   {
+    "code": "GEOG1007",
+    "name": "지도학",
+    "credit": 3,
+    "dept": "지리학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "양자반도체",
+  "eng": "Quantum Semiconductor",
+  "campus": "SEOUL",
+  "rule": "가. 응용물리학과 ‘양자정보하드웨어(3)’, ‘양자컴퓨팅(3)’, 반도체공학과 ‘반도체현대물리학(3)’의 9학점, 전자공학과 ‘반도체집적 회로(3)’와 ‘초고주파공학(3)’ 중 택일하여 3학점, 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "APHY3612",
+    "name": "양자컴퓨팅",
+    "credit": 3,
+    "dept": "응용물리학과"
+   },
+   {
+    "code": "APHY4609",
+    "name": "양자정보하드웨어",
+    "credit": 3,
+    "dept": "응용물리학과"
+   },
+   {
+    "code": "SE3002",
+    "name": "반도체현대물리학",
+    "credit": 3,
+    "dept": "반도체공학과"
+   },
+   {
+    "code": "EE325",
+    "name": "반도체집적회로, 초고주파공학 중 택일",
+    "credit": 3,
+    "dept": "EE496,"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "예술과 기술",
+  "eng": "Art and Technology Micro Degree",
+  "campus": "SEOUL",
+  "rule": "가. 신규 개설될 사운드프로세싱(3학점), 이미지프로세싱(3학점), 피지컬컴퓨팅(3학점) 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "ART2612",
+    "name": "사운드프로세싱",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "ART2613",
+    "name": "이미지프로세싱",
+    "credit": 3,
+    "dept": "한국화,회화,조소전공"
+   },
+   {
+    "code": "ART31002",
+    "name": "피지컬컴퓨팅",
+    "credit": 3,
+    "dept": ""
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "음악학",
+  "eng": "Musicology",
+  "campus": "SEOUL",
+  "rule": "가. 교과목 편성 음악대학 공통교과 음악사1, 2, 성악과 오페라사, 기악과 20세기음악, 기악문헌1, 건반악기사 18 -",
+  "total": 12,
+  "courses": [
+   {
+    "code": "MUSIC2011",
+    "name": "음악사1",
+    "credit": 2,
+    "dept": "공통"
+   },
+   {
+    "code": "MUSIC2012",
+    "name": "음악사2",
+    "credit": 2,
+    "dept": "공통"
+   },
+   {
+    "code": "VOICE0002",
+    "name": "오페라사",
+    "credit": 2,
+    "dept": "성악과"
+   },
+   {
+    "code": "MUSIC3016",
+    "name": "20세기음악",
+    "credit": 2,
+    "dept": "기악과(피아노)"
+   },
+   {
+    "code": "INSTR4007",
+    "name": "기악문헌1",
+    "credit": 2,
+    "dept": "기악과(관현)"
+   },
+   {
+    "code": "INSTR3026",
+    "name": "건반악기사",
+    "credit": 2,
+    "dept": "기악과(피아노)"
+   }
+  ],
+  "src": "music2"
+ },
+ {
+  "name": "인공지능 예술",
+  "eng": "AI Art Micro Degree",
+  "campus": "SEOUL",
+  "rule": "가. 뉴미디어아트택 중 디지털그래픽1(1학점), 영상미디어1(2학점)과 신규 개설될 인공지능예술(3학점), 후마니타스칼리지 SW 교양과목의 소프트웨어적사유(3학점), 디지털세계의신인류:인공지능과머신러닝(3학점) 총 12학점을 이수하여야 한 다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "ART1604",
+    "name": "디지털그래픽1",
+    "credit": 1,
+    "dept": ""
+   },
+   {
+    "code": "ART2604",
+    "name": "영상미디어1",
+    "credit": 2,
+    "dept": "한국화,회화,조소전공"
+   },
+   {
+    "code": "ART31003",
+    "name": "인공지능예술",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "GEE1954",
+    "name": "소프트웨어적사유",
+    "credit": 3,
+    "dept": ""
+   },
+   {
+    "code": "GEE1986",
+    "name": "",
+    "credit": 3,
+    "dept": ""
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "인구변화와 미래전략",
+  "eng": "Population Changes and Future Strategies",
+  "campus": "SEOUL",
+  "rule": "① 인구변화와 미래전략 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 4과목 총 12학점을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "SOC2013",
+    "name": "전공선택 인구와사회",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "SOC4042",
+    "name": "전공선택 도시사회학",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "SOC2009",
+    "name": "전공선택 가족사회학",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "SOC3040",
+    "name": "전공선택 국제이주와다문화사회",
+    "credit": 3,
+    "dept": "사회학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "인문예술",
+  "eng": "Humanities and Art Micro Degree",
+  "campus": "SEOUL",
+  "rule": "가. 인문예술 마이크로디그리 이수 기준 인문예술 마이크로디그리를 이수하기 위해서는 국어국문학과 ‘현대비평과사회(3학점)’, ‘현대소설과 문학치료(3 학점)’, 영어영문학과 ‘문학과영화(3학점)’, 철학과 ‘독일미학과낭만주의(3학점)’ 등 3개 학과 4개 교과목 가운 데 총 3개 이상의 교과목을 수강하고 9학점을 이상을 취득해야 한다. (단, 각 학과 별 1개 이상 과목 이수해 야 함)",
+  "total": 12,
+  "courses": [
+   {
+    "code": "KL3108",
+    "name": "현대비평과 사회",
+    "credit": 3,
+    "dept": "국어국문학과"
+   },
+   {
+    "code": "KL2105",
+    "name": "현대소설과 문학치료",
+    "credit": 3,
+    "dept": "국어국문학과"
+   },
+   {
+    "code": "ENGLI2010",
+    "name": "문학과 영화",
+    "credit": 3,
+    "dept": "영어영문학과"
+   },
+   {
+    "code": "PHIL3047",
+    "name": "독일미학과 낭만주의",
+    "credit": 3,
+    "dept": "철학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "전자음악 작곡",
+  "eng": "Electronic Music Composition",
+  "campus": "SEOUL",
+  "rule": "가. 교과목 편성 작곡과 전자음악 1, 2, 3, 4 (DAW 프로그램과 MAX/MSP를 통한 작곡), 기악과 20세기음악, 음악감상및해설 나. 편성된 6개의 교과목 중 5개 교과목 이수 필요 (총 10학점)",
+  "total": 10,
+  "courses": [
+   {
+    "code": "COMPO3009",
+    "name": "전자음악1",
+    "credit": 2,
+    "dept": "작곡과"
+   },
+   {
+    "code": "COMPO3010",
+    "name": "전자음악2",
+    "credit": 2,
+    "dept": "작곡과"
+   },
+   {
+    "code": "COMPO4007",
+    "name": "전자음악3",
+    "credit": 2,
+    "dept": "작곡과"
+   },
+   {
+    "code": "COMPO4008",
+    "name": "전자음악4",
+    "credit": 2,
+    "dept": "작곡과"
+   },
+   {
+    "code": "MUSIC3016",
+    "name": "20세기음악",
+    "credit": 2,
+    "dept": "기악과"
+   },
+   {
+    "code": "INSTR2021",
+    "name": "음악감상및해석",
+    "credit": 2,
+    "dept": "기악과"
+   }
+  ],
+  "src": "music"
+ },
+ {
+  "name": "젠더와 문화",
+  "eng": "Gender and Cultural Studies",
+  "campus": "SEOUL",
+  "rule": "① 젠더와 문화 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 4과목 12학점 이상을 이수하여야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "SOC4039",
+    "name": "전공선택 젠더사회학",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "SOC3022",
+    "name": "전공선택 문화사회학",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "SOC2012",
+    "name": "전공선택 사회심리학",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "SOC2009",
+    "name": "전공선택 가족사회학",
+    "credit": 3,
+    "dept": "사회학과"
+   },
+   {
+    "code": "JCOMM3067",
+    "name": "전공선택 미디어와젠더",
+    "credit": 3,
+    "dept": "미디어학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "지속가능 미래학",
+  "eng": "Sustainable Future Society",
+  "campus": "SEOUL",
+  "rule": "가. 지속가능 미래학 융합전공 과정 가운데 “너와나의미래로의초대(1학점)”, “미래학세미나(1학점)”, “PeaceBar 프로젝트(1학점)”를 필수로 수강하고, 사학과의 “세계과학기술문명사(3학점)”, 행정학과의 “환경정책론(3학 점)”, 지리학과의 “글로벌위기와지리적상상력(3학점)” 가운데에 두 과목 이상을 선택 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "HIST1106",
+    "name": "세계과학기술문명사",
+    "credit": 3,
+    "dept": "사학과"
+   },
+   {
+    "code": "PA3036",
+    "name": "환경정책론",
+    "credit": 3,
+    "dept": "행정학과"
+   },
+   {
+    "code": "GEOG4066",
+    "name": "글로벌위기와지리적상상력",
+    "credit": 3,
+    "dept": "지리학과"
+   }
+  ],
+  "src": "newsrc"
+ },
+ {
+  "name": "첨단의약품 규제과학",
+  "eng": "regulatory science",
+  "campus": "SEOUL",
+  "rule": "최저이수학점 : 11학점(기초 9학점, 선택 2학점)",
+  "total": 10,
+  "courses": [
+   {
+    "code": "PHS3224",
+    "name": "품질관리학",
+    "credit": 3,
+    "dept": "약과학"
+   },
+   {
+    "code": "PHS3232",
+    "name": "분자생물학",
+    "credit": 3,
+    "dept": "약과학"
+   },
+   {
+    "code": "PHS4221",
+    "name": "바이오신약개발",
+    "credit": 2,
+    "dept": ""
+   },
+   {
+    "code": "PHS4122",
+    "name": "보건의료관계법규",
+    "credit": 2,
+    "dept": ""
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "푸드 비즈니스",
+  "eng": "Food Business",
+  "campus": "SEOUL",
+  "rule": "조리&푸드디자인학과 ‘외식마케팅(3)’, ‘푸드디자인(3)’ / Hospitality경영학과 ‘Hospitality브랜드경영론(3)’, 총 9학점을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "CNFDM2007",
+    "name": "외식마케팅",
+    "credit": 3,
+    "dept": "조리&푸드디자인학과"
+   },
+   {
+    "code": "CNFDM4010",
+    "name": "푸드디자인",
+    "credit": 3,
+    "dept": "조리&푸드디자인학과"
+   },
+   {
+    "code": "HSPMT3007",
+    "name": "Hospitality브랜드경영론",
+    "credit": 3,
+    "dept": "Hospitality경영학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "행정과 회계정보",
+  "eng": "Public Administration and Accounting Information",
+  "campus": "SEOUL",
+  "rule": "가. 회계학과 회계원리(3학점), 정부회계(3학점), 행정학과 행정학원론(3학점), 재무행정론(3학점), 총 12학점을 이수하여야 한다. 나. 학생은 편성된 학점을 모두 이수해야 한다.",
+  "total": 12,
+  "courses": [
+   {
+    "code": "ACCT1001",
+    "name": "회계원리",
+    "credit": 3,
+    "dept": "회계학과"
+   },
+   {
+    "code": "ACCT4009",
+    "name": "정부회계",
+    "credit": 3,
+    "dept": "회계학과"
+   },
+   {
+    "code": "PA1001",
+    "name": "행정학원론",
+    "credit": 3,
+    "dept": "행정학과"
+   },
+   {
+    "code": "PA2004",
+    "name": "재무행정론",
+    "credit": 3,
+    "dept": "행정학과"
+   }
+  ],
+  "src": "newsrc"
+ },
+ {
+  "name": "환경위기와 기후변화 거버넌스",
+  "eng": "",
+  "campus": "SEOUL",
+  "rule": "① 환경위기와 기후변화 거버넌스 마이크로디그리를 이수하고자 할 경우 아래 지정 교과목 중 3개 이상 학과에서 개설된 과목으로 3과목 총 9학점 이상을 이수하여야 한다.",
+  "total": 9,
+  "courses": [
+   {
+    "code": "PSC3047",
+    "name": "전공선택 환경과국제정치",
+    "credit": 3,
+    "dept": "정치외교학과"
+   },
+   {
+    "code": "PA3036",
+    "name": "전공선택 환경정책론",
+    "credit": 3,
+    "dept": "행정학과"
+   },
+   {
+    "code": "ECON3054",
+    "name": "전공선택 기후환경경제학",
+    "credit": 3,
+    "dept": "경제학과"
+   },
+   {
+    "code": "ECON3061",
+    "name": "전공선택 기후변화정책론",
+    "credit": 3,
+    "dept": "경제학과"
+   },
+   {
+    "code": "SOC2017",
+    "name": "전공선택 인류세의사회학",
+    "credit": 3,
+    "dept": "사회학과"
+   }
+  ],
+  "src": "seoul"
+ },
+ {
+  "name": "후마니타스 AI/SW",
+  "eng": "",
+  "campus": "BOTH",
+  "rule": "편성된 9과목 중 3과목(9학점) · 교양학점과 중복 인정",
+  "total": 9,
+  "courses": [
+   {
+    "code": "GEE1954",
+    "name": "소프트웨어적사유",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1984",
+    "name": "사이버스페이스문화",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1985",
+    "name": "네트워크기술로인한사회변화",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1193",
+    "name": "언어와컴퓨터",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GED1711",
+    "name": "인간-컴퓨터중심세계",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GED1999",
+    "name": "인공지능과라이프3.0",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   }
+  ],
+  "src": "후마니타스칼리지 2026 교양교육과정 [별표2]"
+ },
+ {
+  "name": "후마니타스 인공지능",
+  "eng": "",
+  "campus": "BOTH",
+  "rule": "편성된 12과목 중 3과목(9학점) · 교양학점과 중복 인정",
+  "total": 9,
+  "courses": [
+   {
+    "code": "GEE1345",
+    "name": "파이썬으로배우는소프트웨어코딩",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1343",
+    "name": "빅데이터를통한세상바로알기:R로배우는데이터분석코딩",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GED1244",
+    "name": "빅데이터를통한세상바로알기",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1953",
+    "name": "새로운생명체:인공지능",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1983",
+    "name": "인공지능을위한수학",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1986",
+    "name": "디지털세계의신인류:인공지능과머신러닝",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1975",
+    "name": "인공지능을위한기계학습",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1976",
+    "name": "파이썬과데이터마이닝",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1987",
+    "name": "학습과사고:파이썬과딥러닝",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   }
+  ],
+  "src": "후마니타스칼리지 2026 교양교육과정 [별표2]"
+ },
+ {
+  "name": "후마니타스 소프트웨어",
+  "eng": "",
+  "campus": "BOTH",
+  "rule": "편성된 12과목 중 3과목(9학점) · 교양학점과 중복 인정",
+  "total": 9,
+  "courses": [
+   {
+    "code": "GEE1988",
+    "name": "C샵을통한창의적사고",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1344",
+    "name": "앱인벤터로배우는코딩세상",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1980",
+    "name": "소프트웨어개발자를위한C프로그래밍",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1989",
+    "name": "4차산업혁명의변화:사물인터넷",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1979",
+    "name": "인터넷과메타버스",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GED1245",
+    "name": "문화세계의변혁,안드로이드세상",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1990",
+    "name": "인터넷과미디어콘텐츠기술",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1991",
+    "name": "게임과네트워크:이론과코딩",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1978",
+    "name": "컴퓨터게임개론:이론과기술",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1127",
+    "name": "사물인터넷과미래사회",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   }
+  ],
+  "src": "후마니타스칼리지 2026 교양교육과정 [별표2]"
+ },
+ {
+  "name": "예술체험심화",
+  "eng": "",
+  "campus": "BOTH",
+  "rule": "편성된 5과목 중 4과목(11~12학점) · 교양학점과 중복 인정",
+  "total": 11,
+  "courses": [
+   {
+    "code": "GEE11038",
+    "name": "현대미술라운드테이블",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE11029",
+    "name": "움직임과소통,국립현대무용단과함께",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE11027",
+    "name": "오케스트라의오늘",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE11028",
+    "name": "우리가락으로만나는세상",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE11011",
+    "name": "후마니타스예술특강",
+    "credit": 2,
+    "dept": "후마니타스칼리지"
+   }
+  ],
+  "src": "후마니타스칼리지 2026 교양교육과정 [별표2]"
+ },
+ {
+  "name": "리터러시·라이팅",
+  "eng": "",
+  "campus": "BOTH",
+  "rule": "편성된 5과목 중 4과목(12학점) · 교양학점과 중복 인정",
+  "total": 12,
+  "courses": [
+   {
+    "code": "GEE1187",
+    "name": "시창작교실",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE1180",
+    "name": "소설창작교실:서사는힘이세다",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE11008",
+    "name": "시나리오창작교실",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE11040",
+    "name": "르포르타주:가려진세계의보고서",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   },
+   {
+    "code": "GEE11009",
+    "name": "출판편집교실",
+    "credit": 3,
+    "dept": "후마니타스칼리지"
+   }
+  ],
+  "src": "후마니타스칼리지 2026 교양교육과정 [별표2]"
+ }
+]

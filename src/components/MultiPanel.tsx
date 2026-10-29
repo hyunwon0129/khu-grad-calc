@@ -24,6 +24,8 @@ export default function MultiPanel(p: Props) {
   const [query, setQuery] = useState('');
   const [campusFilter, setCampusFilter] = useState<'ALL' | 'SEOUL' | 'INTL'>('ALL');
   const [showAll, setShowAll] = useState(false);
+  const [mdQuery, setMdQuery] = useState('');
+  const [mdAll, setMdAll] = useState(false);
 
   const cap = p.cap;
   const room = Math.max(0, cap - p.mustRemaining);
@@ -31,7 +33,12 @@ export default function MultiPanel(p: Props) {
     () => recommendMulti(p.departments, p.programs, p.courseMap, p.taken, p.student, room),
     [p.departments, p.programs, p.courseMap, p.taken, p.student, room],
   );
-  const mds = recommendMd(p.programs, p.courseMap, p.taken, p.student.campus);
+  // 들은 과목이 많은 것 → 내 캠퍼스 → 남은 학점이 적은 순
+  const mdsAll = recommendMd(p.programs, p.courseMap, p.taken, p.student.campus)
+    .sort((a, b) => b.earned - a.earned || Number(a.otherCampus) - Number(b.otherCampus) || a.needed - b.needed);
+  const mq = mdQuery.replace(/\s+/g, '');
+  const mdsFound = mq ? mdsAll.filter((m) => (m.program.department + m.program.college + m.program.note + m.takenNames.join('')).replace(/\s+/g, '').includes(mq)) : mdsAll;
+  const mds = mdAll || mq ? mdsFound : mdsFound.slice(0, SHOW);
   const shift = ownMajorShift(p.departments, p.student);
 
   const q = query.replace(/\s+/g, '');
@@ -127,7 +134,11 @@ export default function MultiPanel(p: Props) {
         <p className="muted small">근거: 경희대학교 학생설계전공 가이드북. 2026학번 졸업요건(다전공·MD·부전공 1개 이상)도 학생설계전공으로 채울 수 있어요.</p>
       </details>
 
-      <h3>마이크로디그리 <span className="muted small">1인당 최대 3개 · 전공·교양 학점과 중복 인정</span></h3>
+      <h3>마이크로디그리 <span className="muted small">{mdsAll.length}개 · 1인당 최대 3개 · 전공·교양 학점과 중복 인정</span></h3>
+      <div className="toolbar">
+        <input type="search" placeholder="마이크로디그리·학과·과목 검색" value={mdQuery} onChange={(e) => setMdQuery(e.target.value)} aria-label="마이크로디그리 검색" />
+        <span className="muted">{mdsFound.length}개</span>
+      </div>
       <ul className="multi-list">
         {mds.map((m) => (
           <li key={m.program.programId} className="multi-item">
@@ -143,9 +154,12 @@ export default function MultiPanel(p: Props) {
             {m.takenNames.length > 0 && <p className="muted small">들은 과목: {m.takenNames.join(', ')}</p>}
           </li>
         ))}
-        {mds.length === 0 && <li className="muted">마이크로디그리 데이터가 아직 없습니다.</li>}
+        {mds.length === 0 && <li className="muted">찾는 마이크로디그리가 없어요</li>}
       </ul>
-      <p className="muted small">공개된 과정만 넣었어요(경영학과 3개, 의료인공지능 1개). 2학기 이상 이수하면 신청할 수 있어요</p>
+      {!mdAll && !mq && mdsFound.length > SHOW && (
+        <button type="button" className="link" onClick={() => setMdAll(true)}>마이크로디그리 전체 {mdsFound.length}개 보기</button>
+      )}
+      <p className="muted small">2026 학과 교육과정·시행세칙의 마이크로디그리 이수체계도와 후마니타스칼리지·사업단 세칙에서 모았어요. 2학기 이상 이수하면 신청할 수 있어요</p>
     </section>
   );
 }
