@@ -4,7 +4,7 @@
 
 ## 배포 (설치 없이 링크로 쓰기)
 
-`docs/배포.md` 참고. `npm run deploy:zip`으로 만든 폴더를 Netlify Drop에 끌어다 놓으면 5분 안에 주소가 생깁니다.
+운영 주소: https://hyunwon0129.github.io/khu-grad-calc/ (main에 push하면 GitHub Actions가 테스트·빌드·배포). 자세한 방법은 `docs/배포.md`, `docs/SETUP-서버.md`.
 
 ## 실행 (개발용)
 
@@ -41,7 +41,7 @@ raw/                학교 원본 자료(요람, 개설과목 엑셀) — git �
 3. `npm run validate`로 오류 확인.
 4. 원문과 대조 검증을 마친 과정만 `"verified": true`로 바꾼다.
 
-현재 들어 있는 데이터는 **모두 가상 샘플**입니다(`[샘플]` 표시).
+데이터는 2026 학과 교육과정 책자·시행세칙과 학사제도안내에서 추출했습니다(출처: `data-src/SOURCES.md`). 테스트용 사정표 PDF(`src/test-fixtures`)는 `scripts/fixtures/make_reports.py`로 만든 가상 학생 자료입니다.
 
 ## 로그인·배포 (선택)
 
