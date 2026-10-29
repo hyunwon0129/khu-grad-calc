@@ -1,6 +1,7 @@
 # 교육과정 원문(pdftotext -layout)에서 '▣ 마이크로디그리명' 블록을 읽어 과목·학점·이수기준을 뽑는다
 import re, json, sys
-S = '/tmp/claude-0/-home-claude/67bd4f7f-00fa-5be5-af42-2cf829fc4257/scratchpad'
+import os
+S = os.environ.get('SRC_DIR', '.')  # pdftotext -layout 결과(all.txt)들이 있는 작업 폴더
 SRC = [(S + '/book/all.txt', 'INTL'), (S + '/seoul/book/all.txt', 'SEOUL'), (S + '/newsrc/book/all.txt', 'SEOUL'),
        (S + '/music/book/all.txt', 'SEOUL'), (S + '/music2/book/all.txt', 'SEOUL')]
 CODE = re.compile(r'\b([A-Z]{2,6}\d{3,6})\b')
